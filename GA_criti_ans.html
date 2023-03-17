@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>GA_criti_ans.knit</title>
+
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">QK 2nd ed material for instructors</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="../Examples/index.html">Boxes</a>
+</li>
+<li>
+  <a href="../Exercises/index.html">Exercises</a>
+</li>
+<li>
+  <a href="../Figures/index.html">Figures</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><h4
+id="what-biological-questions-were-the-data-designed-to-answer">What
+(biological) question(s) were the data designed to answer?</h4>
+<p>Broadly, how does fire affect ants.</p>
+<p>Specifically, how do prescribed fires, tree species (oaks and
+hickories) and tree size (large and small) affect the presence of one
+particular ant species, black carpenter ants</p>
+<p>2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><h4
+id="what-kind-of-statistical-models-were-fitted-to-the-data">What kind
+of statistical model(s) were fitted to the data?</h4>
+<p>Analysis of variance models. Data collected were presence/absence of
+ants on individual trees. Trees were within 5 plots at each site, and
+data were aggregated up to % of trees with ants. These percentages were
+the variables analysed. This step makes sense!</p>
+<p>Claimed in methods that analyses were one-way anova, but they also
+talk about interactions between factors. Still not clear from results
+exactly what they did. Degrees of freedom are listed, but only one for
+F-test. Hard to interpret, because F-test has two separate df.</p>
+<p>Figure 2 suggests some strange pooling of control sites across all
+years and comparison to burned sites in each year.</p>
+<p>2</p></td>
+</tr>
+<tr class="even">
+<td><h4
+id="describe-your-preliminary-conclusion-from-the-analysis">Describe
+your preliminary conclusion from the analysis</h4>
+<p>From the authors: Large oaks best, small hickories worst. This
+suggests an interaction between tree species and tree size. Effects of
+fire varied…</p>
+<p><em>2</em></p></td>
+</tr>
+<tr class="odd">
+<td><h4 id="outlin">Outlin</h4>
+<p>e the assumptions associated with the particular statistical
+model(s)</p>
+<p>Normality, independence, equality of variances</p>
+<p>2</p></td>
+</tr>
+<tr class="even">
+<td><h4 id="did-the-authors-provide-you-with-enou">Did the authors
+provide you with enou</h4>
+<p>gh information to determine whether the data analysis is appropriate?
+If not, what additional information would you like to see presented?</p>
+<p>No formal statement about variances</p>
+<p>No assessment of normality. Data are proportions, which were
+transformed (using arcsine transformation).</p>
+<p>No other mention of assumptions</p>
+<p>4</p></td>
+</tr>
+<tr class="odd">
+<td><h4 id="what-changes-would-you-make-to-the-data-analysis">What
+changes would you make to the data analysis?</h4>
+<p>Lots!</p>
+<ol style="list-style-type: decimal">
+<li><p>Tell the reader what was actually done (not clear from
+ms)</p></li>
+<li><p>The analysis bears no relationship to the structure of the data.
+The authors ignored things like collection of samples in different years
+and the pairing of burned and unburned sites. They also did simple
+anovas when the data for different tree species and sizes clearly came
+from the same set of plots, i.e., there were not spatially independent
+estimates for each species, etc.</p></li>
+<li><p>The actual analysis/design is quite complicated. Here’s my take
+on it:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>At a large scale, data were collected in 3 years (Y)</p></li>
+<li><p>In each year, there were 3 pairs (P) of sites</p></li>
+<li><p>Within each pair, one was burned and the other was not
+(B)</p></li>
+<li><p>Within each site data were collected on the % of trees having
+ants for each of 3 tree species (S) of 3 different sizes, measured as
+DBH (D)</p></li>
+<li><p>Technically, data came from 5 plots within each site, but it’s
+simplest to aggregate the data at site level (all tree species/sizes may
+not be in each 30 m plot)</p></li>
+<li><p>The experimental unit is the site – the scale at which fire
+treatments were applied.</p></li>
+</ol></li>
+<li><p>The linear model to describe this data is best treated as a
+repeated measures design (or partly nested).</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The “subjects” are sites</p>
+<ol style="list-style-type: lower-roman">
+<li><p>Each site occurs in one year</p></li>
+<li><p>Is one of a pair of sites differing in burning treatment</p></li>
+</ol></li>
+<li><p>The between-subjects part of the design has Years, Pairs nested
+within years, and Burning treatments applied to pairs: Y, P(Y), B,
+Y*B</p></li>
+<li><p>The “repeated” measures are the ant presences on different
+species and sizes of trees, and one value for each combination comes
+from a site.</p>
+<ol style="list-style-type: lower-roman">
+<li>The within subject measurements form a factorial array of Species
+and Size: S, D, S*D</li>
+</ol></li>
+</ol></li>
+<li><p>The correct statistical model thus has 5 factors, 3 between and 2
+within subjects. One of those factors (Pairs) is a random effect. The
+others are fixed. Years could be either, but with 3 consecutive years,
+it’s probably best treated as fixed.</p></li>
+<li><p>The full analysis table is complicated, and needs to be evaluated
+carefully, with the presence of both fixed and random effects.</p></li>
+<li><p>Bonus points to anyone who can specify this model
+completely!</p></li>
+</ol>
+<p>4</p></td>
+</tr>
+<tr class="even">
+<td><h4 id="what-would-you-conclude-from-the-data-analysis">What would
+<u>you</u> conclude from the data analysis?</h4>
+<p>Impossible to draw any conclusion here, as we don’t have enough
+information. The “right” analysis is complicated and so far away from
+what we guess the authors did, that we can’t be confident that any of
+the authors conclusions will hold up under reanalysis.</p>
+<p>The interaction plot (if we drew one from Table 2) looks like a
+pattern in species x size, but we don’t know what background variation
+(noise) was or should be used to put this pattern into context.</p>
+<p>4</p></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
