@@ -11,7 +11,7 @@
 
 
 
-<title>Quick access to R scripts for Boxes</title>
+<title>The worked examples</title>
 
 <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -246,7 +246,7 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="../Examples/index.html">Boxes</a>
+  <a href="examples.html">Boxes</a>
 </li>
 <li>
   <a href="../Exercises/index.html">Exercises</a>
@@ -263,14 +263,52 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Quick access to R scripts for Boxes</h1>
+<h1 class="title toc-ignore">The worked examples</h1>
 
 </div>
 
 
-<p>In most cases, the R code includes preliminary steps in the data
-analysis and may show alternative ways to fit a particular model. The
-scripts rely on two external R scripts:</p>
+<p>The online versions of the worked examples are different from those
+in the book:</p>
+<ul>
+<li><p>For a start, they are less polished. The book versions have
+detailed explanations of the analysis and what it means. Here, we just
+provide brief statements as a guide to any next steps</p></li>
+<li><p>They include the R code, so you can run the analysis for yourself
+or use it for similar data structures and models</p></li>
+<li><p>In most cases, the R code includes preliminary steps in the data
+analysis and may show alternative ways to fit a particular
+model.</p></li>
+<li><p>They include links to the published paper, and, if necessary, the
+data repository. We’ve tried to use examples from journals such as
+PlosOne, where the data links are clear within the paper</p></li>
+<li><p>Where we think it’s helpful, we’ve included images of the study
+organism or system. We haven’t bothered if the target is a mouse,
+assuming that you’ll have some familiarity (;-)), but there are others
+that involve less common species, and some examples where we found that
+an intriguing title (e.g. Are teasel carnivorous?) led us to a
+widely-distributed weed. The images are mostly available under Creative
+Commons licenses and good for including in lectures.</p></li>
+</ul>
+<p>We will update these online examples periodically to maintain
+compatibility with <em>R</em> upgrades, improve the code, and possibly
+add more material. It’s also worth checking <a
+href="https://qkstats.com">our personal website</a> for minor updates,
+suggestions, discussion, etc.</p>
+<p>The scripts should be fine for <em>R</em> version 4.2.2.</p>
+<div id="a-note-on-the-r-code" class="section level4">
+<h4>A note on the <em>R</em> code</h4>
+<p>Each example is based on an Rmarkdown notebook, which has two
+important features:</p>
+<ul>
+<li><p>You can show or hide the code throughout the document for for
+individual code chunks. Sometimes it’s good to just see the comments and
+the output, while at other times you really want the code. Mix and
+match!</p></li>
+<li><p>The Rmarkdown files can be downloaded using the button at the top
+right of each screen. <strong>This isn’t working atm</strong></p></li>
+</ul>
+<p>The scripts rely on two external R scripts:</p>
 <ul>
 <li><p><a href="../R/libraries.R">libraries</a> is a small script that
 loads packages that are used across several examples, plus packages that
@@ -284,12 +322,49 @@ colour, symbol colours, etc. Changing this script is a quick way to
 change lots of figures, e.g. to colours suitable for teaching, rather
 than the gray scales predominantly used in the printed book.</p></li>
 </ul>
-<p>We will update these online examples periodically to maintain
-compatibility with <em>R</em> upgrades, improve the code, and possibly
-add more material. It’s also worth checking <a
-href="https://qkstats.com">our personal website</a> for minor updates,
-suggestions, discussion, etc.</p>
-<p>The scripts should be fine for <em>R</em> version 4.2.2.</p>
+</div>
+<div id="the-data-files" class="section level4">
+<h4>The data files</h4>
+<p>We’ve created our own working files from the raw data from each
+example. When that’s the case, you’ll also see a link to our file, and
+generally in the scripts.</p>
+<p>We’ll load those files, rather than importing directly from a journal
+repository, Dryad, etc. That’s largely for convenience, and because most
+files require a little housekeeping before loading into a dataframe.
+Often that’s just some tidying of the first few rows and renaming of
+variables, but it can be more extensive. Excel files are quite common,
+and they often have a few header rows. We could deal with that as part
+of the script for each example, but for teaching purposes, it’s cleaner
+to just be able to load a file where the variable names match the rest
+of the script exactly.</p>
+<p>In a few cases, the analyses in the published papers used a more
+complex subset of a larger dataset that was provided online. There, such
+as for Box 13.9, we’ve included an R code chunk replicating the data
+subset in the paper. In Box 13.9, that code chunk was kindly provided by
+the authors.</p>
+<p>In future, we may provide the example data files as a complete set,
+either as a zip or an <em>R</em> package.</p>
+</div>
+<div id="directory-structures" class="section level4">
+<h4>Directory structures</h4>
+<p>The pages for each of the worked examples are in one folder, and the
+data, <em>R</em> scripts, and documents/images are in separate folders.
+These folders are shared with other material, so the directory structure
+is slightly unusual. The Rmarkdown files, if you download them, link to
+three “parent” folders, <strong>R</strong>, <strong>data</strong>, and
+<strong>media</strong>. If you download the examples as a zipped
+document, that structure will be created, and you’ll just need to use
+the examples folder as the session directory.</p>
+<p>If you download individual files, make sure you recreate that
+structure: main directory has example.html and four folders:</p>
+<ul>
+<li><p>examples will contain the html file (if you have it) and any Rmd
+files</p></li>
+<li><p>R has relevant <em>R</em> scripts</p></li>
+<li><p>data has csv files</p></li>
+<li><p>media has any images</p></li>
+</ul>
+</div>
 <div id="chapter-2" class="section level3">
 <h3>Chapter 2</h3>
 <ul>
