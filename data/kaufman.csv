@@ -1,0 +1,57 @@
+﻿family,genus,species,bodymass,brainmass,relation,relation2
+Solenodontidae,Solenodon,paradoxus,672,4723,laurasiatherian,other insectivore
+Tenrecidae,Tenrec,ecaudatus,852,2588,afrotherian,other insectivore
+Tenrecidae,Setifer,setosus,237,1516,afrotherian,other insectivore
+Tenrecidae,Hemicentetes,semispin,116,839,afrotherian,other insectivore
+Tenrecidae,Echinops,telfairi,87.5,623,afrotherian,other insectivore
+Tenrecidae,Oryzorictes,talpoides,44.2,580,afrotherian,other insectivore
+Tenrecidae,Microgale,cowani,15.2,420,afrotherian,other insectivore
+Tenrecidae,Limnogale,mergulus,92,1150,afrotherian,other insectivore
+Tenrecidae,Microgale,dobsoni,31.9,557,afrotherian,other insectivore
+Tenrecidae,Microgale,talazaci,48.2,766,afrotherian,other insectivore
+Tenrecidae,Micropotamog,lamottei,64.2,800,afrotherian,other insectivore
+Tenrecidae,Micropotamog,ruwenzorii,96.8,1134,afrotherian,other insectivore
+Tenrecidae,Potamogale,velox,618,4152,afrotherian,other insectivore
+Chrysochloridae,Chlorotalpa,stuhlmanni,40.2,736,afrotherian,other insectivore
+Chrysochloridae,Chrysochlori,asiatica,49,700,afrotherian,other insectivore
+Erinaceidae,Atelerix,algirus,736,3264,laurasiatherian,other insectivore
+Erinaceidae,Erinaceus,europaeus,849,3367,laurasiatherian,other insectivore
+Erinaceidae,Hemiechinus,auritus,235,1880,laurasiatherian,other insectivore
+Erinaceidae,Echinosorex,gymnurus,823,6084,laurasiatherian,other insectivore
+Soricidae,Sorex,alpinus,11,262,laurasiatherian,other insectivore
+Soricidae,Sorex,cinereus,5.2,168,laurasiatherian,other insectivore
+Soricidae,Sorex,fumeus,8.4,241,laurasiatherian,other insectivore
+Soricidae,Sorex,minutus,4.4,115,laurasiatherian,other insectivore
+Soricidae,Sorex,araneus,10.2,216,laurasiatherian,other insectivore
+Soricidae,Microsorex,hoyi,2.6,96,laurasiatherian,other insectivore
+Soricidae,Neomys,anomalus,11.6,282,laurasiatherian,other insectivore
+Soricidae,Neomys,fodiens,15.3,328,laurasiatherian,other insectivore
+Soricidae,Blarina,brevicauda,19.7,393,laurasiatherian,other insectivore
+Soricidae,Cryptotis,parva,9.9,245,laurasiatherian,other insectivore
+Soricidae,Anourosorex,squamipes,20.1,389,laurasiatherian,other insectivore
+Soricidae,Crocidura,attenuata,9.3,209,laurasiatherian,other insectivore
+Soricidae,Crocidura,flavescens,29.3,414,laurasiatherian,other insectivore
+Soricidae,Crocidura,giffardi,82,545,laurasiatherian,other insectivore
+Soricidae,Crocidura,hildegardeae,10.2,213,laurasiatherian,other insectivore
+Soricidae,Crocidura,occidentalis,28,440,laurasiatherian,other insectivore
+Soricidae,Crocidura,russula,11.1,197,laurasiatherian,other insectivore
+Soricidae,Crocidura,suaveolens,10.3,190,laurasiatherian,other insectivore
+Soricidae,Crocidura,jacksoni,12.7,250,laurasiatherian,other insectivore
+Soricidae,Crocidura,leucodon,13.5,190,laurasiatherian,other insectivore
+Soricidae,Suncus,etrescus,1.9,62,laurasiatherian,other insectivore
+Soricidae,Suncus,murinus,33.8,383,laurasiatherian,other insectivore
+Soricidae,Scutisorex,somereni,63.4,640,laurasiatherian,other insectivore
+Soricidae,Sylvisorex,granti,3.9,165,laurasiatherian,other insectivore
+Soricidae,Sylvisorex,megalura,5.5,188,laurasiatherian,other insectivore
+Soricidae,Ruwenzorisor,suncoides,18.2,370,laurasiatherian,other insectivore
+Soricidae,Myosorex,babaulti,17,360,laurasiatherian,other insectivore
+Talpidae,Talpa,europaea,82.1,1024,laurasiatherian,other insectivore
+Talpidae,Talpa,micrura,41.4,816,laurasiatherian,other insectivore
+Talpidae,Parascalops,breweri,53.8,880,laurasiatherian,other insectivore
+Talpidae,Desmana,moschata,443,4000,laurasiatherian,other insectivore
+Talpidae,Galemys,pyrenaicus,59.7,1329,laurasiatherian,other insectivore
+Macroscelididae,Elephantulus,fuscipes,57,1330,sengi,sengi
+Macroscelididae,Elephantulus,myurus,45.1,1270,sengi,sengi
+Macroscelididae,Rhynchocyon,stuhlmanni,490,6100,sengi,sengi
+Macroscelididae,Rhynchocyon,petersi,471,5400,sengi,sengi
+Macroscelididae,Rhynchocyon,udzugwensis,710,7131,sengi,sengi
