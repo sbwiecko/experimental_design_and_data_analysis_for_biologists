@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Ch 5 exercises</title>
+
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">QK 2nd ed resources</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="examples.html">Boxes</a>
+</li>
+<li>
+  <a href="../Exercises/index.html">Exercises</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Ch 5 exercises</h1>
+
+</div>
+
+
+<p>The aim of these exercises is to help you get comfortable with
+running exploratory data analysis - taking a data set and a potential
+model, and evaluating whether the two are compatible. This activity will
+be part of most of the exercises in the later chapters. Particular
+things to look for are:</p>
+<ul>
+<li><p>Does the data set have extreme values?</p></li>
+<li><p>How do you identify those values?</p>
+<ul>
+<li><p>Are the observations legitimate or mistakes?</p></li>
+<li><p>Are extreme values influential?</p></li>
+</ul></li>
+<li><p>What statistical model is proposed for this data set?</p>
+<ul>
+<li><p>What are the important assumptions?</p></li>
+<li><p>How can you evaluate whether those assumptions are
+satisfied?</p></li>
+<li><p>If they aren’t satisfied, what are your options?</p></li>
+</ul></li>
+</ul>
+<p>Exploratory data analysis can be counter-intuitive. We emphasise its
+value as something to do before going ahead with fitting the model,
+assessing parameters, and testing hypothesis, <strong>but</strong> some
+assumptions can only be assessed by fitting the model. At this stage,
+we’re aiming to fit the model without bothering to look at parameter
+interests, confidence intervals, or P-values, but software doesn’t
+always make this easy. We’re trying to avoid the temptation of P-hacking
+or its equivalent - fitting a model that will give us results, rather
+than one that is appropriate for the particular data set. If you wanted
+to be super-rigourous about this step, you could write some Rmarkdown
+code where the results of model-fitting are suppressed (using RESULTS=
+‘Hide’, etc.) and you just generate, e.g. residual plots!</p>
+<div id="study-a" class="section level2">
+<h2>Study A</h2>
+<p>Continue with the La Boeuf et al. elephant seal example from Chapter
+4’s exercises.</p>
+<p><strong>For the linear model you’ve specified, what are the
+assumptions?</strong></p>
+<p><strong>Open the <a href="data/leboeuf.csv">data file</a> and check
+those assumptions.</strong></p>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/leboeuf.csv&quot;)
+head(df,10)</code></pre>
+<pre><code>##    male departwt distance FFAduration durationto durationfrom
+## 1   Pop       NA      534          31         18           11
+## 2   Alt      973      755          89          9            8
+## 3   Pro      977     1210          77         12           18
+## 4   Hal     1121       NA          NA         NA           NA
+## 5   Blu       NA     1297          76         19           25
+## 6   Dua      996     1487          68         18           23
+## 7   Rov     1100     2073          69         29           25
+## 8   Ric     1068     2181          46         21           42
+## 9   Ori     1097       NA          NA         NA           NA
+## 10  Jer     1199       NA          NA         NA           NA</code></pre>
+<p>The data also include information on departure weight. Have a look to
+see if that variable might also be linked to foraging duration, and
+whether it might also be linked to distance travelled.</p>
+<p><em>Hint: here’s your chance at a scatterplot matrix</em></p>
+</div>
+<div id="study-b" class="section level2">
+<h2>Study B</h2>
+<p>Continue with the Peake and Quinn example from Chapter 4’s exercises,
+the relationship between the number of individuals and number of species
+(response variables).</p>
+<p><strong>For the linear model you’ve specified, what are the
+assumptions?</strong></p>
+<p>Open the <a href="data/peakquinn.csv"><strong>data file</strong></a>
+<strong>and check those assumptions.</strong></p>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/peakquinn.csv&quot;)
+head(df,10)</code></pre>
+<pre><code>##       area indiv species
+## 1   516.00    18       3
+## 2   469.06    60       7
+## 3   462.25    57       6
+## 4   938.60   100       8
+## 5  1357.15    48      10
+## 6  1773.66   118       9
+## 7  1686.01   148      10
+## 8  1786.29   214      11
+## 9  3090.07   225      16
+## 10 3980.12   283       9</code></pre>
+</div>
+<div id="study-c" class="section level2">
+<h2>Study C</h2>
+<p>Vosteen et al (2016) examined patterns of production of honeydew by
+different races of pea aphids (<em>Acyrthosiphon pisum</em>) and how
+that attracts ovipositioning hoverflies (<em>Episyrphus balteatus</em>)
+to create enemy-free space for the aphids. They measured honeydew
+production (mg) over 24 hours by three races of aphids (representing the
+native hosts they were collected from: <em>Triflolium</em>,
+<em>Pisum</em>, <em>Medicago</em> races) on plants of their native hosts
+and also the universal host plant <em>Vicia faba</em> in a climate
+chamber. There were six combinations of aphid race and host (native vs
+universal) plant that Vosteen et al (2016)</p>
+<p>In Chapter 4’s exercises, you should have described a model to fit to
+these data.</p>
+<p><strong>What are the assumptions associated with that
+model?</strong></p>
+<p><strong>Read in the data and check the assumptions</strong></p>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/vosteen.csv&quot;)
+head(df,10)</code></pre>
+<pre><code>##    clone_plant_combination honeydew clone plant hostplant
+## 1                  T_Vicia     1.08     T Vicia Universal
+## 2                  T_Vicia     2.21     T Vicia Universal
+## 3                  T_Vicia     2.63     T Vicia Universal
+## 4                  T_Vicia     1.63     T Vicia Universal
+## 5                  T_Vicia     3.51     T Vicia Universal
+## 6                  T_Vicia     2.53     T Vicia Universal
+## 7                  T_Vicia     2.92     T Vicia Universal
+## 8                  T_Vicia     0.98     T Vicia Universal
+## 9                  T_Vicia     2.39     T Vicia Universal
+## 10                 T_Vicia     2.05     T Vicia Universal</code></pre>
+</div>
+<div id="study-d" class="section level2">
+<h2>Study D</h2>
+<p>Binning et al (2013) studied the effect of ectoparasitic isopods
+(<em>Anilocra nemipteri</em>) on the swimming ability of a tropical
+species of bream (<em>Scolopsis bilineatus</em>). They collected 18
+unparasitized and 20 parasitized fish from Lizard Island on the Great
+Barrier Reef and created four treatment groups in the laboratory: eight
+unparasitized fish, 10 parasitized fish, 10 parasitized fish that had
+the parasites removed, and ten unparasitized fish that had model
+parasites made of plastic added. They recorded the swimming speed (body
+lengths per second) and oxygen consumption (mgO<sub>2</sub> per kg per
+hour) of each fish, in a respirometer. The data are available from <a
+href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.r73v3">datadryad</a>.
+Within dryad, the dataset you want is “binning etal 2012 one way
+anova.txt”; in this dataset, SMR is Standard Metabolic Rate
+(O<sub>2</sub> consumption), AS = factorial aerobic scope, and Ucrit is
+swimming speed.</p>
+<p>In Chapter 4’s exercises, you should have described a model to fit to
+these data.</p>
+<p><strong>What are the assumptions associated with that
+model?</strong></p>
+<p><strong>Read in the data and check the assumptions</strong></p>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/peakquinn.csv&quot;)
+head(df,10)</code></pre>
+<pre><code>##       area indiv species
+## 1   516.00    18       3
+## 2   469.06    60       7
+## 3   462.25    57       6
+## 4   938.60   100       8
+## 5  1357.15    48      10
+## 6  1773.66   118       9
+## 7  1686.01   148      10
+## 8  1786.29   214      11
+## 9  3090.07   225      16
+## 10 3980.12   283       9</code></pre>
+</div>
+<div id="study-e" class="section level2">
+<h2>Study E</h2>
+<p><a href="https://doi.org/10.1371/journal.pone.0058667">Kaufman et
+al. (2013)</a> examined the neuroanatomy of a recently described species
+of sengi, which are small insectivorous mammals also known as elephant
+or jumping shrews. These animals are interesting, having been originally
+placed with the mammalian order Insectivora, along with shrews,
+hedgehogs, moles, etc., but this group is now known to be polyphyletic,
+and sengis are more appropriately grouped with elephants, dugongs, and
+hyraxes. They are in the order Macroscelidea, within the Afrotheria. The
+Afrotheria includes another order of small insectivores, the Tenrecoidea
+(tenrecs and golden moles). The Laurasiatheria also includes several
+families of small insectivores</p>
+<p>Small insectivores are generally thought to have small brain mass
+(when adjusted for overall mass), but there has been some question of
+whether sengis fit this pattern, and Kaufman and colleagues were curious
+whether the new species, <em>Rhynchocyon udzungwensis</em>, fitted with
+other sengi. They assembled data from 56 small insectivores, 5 sengi, 14
+afrotherian species, and 37 laurasiatherians. For each species, they
+calculated brain mass (in mg) and total body mass (g).</p>
+<p>Data are all presented in Table 1 of the paper. We’ve extracted it
+from the paper and it’s here <a
+href="data/kaufman.csv">kaufman.csv</a></p>
+<p>In the exercises for this chapter, we’ll just think about brain size
+relative to body size, and we’ll pick this example up again in Chapter
+8.</p>
+<p>Load the data file, and look at the relationship between brain mass
+and body mass.</p>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/kaufman.csv&quot;)
+head(df,10)</code></pre>
+<pre><code>##            family        genus   species bodymass brainmass        relation
+## 1  Solenodontidae    Solenodon paradoxus    672.0      4723 laurasiatherian
+## 2      Tenrecidae       Tenrec ecaudatus    852.0      2588     afrotherian
+## 3      Tenrecidae      Setifer   setosus    237.0      1516     afrotherian
+## 4      Tenrecidae Hemicentetes  semispin    116.0       839     afrotherian
+## 5      Tenrecidae     Echinops  telfairi     87.5       623     afrotherian
+## 6      Tenrecidae  Oryzorictes talpoides     44.2       580     afrotherian
+## 7      Tenrecidae    Microgale    cowani     15.2       420     afrotherian
+## 8      Tenrecidae    Limnogale  mergulus     92.0      1150     afrotherian
+## 9      Tenrecidae    Microgale   dobsoni     31.9       557     afrotherian
+## 10     Tenrecidae    Microgale  talazaci     48.2       766     afrotherian
+##            relation2
+## 1  other insectivore
+## 2  other insectivore
+## 3  other insectivore
+## 4  other insectivore
+## 5  other insectivore
+## 6  other insectivore
+## 7  other insectivore
+## 8  other insectivore
+## 9  other insectivore
+## 10 other insectivore</code></pre>
+<p><strong>What kind of model are we intending to fit to these
+data?</strong></p>
+<p><strong>Look at the relationship between the two variables? Are there
+any steps you’d recommend we take?</strong></p>
+<p><em>Note that the original researchers used a reduced major axis
+regression, as they considered both variables measured with error. Note
+the discussion in Chapter 6 about whether to consider X random or fixed.
+For our purposes, we’ll treat it as fixed</em></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
