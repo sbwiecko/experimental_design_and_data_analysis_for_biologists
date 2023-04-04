@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+<meta name="date" content="2023-04-04" />
+
+<title>Additional published examples</title>
+
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">QK 2nd ed resources</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="examples.html">Boxes</a>
+</li>
+<li>
+  <a href="../Exercises/index.html">Exercises</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Additional published examples</h1>
+<h4 class="date">2023-04-04</h4>
+
+</div>
+
+
+<p>This a more or less haphazard collection of papers we’ve run across
+while looking for good examples or studies to use as exercises. The list
+below is roughly organized into a few groups, such as single predictor
+models, multiple continuous predictors, etc.</p>
+<p>The references below aren’t the result of a systematic search, but
+our own somewhat haphazard sampling, heavily stratified by how
+accessible the paper and its data are. Our goal was to use as much as
+possible papers that are open access (via the journal or on a
+paper-by-paper basis), so we used PlosOne extensively initially,
+broadening in recent years as open access spreads.</p>
+<p><strong>If you’re a student</strong>, these extra examples can give
+you practice at running particular kinds of models. You might want to
+pick and choose to find examples of the kinds of models you might be
+using. It’s also worth looking at the original paper, to see how the
+authors approached their analysis and interpretation.</p>
+<p><strong>If you’re an instructor,</strong> the examples can be useful
+in class to deepen students’ experience of particular kinds of models.
+You’ll probably already know that your students will want to use more of
+some book chapters than others, and these examples let you easily expand
+those chapters.</p>
+<p><strong>Note</strong>. These references are offered as is. They are
+papers that were initial candidates for inclusion in the book and our
+teaching resources, but which were omitted at the final stage. This
+omission was for a variety of reasons - balance across disciplines,
+numbers of examples required for a topic. Some were also omitted because
+we struggled with the data files; it is unfortunately not common for
+online data to be a large data set, a subset of which appeared in
+analyses. Other papers were omitted if we struggled to replicate the
+analysis. The list below hasn’t been filtered by the reason we didn’t
+use each paper. In one sense it’s <em>caveat emptor</em>, even though
+you aren’t buying anything, but the variety of issues we encountered
+makes the papers valuable for class exercises and discussions - it’s
+good for students to discover how difficult it can be to check analyses
+even when there are good intentions. It may also be that in using real
+world examples, students devise better ways of analysing particular case
+studies. We suspect that many of us who’ve been publishing for a while
+have a catalogue of papers for which better analyses could be suggested
+:-)</p>
+<p>We encourage users of the book to contribute additional examples -
+contact us through qkstats.com or Github with suggestions and we’ll add
+them.</p>
+<div id="continuous-response-variables" class="section level1">
+<h1>Continuous response variables</h1>
+<div id="single-predictor-models" class="section level2">
+<h2>Single predictor models</h2>
+<p><span class="citation">Booth and Evans (2011)</span></p>
+<p><span class="citation">Haramura et al. (2016)</span></p>
+<p><span class="citation">Hulbert et al. (2002)</span></p>
+<p><span class="citation">Kurnath, Merz, and Dearing (2016)</span></p>
+<p><span class="citation">Nobata et al. (2011)</span></p>
+<p><span class="citation">C. M. Schmidt and Hood (2012)</span></p>
+<p><span class="citation">Seitz, Lipcius, and Hines (2016)</span></p>
+<p><span class="citation">Shu et al. (2015)</span></p>
+<p><span class="citation">Thom and Clayton (2013)</span></p>
+<p><span class="citation">Wiezik et al. (2015)</span></p>
+</div>
+<div id="multiple-categorical-predictors-with-fixed-effects"
+class="section level2">
+<h2>Multiple categorical predictors with fixed effects</h2>
+<p><span class="citation">Alba et al. (2014)</span></p>
+<p><span class="citation">Arndt, Peterson, and Cain (2015)</span></p>
+<p><span class="citation">Hostetler, Phillips, and Ryabinin
+(2016)</span></p>
+<p><span class="citation">Espinoza-Romo et al. (2018)</span></p>
+<p><span class="citation">Garland and Kimbro (2015)</span></p>
+<p><span class="citation">Poureslami et al. (2010)</span></p>
+<p><span class="citation">Thom and Clayton (2013)</span></p>
+</div>
+<div id="multiple-continuous-predictors" class="section level2">
+<h2>Multiple continuous predictors</h2>
+<p><span class="citation">Bolger et al. (1997)</span></p>
+<p><span class="citation">Dlugosz et al. (2013)</span></p>
+<p><span class="citation">Giosa, Mammides, and Zotos (2018)</span></p>
+<p><span class="citation">Gutiérrez et al. (2012)</span></p>
+<p><span class="citation">Haramura et al. (2016)</span></p>
+<p><span class="citation">Huey et al. (2009)</span></p>
+<p><span class="citation">Martin and Thomas (2011)</span></p>
+<p><span class="citation">McGuire, Jonasson, and Guglielmo
+(2014)</span></p>
+<p><span class="citation">J. P. Schmidt and Drake (2011)</span> (boosted
+regression trees)</p>
+<p><span class="citation">Scofield and Mattila (2015)</span></p>
+</div>
+<div id="mixed-models-nesting-and-covariates" class="section level2">
+<h2>Mixed models: nesting and covariates</h2>
+<p><span class="citation">Bailey et al. (2017)</span></p>
+<p><span class="citation">Birceanu and Wilkie (2018)</span></p>
+<p><span class="citation">Cram et al. (2015)</span></p>
+<p><span class="citation">Didiano, Johnson, and Duval (2016)</span></p>
+<p><span class="citation">Highfill et al. (2019)</span></p>
+<p><span class="citation">Höhn, Lucas, and Thatje (2017)</span></p>
+<p><span class="citation">Jacob, Tozzi, and Willenborg (2017)</span></p>
+<p><span class="citation">Li et al. (2015)</span></p>
+<p><span class="citation">Morissette et al. (2018)</span></p>
+<p><span class="citation">Nudds, Codd, and Sellers (2009)</span></p>
+<p><span class="citation">Pánková, Raabová, and Münzbergová
+(2014)</span></p>
+<p><span class="citation">Ranåker et al. (2014)</span></p>
+<p><span class="citation">C. M. Schmidt and Hood (2012)</span></p>
+<p><span class="citation">Walter and O’Dowd (1992)</span></p>
+<p><span class="citation">Luter et al. (2016)</span></p>
+</div>
+<div id="more-models-for-correlated-data" class="section level2">
+<h2>More models for correlated data</h2>
+<p><span class="citation">Allen and Marshall (2014)</span></p>
+<p><span class="citation">Bailey et al. (2017)</span></p>
+<p><span class="citation">Dalziel et al. (2015)</span></p>
+<p><span class="citation">Davies et al. (2015)</span></p>
+<p><span class="citation">Dickson and Mitchell (2010)</span></p>
+<p><span class="citation">Fernández, Springthorpe, and Hedrick
+(2012)</span></p>
+<p><span class="citation">Hoye and Buttemer (2011)</span></p>
+<p><span class="citation">Kurnath, Merz, and Dearing (2016)</span></p>
+<p><span class="citation">Mehring et al. (2015)</span></p>
+<p><span class="citation">Morissette et al. (2018)</span></p>
+<p><span class="citation">Reynolds et al. (2016)</span></p>
+<p><span class="citation">Troyer and Turner (2015)</span></p>
+<p><span class="citation">Seitz, Lipcius, and Hines (2016)</span></p>
+</div>
+</div>
+<div id="other-response-variables" class="section level1">
+<h1>Other response variables</h1>
+<div id="simple-logistic-and-poisson-resonses" class="section level3">
+<h3>Simple logistic and Poisson resonses</h3>
+<p><span class="citation">(<strong>bolger1997?</strong>)</span></p>
+<p><span class="citation">Ceacero et al. (2015)</span></p>
+<p><span class="citation">Li et al. (2015)</span></p>
+<p><span class="citation">French and Westoby (1996)</span></p>
+<p><span class="citation">Posthumus, Koprowski, and Steidl
+(2015)</span></p>
+<p><span class="citation">Savage et al. (2016)</span></p>
+<p><span class="citation">Schry et al. (2014)</span></p>
+</div>
+<div id="contingency-tables" class="section level3">
+<h3>Contingency tables</h3>
+<p><span class="citation">Dale and Frank (2014)</span></p>
+<p><span class="citation">Farley et al. (2014)</span></p>
+<p><span class="citation">French and Westoby (1996)</span> This example
+is from the first edition, and you can get the data <a
+href="\data\french.csv">here</a></p>
+<p><span class="citation">Milisenda et al. (2014)</span></p>
+<p><span class="citation">Scofield and Mattila (2015)</span></p>
+</div>
+<div id="glmms-gams" class="section level3">
+<h3>GLMMs &amp; GAMs</h3>
+<p><span class="citation">Braulik et al. (2014)</span></p>
+<p><span class="citation">Mols and Visser (2007)</span></p>
+<p><span class="citation">Keslinka et al. (2019)</span></p>
+<p><span class="citation">Tamura et al. (2020)</span></p>
+</div>
+</div>
+<div id="multivariate-analyses" class="section level1">
+<h1>Multivariate analyses</h1>
+<p><span class="citation">Bender et al. (2015)</span></p>
+<p><span class="citation">Hutto and Barrett (2021)</span></p>
+<p><span class="citation">Campione and Evans (2011)</span></p>
+<p><span class="citation">Krosnick et al. (2017)</span></p>
+<p><span class="citation">Landová et al. (2021)</span></p>
+<p><span class="citation">Noonan, Kluibenschedl, and Fabricius
+(2018)</span></p>
+<p><span class="citation">Schulz et al. (2020)</span></p>
+<p><span class="citation">Tegtman and Magrath (2020)</span></p>
+<p><span class="citation">van der Stap, Coolen, and Lindeboom
+(2016)</span></p>
+<p><span class="citation">Yvon-Durocher et al. (2015)</span></p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-albaChemicalMechanicalDefenses2014" class="csl-entry">
+Alba, Christina, M. Deane Bowers, Dana Blumenthal, and Ruth A. Hufbauer.
+2014. <span>“Chemical and <span>Mechanical Defenses Vary</span> Among
+<span>Maternal Lines</span> and <span>Leaf Ages</span> in
+<span>Verbascum</span> Thapsus <span>L</span>.
+(<span>Scrophulariaceae</span>) and <span>Reduce Palatability</span> to
+a <span>Generalist Insect</span>.”</span> Edited by Benedicte Riber
+Albrectsen. <em>PLoS ONE</em> 9 (8): e104889. <a
+href="https://doi.org/10.1371/journal.pone.0104889">https://doi.org/10.1371/journal.pone.0104889</a>.
+</div>
+<div id="ref-allenEggSizeEffects2014" class="csl-entry">
+Allen, R. M., and D. Marshall. 2014. <span>“Egg Size Effects Across
+Multiple Life-History Stages in the Marine Annelid
+<span>Hydroides</span> Diramphus.”</span> <em>PLoS One</em> 9 (7):
+e102253. <a href="https://doi.org/gf8mjs">https://doi.org/gf8mjs</a>.
+</div>
+<div id="ref-arndtDifferentialRearingAlters2015" class="csl-entry">
+Arndt, David L., Christy J. Peterson, and Mary E. Cain. 2015.
+<span>“Differential <span>Rearing Alters Forced Swim Test
+Behavior</span>, <span>Fluoxetine Efficacy</span>, and <span>Post-Test
+Weight Gain</span> in <span>Male Rats</span>.”</span> <em>Plos One</em>
+10 (7). <a
+href="https://doi.org/10.1371/journal.pone.0131709">https://doi.org/10.1371/journal.pone.0131709</a>.
+</div>
+<div id="ref-baileyExogenousKisspeptinEnhances2017" class="csl-entry">
+Bailey, Allison M., Sandra J. Legan, Gregory E. Demas, and Caroline
+Williams. 2017. <span>“Exogenous Kisspeptin Enhances Seasonal
+Reproductive Function in Male <span>Siberian</span> Hamsters.”</span>
+<em>Functional Ecology</em> 31 (6): 1220–30. <a
+href="https://doi.org/gqhmhz">https://doi.org/gqhmhz</a>.
+</div>
+<div id="ref-benderEffectsReducedBusinessAsUsual2015" class="csl-entry">
+Bender, D., C. M. Champ, D. Kline, G. Diaz-Pulido, and S. Dove. 2015.
+<span>“Effects of "<span>Reduced</span>" and
+"<span>Business-As-Usual</span>" <span>CO2 Emission Scenarios</span> on
+the <span>Algal Territories</span> of the <span>Damselfish
+Pomacentrus</span> Wardi (<span>Pomacentridae</span>).”</span> <em>PLoS
+One</em> 10 (6): e0131442. <a
+href="https://doi.org/gr2rk5">https://doi.org/gr2rk5</a>.
+</div>
+<div id="ref-birceanuPostexposureEffectsPiscicide2018"
+class="csl-entry">
+Birceanu, Oana, and Michael Patrick Wilkie. 2018. <span>“Post-Exposure
+Effects of the Piscicide 3-Trifluoromethyl-4-Nitrophenol
+(<span>TFM</span>) on the Stress Response and Liver Metabolic Capacity
+in Rainbow Trout (<span>Oncorhynchus</span> Mykiss).”</span> <em>Plos
+One</em> 13 (7). <a
+href="https://doi.org/gdw2tk">https://doi.org/gdw2tk</a>.
+</div>
+<div id="ref-bolgerResponseRodentsHabitat1997" class="csl-entry">
+Bolger, D. T., A. C. Alberts, R. M. Sauvajot, P. Potenza, C. McCalvin,
+D. Tran, S. Mazzoni, and M. E. Soule. 1997. <span>“Response of Rodents
+to Habitat Fragmentation in Coastal Southern
+<span>California</span>.”</span> <em>Ecological Applications</em> 7 (2):
+552–63. <a
+href="https://doi.org/10.1890/1051-0761(1997)007[0552:RORTHF]2.0.CO;2">https://doi.org/10.1890/1051-0761(1997)007[0552:RORTHF]2.0.CO;2</a>.
+</div>
+<div id="ref-boothWarmWaterCool2011" class="csl-entry">
+Booth, David T., and Andrew Evans. 2011. <span>“Warm <span>Water</span>
+and <span>Cool Nests Are Best</span>. <span>How Global Warming Might
+Influence Hatchling Green Turtle Swimming Performance</span>.”</span>
+<em>PLoS ONE</em> 6 (8). <a
+href="https://doi.org/fbmrzp">https://doi.org/fbmrzp</a>.
+</div>
+<div id="ref-braulikHabitatFragmentationSpecies2014" class="csl-entry">
+Braulik, Gill T., Masood Arshad, Uzma Noureen, and Simon P. Northridge.
+2014. <span>“Habitat <span>Fragmentation</span> and <span>Species
+Extirpation</span> in <span>Freshwater Ecosystems</span>;
+<span>Causes</span> of <span>Range Decline</span> of the <span>Indus
+River Dolphin</span> (<span>Platanista</span> Gangetica Minor).”</span>
+<em>PLoS ONE</em> 9 (7). <a
+href="https://doi.org/ggvnbk">https://doi.org/ggvnbk</a>.
+</div>
+<div id="ref-campioneCranialGrowthVariation2011" class="csl-entry">
+Campione, Nicolás E., and David C. Evans. 2011. <span>“Cranial
+<span>Growth</span> and <span>Variation</span> in
+<span>Edmontosaurs</span> (<span>Dinosauria</span>:
+<span>Hadrosauridae</span>): <span>Implications</span> for <span>Latest
+Cretaceous Megaherbivore Diversity</span> in <span>North
+America</span>.”</span> <em>PLoS ONE</em> 6 (9). <a
+href="https://doi.org/c3tg7h">https://doi.org/c3tg7h</a>.
+</div>
+<div id="ref-ceaceroAvoidingToxicLevels2015" class="csl-entry">
+Ceacero, Francisco, Tomás Landete-Castillejos, Augusto Olguín, María
+Miranda, Andrés García, Alberto Martínez, Jorge Cassinello, Valentín
+Miguel, and Laureano Gallego. 2015. <span>“Avoiding <span>Toxic
+Levels</span> of <span>Essential Minerals</span>: <span>A Forgotten
+Factor</span> in <span>Deer Diet Preferences</span>.”</span> <em>Plos
+One</em> 10 (1). <a
+href="https://doi.org/gr2sgj">https://doi.org/gr2sgj</a>.
+</div>
+<div id="ref-cramImmuneResponseWild2015" class="csl-entry">
+Cram, Dominic L., Jonathan D. Blount, Jennifer E. York, and Andrew J.
+Young. 2015. <span>“Immune <span>Response</span> in a <span>Wild Bird Is
+Predicted</span> by <span>Oxidative Status</span>, but <span>Does Not
+Cause Oxidative Stress</span>.”</span> <em>Plos One</em> 10 (3). <a
+href="https://doi.org/gr2pgh">https://doi.org/gr2pgh</a>.
+</div>
+<div id="ref-daleEffectsUrbanWarming2014" class="csl-entry">
+Dale, Adam G., and Steven D. Frank. 2014. <span>“The
+<span>Effects</span> of <span>Urban Warming</span> on <span>Herbivore
+Abundance</span> and <span>Street Tree Condition</span>.”</span>
+<em>PLoS ONE</em> 9 (7). <a
+href="https://doi.org/f6h6s2">https://doi.org/f6h6s2</a>.
+</div>
+<div id="ref-dalzielAdaptationAcclimationAerobic2015" class="csl-entry">
+Dalziel, Anne C., Nicolas Martin, Martin Laporte, Helga Guderley, and
+Louis Bernatchez. 2015. <span>“Adaptation and Acclimation of Aerobic
+Exercise Physiology in <span>Lake Whitefish</span> Ecotypes
+(<span>Coregonus</span> Clupeaformis).”</span> <em>Evolution</em> 69
+(8): 2167–86. <a
+href="https://doi.org/f7ptnz">https://doi.org/f7ptnz</a>.
+</div>
+<div id="ref-daviesNegativeEnergyBalance2015" class="csl-entry">
+Davies, Scott, Sisi Gao, Shelley Valle, Stephanie Bittner, Pierce
+Hutton, Simone L. Meddle, and Pierre Deviche. 2015. <span>“Negative
+Energy Balance in a Male Songbird, the <span>Abert</span>’s Towhee,
+Constrains the Testicular Endocrine Response to Luteinizing Hormone
+Stimulation.”</span> <em>Journal of Experimental Biology</em> 218 (17):
+2685–93. <a href="https://doi.org/f7qfs6">https://doi.org/f7qfs6</a>.
+</div>
+<div id="ref-dicksonHerbivoreFungalPathogen2010" class="csl-entry">
+Dickson, T. L., and C. E. Mitchell. 2010. <span>“Herbivore and Fungal
+Pathogen Exclusion Affects the Seed Production of Four Common Grassland
+Species.”</span> <em>PLoS One</em> 5 (8): e12022. <a
+href="https://doi.org/cjgb8t">https://doi.org/cjgb8t</a>.
+</div>
+<div id="ref-didianoDisentanglingEffectsPrecipitation2016"
+class="csl-entry">
+Didiano, Teresa J., Marc T. J. Johnson, and Tim P. Duval. 2016.
+<span>“Disentangling the <span>Effects</span> of <span>Precipitation
+Amount</span> and <span>Frequency</span> on the <span>Performance</span>
+of 14 <span>Grassland Species</span>.”</span> <em>Plos One</em> 11 (9).
+<a href="https://doi.org/f9rkgk">https://doi.org/f9rkgk</a>.
+</div>
+<div id="ref-dlugoszPhylogeneticAnalysisMammalian2013"
+class="csl-entry">
+Dlugosz, Elizabeth M., Mark A. Chappell, Thomas H. Meek, Paulina
+Szafrańska, Karol Zub, Marek Konarzewski, James H. Jones, et al. 2013.
+<span>“Phylogenetic Analysis of Mammalian Maximal Oxygen Consumption
+During Exercise.”</span> <em>Journal of Experimental Biology</em>. <a
+href="https://doi.org/10.1242/jeb.088914">https://doi.org/10.1242/jeb.088914</a>.
+</div>
+<div id="ref-espinoza-romoBloodBiochemistryOlive2018" class="csl-entry">
+Espinoza-Romo, B. A., J. C. Sainz-Hernández, C. P. Ley-Quiñónez, C. E.
+Hart, R. Leal-Moreno, A. A. Aguirre, and A. A. Zavala-Norzagaray. 2018.
+<span>“Blood Biochemistry of Olive Ridley (<span>Lepidochelys</span>
+Olivacea) Sea Turtles Foraging in Northern <span>Sinaloa</span>,
+<span>Mexico</span>.”</span> <em>Plos One</em> 13 (7). <a
+href="https://doi.org/10.1371/journal.pone.0199825">https://doi.org/10.1371/journal.pone.0199825</a>.
+</div>
+<div id="ref-farleyDemographicStructureSex2014" class="csl-entry">
+Farley, Jessica H., J. Paige Eveson, Tim L. O. Davis, Retno Andamari,
+Craig H. Proctor, Budi Nugraha, and Campbell R. Davies. 2014.
+<span>“Demographic <span>Structure</span>, <span>Sex Ratio</span> and
+<span>Growth Rates</span> of <span>Southern Bluefin Tuna</span>
+(<span>Thunnus</span> Maccoyii) on the <span>Spawning
+Ground</span>.”</span> <em>PLoS ONE</em> 9 (5). <a
+href="https://doi.org/f6bhtp">https://doi.org/f6bhtp</a>.
+</div>
+<div id="ref-fernandezNeuromuscularBiomechanicalCompensation2012"
+class="csl-entry">
+Fernández, María José, Dwight Springthorpe, and Tyson L. Hedrick. 2012.
+<span>“Neuromuscular and Biomechanical Compensation for Wing Asymmetry
+in Insect Hovering Flight.”</span> <em>Journal of Experimental
+Biology</em>. <a
+href="https://doi.org/grq8s2">https://doi.org/grq8s2</a>.
+</div>
+<div id="ref-frenchVertebratedispersedSpeciesFireprone1996"
+class="csl-entry">
+French, K., and M. Westoby. 1996. <span>“Vertebrate-Dispersed Species in
+a Fire-Prone Environment.”</span> <em>Australian Journal of Ecology</em>
+21 (4): 379–85. <a
+href="https://doi.org/bgkcp2">https://doi.org/bgkcp2</a>.
+</div>
+<div id="ref-garlandDroughtIncreasesConsumer2015" class="csl-entry">
+Garland, Hanna G., and David L. Kimbro. 2015. <span>“Drought
+<span>Increases Consumer Pressure</span> on <span>Oyster Reefs</span> in
+<span>Florida</span>, <span>USA</span>.”</span> <em>Plos One</em> 10
+(8). <a
+href="https://doi.org/10.1371/journal.pone.0125095">https://doi.org/10.1371/journal.pone.0125095</a>.
+</div>
+<div id="ref-giosaImportanceArtificialWetlands2018" class="csl-entry">
+Giosa, Efthymia, Christos Mammides, and Savvas Zotos. 2018. <span>“The
+Importance of Artificial Wetlands for Birds: <span>A</span> Case Study
+from <span>Cyprus</span>.”</span> <em>Plos One</em> 13 (5). <a
+href="https://doi.org/10.1371/journal.pone.0197286">https://doi.org/10.1371/journal.pone.0197286</a>.
+</div>
+<div id="ref-gutierrezAvianBMRMarine2012" class="csl-entry">
+Gutiérrez, Jorge S., José M. Abad-Gómez, Juan M. Sánchez-Guzmán, Juan G.
+Navedo, and José A. Masero. 2012. <span>“Avian <span>BMR</span> in
+<span>Marine</span> and <span>Non-Marine Habitats</span>: <span>A Test
+Using Shorebirds</span>.”</span> <em>PLoS ONE</em> 7 (7). <a
+href="https://doi.org/10.1371/journal.pone.0042206">https://doi.org/10.1371/journal.pone.0042206</a>.
+</div>
+<div id="ref-haramuraBioticResistanceAlien2016" class="csl-entry">
+Haramura, Takashi, Hirohiko Takeuchi, Michael R. Crossland, and Richard
+Shine. 2016. <span>“Biotic <span>Resistance</span> to an <span>Alien
+Amphibian</span>: <span>Larval Competition</span> Between <span>Japanese
+Frogs</span> and <span>Invasive Cane Toads</span>.”</span> <em>Plos
+One</em> 11 (6). <a
+href="https://doi.org/10.1371/journal.pone.0156396">https://doi.org/10.1371/journal.pone.0156396</a>.
+</div>
+<div id="ref-highfillGeneticsCocaineMethamphetamine2019"
+class="csl-entry">
+Highfill, Chad A., Brandon M. Baker, Stephenie D. Stevens, Robert R. H.
+Anholt, and Trudy F. C. Mackay. 2019. <span>“Genetics of Cocaine and
+Methamphetamine Consumption and Preference in <span>Drosophila</span>
+Melanogaster.”</span> <em>PLOS Genetics</em> 15 (5). <a
+href="https://doi.org/gr2pgk">https://doi.org/gr2pgk</a>.
+</div>
+<div id="ref-hohnRespiratoryResponseTemperature2017" class="csl-entry">
+Höhn, Danja P., Cathy H. Lucas, and Sven Thatje. 2017.
+<span>“Respiratory Response to Temperature of Three Populations of
+<span>Aurelia</span> Aurita Polyps in Northern
+<span>Europe</span>.”</span> <em>Plos One</em> 12 (5). <a
+href="https://doi.org/f982hj">https://doi.org/f982hj</a>.
+</div>
+<div id="ref-hostetlerMethamphetamineConsumptionInhibits2016"
+class="csl-entry">
+Hostetler, C. M., T. J. Phillips, and A. E. Ryabinin. 2016.
+<span>“Methamphetamine <span>Consumption Inhibits Pair Bonding</span>
+and <span>Hypothalamic Oxytocin</span> in <span>Prairie
+Voles</span>.”</span> <em>PLoS One</em> 11 (7): e0158178. <a
+href="https://doi.org/10.1371/journal.pone.0158178">https://doi.org/10.1371/journal.pone.0158178</a>.
+</div>
+<div id="ref-hoyeInexplicableInefficiencyAvian2011" class="csl-entry">
+Hoye, B J, and W A Buttemer. 2011. <span>“Inexplicable Inefficiency of
+Avian Molt? <span>Insights</span> from an Opportunistically Breeding
+Arid-Zone Dpecies, <span>Lichenostomus</span> Penicillatus.”</span>
+<em>PLoS One</em> 6 (2): e16230. <a
+href="https://doi.org/bszbq7">https://doi.org/bszbq7</a>.
+</div>
+<div id="ref-hueyWhyTropicalForest2009" class="csl-entry">
+Huey, Raymond B., Curtis A. Deutsch, Joshua J. Tewksbury, Laurie J.
+Vitt, Paul E. Hertz, Héctor J. Álvarez Pérez, and Theodore Garland.
+2009. <span>“Why Tropical Forest Lizards Are Vulnerable to Climate
+Warming.”</span> <em>Proceedings of the Royal Society B: Biological
+Sciences</em> 276 (1664): 1939–48. <a
+href="https://doi.org/10.1098/rspb.2008.1957">https://doi.org/10.1098/rspb.2008.1957</a>.
+</div>
+<div id="ref-hulbertAcylCompositionMuscle2002" class="csl-entry">
+Hulbert, A. J., S. Faulks, W. A. Buttemer, and P. L. Else. 2002.
+<span>“Acyl Composition of Muscle Membranes Varies with Body Size in
+Birds.”</span> <em>Journal of Experimental Biology</em> 205 (22):
+3561–69. <a href="https://doi.org/gr2pdf">https://doi.org/gr2pdf</a>.
+</div>
+<div id="ref-huttoUrbanOpenSpaces2021" class="csl-entry">
+Hutto, David, and Kyle Barrett. 2021. <span>“Do Urban Open Spaces
+Provide Refugia for Frogs in Urban Environments?”</span> <em>Plos
+One</em> 16 (1). <a
+href="https://doi.org/gr2r9n">https://doi.org/gr2r9n</a>.
+</div>
+<div id="ref-jacobNeighbourPresenceNot2017" class="csl-entry">
+Jacob, Cory E., Eric Tozzi, and Christian J. Willenborg. 2017.
+<span>“Neighbour Presence, Not Identity, Influences Root and Shoot
+Allocation in Pea.”</span> <em>Plos One</em> 12 (3). <a
+href="https://doi.org/f9tzqz">https://doi.org/f9tzqz</a>.
+</div>
+<div id="ref-keslinkaDeterminantsLittleAuk2019" class="csl-entry">
+Keslinka, Liliana Katarzyna, Katarzyna Wojczulanis-Jakubas, Dariusz
+Jakubas, and Grzegorz Neubauer. 2019. <span>“Determinants of the Little
+Auk (<span>Alle</span> Alle) Breeding Colony Location and Size in
+<span>W</span> and <span>NW</span> Coast of
+<span>Spitsbergen</span>.”</span> <em>Plos One</em> 14 (3). <a
+href="https://doi.org/gr2sgk">https://doi.org/gr2sgk</a>.
+</div>
+<div id="ref-krosnickNewInsightsFloral2017" class="csl-entry">
+Krosnick, Shawn E., Joshuah S. Perkin, Tim S. Schroeder, Lesley G.
+Campbell, Elizabeth B. Jackson, Silas C. Maynord, Christopher G. Waters,
+and Jeffrey S. Mitchell. 2017. <span>“New Insights into Floral Morph
+Variation in <span>Passiflora</span> Incarnata <span>L</span>.
+(<span>Passifloraceae</span>) in <span>Tennessee</span>,
+<span>U</span>.<span>S</span>.<span>A</span>.”</span> <em>Flora</em>
+236–237: 115–25. <a
+href="https://doi.org/gr2rk6">https://doi.org/gr2rk6</a>.
+</div>
+<div id="ref-kurnathAmbientTemperatureInfluences2016" class="csl-entry">
+Kurnath, P., N. D. Merz, and M. D. Dearing. 2016. <span>“Ambient
+Temperature Influences Tolerance to Plant Secondary Compounds in a
+Mammalian Herbivore.”</span> <em>Proceedings of the Royal Society B:
+Biological Sciences</em> 283 (1822). <a
+href="https://doi.org/10.1098/rspb.2015.2387">https://doi.org/10.1098/rspb.2015.2387</a>.
+</div>
+<div id="ref-landovaSpecificitySpidersFear2021" class="csl-entry">
+Landová, Eva, Markéta Janovcová, Iveta Štolhoferová, Silvie Rádlová,
+Petra Frýdlová, Kristýna Sedláčková, and Daniel Frynta. 2021.
+<span>“Specificity of Spiders Among Fear- and Disgust-Eliciting
+Arthropods: <span>Spiders</span> Are Special, but Phobics Not so
+Much.”</span> <em>Plos One</em> 16 (9). <a
+href="https://doi.org/gngp4h">https://doi.org/gngp4h</a>.
+</div>
+<div id="ref-liVegetativePropagulePressure2015" class="csl-entry">
+Li, Hong-Li, Yong-Yang Wang, Qian Zhang, Pu Wang, Ming-Xiang Zhang, and
+Fei-Hai Yu. 2015. <span>“Vegetative <span>Propagule Pressure</span> and
+<span>Water Depth Affect Biomass</span> and <span>Evenness</span> of
+<span>Submerged Macrophyte Communities</span>.”</span> <em>Plos One</em>
+10 (11). <a href="https://doi.org/f8bw5m">https://doi.org/f8bw5m</a>.
+</div>
+<div id="ref-luterRecruitmentVariabilityCoral2016" class="csl-entry">
+Luter, Heidi M., Alan R. Duckworth, Carsten W. Wolff, Elizabeth
+Evans-Illidge, and Steve Whalan. 2016. <span>“Recruitment
+<span>Variability</span> of <span>Coral Reef Sessile Communities</span>
+of the <span>Far North Great Barrier Reef</span>.”</span> <em>Plos
+One</em> 11 (4). <a
+href="https://doi.org/f8w2zp">https://doi.org/f8w2zp</a>.
+</div>
+<div id="ref-martinReassessmentCarbonContent2011" class="csl-entry">
+Martin, Adam R., and Sean C. Thomas. 2011. <span>“A
+<span>Reassessment</span> of <span>Carbon Content</span> in
+<span>Tropical Trees</span>.”</span> <em>PLoS ONE</em> 6 (8). <a
+href="https://doi.org/c7zcnd">https://doi.org/c7zcnd</a>.
+</div>
+<div id="ref-mcguireBatsBudgetTorporAssisted2014" class="csl-entry">
+McGuire, Liam P., Kristin A. Jonasson, and Christopher G. Guglielmo.
+2014. <span>“Bats on a <span>Budget</span>: <span>Torpor-Assisted
+Migration Saves Time</span> and <span>Energy</span>.”</span> <em>PLoS
+ONE</em> 9 (12). <a
+href="https://doi.org/f62czd">https://doi.org/f62czd</a>.
+</div>
+<div id="ref-mehringLeafLitterNutrient2015" class="csl-entry">
+Mehring, Andrew S., Kevin A. Kuehn, Aaron Thompson, Catherine M.
+Pringle, Amy D. Rosemond, Matthew R. First, R. Richard Lowrance, George
+Vellidis, and David Whitehead. 2015. <span>“Leaf Litter Nutrient Uptake
+in an Intermittent Blackwater River: Influence of Tree Species and
+Associated Biotic and Abiotic Drivers.”</span> <em>Functional
+Ecology</em> 29 (6): 849–60. <a
+href="https://doi.org/f7jnsf">https://doi.org/f7jnsf</a>.
+</div>
+<div id="ref-milisendaJellyfishPreyFrequency2014" class="csl-entry">
+Milisenda, Giacomo, Sara Rosa, Veronica L. Fuentes, Ferdinando Boero,
+Letterio Guglielmo, Jennifer E. Purcell, and Stefano Piraino. 2014.
+<span>“Jellyfish as <span>Prey</span>: <span>Frequency</span> of
+<span>Predation</span> and <span>Selective Foraging</span> of
+<span>Boops</span> Boops (<span>Vertebrata</span>,
+<span>Actinopterygii</span>) on the <span>Mauve Stinger Pelagia</span>
+Noctiluca (<span>Cnidaria</span>, <span>Scyphozoa</span>).”</span>
+<em>PLoS ONE</em> 9 (4). <a
+href="https://doi.org/gr2r9s">https://doi.org/gr2r9s</a>.
+</div>
+<div id="ref-molsGreatTitsParus2007" class="csl-entry">
+Mols, Christel M. M., and Marcel E. Visser. 2007. <span>“Great
+<span>Tits</span> (<span>Parus</span> Major) <span>Reduce Caterpillar
+Damage</span> in <span>Commercial Apple Orchards</span>.”</span>
+<em>PLoS ONE</em> 2 (2). <a
+href="https://doi.org/dnphxv">https://doi.org/dnphxv</a>.
+</div>
+<div id="ref-morissetteSupplementationStockingLake2018"
+class="csl-entry">
+Morissette, Olivier, Pascal Sirois, Nigel P. Lester, Chris C. Wilson,
+and Louis Bernatchez. 2018. <span>“Supplementation Stocking of
+<span>Lake Trout</span> (<span>Salvelinus</span> Namaycush) in Small
+Boreal Lakes: <span>Ecotypes</span> Influence on Growth and
+Condition.”</span> <em>Plos One</em> 13 (7). <a
+href="https://doi.org/gdv546">https://doi.org/gdv546</a>.
+</div>
+<div id="ref-nobataPotentCardiovascularEffects2011" class="csl-entry">
+Nobata, Shigenori, John A. Donald, Richard J. Balment, and Yoshio Takei.
+2011. <span>“Potent Cardiovascular Effects of Homologous Urotensin
+<span>II</span> (<span>UII</span>)-Related Peptide and <span>UII</span>
+in Unanesthetized Eels After Peripheral and Central Injections.”</span>
+<em>American Journal of Physiology-Regulatory, Integrative and
+Comparative Physiology</em> 300 (2): R437–46. <a
+href="https://doi.org/bnzww5">https://doi.org/bnzww5</a>.
+</div>
+<div id="ref-noonanOceanAcidificationAlters2018" class="csl-entry">
+Noonan, Sam H. C., Anna Kluibenschedl, and Katharina E. Fabricius. 2018.
+<span>“Ocean Acidification Alters Early Successional Coral Reef
+Communities and Their Rates of Community Metabolism.”</span> <em>Plos
+One</em> 13 (5). <a
+href="https://doi.org/gdmbbd">https://doi.org/gdmbbd</a>.
+</div>
+<div id="ref-nuddsEvidenceMassDependent2009" class="csl-entry">
+Nudds, Robert L., Jonathan R. Codd, and William I. Sellers. 2009.
+<span>“Evidence for a <span>Mass Dependent Step-Change</span> in the
+<span>Scaling</span> of <span>Efficiency</span> in <span>Terrestrial
+Locomotion</span>.”</span> <em>PLoS ONE</em> 4 (9). <a
+href="https://doi.org/ds6d25">https://doi.org/ds6d25</a>.
+</div>
+<div id="ref-pankovaMycorrhizalSymbiosisLocal2014" class="csl-entry">
+Pánková, Hana, Jana Raabová, and Zuzana Münzbergová. 2014.
+<span>“Mycorrhizal <span>Symbiosis</span> and <span>Local
+Adaptation</span> in <span>Aster</span> Amellus: <span>A Field
+Transplant Experiment</span>.”</span> <em>PLoS ONE</em> 9 (4). <a
+href="https://doi.org/gr289z">https://doi.org/gr289z</a>.
+</div>
+<div id="ref-posthumusRedSquirrelMiddens2015" class="csl-entry">
+Posthumus, Erin E., John L. Koprowski, and Robert J. Steidl. 2015.
+<span>“Red <span>Squirrel Middens Influence Abundance</span> but
+<span>Not Diversity</span> of <span>Other Vertebrates</span>.”</span>
+<em>Plos One</em> 10 (4). <a
+href="https://doi.org/f7jwtd">https://doi.org/f7jwtd</a>.
+</div>
+<div id="ref-poureslamiEffectDietSex2010" class="csl-entry">
+Poureslami, R., K. Raes, G. M. Turchini, G. Huyghebaert, and S. De Smet.
+2010. <span>“Effect of Diet, Sex and Age on Fatty Acid Metabolism in
+Broiler Chickens:n-3 Andn-6 <span>PUFA</span>.”</span> <em>British
+Journal of Nutrition</em> 104 (2): 189–97. <a
+href="https://doi.org/ctdvkg">https://doi.org/ctdvkg</a>.
+</div>
+<div id="ref-ranakerPiscivorePreyFishInteractions2014"
+class="csl-entry">
+Ranåker, Lynn, Jens Persson, Mikael Jönsson, P. Anders Nilsson, and
+Christer Brönmark. 2014. <span>“Piscivore-<span>Prey Fish
+Interactions</span>: <span>Mechanisms</span> Behind <span>Diurnal
+Patterns</span> in <span>Prey Selectivity</span> in <span>Brown</span>
+and <span>Clear Water</span>.”</span> <em>PLoS ONE</em> 9 (11). <a
+href="https://doi.org/f245rh">https://doi.org/f245rh</a>.
+</div>
+<div id="ref-reynoldsResponseHabitatFormingMarine2016"
+class="csl-entry">
+Reynolds, Laura K., Katherine DuBois, Jessica M. Abbott, Susan L.
+Williams, and John J. Stachowicz. 2016. <span>“Response of a
+<span>Habitat-Forming Marine Plant</span> to a <span>Simulated Warming
+Event Is Delayed</span>, <span>Genotype Specific</span>, and
+<span>Varies</span> with <span>Phenology</span>.”</span> <em>Plos
+One</em> 11 (6). <a
+href="https://doi.org/gbppqs">https://doi.org/gbppqs</a>.
+</div>
+<div id="ref-savageAssessmentPopulationCottonTop2016" class="csl-entry">
+Savage, Anne, Len Thomas, Katie L. Feilen, Darren Kidney, Luis H. Soto,
+Mackenzie Pearson, Felix S. Medina, German Emeris, and Rosamira R.
+Guillen. 2016. <span>“An <span>Assessment</span> of the
+<span>Population</span> of <span>Cotton-Top Tamarins</span>
+(<span>Saguinus</span> Oedipus) and <span>Their Habitat</span> in
+<span>Colombia</span>.”</span> <em>Plos One</em> 11 (12). <a
+href="https://doi.org/gg4bsp">https://doi.org/gg4bsp</a>.
+</div>
+<div id="ref-schmidtCalciumAvailabilityInfluences2012"
+class="csl-entry">
+Schmidt, Christina M., and Wendy R. Hood. 2012. <span>“Calcium
+<span>Availability Influences Litter Size</span> and <span>Sex
+Ratio</span> in <span>White-Footed Mice</span> (<span>Peromyscus</span>
+Leucopus).”</span> <em>PLoS ONE</em> 7 (8). <a
+href="https://doi.org/gr2892">https://doi.org/gr2892</a>.
+</div>
+<div id="ref-schmidtTimeIntroductionSeed2011" class="csl-entry">
+Schmidt, John Paul, and John M. Drake. 2011. <span>“Time Since
+<span>Introduction</span>, <span>Seed Mass</span>, and <span>Genome Size
+Predict Successful Invaders</span> Among the <span>Cultivated Vascular
+Plants</span> of <span>Hawaii</span>.”</span> <em>PLoS ONE</em> 6 (3).
+<a href="https://doi.org/bb2hs7">https://doi.org/bb2hs7</a>.
+</div>
+<div id="ref-schryGenderMattersRelationship2014" class="csl-entry">
+Schry, Amie R., Melissa M. Norberg, Brenna B. Maddox, and Susan W.
+White. 2014. <span>“Gender <span>Matters</span>: <span>The
+Relationship</span> Between <span>Social Anxiety</span> and
+<span>Alcohol-Related Consequences</span>.”</span> <em>PLoS ONE</em> 9
+(12). <a href="https://doi.org/f6x95v">https://doi.org/f6x95v</a>.
+</div>
+<div id="ref-schulzCoastalRestorationEvaluated2020" class="csl-entry">
+Schulz, Kailee, Philip W. Stevens, Jeffrey E. Hill, Alexis A. Trotter,
+Jared L. Ritch, Quenton M. Tuckett, and Joshua T. Patterson. 2020.
+<span>“Coastal Restoration Evaluated Using Dominant Habitat
+Characteristics and Associated Fish Communities.”</span> <em>Plos
+One</em> 15 (10). <a
+href="https://doi.org/gr2r9t">https://doi.org/gr2r9t</a>.
+</div>
+<div id="ref-scofieldHoneyBeeWorkers2015" class="csl-entry">
+Scofield, Hailey N., and Heather R. Mattila. 2015. <span>“Honey
+<span>Bee Workers That Are Pollen Stressed</span> as <span>Larvae Become
+Poor Foragers</span> and <span>Waggle Dancers</span> as
+<span>Adults</span>.”</span> <em>Plos One</em> 10 (4). <a
+href="https://doi.org/f7f2ns">https://doi.org/f7f2ns</a>.
+</div>
+<div id="ref-seitzConsumerResourceControl2016" class="csl-entry">
+Seitz, Rochelle D., Romuald N. Lipcius, and Anson H. Hines. 2016.
+<span>“Consumer Versus Resource Control and the Importance of Habitat
+Heterogeneity for Estuarine Bivalves.”</span> <em>Oikos</em> 126 (1):
+121–35. <a href="https://doi.org/f9mh38">https://doi.org/f9mh38</a>.
+</div>
+<div id="ref-shuFootMorphologicalDifference2015" class="csl-entry">
+Shu, Yang, Qichang Mei, Justin Fernandez, Zhiyong Li, Neng Feng, and
+Yaodong Gu. 2015. <span>“Foot <span>Morphological Difference</span>
+Between <span>Habitually Shod</span> and <span>Unshod
+Runners</span>.”</span> <em>Plos One</em> 10 (7). <a
+href="https://doi.org/f7vb2c">https://doi.org/f7vb2c</a>.
+</div>
+<div id="ref-vanderstapMarineFoulingAssemblages2016" class="csl-entry">
+Stap, Tim van der, Joop W. P. Coolen, and Han J. Lindeboom. 2016.
+<span>“Marine <span>Fouling Assemblages</span> on <span>Offshore Gas
+Platforms</span> in the <span>Southern North Sea</span>:
+<span>Effects</span> of <span>Depth</span> and <span>Distance</span>
+from <span>Shore</span> on <span>Biodiversity</span>.”</span> <em>Plos
+One</em> 11 (1). <a
+href="https://doi.org/gg3q7b">https://doi.org/gg3q7b</a>.
+</div>
+<div id="ref-tamuraIntraspecificNeighbourhoodEffect2020"
+class="csl-entry">
+Tamura, Momoka, Takayuki Ohgushi, Takashi Y. Ida, and Julia Koricheva.
+2020. <span>“Intraspecific Neighbourhood Effect:
+<span>Population</span>‐level Consequence of Aggregation of Highly
+Defended Plants.”</span> <em>Functional Ecology</em> 34 (3): 597–605. <a
+href="https://doi.org/gr2893">https://doi.org/gr2893</a>.
+</div>
+<div id="ref-tegtmanDiscriminatingSimilarAlarm2020" class="csl-entry">
+Tegtman, Natalie T., and Robert D. Magrath. 2020. <span>“Discriminating
+Between Similar Alarm Calls of Contrasting Function.”</span>
+<em>Philosophical Transactions of the Royal Society B: Biological
+Sciences</em> 375 (1802). <a
+href="https://doi.org/gr2894">https://doi.org/gr2894</a>.
+</div>
+<div id="ref-thomRecachingWesternScrubJays2013" class="csl-entry">
+Thom, James M., and Nicola S. Clayton. 2013. <span>“Re-Caching by
+<span>Western Scrub-Jays</span> (<span>Aphelocoma</span> Californica)
+<span>Cannot Be Attributed</span> to <span>Stress</span>.”</span>
+<em>PLoS ONE</em> 8 (1). <a
+href="https://doi.org/f4h8nf">https://doi.org/f4h8nf</a>.
+</div>
+<div id="ref-troyerChemosensoryPerceptionPredators2015"
+class="csl-entry">
+Troyer, Rachael R., and Andrew M. Turner. 2015. <span>“Chemosensory
+<span>Perception</span> of <span>Predators</span> by <span>Larval
+Amphibians Depends</span> on <span>Water Quality</span>.”</span>
+<em>Plos One</em> 10 (6). <a
+href="https://doi.org/f7scr4">https://doi.org/f7scr4</a>.
+</div>
+<div id="ref-walterLeavesDomatiaHave1992" class="csl-entry">
+Walter, D. E., and D. J. O’Dowd. 1992. <span>“Leaves with Domatia Have
+More Mites.”</span> <em>Ecology</em> 73 (4): 1514–18. <a
+href="https://doi.org/10.2307/1940694">https://doi.org/10.2307/1940694</a>.
+</div>
+<div id="ref-wiezikIdentifyingShiftsLeafLitter2015" class="csl-entry">
+Wiezik, Michal, Marek Svitok, Adela Wieziková, and Martin Dovčiak. 2015.
+<span>“Identifying <span>Shifts</span> in <span>Leaf-Litter Ant
+Assemblages</span> (<span>Hymenoptera</span>: <span>Formicidae</span>)
+Across <span>Ecosystem Boundaries Using Multiple Sampling
+Methods</span>.”</span> <em>Plos One</em> 10 (7). <a
+href="https://doi.org/f7z2tk">https://doi.org/f7z2tk</a>.
+</div>
+<div id="ref-yvon-durocherFiveYearsExperimental2015" class="csl-entry">
+Yvon-Durocher, Gabriel, Andrew P. Allen, Maria Cellamare, Matteo
+Dossena, Kevin J. Gaston, Maria Leitao, José M. Montoya, Daniel C.
+Reuman, Guy Woodward, and Mark Trimmer. 2015. <span>“Five
+<span>Years</span> of <span>Experimental Warming Increases</span> the
+<span>Biodiversity</span> and <span>Productivity</span> of
+<span>Phytoplankton</span>.”</span> <em>PLOS Biology</em> 13 (12). <a
+href="https://doi.org/f77rg6">https://doi.org/f77rg6</a>.
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
