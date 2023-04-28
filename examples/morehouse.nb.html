@@ -1773,7 +1773,7 @@ in Grizzly Bears. <em>PLoS One</em>, 11.</p>
 <pre class="r"><code>morehouse &lt;- read.csv(&quot;../data/morehouse.csv&quot;)
 head(morehouse)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNCDDlyAzXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzVlFUVS9ETUF6MTByU29sUVlJZmtkN1lCejRBWWpqRGdpa2NjeXlkSzNXSlZPYUNvNzg4b0dUeFdJS0VNbUsvZXozL1BIOHVGcFVxd29BTXVDTVFaYWpDL25yeTFQOUFJaGdNQU1PcGY4L3NPZzJWQUpjbzNGS3ZQMXlsai9PZjdYTFB4Q0FlYWpGQ1dLZkc3UzdaSkJjaTcwYW8zQVd3V0p2WEtkc2pFclR0dVBCOW5wTEhHa203UktoMHByM2hzUjhaL1lKNGZHMG94ekVTQjBKckRiQ2lhYTF5TWZvbUZBdXpNSDFSaU9KK1pzVm5oRFNKenNYbXRrRXVKcTBuMnBUeTI3U3Uvbys0YzdqejgvODdOU2VmVVdwSWtweEpUdERKMUo2MjJ0Rk93MWlyWVlZWE9JbHdpRWFmelJIR3lJNk5zNDRRWFdWTkFNaFlXYzRmZ05HQ25aM1FnSUFBQT09In0= -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6Mywic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNCDDlyAzXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzVlFiVXZETUJDK05XbWxoY25RMzlHQ0RzRWZJSDdjQjFHWUgyT1dybVZkTXRJVS9lZ3ZuMTZ5SEk2b2dTTjN6OTN6M012VHczcFpyU3NBWU1BekJpeEhGL0tYNThmNkhoREJZQVljU3Y5L1lORjFxQVJZb0hGS3ZQNXlWai9PZjdXclB4Q0FlYWpGQ1dLZks3VGJaSkJjaTcwYW96Q0xZTEUzcmxNMlJxVnAyL0ZnZTcwbGpqU1Rkb2xRYWMxN1EySytjL1lKNGZHMG94ekVTQjBKckRiQ2lhYTF5TWZvbUZBdXpNSDFSaU1wOHpjclBDR2tUM1l1TkxNSnNKaTBuMnBUeTI3U3Uvcm1MaUhQNDgvUGZIYnFuMzFGclNKcWNTVTdRemRTZXR0clJVc040azBOTWJqRVU0UkxOUDVxamxaRWRHeWNjWUxxS21rR1FzTFNjUHdHR3dEaThrTUNBQUE9In0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["mother"],"name":[1],"type":["chr"],"align":["left"]},{"label":["offspring"],"name":[2],"type":["chr"],"align":["left"]},{"label":["count"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"Y","2":"Y","3":"5","_rn_":"1"},{"1":"Y","2":"N","3":"3","_rn_":"2"},{"1":"N","2":"Y","3":"18","_rn_":"3"},{"1":"N","2":"N","3":"50","_rn_":"4"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
@@ -1842,34 +1842,20 @@ mother          N          Y
      N  0.3745044 -0.5685006
      Y -1.0918585  1.6574497</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubW9yZWhvdXNlLm9kZHMgPC0gb2Rkc3JhdGlvKG1vcmVob3VzZS50YWIpXG5zdW1tYXJ5KG1vcmVob3VzZS5vZGRzKVxuYGBgIn0= -->
-<pre class="r"><code>morehouse.odds &lt;- oddsratio(morehouse.tab)
-summary(morehouse.odds)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubW9yZWhvdXNlLm9kZHMgPC0gb2Rkc3JhdGlvKG1vcmVob3VzZS50YWIsIGxvZyA9IEZBTFNFKVxuYGBgIn0= -->
+<pre class="r"><code>morehouse.odds &lt;- oddsratio(morehouse.tab, log = FALSE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG56IHRlc3Qgb2YgY29lZmZpY2llbnRzOlxuXG4gICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgeiB2YWx1ZSBQcig+fHp8KSAgXG5OOlkvTjpZICAxLjUzMjQ4ICAgIDAuNzgwMzEgIDEuOTYzOSAgMC4wNDk1NCAqXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcbiJ9 -->
-<pre><code>
-z test of coefficients:
-
-        Estimate Std. Error z value Pr(&gt;|z|)  
-N:Y/N:Y  1.53248    0.78031  1.9639  0.04954 *
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gb2Rkc3JhdGlvKG1vcmVob3VzZS50YWIsIGxvZyA9IEZBTFNFKSA6IFxuICB1bnVzZWQgYXJndW1lbnQgKGxvZyA9IEZBTFNFKVxuIn0= -->
+<pre><code>Error in oddsratio(morehouse.tab, log = FALSE) : 
+  unused argument (log = FALSE)</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29uZmludChtb3JlaG91c2Uub2RkcylcbmBgYCJ9 -->
-<pre class="r"><code>confint(morehouse.odds)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAyLjUgJSAgIDk3LjUgJVxuTjpZL046WSAwLjAwMzA5MDg1MyAzLjA2MTg2M1xuIn0= -->
-<pre><code>              2.5 %   97.5 %
-N:Y/N:Y 0.003090853 3.061863</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub2Rkc3JhdGlvKG1vcmVob3VzZS50YWIsIGxvZz1GQUxTRSlcbmBgYCJ9 -->
-<pre class="r"><code>oddsratio(morehouse.tab, log=FALSE)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgcmF0aW9zIGZvciBtb3RoZXIgYW5kIG9mZnNwcmluZyBcblxuWzFdIDQuNjI5NjNcbiJ9 -->
-<pre><code> odds ratios for mother and offspring 
-
-[1] 4.62963</code></pre>
-<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="run-exact-tests" class="section level3">
+<h3>Run exact tests</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1881,7 +1867,7 @@ N:Y/N:Y 0.003090853 3.061863</code></pre>
 <pre class="r"><code>morehouse.glm &lt;- glm(count~mother*offspring, family=poisson, data=morehouse)
 summary(morehouse.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IG1vdGhlciAqIG9mZnNwcmluZywgZmFtaWx5ID0gcG9pc3NvbiwgZGF0YSA9IG1vcmVob3VzZSlcblxuRGV2aWFuY2UgUmVzaWR1YWxzOiBcblsxXSAgMCAgMCAgMCAgMFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgICAgICAgRXN0aW1hdGUgU3RkLiBFcnJvciB6IHZhbHVlIFByKD58enwpICAgIFxuKEludGVyY2VwdCkgICAgICAgICAgMi4zNzc2ICAgICAwLjE5NTEgIDEyLjE4OCAgPCAyZS0xNiAqKipcbm1vdGhlcjEgICAgICAgICAgICAgIDEuMDIzNiAgICAgMC4xOTUxICAgNS4yNDcgMS41NWUtMDcgKioqXG5vZmZzcHJpbmcxICAgICAgICAgICAwLjEyNzcgICAgIDAuMTk1MSAgIDAuNjU1ICAgMC41MTI3ICAgIFxubW90aGVyMTpvZmZzcHJpbmcxICAgMC4zODMxICAgICAwLjE5NTEgICAxLjk2NCAgIDAuMDQ5NSAqICBcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG4oRGlzcGVyc2lvbiBwYXJhbWV0ZXIgZm9yIHBvaXNzb24gZmFtaWx5IHRha2VuIHRvIGJlIDEpXG5cbiAgICBOdWxsIGRldmlhbmNlOiAgNy4wMzg3ZSswMSAgb24gMyAgZGVncmVlcyBvZiBmcmVlZG9tXG5SZXNpZHVhbCBkZXZpYW5jZTogLTMuOTk2OGUtMTUgIG9uIDAgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiAyNC45NjNcblxuTnVtYmVyIG9mIEZpc2hlciBTY29yaW5nIGl0ZXJhdGlvbnM6IDNcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IG1vdGhlciAqIG9mZnNwcmluZywgZmFtaWx5ID0gcG9pc3NvbiwgZGF0YSA9IG1vcmVob3VzZSlcblxuRGV2aWFuY2UgUmVzaWR1YWxzOiBcblsxXSAgMCAgMCAgMCAgMFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgICAgICAgRXN0aW1hdGUgU3RkLiBFcnJvciB6IHZhbHVlIFByKD58enwpICAgIFxuKEludGVyY2VwdCkgICAgICAgICAgMy45MTIwICAgICAwLjE0MTQgIDI3LjY2MiAgPCAyZS0xNiAqKipcbm1vdGhlclkgICAgICAgICAgICAgLTIuODEzNCAgICAgMC41OTQ0ICAtNC43MzMgMi4yMWUtMDYgKioqXG5vZmZzcHJpbmdZICAgICAgICAgIC0xLjAyMTcgICAgIDAuMjc0OSAgLTMuNzE3IDAuMDAwMjAyICoqKlxubW90aGVyWTpvZmZzcHJpbmdZICAgMS41MzI1ICAgICAwLjc4MDMgICAxLjk2NCAwLjA0OTUzOSAqICBcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG4oRGlzcGVyc2lvbiBwYXJhbWV0ZXIgZm9yIHBvaXNzb24gZmFtaWx5IHRha2VuIHRvIGJlIDEpXG5cbiAgICBOdWxsIGRldmlhbmNlOiAgNy4wMzg3ZSswMSAgb24gMyAgZGVncmVlcyBvZiBmcmVlZG9tXG5SZXNpZHVhbCBkZXZpYW5jZTogLTIuODg2NmUtMTUgIG9uIDAgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiAyNC45NjNcblxuTnVtYmVyIG9mIEZpc2hlciBTY29yaW5nIGl0ZXJhdGlvbnM6IDNcbiJ9 -->
 <pre><code>
 Call:
 glm(formula = count ~ mother * offspring, family = poisson, data = morehouse)
@@ -1891,17 +1877,17 @@ Deviance Residuals:
 
 Coefficients:
                    Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)          2.3776     0.1951  12.188  &lt; 2e-16 ***
-mother1              1.0236     0.1951   5.247 1.55e-07 ***
-offspring1           0.1277     0.1951   0.655   0.5127    
-mother1:offspring1   0.3831     0.1951   1.964   0.0495 *  
+(Intercept)          3.9120     0.1414  27.662  &lt; 2e-16 ***
+motherY             -2.8134     0.5944  -4.733 2.21e-06 ***
+offspringY          -1.0217     0.2749  -3.717 0.000202 ***
+motherY:offspringY   1.5325     0.7803   1.964 0.049539 *  
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for poisson family taken to be 1)
 
     Null deviance:  7.0387e+01  on 3  degrees of freedom
-Residual deviance: -3.9968e-15  on 0  degrees of freedom
+Residual deviance: -2.8866e-15  on 0  degrees of freedom
 AIC: 24.963
 
 Number of Fisher Scoring iterations: 3</code></pre>
@@ -1928,7 +1914,7 @@ mother:offspring  1    4.005         0      0.000</code></pre>
 <pre class="r"><code>morehouse1.glm &lt;- glm(count~mother+offspring, family=poisson, data=morehouse)
 summary(morehouse1.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IG1vdGhlciArIG9mZnNwcmluZywgZmFtaWx5ID0gcG9pc3NvbiwgZGF0YSA9IG1vcmVob3VzZSlcblxuRGV2aWFuY2UgUmVzaWR1YWxzOiBcbiAgICAgIDEgICAgICAgIDIgICAgICAgIDMgICAgICAgIDQgIFxuIDEuNDQ3MiAgLTEuMTk4MiAgLTAuNTgxMCAgIDAuMzcxMiAgXG5cbkNvZWZmaWNpZW50czpcbiAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgeiB2YWx1ZSBQcig+fHp8KSAgICBcbihJbnRlcmNlcHQpICAgMi4zNzE2ICAgICAwLjE5MzMgIDEyLjI3MSAgPCAyZS0xNiAqKipcbm1vdGhlcjEgICAgICAgMS4wNzAwICAgICAwLjE4NjkgICA1LjcyNiAxLjAzZS0wOCAqKipcbm9mZnNwcmluZzEgICAgMC40MTc0ICAgICAwLjEyNDggICAzLjM0MyAwLjAwMDgyOCAqKipcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG4oRGlzcGVyc2lvbiBwYXJhbWV0ZXIgZm9yIHBvaXNzb24gZmFtaWx5IHRha2VuIHRvIGJlIDEpXG5cbiAgICBOdWxsIGRldmlhbmNlOiA3MC4zODcwICBvbiAzICBkZWdyZWVzIG9mIGZyZWVkb21cblJlc2lkdWFsIGRldmlhbmNlOiAgNC4wMDU0ICBvbiAxICBkZWdyZWVzIG9mIGZyZWVkb21cbkFJQzogMjYuOTY5XG5cbk51bWJlciBvZiBGaXNoZXIgU2NvcmluZyBpdGVyYXRpb25zOiA1XG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IG1vdGhlciArIG9mZnNwcmluZywgZmFtaWx5ID0gcG9pc3NvbiwgZGF0YSA9IG1vcmVob3VzZSlcblxuRGV2aWFuY2UgUmVzaWR1YWxzOiBcbiAgICAgIDEgICAgICAgIDIgICAgICAgIDMgICAgICAgIDQgIFxuIDEuNDQ3MiAgLTEuMTk4MiAgLTAuNTgxMCAgIDAuMzcxMiAgXG5cbkNvZWZmaWNpZW50czpcbiAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgeiB2YWx1ZSBQcig+fHp8KSAgICBcbihJbnRlcmNlcHQpICAgMy44NTkxICAgICAwLjE0MjkgIDI3LjAwOCAgPCAyZS0xNiAqKipcbm1vdGhlclkgICAgICAtMi4xNDAxICAgICAwLjM3MzggIC01LjcyNiAxLjAzZS0wOCAqKipcbm9mZnNwcmluZ1kgICAtMC44MzQ4ICAgICAwLjI0OTcgIC0zLjM0MyAwLjAwMDgyOCAqKipcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG4oRGlzcGVyc2lvbiBwYXJhbWV0ZXIgZm9yIHBvaXNzb24gZmFtaWx5IHRha2VuIHRvIGJlIDEpXG5cbiAgICBOdWxsIGRldmlhbmNlOiA3MC4zODcwICBvbiAzICBkZWdyZWVzIG9mIGZyZWVkb21cblJlc2lkdWFsIGRldmlhbmNlOiAgNC4wMDU0ICBvbiAxICBkZWdyZWVzIG9mIGZyZWVkb21cbkFJQzogMjYuOTY5XG5cbk51bWJlciBvZiBGaXNoZXIgU2NvcmluZyBpdGVyYXRpb25zOiA1XG4ifQ== -->
 <pre><code>
 Call:
 glm(formula = count ~ mother + offspring, family = poisson, data = morehouse)
@@ -1939,9 +1925,9 @@ Deviance Residuals:
 
 Coefficients:
             Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)   2.3716     0.1933  12.271  &lt; 2e-16 ***
-mother1       1.0700     0.1869   5.726 1.03e-08 ***
-offspring1    0.4174     0.1248   3.343 0.000828 ***
+(Intercept)   3.8591     0.1429  27.008  &lt; 2e-16 ***
+motherY      -2.1401     0.3738  -5.726 1.03e-08 ***
+offspringY   -0.8348     0.2497  -3.343 0.000828 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -2002,7 +1988,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUSAmIEsgQm94IDEzLjUiCm91dHB1dDoKICAgIGh0bWxfbm90ZWJvb2s6CiAgICAgIHRoZW1lOmZsYXRseQotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUpCmBgYAoKTW9yZWhvdXNlIGV0IGFsLiAoMjAxNikgdXNlZCBnZW5ldGljIGFuYWx5c2lzIHRvIGRldGVybWluZSB0aGUgcGFyZW50YWdlIG9mIGJlYXIgY3VicywgYW5kIGNyb3NzLWNsYXNzaWZpZWQgY3VicyBhbmQgdGhlaXIgcGFyZW50cyBhcyBjYXVzaW5nIHByb2JsZW1zIGFyb3VuZCBodW1hbnMgKHNlZSBUYWJsZSA0LjIpCgpUaGUgZGF0YSBhcmUgW2hlcmVdKC4uL2RhdGEvbW9yZWhvdXNlLmNzdikKCk1vcmVob3VzZSwgQS4gVC4sIEdyYXZlcywgVC4gQS4sIE1pa2xlLCBOLiAmIEJveWNlLCBNLiBTLiAoMjAxNikuIE5hdHVyZSB2cy4gTnVydHVyZTogRXZpZGVuY2UgZm9yIHNvY2lhbCBsZWFybmluZyBvZiBjb25mbGljdCBiZWhhdmlvdXIgaW4gR3JpenpseSBCZWFycy4gKlBMb1MgT25lKiwgMTEuCgojIyMgUHJlbGltaW5hcmllcwoKRmlyc3QsIGxvYWQgdGhlIHJlcXVpcmVkIHBhY2thZ2VzICh2Y2QpCgpgYGB7ciBpbmNsdWRlPUZBTFNFLCByZXN1bHRzPSdoaWRlJ30KbGlicmFyeSh2Y2QpCmBgYAoKSW1wb3J0IG1vcmVob3VzZSBkYXRhIGZpbGUKCmBgYHtyfQptb3JlaG91c2UgPC0gcmVhZC5jc3YoIi4uL2RhdGEvbW9yZWhvdXNlLmNzdiIpCmhlYWQobW9yZWhvdXNlKQoKYGBgCgpUYWJ1bGF0ZSB0aGUgZGF0YQoKYGBge3IgfQptb3JlaG91c2UudGFiPC14dGFicyhjb3VudH5tb3RoZXIgKyBvZmZzcHJpbmcsIGRhdGE9bW9yZWhvdXNlKQptb3JlaG91c2UudGFiCmBgYAoKIyMjIENhbGN1bGF0ZSBjaGktc3EuIHRlc3QgYW5kIG9kZHMgcmF0aW9zCgpgYGB7cn0KY2hpc3EudGVzdChtb3JlaG91c2UudGFiLCBjb3JyZWN0PUYpJGV4cAptb3JlaG91c2UuY2hpPC0gY2hpc3EudGVzdChtb3JlaG91c2UudGFiLCBjb3JyZWN0PUYpCm1vcmVob3VzZS5jaGkKbW9yZWhvdXNlLmNoaSRyZXNpZHVhbHMKbW9yZWhvdXNlLm9kZHMgPC0gb2Rkc3JhdGlvKG1vcmVob3VzZS50YWIpCnN1bW1hcnkobW9yZWhvdXNlLm9kZHMpCmNvbmZpbnQobW9yZWhvdXNlLm9kZHMpCm9kZHNyYXRpbyhtb3JlaG91c2UudGFiLCBsb2c9RkFMU0UpCmBgYAoKIyMjIERvIGxvZ2xpbmVhciBtb2RlbAoKYGBge3IgfQptb3JlaG91c2UuZ2xtIDwtIGdsbShjb3VudH5tb3RoZXIqb2Zmc3ByaW5nLCBmYW1pbHk9cG9pc3NvbiwgZGF0YT1tb3JlaG91c2UpCnN1bW1hcnkobW9yZWhvdXNlLmdsbSkKYW5vdmEobW9yZWhvdXNlLmdsbSkKbW9yZWhvdXNlMS5nbG0gPC0gZ2xtKGNvdW50fm1vdGhlcitvZmZzcHJpbmcsIGZhbWlseT1wb2lzc29uLCBkYXRhPW1vcmVob3VzZSkKc3VtbWFyeShtb3JlaG91c2UxLmdsbSkKYW5vdmEobW9yZWhvdXNlLmdsbSwgbW9yZWhvdXNlMS5nbG0sIHRlc3Q9IkNoaXNxIikKbHJ0ZXN0KG1vcmVob3VzZS5nbG0sIG1vcmVob3VzZTEuZ2xtKQpwbG90KG1vcmVob3VzZTEuZ2xtKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUSAmIEsgQm94IDEzLjUiCm91dHB1dDoKICAgIGh0bWxfbm90ZWJvb2s6CiAgICAgIHRoZW1lOmZsYXRseQotLS0KCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQprbml0cjo6b3B0c19jaHVuayRzZXQoZWNobyA9IFRSVUUpCmBgYAoKTW9yZWhvdXNlIGV0IGFsLiAoMjAxNikgdXNlZCBnZW5ldGljIGFuYWx5c2lzIHRvIGRldGVybWluZSB0aGUgcGFyZW50YWdlIG9mIGJlYXIgY3VicywgYW5kIGNyb3NzLWNsYXNzaWZpZWQgY3VicyBhbmQgdGhlaXIgcGFyZW50cyBhcyBjYXVzaW5nIHByb2JsZW1zIGFyb3VuZCBodW1hbnMgKHNlZSBUYWJsZSA0LjIpCgpUaGUgZGF0YSBhcmUgW2hlcmVdKC4uL2RhdGEvbW9yZWhvdXNlLmNzdikKCk1vcmVob3VzZSwgQS4gVC4sIEdyYXZlcywgVC4gQS4sIE1pa2xlLCBOLiAmIEJveWNlLCBNLiBTLiAoMjAxNikuIE5hdHVyZSB2cy4gTnVydHVyZTogRXZpZGVuY2UgZm9yIHNvY2lhbCBsZWFybmluZyBvZiBjb25mbGljdCBiZWhhdmlvdXIgaW4gR3JpenpseSBCZWFycy4gKlBMb1MgT25lKiwgMTEuCgojIyMgUHJlbGltaW5hcmllcwoKRmlyc3QsIGxvYWQgdGhlIHJlcXVpcmVkIHBhY2thZ2VzICh2Y2QpCgpgYGB7ciBpbmNsdWRlPUZBTFNFLCByZXN1bHRzPSdoaWRlJ30KbGlicmFyeSh2Y2QpCmxpYnJhcnkobG10ZXN0KQpsaWJyYXJ5KGVwaXRvb2xzKQpgYGAKCkltcG9ydCBtb3JlaG91c2UgZGF0YSBmaWxlCgpgYGB7cn0KbW9yZWhvdXNlIDwtIHJlYWQuY3N2KCIuLi9kYXRhL21vcmVob3VzZS5jc3YiKQpoZWFkKG1vcmVob3VzZSkKCmBgYAoKVGFidWxhdGUgdGhlIGRhdGEKCmBgYHtyIH0KbW9yZWhvdXNlLnRhYjwteHRhYnMoY291bnR+bW90aGVyICsgb2Zmc3ByaW5nLCBkYXRhPW1vcmVob3VzZSkKbW9yZWhvdXNlLnRhYgpgYGAKCiMjIyBDYWxjdWxhdGUgY2hpLXNxLiB0ZXN0IGFuZCBvZGRzIHJhdGlvcwoKYGBge3J9CmNoaXNxLnRlc3QobW9yZWhvdXNlLnRhYiwgY29ycmVjdD1GKSRleHAKbW9yZWhvdXNlLmNoaTwtIGNoaXNxLnRlc3QobW9yZWhvdXNlLnRhYiwgY29ycmVjdD1GKQptb3JlaG91c2UuY2hpCm1vcmVob3VzZS5jaGkkcmVzaWR1YWxzCm1vcmVob3VzZS5vZGRzIDwtIG9kZHNyYXRpbyhtb3JlaG91c2UudGFiLCBsb2cgPSBGQUxTRSkKc3VtbWFyeShtb3JlaG91c2Uub2RkcykKY29uZmludChtb3JlaG91c2Uub2RkcykKYGBgCiMjIyBSdW4gZXhhY3QgdGVzdHMKCmBgYHtyfQpmaXNoZXIudGVzdChtb3JlaG91c2UudGFiKQpvZGRzcmF0aW8ubWlkcChtb3JlaG91c2UudGFiKQpgYGAKCiMjIyBEbyBsb2dsaW5lYXIgbW9kZWwKCmBgYHtyIH0KbW9yZWhvdXNlLmdsbSA8LSBnbG0oY291bnR+bW90aGVyKm9mZnNwcmluZywgZmFtaWx5PXBvaXNzb24sIGRhdGE9bW9yZWhvdXNlKQpzdW1tYXJ5KG1vcmVob3VzZS5nbG0pCmFub3ZhKG1vcmVob3VzZS5nbG0pCm1vcmVob3VzZTEuZ2xtIDwtIGdsbShjb3VudH5tb3RoZXIrb2Zmc3ByaW5nLCBmYW1pbHk9cG9pc3NvbiwgZGF0YT1tb3JlaG91c2UpCnN1bW1hcnkobW9yZWhvdXNlMS5nbG0pCmFub3ZhKG1vcmVob3VzZS5nbG0sIG1vcmVob3VzZTEuZ2xtLCB0ZXN0PSJDaGlzcSIpCmxydGVzdChtb3JlaG91c2UuZ2xtLCBtb3JlaG91c2UxLmdsbSkKcGxvdChtb3JlaG91c2UxLmdsbSkKYGBgCg==</div>
 
 
 

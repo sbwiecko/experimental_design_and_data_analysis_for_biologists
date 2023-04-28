@@ -1774,8 +1774,9 @@ ownership of obese cats. <em>PLoS One</em>, 15, e0234190.</p>
 <p>Install the package epitools</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShlcGl0b29scylcbmBgYCJ9 -->
-<pre class="r"><code>library(epitools)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGVwaXRvb2xzKVxuYGBgIn0= -->
+<pre class="r"><code>library(tidyverse)
+library(epitools)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZXBpdG9vbHPigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTp2Y2TigJk6XG5cbiAgICBvZGRzcmF0aW9cbiJ9 -->
 <pre><code>
@@ -1793,8 +1794,8 @@ The following object is masked from ‘package:vcd’:
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVuZyA8LSByZWFkX2NzdihcIi4uL2RhdGEvdGVuZy5jc3ZcIilcbmBgYCJ9 -->
 <pre class="r"><code>teng &lt;- read_csv(&quot;../data/teng.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTIgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAoMik6IGJlZ2dpbmcsIGJjc1xuZGJsICgxKTogY291bnRcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
-<pre><code>Rows: 12 Columns: 3── Column specification ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTIgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAoMik6IGJlZ2dpbmcsIGJjc1xuZGJsICgxKTogY291bnRcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 12 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
 chr (2): begging, bcs
 dbl (1): count
@@ -1804,7 +1805,7 @@ dbl (1): count
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVuZ1xuYGBgIn0= -->
 <pre class="r"><code>teng</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMiDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQThWU3pVN0NRQkFlV2xwQ28yamlLM2lVSm9JbUhuc3dlTkNMUmhQaWJWc1dhQ3k3VGJzSTNuZ1VINUl6ZGJZN0c3RUg4ZVltazludm0vL1pmYm9kRDROeEFBQXV0QjBIWEErdjRMMDhqL28zZ0F5Q0ZyU2hxL1VhbmM1cVQ0QlRsQ015ZUlLLzgrSWc2Slp5d1ZXNjRPV2ZDVTlPRlJjSGdjK3lGZnNvZjBXTmx1T2t2QndRYUNNWTdobXVydi9CQzZDbis0djBEVStVZnhyOVFQaCtZL1JtYmZRa012cUM3SzlrZnlUK25QZzc0a2RBNThlYmVvTHBiWnZsdUVSMllqNmJwV0pHME1VR3JYc2lsMEkxY25RTHVRcHRubU1VUjVlc3FtcmJMSlprckxURkxCbE1tR0xodE1CNFJMdEdTRWZtS3BVQ2d4ejk4M3dkVUp1TjdDZHFGUTNpWkNsMFY1TitNbCtLdC81Z0x4YW8wMWI5SmI3dnJpbnZWSlRLdCsvRms3bTBING9MWEE2M00yVXM1aG1CSG02aVhrU1lGeW51aVNaRXRneVZWTXo2QlluTUxGUFBETHN2ZmxZNFI0Z0RBQUE9In0= -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMiDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQThWU3pVN0NRQkFlV2dwcG80VEVWL0FvVFJCTlBQWmc4S0FYakNiRTI3WXMwRmgybTNZUnZQRW9QcVJuNm14M05tSVA0czFOSnJQZk4vK3orM2c3SFFYVEFBQmNhRHN1dUI1ZXdYdCtHZzl1QUJrRUxXaURyL1VXbmM1cVQ0QSt5Z2taUE1IZmVIRVUrS1ZjY1pXdWVQbG53cE56eGNWUjBHSFpocjJYdjZKR3kzRlNEaThKdEJHTURneFgxLy9nQmREVC9VWDZoaWZLUDR4K0lIeS9NM3EzTlhvV0dYMUI5aGV5VDRnL0ovNk8rREhRK2ZHbW5tQjYyMlk1THBIZG1DOFdxVmdRZExGQjY1N0l0VkNOSEg0aE42SE5jNHJpNkpKVlZYMDJpeVVaSzIweFN3WXpwbGc0THpBZTBiNFIwcFc1U3FYQUlFZi92STRPcU0xR0RoTzFpZ2JSWHd2ZDFXeVFMTmZpZFRBY0hRUUR0ZHFxLzhUMzNUWDFuWXB5ZGV5RDhXUXA3WS9pQXJmRDdWQVppM2xHb0llcnFEY1I1a1dLaTZJUmtTMURKUld6ZmtFaU04dlVROFArQzhBdVpPNkpBd0FBIn0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["begging"],"name":[1],"type":["chr"],"align":["left"]},{"label":["bcs"],"name":[2],"type":["chr"],"align":["left"]},{"label":["count"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"never","2":"bcs12","3":"21"},{"1":"never","2":"bcs3","3":"266"},{"1":"never","2":"bcs45","3":"56"},{"1":"sometimes","2":"bcs12","3":"55"},{"1":"sometimes","2":"bcs3","3":"527"},{"1":"sometimes","2":"bcs45","3":"162"},{"1":"often","2":"bcs12","3":"14"},{"1":"often","2":"bcs3","3":"106"},{"1":"often","2":"bcs45","3":"69"},{"1":"always","2":"bcs12","3":"10"},{"1":"always","2":"bcs3","3":"47"},{"1":"always","2":"bcs45","3":"44"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[12]},"pages":{}}}
@@ -1985,7 +1986,7 @@ attr(,&quot;method&quot;)
 <pre class="r"><code>tengfull.glm &lt;- glm(count~begging*bcs, family=poisson, data=teng)
 summary(tengfull.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IGJlZ2dpbmcgKiBiY3MsIGZhbWlseSA9IHBvaXNzb24sIGRhdGEgPSB0ZW5nKVxuXG5EZXZpYW5jZSBSZXNpZHVhbHM6IFxuIFsxXSAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgeiB2YWx1ZSBQcig+fHp8KSAgICBcbihJbnRlcmNlcHQpICAgIDQuMTI0MDkgICAgMC4wNDgyMiAgODUuNTI0ICA8IDJlLTE2ICoqKlxuYmVnZ2luZzEgICAgICAgMC4wOTM3MCAgICAwLjA3ODU2ICAgMS4xOTMgIDAuMjMyOTYgICAgXG5iZWdnaW5nMiAgICAgICAwLjk5NjYyICAgIDAuMDYxNTEgIDE2LjIwMiAgPCAyZS0xNiAqKipcbmJlZ2dpbmczICAgICAgLTAuMjc4NTUgICAgMC4wODczMSAgLTMuMTkwICAwLjAwMTQyICoqIFxuYmNzMSAgICAgICAgICAtMS4xMjU3MSAgICAwLjA4NTI1IC0xMy4yMDUgIDwgMmUtMTYgKioqXG5iY3MyICAgICAgICAgICAwLjk2Njk5ICAgIDAuMDU1NTIgIDE3LjQxNSAgPCAyZS0xNiAqKipcbmJlZ2dpbmcxOmJjczEgLTAuMDQ3NTYgICAgMC4xMzgwMiAgLTAuMzQ1ICAwLjczMDQzICAgIFxuYmVnZ2luZzI6YmNzMSAgMC4wMTIzMyAgICAwLjEwODQzICAgMC4xMTQgIDAuOTA5NDMgICAgXG5iZWdnaW5nMzpiY3MxIC0wLjA4MDc3ICAgIDAuMTU2NDMgIC0wLjUxNiAgMC42MDU2NCAgICBcbmJlZ2dpbmcxOmJjczIgIDAuMzk4NzIgICAgMC4wODY5MyAgIDQuNTg3ICA0LjVlLTA2ICoqKlxuYmVnZ2luZzI6YmNzMiAgMC4xNzk1MSAgICAwLjA2OTcwICAgMi41NzYgIDAuMDEwMDEgKiAgXG5iZWdnaW5nMzpiY3MyIC0wLjE0OTA4ICAgIDAuMDk5NzYgIC0xLjQ5NCAgMC4xMzUwOSAgICBcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG4oRGlzcGVyc2lvbiBwYXJhbWV0ZXIgZm9yIHBvaXNzb24gZmFtaWx5IHRha2VuIHRvIGJlIDEpXG5cbiAgICBOdWxsIGRldmlhbmNlOiAxLjU3MDJlKzAzICBvbiAxMSAgZGVncmVlcyBvZiBmcmVlZG9tXG5SZXNpZHVhbCBkZXZpYW5jZTogNy40MTYzZS0xNCAgb24gIDAgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiA5NS41OTlcblxuTnVtYmVyIG9mIEZpc2hlciBTY29yaW5nIGl0ZXJhdGlvbnM6IDNcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IGJlZ2dpbmcgKiBiY3MsIGZhbWlseSA9IHBvaXNzb24sIGRhdGEgPSB0ZW5nKVxuXG5EZXZpYW5jZSBSZXNpZHVhbHM6IFxuIFsxXSAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgICAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgeiB2YWx1ZSBQcig+fHp8KSAgICBcbihJbnRlcmNlcHQpICAgICAgICAgICAgICAgIDMuMDQ0NTIgICAgMC4yMTgyMiAgMTMuOTUyICA8IDJlLTE2ICoqKlxuYmVnZ2luZ3NvbWV0aW1lcyAgICAgICAgICAgMC45NjI4MSAgICAwLjI1NjUyICAgMy43NTMgMC4wMDAxNzQgKioqXG5iZWdnaW5nb2Z0ZW4gICAgICAgICAgICAgIC0wLjQwNTQ3ICAgIDAuMzQ1MDMgIC0xLjE3NSAwLjIzOTkzNSAgICBcbmJlZ2dpbmdhbHdheXMgICAgICAgICAgICAgLTAuNzQxOTQgICAgMC4zODQyMSAgLTEuOTMxIDAuMDUzNDc1IC4gIFxuYmNzYmNzMyAgICAgICAgICAgICAgICAgICAgMi41Mzg5NyAgICAwLjIyNjY3ICAxMS4yMDEgIDwgMmUtMTYgKioqXG5iY3NiY3M0NSAgICAgICAgICAgICAgICAgICAwLjk4MDgzICAgIDAuMjU1ODggICAzLjgzMyAwLjAwMDEyNyAqKipcbmJlZ2dpbmdzb21ldGltZXM6YmNzYmNzMyAgLTAuMjc5MTEgICAgMC4yNjczMiAgLTEuMDQ0IDAuMjk2NDM2ICAgIFxuYmVnZ2luZ29mdGVuOmJjc2JjczMgICAgICAtMC41MTQ1OSAgICAwLjM2MzY1ICAtMS40MTUgMC4xNTcwNDYgICAgXG5iZWdnaW5nYWx3YXlzOmJjc2JjczMgICAgIC0wLjk5MTQxICAgIDAuNDE1NTIgIC0yLjM4NiAwLjAxNzAzNCAqICBcbmJlZ2dpbmdzb21ldGltZXM6YmNzYmNzNDUgIDAuMDk5NDMgICAgMC4yOTk3MiAgIDAuMzMyIDAuNzQwMDcyICAgIFxuYmVnZ2luZ29mdGVuOmJjc2JjczQ1ICAgICAgMC42MTQyMiAgICAwLjM4OTEwICAgMS41NzkgMC4xMTQ0MzQgICAgXG5iZWdnaW5nYWx3YXlzOmJjc2JjczQ1ICAgICAwLjUwMDc4ICAgIDAuNDMzODIgICAxLjE1NCAwLjI0ODM2NiAgICBcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG4oRGlzcGVyc2lvbiBwYXJhbWV0ZXIgZm9yIHBvaXNzb24gZmFtaWx5IHRha2VuIHRvIGJlIDEpXG5cbiAgICBOdWxsIGRldmlhbmNlOiAxLjU3MDJlKzAzICBvbiAxMSAgZGVncmVlcyBvZiBmcmVlZG9tXG5SZXNpZHVhbCBkZXZpYW5jZTogNy42NjA1ZS0xNCAgb24gIDAgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiA5NS41OTlcblxuTnVtYmVyIG9mIEZpc2hlciBTY29yaW5nIGl0ZXJhdGlvbnM6IDNcbiJ9 -->
 <pre><code>
 Call:
 glm(formula = count ~ begging * bcs, family = poisson, data = teng)
@@ -1994,26 +1995,26 @@ Deviance Residuals:
  [1]  0  0  0  0  0  0  0  0  0  0  0  0
 
 Coefficients:
-              Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)    4.12409    0.04822  85.524  &lt; 2e-16 ***
-begging1       0.09370    0.07856   1.193  0.23296    
-begging2       0.99662    0.06151  16.202  &lt; 2e-16 ***
-begging3      -0.27855    0.08731  -3.190  0.00142 ** 
-bcs1          -1.12571    0.08525 -13.205  &lt; 2e-16 ***
-bcs2           0.96699    0.05552  17.415  &lt; 2e-16 ***
-begging1:bcs1 -0.04756    0.13802  -0.345  0.73043    
-begging2:bcs1  0.01233    0.10843   0.114  0.90943    
-begging3:bcs1 -0.08077    0.15643  -0.516  0.60564    
-begging1:bcs2  0.39872    0.08693   4.587  4.5e-06 ***
-begging2:bcs2  0.17951    0.06970   2.576  0.01001 *  
-begging3:bcs2 -0.14908    0.09976  -1.494  0.13509    
+                          Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                3.04452    0.21822  13.952  &lt; 2e-16 ***
+beggingsometimes           0.96281    0.25652   3.753 0.000174 ***
+beggingoften              -0.40547    0.34503  -1.175 0.239935    
+beggingalways             -0.74194    0.38421  -1.931 0.053475 .  
+bcsbcs3                    2.53897    0.22667  11.201  &lt; 2e-16 ***
+bcsbcs45                   0.98083    0.25588   3.833 0.000127 ***
+beggingsometimes:bcsbcs3  -0.27911    0.26732  -1.044 0.296436    
+beggingoften:bcsbcs3      -0.51459    0.36365  -1.415 0.157046    
+beggingalways:bcsbcs3     -0.99141    0.41552  -2.386 0.017034 *  
+beggingsometimes:bcsbcs45  0.09943    0.29972   0.332 0.740072    
+beggingoften:bcsbcs45      0.61422    0.38910   1.579 0.114434    
+beggingalways:bcsbcs45     0.50078    0.43382   1.154 0.248366    
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for poisson family taken to be 1)
 
     Null deviance: 1.5702e+03  on 11  degrees of freedom
-Residual deviance: 7.4163e-14  on  0  degrees of freedom
+Residual deviance: 7.6605e-14  on  0  degrees of freedom
 AIC: 95.599
 
 Number of Fisher Scoring iterations: 3</code></pre>
@@ -2042,7 +2043,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 <pre class="r"><code>tengred.glm &lt;- glm(count~begging+bcs, family=poisson, data=teng)
 summary(tengred.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IGJlZ2dpbmcgKyBiY3MsIGZhbWlseSA9IHBvaXNzb24sIGRhdGEgPSB0ZW5nKVxuXG5EZXZpYW5jZSBSZXNpZHVhbHM6IFxuICAgIE1pbiAgICAgICAxUSAgIE1lZGlhbiAgICAgICAzUSAgICAgIE1heCAgXG4tMy4wOTQxICAtMS41MDA0ICAgMC4xMDI3ICAgMS4xODM0ICAgMy41ODkyICBcblxuQ29lZmZpY2llbnRzOlxuICAgICAgICAgICAgRXN0aW1hdGUgU3RkLiBFcnJvciB6IHZhbHVlIFByKD58enwpICAgIFxuKEludGVyY2VwdCkgIDQuMTAyMTcgICAgMC4wNDUzMiAgOTAuNTE5ICA8IDJlLTE2ICoqKlxuYmVnZ2luZzEgICAgIDAuMjYxMDcgICAgMC4wNTE3MSAgIDUuMDQ5IDQuNDRlLTA3ICoqKlxuYmVnZ2luZzIgICAgIDEuMDM1MzggICAgMC4wNDM0NSAgMjMuODMwICA8IDJlLTE2ICoqKlxuYmVnZ2luZzMgICAgLTAuMzM0OTEgICAgMC4wNjIxNCAgLTUuMzkwIDcuMDZlLTA4ICoqKlxuYmNzMSAgICAgICAgLTEuMTQ4MDEgICAgMC4wNjk5OCAtMTYuNDA0ICA8IDJlLTE2ICoqKlxuYmNzMiAgICAgICAgIDEuMDk5MDcgICAgMC4wNDM3OCAgMjUuMTA1ICA8IDJlLTE2ICoqKlxuLS0tXG5TaWduaWYuIGNvZGVzOiAgMCDigJgqKirigJkgMC4wMDEg4oCYKirigJkgMC4wMSDigJgq4oCZIDAuMDUg4oCYLuKAmSAwLjEg4oCYIOKAmSAxXG5cbihEaXNwZXJzaW9uIHBhcmFtZXRlciBmb3IgcG9pc3NvbiBmYW1pbHkgdGFrZW4gdG8gYmUgMSlcblxuICAgIE51bGwgZGV2aWFuY2U6IDE1NzAuMjIxICBvbiAxMSAgZGVncmVlcyBvZiBmcmVlZG9tXG5SZXNpZHVhbCBkZXZpYW5jZTogICA1My4yMzkgIG9uICA2ICBkZWdyZWVzIG9mIGZyZWVkb21cbkFJQzogMTM2Ljg0XG5cbk51bWJlciBvZiBGaXNoZXIgU2NvcmluZyBpdGVyYXRpb25zOiA0XG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IGJlZ2dpbmcgKyBiY3MsIGZhbWlseSA9IHBvaXNzb24sIGRhdGEgPSB0ZW5nKVxuXG5EZXZpYW5jZSBSZXNpZHVhbHM6IFxuICAgIE1pbiAgICAgICAxUSAgIE1lZGlhbiAgICAgICAzUSAgICAgIE1heCAgXG4tMy4wOTQxICAtMS41MDA0ICAgMC4xMDI3ICAgMS4xODM0ICAgMy41ODkyICBcblxuQ29lZmZpY2llbnRzOlxuICAgICAgICAgICAgICAgICBFc3RpbWF0ZSBTdGQuIEVycm9yIHogdmFsdWUgUHIoPnx6fCkgICAgXG4oSW50ZXJjZXB0KSAgICAgICAzLjIxNTI0ICAgIDAuMTEwNDAgIDI5LjEyMiAgPCAyZS0xNiAqKipcbmJlZ2dpbmdzb21ldGltZXMgIDAuNzc0MzEgICAgMC4wNjUyNyAgMTEuODY0ICA8IDJlLTE2ICoqKlxuYmVnZ2luZ29mdGVuICAgICAtMC41OTU5OCAgICAwLjA5MDU5ICAtNi41NzkgNC43NGUtMTEgKioqXG5iZWdnaW5nYWx3YXlzICAgIC0xLjIyMjYxICAgIDAuMTEzMjEgLTEwLjgwMCAgPCAyZS0xNiAqKipcbmJjc2JjczMgICAgICAgICAgIDIuMjQ3MDcgICAgMC4xMDUxNSAgMjEuMzcwICA8IDJlLTE2ICoqKlxuYmNzYmNzNDUgICAgICAgICAgMS4xOTY5NSAgICAwLjExNDExICAxMC40ODkgIDwgMmUtMTYgKioqXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcblxuKERpc3BlcnNpb24gcGFyYW1ldGVyIGZvciBwb2lzc29uIGZhbWlseSB0YWtlbiB0byBiZSAxKVxuXG4gICAgTnVsbCBkZXZpYW5jZTogMTU3MC4yMjEgIG9uIDExICBkZWdyZWVzIG9mIGZyZWVkb21cblJlc2lkdWFsIGRldmlhbmNlOiAgIDUzLjIzOSAgb24gIDYgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiAxMzYuODRcblxuTnVtYmVyIG9mIEZpc2hlciBTY29yaW5nIGl0ZXJhdGlvbnM6IDRcbiJ9 -->
 <pre><code>
 Call:
 glm(formula = count ~ begging + bcs, family = poisson, data = teng)
@@ -2052,13 +2053,13 @@ Deviance Residuals:
 -3.0941  -1.5004   0.1027   1.1834   3.5892  
 
 Coefficients:
-            Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)  4.10217    0.04532  90.519  &lt; 2e-16 ***
-begging1     0.26107    0.05171   5.049 4.44e-07 ***
-begging2     1.03538    0.04345  23.830  &lt; 2e-16 ***
-begging3    -0.33491    0.06214  -5.390 7.06e-08 ***
-bcs1        -1.14801    0.06998 -16.404  &lt; 2e-16 ***
-bcs2         1.09907    0.04378  25.105  &lt; 2e-16 ***
+                 Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)       3.21524    0.11040  29.122  &lt; 2e-16 ***
+beggingsometimes  0.77431    0.06527  11.864  &lt; 2e-16 ***
+beggingoften     -0.59598    0.09059  -6.579 4.74e-11 ***
+beggingalways    -1.22261    0.11321 -10.800  &lt; 2e-16 ***
+bcsbcs3           2.24707    0.10515  21.370  &lt; 2e-16 ***
+bcsbcs45          1.19695    0.11411  10.489  &lt; 2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -2120,7 +2121,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUSAmIEsgQm94IDEzLjYiCm91dHB1dDoKICBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgpUZW5nIGV0IGFsLiAoMjAyMCkgYW5hbHl6ZWQgdGhlIHJlc3VsdHMgb2YgYSBzdXJ2ZXkgb2YgZG9tZXN0aWMgY2F0IG93bmVycyBpbiBBdXN0cmFsaWEuIFRoZSBzdXJ2ZXkgZm9jdXNlZCBvbiBmYWN0b3JzIChlLmcuIGNhdCBkZW1vZ3JhcGhpY3MsIG93bmVyIGF0dGl0dWRlcyBhbmQgZGVtb2dyYXBoaWNzLCBldGMuKSB0aGF0IG1pZ2h0IGFmZmVjdCB0aGUgcHJldmFsZW5jZSBvZiBvdmVyd2VpZ2h0IGFuZCBvYmVzZSBjYXRzLiBUaGV5IHJlbGF0ZWQgbmVhcmx5IDE0MDAgc3VydmV5IHJlc3BvbnNlcyBvZiBvd25lci1hc3Nlc3NlZCBib2R5IGNvbmRpdGlvbiBzY29yZSBbQkNTIHdpdGggZml2ZSBjYXRlZ29yaWVzOiB2ZXJ5IHVuZGVyd2VpZ2h0ICgxKSwgc29tZXdoYXQgdW5kZXJ3ZWlnaHQgKDIpLCBpZGVhbCAoMyksIGNodWJieS9vdmVyd2VpZ2h0ICg0KSwgYW5kIGZhdC9vYmVzZSAoNSldIHRvIGEgcmFuZ2Ugb2YgY2F0ZWdvcmljYWwgcHJlZGljdG9ycyB3aXRoIGEgbXVsdGl2YXJpYXRlIG11bHRpbm9taWFsIEdMTS4gV2Ugd2lsbCB1c2Ugb25lIGFzcGVjdCBvZiB0aGVpciBkYXRhIHRvIGNvbnN0cnVjdCBhIGNvbnRpbmdlbmN5IHRhYmxlIHJlbGF0aW5nIHRoZSBCQ1MsIHJlZHVjZWQgdG8gdGhyZWUgY2F0ZWdvcmllcyAoMSYyLCAzLCA0JjUpIHRvIGNhdHMnIGJlZ2dpbmcgYmVoYXZpb3IgKGZvdXIgY2F0ZWdvcmllczogbmV2ZXIsIHNvbWV0aW1lcywgb2Z0ZW4sIGFsd2F5cykuCgpUaGUgcGFwZXIgaXMgW2hlcmVdKGh0dHBzOi8vZG9pLm9yZy8xMC4xMzcxL2pvdXJuYWwucG9uZS4wMjM0MTkwKQoKVGVuZywgSy4gVC4sIE1jR3JlZXZ5LCBQLiBELiwgVG9yaWJpbywgSi4gJiBEaGFuZCwgTi4gSy4gKDIwMjApLiBQb3NpdGl2ZSBhdHRpdHVkZXMgdG93YXJkcyBmZWxpbmUgb2Jlc2l0eSBhcmUKc3Ryb25nbHkgYXNzb2NpYXRlZCB3aXRoIG93bmVyc2hpcCBvZiBvYmVzZSBjYXRzLiAqUExvUyBPbmUqLCAxNSwgZTAyMzQxOTAuCgojIyMgUHJlbGltaW5hcmllcwoKSW5zdGFsbCB0aGUgcGFja2FnZSBlcGl0b29scwoKYGBge3IgfQpsaWJyYXJ5KGVwaXRvb2xzKQpgYGAKClJlYWQgaW4gZGF0YQoKYGBge3J9CnRlbmcgPC0gcmVhZF9jc3YoIi4uL2RhdGEvdGVuZy5jc3YiKQp0ZW5nCmBgYAoKTWFrZSBiZWdnaW5nIGEgZmFjdG9yIGFuZCBwdXQgY2F0ZWdvcmllcyBpbnRvIGEgc2Vuc2libGUgb3JkZXIKCmBgYHtyfQp0ZW5nJGJlZ2dpbmcgPC0gZmFjdG9yKHRlbmckYmVnZ2luZywgbGV2ZWxzPWMoIm5ldmVyIiwic29tZXRpbWVzIiwib2Z0ZW4iLCJhbHdheXMiKSkKdGVuZy50YWI8LXh0YWJzKGNvdW50fmJlZ2dpbmcgKyBiY3MsIGRhdGE9dGVuZykKdGVuZy50YWIKYGBgCgpHZW5lcmF0ZSBjaGktc3F1YXJlIHN0YXRpc3RpYyBhbmQgbG9vayBhdCByZXNpZHVhbHMKCmBgYHtyfQpjaGlzcS50ZXN0KHRlbmcudGFiLCBjb3JyZWN0PUYpJGV4cAp0ZW5nLmNoaTwtIGNoaXNxLnRlc3QodGVuZy50YWIsIGNvcnJlY3Q9RikKdGVuZy5jaGkKdGVuZy5jaGkkcmVzaWR1YWxzCmBgYAoKIyMjIERldGVybWluZSBPUiBmb3IgYmVpbmcgb3ZlcndlaWdodCBmb3IgcGFpcnMgb2YgYmVnZ2luZyBjYXRlZ29yaWVzCgoKYGBge3J9CiMgTmV2ZXIgdnMgc29tZXRpbWVzIGJlZ2dpbmcKdGVuZzEgPC0gc3Vic2V0KHRlbmcsc3Vic2V0ID0gYmVnZ2luZyAlaW4lIGMoJ25ldmVyJywnc29tZXRpbWVzJykpCnRlbmcxYSA8LSBzdWJzZXQodGVuZzEsc3Vic2V0ID0gYmNzICVpbiUgYygnYmNzMycsJ2JjczQ1JykpCnRlbmcxYS50YWIgPC0geHRhYnMoY291bnR+YmVnZ2luZyArIGJjcywgZGF0YT10ZW5nMWEsIGRyb3AudW51c2VkLmxldmVscz1UUlVFKQpvZGRzcmF0aW8odGVuZzFhLnRhYikKCiMgTmV2ZXIgdnMgb2Z0ZW4KdGVuZzIgPC0gc3Vic2V0KHRlbmcsc3Vic2V0ID0gYmVnZ2luZyAlaW4lIGMoJ25ldmVyJywnb2Z0ZW4nKSkKdGVuZzJhIDwtIHN1YnNldCh0ZW5nMixzdWJzZXQgPSBiY3MgJWluJSBjKCdiY3MzJywnYmNzNDUnKSkKdGVuZzJhLnRhYiA8LSB4dGFicyhjb3VudH5iZWdnaW5nICsgYmNzLCBkYXRhPXRlbmcyYSwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpCm9kZHNyYXRpbyh0ZW5nMmEudGFiKQoKIyAgTmV2ZXIgdnMgYWx3YXlzIGJlZ2dpbmcKdGVuZzMgPC0gc3Vic2V0KHRlbmcsc3Vic2V0ID0gYmVnZ2luZyAlaW4lIGMoJ25ldmVyJywnYWx3YXlzJykpCnRlbmczYSA8LSBzdWJzZXQodGVuZzMsc3Vic2V0ID0gYmNzICVpbiUgYygnYmNzMycsJ2JjczQ1JykpCnRlbmczYS50YWIgPC0geHRhYnMoY291bnR+YmVnZ2luZyArIGJjcywgZGF0YT10ZW5nM2EsIGRyb3AudW51c2VkLmxldmVscz1UUlVFKQpvZGRzcmF0aW8odGVuZzNhLnRhYikKYGBgCgojIyMgZml0IGxvZy1saW5lYXIgbW9kZWxzCgpgYGB7cn0KdGVuZ2Z1bGwuZ2xtIDwtIGdsbShjb3VudH5iZWdnaW5nKmJjcywgZmFtaWx5PXBvaXNzb24sIGRhdGE9dGVuZykKc3VtbWFyeSh0ZW5nZnVsbC5nbG0pCmFub3ZhKHRlbmdmdWxsLmdsbSwgdGVzdD0iQ2hpc3EiKQp0ZW5ncmVkLmdsbSA8LSBnbG0oY291bnR+YmVnZ2luZytiY3MsIGZhbWlseT1wb2lzc29uLCBkYXRhPXRlbmcpCnN1bW1hcnkodGVuZ3JlZC5nbG0pCmFub3ZhKHRlbmdyZWQuZ2xtLCB0ZXN0PSJDaGlzcSIpCmFub3ZhKHRlbmdmdWxsLmdsbSwgdGVuZ3JlZC5nbG0sIHRlc3Q9IkNoaXNxIikKbHJ0ZXN0KHRlbmdmdWxsLmdsbSwgdGVuZ3JlZC5nbG0pCmBgYAo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUSAmIEsgQm94IDEzLjYiCm91dHB1dDoKICBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgpUZW5nIGV0IGFsLiAoMjAyMCkgYW5hbHl6ZWQgdGhlIHJlc3VsdHMgb2YgYSBzdXJ2ZXkgb2YgZG9tZXN0aWMgY2F0IG93bmVycyBpbiBBdXN0cmFsaWEuIFRoZSBzdXJ2ZXkgZm9jdXNlZCBvbiBmYWN0b3JzIChlLmcuIGNhdCBkZW1vZ3JhcGhpY3MsIG93bmVyIGF0dGl0dWRlcyBhbmQgZGVtb2dyYXBoaWNzLCBldGMuKSB0aGF0IG1pZ2h0IGFmZmVjdCB0aGUgcHJldmFsZW5jZSBvZiBvdmVyd2VpZ2h0IGFuZCBvYmVzZSBjYXRzLiBUaGV5IHJlbGF0ZWQgbmVhcmx5IDE0MDAgc3VydmV5IHJlc3BvbnNlcyBvZiBvd25lci1hc3Nlc3NlZCBib2R5IGNvbmRpdGlvbiBzY29yZSBbQkNTIHdpdGggZml2ZSBjYXRlZ29yaWVzOiB2ZXJ5IHVuZGVyd2VpZ2h0ICgxKSwgc29tZXdoYXQgdW5kZXJ3ZWlnaHQgKDIpLCBpZGVhbCAoMyksIGNodWJieS9vdmVyd2VpZ2h0ICg0KSwgYW5kIGZhdC9vYmVzZSAoNSldIHRvIGEgcmFuZ2Ugb2YgY2F0ZWdvcmljYWwgcHJlZGljdG9ycyB3aXRoIGEgbXVsdGl2YXJpYXRlIG11bHRpbm9taWFsIEdMTS4gV2Ugd2lsbCB1c2Ugb25lIGFzcGVjdCBvZiB0aGVpciBkYXRhIHRvIGNvbnN0cnVjdCBhIGNvbnRpbmdlbmN5IHRhYmxlIHJlbGF0aW5nIHRoZSBCQ1MsIHJlZHVjZWQgdG8gdGhyZWUgY2F0ZWdvcmllcyAoMSYyLCAzLCA0JjUpIHRvIGNhdHMnIGJlZ2dpbmcgYmVoYXZpb3IgKGZvdXIgY2F0ZWdvcmllczogbmV2ZXIsIHNvbWV0aW1lcywgb2Z0ZW4sIGFsd2F5cykuCgpUaGUgcGFwZXIgaXMgW2hlcmVdKGh0dHBzOi8vZG9pLm9yZy8xMC4xMzcxL2pvdXJuYWwucG9uZS4wMjM0MTkwKQoKVGVuZywgSy4gVC4sIE1jR3JlZXZ5LCBQLiBELiwgVG9yaWJpbywgSi4gJiBEaGFuZCwgTi4gSy4gKDIwMjApLiBQb3NpdGl2ZSBhdHRpdHVkZXMgdG93YXJkcyBmZWxpbmUgb2Jlc2l0eSBhcmUKc3Ryb25nbHkgYXNzb2NpYXRlZCB3aXRoIG93bmVyc2hpcCBvZiBvYmVzZSBjYXRzLiAqUExvUyBPbmUqLCAxNSwgZTAyMzQxOTAuCgojIyMgUHJlbGltaW5hcmllcwoKSW5zdGFsbCB0aGUgcGFja2FnZSBlcGl0b29scwoKYGBge3IgfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShlcGl0b29scykKYGBgCgpSZWFkIGluIGRhdGEKCmBgYHtyfQp0ZW5nIDwtIHJlYWRfY3N2KCIuLi9kYXRhL3RlbmcuY3N2IikKdGVuZwpgYGAKCk1ha2UgYmVnZ2luZyBhIGZhY3RvciBhbmQgcHV0IGNhdGVnb3JpZXMgaW50byBhIHNlbnNpYmxlIG9yZGVyCgpgYGB7cn0KdGVuZyRiZWdnaW5nIDwtIGZhY3Rvcih0ZW5nJGJlZ2dpbmcsIGxldmVscz1jKCJuZXZlciIsInNvbWV0aW1lcyIsIm9mdGVuIiwiYWx3YXlzIikpCnRlbmcudGFiPC14dGFicyhjb3VudH5iZWdnaW5nICsgYmNzLCBkYXRhPXRlbmcpCnRlbmcudGFiCmBgYAoKR2VuZXJhdGUgY2hpLXNxdWFyZSBzdGF0aXN0aWMgYW5kIGxvb2sgYXQgcmVzaWR1YWxzCgpgYGB7cn0KY2hpc3EudGVzdCh0ZW5nLnRhYiwgY29ycmVjdD1GKSRleHAKdGVuZy5jaGk8LSBjaGlzcS50ZXN0KHRlbmcudGFiLCBjb3JyZWN0PUYpCnRlbmcuY2hpCnRlbmcuY2hpJHJlc2lkdWFscwpgYGAKCiMjIyBEZXRlcm1pbmUgT1IgZm9yIGJlaW5nIG92ZXJ3ZWlnaHQgZm9yIHBhaXJzIG9mIGJlZ2dpbmcgY2F0ZWdvcmllcwoKCmBgYHtyfQojIE5ldmVyIHZzIHNvbWV0aW1lcyBiZWdnaW5nCnRlbmcxIDwtIHN1YnNldCh0ZW5nLHN1YnNldCA9IGJlZ2dpbmcgJWluJSBjKCduZXZlcicsJ3NvbWV0aW1lcycpKQp0ZW5nMWEgPC0gc3Vic2V0KHRlbmcxLHN1YnNldCA9IGJjcyAlaW4lIGMoJ2JjczMnLCdiY3M0NScpKQp0ZW5nMWEudGFiIDwtIHh0YWJzKGNvdW50fmJlZ2dpbmcgKyBiY3MsIGRhdGE9dGVuZzFhLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSkKb2Rkc3JhdGlvKHRlbmcxYS50YWIpCgojIE5ldmVyIHZzIG9mdGVuCnRlbmcyIDwtIHN1YnNldCh0ZW5nLHN1YnNldCA9IGJlZ2dpbmcgJWluJSBjKCduZXZlcicsJ29mdGVuJykpCnRlbmcyYSA8LSBzdWJzZXQodGVuZzIsc3Vic2V0ID0gYmNzICVpbiUgYygnYmNzMycsJ2JjczQ1JykpCnRlbmcyYS50YWIgPC0geHRhYnMoY291bnR+YmVnZ2luZyArIGJjcywgZGF0YT10ZW5nMmEsIGRyb3AudW51c2VkLmxldmVscz1UUlVFKQpvZGRzcmF0aW8odGVuZzJhLnRhYikKCiMgIE5ldmVyIHZzIGFsd2F5cyBiZWdnaW5nCnRlbmczIDwtIHN1YnNldCh0ZW5nLHN1YnNldCA9IGJlZ2dpbmcgJWluJSBjKCduZXZlcicsJ2Fsd2F5cycpKQp0ZW5nM2EgPC0gc3Vic2V0KHRlbmczLHN1YnNldCA9IGJjcyAlaW4lIGMoJ2JjczMnLCdiY3M0NScpKQp0ZW5nM2EudGFiIDwtIHh0YWJzKGNvdW50fmJlZ2dpbmcgKyBiY3MsIGRhdGE9dGVuZzNhLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSkKb2Rkc3JhdGlvKHRlbmczYS50YWIpCmBgYAoKIyMjIGZpdCBsb2ctbGluZWFyIG1vZGVscwoKYGBge3J9CnRlbmdmdWxsLmdsbSA8LSBnbG0oY291bnR+YmVnZ2luZypiY3MsIGZhbWlseT1wb2lzc29uLCBkYXRhPXRlbmcpCnN1bW1hcnkodGVuZ2Z1bGwuZ2xtKQphbm92YSh0ZW5nZnVsbC5nbG0sIHRlc3Q9IkNoaXNxIikKdGVuZ3JlZC5nbG0gPC0gZ2xtKGNvdW50fmJlZ2dpbmcrYmNzLCBmYW1pbHk9cG9pc3NvbiwgZGF0YT10ZW5nKQpzdW1tYXJ5KHRlbmdyZWQuZ2xtKQphbm92YSh0ZW5ncmVkLmdsbSwgdGVzdD0iQ2hpc3EiKQphbm92YSh0ZW5nZnVsbC5nbG0sIHRlbmdyZWQuZ2xtLCB0ZXN0PSJDaGlzcSIpCmxydGVzdCh0ZW5nZnVsbC5nbG0sIHRlbmdyZWQuZ2xtKQpgYGAK</div>
 
 
 
