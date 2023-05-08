@@ -12,7 +12,7 @@ library(nlme)
 library(VCA)
 library(MuMIn)
 library(lattice)
-library(sjstats)
+library(effectsize)
 library(lmtest)
 # Load tidyverse to make things simple
 library(tidyverse)
