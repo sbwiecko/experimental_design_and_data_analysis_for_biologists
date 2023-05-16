@@ -1,27 +1,16 @@
-library(knitr)  # Just for  working with Rmarkdown; not needed for analysis
-# Common lm add-ons
-library(car)
-library(MASS)
-library(Rmisc)
-library(ez)
-library(afex)
-library(emmeans)
-library(lme4)
-library(lmerTest)
-library(nlme)
-library(VCA)
-library(MuMIn)
-library(lattice)
-library(effectsize)
-library(lmtest)
-# Load tidyverse to make things simple
-library(tidyverse)
-library(broom)
-library(broom.mixed)
-# Graphics enhancements
-library(ggExtra)  #For adding marginal distribution plots
-library(patchwork)
-library(viridis)
-library(ggsci)
-library(ggforce)
+# Just for  working with Rmarkdown; not needed for analysis: "knitr"
+# Load tidyverse to make things simple: "tidyverse", "broom", "broom.mixed"
+# Common lm add-ons: "car", "MASS", "Rmisc", "ez", "afex", "emmeans", "lme4", "lmerTest", "nlme", "VCA", "MuMIn", "lattice", "effectsize", "lmtest", 
+# Graphics enhancements: "ggExtra", "patchwork", "viridis", "ggsci", "ggforce"
 
+# Package names
+packages <- c("knitr", "tidyverse", "broom", "broom.mixed", 
+              "car", "MASS", "Rmisc", "ez", "afex", "emmeans", "lme4", "lmerTest", "nlme", "VCA", "MuMIn", "lattice", "effectsize", "lmtest", 
+              "ggExtra", "patchwork", "viridis", "ggsci", "ggforce") 
+
+# Install packages not yet installed
+installed_packages <- packages %in% rownames(installed.packages())
+if (any(installed_packages == FALSE)) {  install.packages(packages[!installed_packages]) }
+
+# Packages loading
+invisible(lapply(packages, library, character.only = TRUE))
