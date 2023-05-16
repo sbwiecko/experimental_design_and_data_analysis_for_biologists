@@ -1784,7 +1784,7 @@ only</p>
 mcgvision&lt;-mcgowen[mcgowen$group %in% c(&quot;vision&quot;,&quot;control&quot;),]
 head(mcgvision,10)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6NSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOCDDlyA1XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE2VlRQVS9ETUJDOUpzMUhBMjJSRUdMakh6UkxGMmFFMkZnUVNGMU5hdEtJNEl0c0IraS9RUHpnd2lYMVNVMHFodExoS1g3UHZydDNaK2ZoZGpGUEZna0ErREQwZlBBRFdrTHc5SGczdXdaU2lBeGdDS1BtKzBtSHpwdGR3aGtoZGh2aGUyRUtWQWV6S0VObE5aYUgwVzd0eUVobFVLLy9ReE9GNmppbDY4V3ZUTDYvRE9uOFgreVFpRzR0citBcCtsamJZMFdBY1pzYjRJWndUN2dpTkhmOVRmZ2lYQkF1ZXc4aVVPSk5HbWNzWURIWFdGZU94TGxVMHE0cnVkOWtWQlpLaXB4M2dneHJaWHNGUmhvL1VpN0NEdHM3SUp3UVRwMCtJVXkzUnJvT3MxSVlkc2hpc2hSV3BDK2E4aExiOUVJaXJDdzlVUXJ5bXY1RFYyM2dzSnRvb0h2Q3RGYU4yK1VzVzlYcWRUYnZ4WTdkTjk1WkI5dnkzbzlMRmJwVVE1bXRrRitBVkRrTmkzc3F4YlBrdjJKQ0Uyb0hsRmE2VUh5N0Nha210V2dGbjBzeUxGbHBlNGJOTC9DV3pNTDZBd0FBIn0= -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6NSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbOCDDlyA1XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE2VlR5MDdETUJEYzV0a0dDcFVRNHNZZk5GTEZoVE5DM0xnZ2tIbzFxVWtqZ2pleUhhQi9nZmpnd2liMVNrMHFEcVdIaVQyejNxZWRoOXY1VlRKUEFNQ0h3S2R2U0ZzSW54N3ZwdGNBZ1Vka0FBR01tdldUekdlTmxUQWhESjBoZWk5TWdXcHZGbWVvck1aeVA5ck5IUnVwRE9yVmYyaWlVQjJtZEd2eEs1UHZiaU02L3hmYng2T2J5eXQ0aWo3VzlsQVJZTnpHQnJnaDNCTXVDYzFkZnhPK0NPZUVpOTZEQ0pWNGs4WVZGcktZYTZ3clI0YTVWTkt1S3JuYlpGd1dTb3FjTFdHR3RiSzlCQ09OSHlrbjRRcmJPeUFjRVk2ZGZrSTQzUlRTclRBcmhlRUtXVXdXd29yMFJWTmNZdXVlUzR5VnBTZEtUbDdUZitTeURSeTJBdzEwVDVqVXFxbDJNYzJXdFhxZHptWTk1N0ZiaDF2N2NKUGYrM0d4SWhjcmtOa1MrUWxJbGRPMHVLbFNQRXYrTFU1b1JPMkUwa29YaXE4M0lkV2tGcTNnYzBtR0pTdHQwN0QrQmMzWXdYVDdBd0FBIn0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["chr"],"align":["left"]},{"label":["genetype"],"name":[2],"type":["chr"],"align":["left"]},{"label":["psg"],"name":[3],"type":["chr"],"align":["left"]},{"label":["lineage"],"name":[4],"type":["chr"],"align":["left"]},{"label":["count"],"name":[5],"type":["int"],"align":["right"]}],"data":[{"1":"vision","2":"sensory","3":"psg","4":"in","5":"66","_rn_":"9"},{"1":"vision","2":"sensory","3":"psg","4":"out","5":"77","_rn_":"10"},{"1":"vision","2":"sensory","3":"nonpsg","4":"in","5":"30","_rn_":"11"},{"1":"vision","2":"sensory","3":"nonpsg","4":"out","5":"19","_rn_":"12"},{"1":"control","2":"nonsensory","3":"psg","4":"in","5":"146","_rn_":"13"},{"1":"control","2":"nonsensory","3":"psg","4":"out","5":"144","_rn_":"14"},{"1":"control","2":"nonsensory","3":"nonpsg","4":"in","5":"21","_rn_":"15"},{"1":"control","2":"nonsensory","3":"nonpsg","4":"out","5":"23","_rn_":"16"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
@@ -1822,35 +1822,37 @@ psg       in out
 mcgvision2.glm &lt;- glm(count~psg+lineage+genetype+psg*lineage+psg*genetype+lineage*genetype, data=mcgvision, family=poisson)
 lrtest(mcgvision1.glm,mcgvision2.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gcHNnICogbGluZWFnZSAqIGdlbmV0eXBlXG5Nb2RlbCAyOiBjb3VudCB+IHBzZyArIGxpbmVhZ2UgKyBnZW5ldHlwZSArIHBzZyAqIGxpbmVhZ2UgKyBwc2cgKiBnZW5ldHlwZSArIFxuICAgIGxpbmVhZ2UgKiBnZW5ldHlwZVxuICAjRGYgIExvZ0xpayBEZiAgQ2hpc3EgUHIoPkNoaXNxKVxuMSAgIDggLTIyLjg3NiAgICAgICAgICAgICAgICAgICAgIFxuMiAgIDcgLTI0LjA1NCAtMSAyLjM1NjUgICAgIDAuMTI0OFxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gcHNnICogbGluZWFnZSAqIGdlbmV0eXBlXG5Nb2RlbCAyOiBjb3VudCB+IHBzZyArIGxpbmVhZ2UgKyBnZW5ldHlwZSArIHBzZyAqIGxpbmVhZ2UgKyBwc2cgKiBnZW5ldHlwZSArIFxuICAgIGxpbmVhZ2UgKiBnZW5ldHlwZVxuICAjRGYgTG9nTGlrIERmIENoaXNxIFByKD5DaGlzcSlcbjEgICA4ICAtMjIuOSAgICAgICAgICAgICAgICAgICAgXG4yICAgNyAgLTI0LjEgLTEgIDIuMzYgICAgICAgMC4xMlxuIn0= -->
 <pre><code>Likelihood ratio test
 
 Model 1: count ~ psg * lineage * genetype
 Model 2: count ~ psg + lineage + genetype + psg * lineage + psg * genetype + 
     lineage * genetype
-  #Df  LogLik Df  Chisq Pr(&gt;Chisq)
-1   8 -22.876                     
-2   7 -24.054 -1 2.3565     0.1248</code></pre>
+  #Df LogLik Df Chisq Pr(&gt;Chisq)
+1   8  -22.9                    
+2   7  -24.1 -1  2.36       0.12</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>No evidence for 3 way interaction - ORs for each 2x2 consistent
 across 3rd variable</p>
-<p>Confirm with Breslow-Day test</p>
+<div id="confirm-with-breslow-day-test" class="section level4">
+<h4>Confirm with Breslow-Day test</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQnJlc2xvd0RheVRlc3QobWNndmlzaW9uLnRhYiwgY29ycmVjdCA9IEZBTFNFKVxuYGBgIn0= -->
 <pre class="r"><code>BreslowDayTest(mcgvision.tab, correct = FALSE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdEJyZXNsb3ctRGF5IHRlc3Qgb24gSG9tb2dlbmVpdHkgb2YgT2RkcyBSYXRpb3NcblxuZGF0YTogIG1jZ3Zpc2lvbi50YWJcblgtc3F1YXJlZCA9IDIuMzUyNCwgZGYgPSAxLCBwLXZhbHVlID0gMC4xMjUxXG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdEJyZXNsb3ctRGF5IHRlc3Qgb24gSG9tb2dlbmVpdHkgb2YgT2RkcyBSYXRpb3NcblxuZGF0YTogIG1jZ3Zpc2lvbi50YWJcblgtc3F1YXJlZCA9IDIuMzUsIGRmID0gMSwgcC12YWx1ZSA9IDAuMTNcbiJ9 -->
 <pre><code>
     Breslow-Day test on Homogeneity of Odds Ratios
 
 data:  mcgvision.tab
-X-squared = 2.3524, df = 1, p-value = 0.1251</code></pre>
+X-squared = 2.35, df = 1, p-value = 0.13</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+</div>
 </div>
 <div id="test-each-2-way-interaction-to-see-if-conditional-independence-applies" class="section level3">
 <h3>Test each 2 way interaction to see if conditional independence
@@ -1862,56 +1864,56 @@ applies</h3>
 mcgvision3.glm &lt;- glm(count~psg+lineage+genetype+psg*genetype+lineage*genetype, data=mcgvision, family=poisson)
 lrtest(mcgvision2.glm,mcgvision3.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gcHNnICsgbGluZWFnZSArIGdlbmV0eXBlICsgcHNnICogbGluZWFnZSArIHBzZyAqIGdlbmV0eXBlICsgXG4gICAgbGluZWFnZSAqIGdlbmV0eXBlXG5Nb2RlbCAyOiBjb3VudCB+IHBzZyArIGxpbmVhZ2UgKyBnZW5ldHlwZSArIHBzZyAqIGdlbmV0eXBlICsgbGluZWFnZSAqIFxuICAgIGdlbmV0eXBlXG4gICNEZiAgTG9nTGlrIERmICBDaGlzcSBQcig+Q2hpc3EpXG4xICAgNyAtMjQuMDU0ICAgICAgICAgICAgICAgICAgICAgXG4yICAgNiAtMjQuNTk3IC0xIDEuMDg1OCAgICAgMC4yOTc0XG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gcHNnICsgbGluZWFnZSArIGdlbmV0eXBlICsgcHNnICogbGluZWFnZSArIHBzZyAqIGdlbmV0eXBlICsgXG4gICAgbGluZWFnZSAqIGdlbmV0eXBlXG5Nb2RlbCAyOiBjb3VudCB+IHBzZyArIGxpbmVhZ2UgKyBnZW5ldHlwZSArIHBzZyAqIGdlbmV0eXBlICsgbGluZWFnZSAqIFxuICAgIGdlbmV0eXBlXG4gICNEZiBMb2dMaWsgRGYgQ2hpc3EgUHIoPkNoaXNxKVxuMSAgIDcgIC0yNC4xICAgICAgICAgICAgICAgICAgICBcbjIgICA2ICAtMjQuNiAtMSAgMS4wOSAgICAgICAgMC4zXG4ifQ== -->
 <pre><code>Likelihood ratio test
 
 Model 1: count ~ psg + lineage + genetype + psg * lineage + psg * genetype + 
     lineage * genetype
 Model 2: count ~ psg + lineage + genetype + psg * genetype + lineage * 
     genetype
-  #Df  LogLik Df  Chisq Pr(&gt;Chisq)
-1   7 -24.054                     
-2   6 -24.597 -1 1.0858     0.2974</code></pre>
+  #Df LogLik Df Chisq Pr(&gt;Chisq)
+1   7  -24.1                    
+2   6  -24.6 -1  1.09        0.3</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBTZWNvbmQsIFBTRyAqIGdlbmV0eXBlICh0aGVzZSB0d28gYXJlIGFzc29jaWF0ZWQpXG5tY2d2aXNpb240LmdsbSA8LSBnbG0oY291bnR+cHNnK2xpbmVhZ2UrZ2VuZXR5cGUrcHNnKmxpbmVhZ2UrbGluZWFnZSpnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24sIGZhbWlseT1wb2lzc29uKVxubHJ0ZXN0KG1jZ3Zpc2lvbjIuZ2xtLG1jZ3Zpc2lvbjQuZ2xtKVxuYGBgIn0= -->
 <pre class="r"><code># Second, PSG * genetype (these two are associated)
 mcgvision4.glm &lt;- glm(count~psg+lineage+genetype+psg*lineage+lineage*genetype, data=mcgvision, family=poisson)
 lrtest(mcgvision2.glm,mcgvision4.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gcHNnICsgbGluZWFnZSArIGdlbmV0eXBlICsgcHNnICogbGluZWFnZSArIHBzZyAqIGdlbmV0eXBlICsgXG4gICAgbGluZWFnZSAqIGdlbmV0eXBlXG5Nb2RlbCAyOiBjb3VudCB+IHBzZyArIGxpbmVhZ2UgKyBnZW5ldHlwZSArIHBzZyAqIGxpbmVhZ2UgKyBsaW5lYWdlICogXG4gICAgZ2VuZXR5cGVcbiAgI0RmICBMb2dMaWsgRGYgIENoaXNxIFByKD5DaGlzcSkgICAgXG4xICAgNyAtMjQuMDU0ICAgICAgICAgICAgICAgICAgICAgICAgIFxuMiAgIDYgLTMwLjI1MCAtMSAxMi4zOTIgIDAuMDAwNDMxMiAqKipcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gcHNnICsgbGluZWFnZSArIGdlbmV0eXBlICsgcHNnICogbGluZWFnZSArIHBzZyAqIGdlbmV0eXBlICsgXG4gICAgbGluZWFnZSAqIGdlbmV0eXBlXG5Nb2RlbCAyOiBjb3VudCB+IHBzZyArIGxpbmVhZ2UgKyBnZW5ldHlwZSArIHBzZyAqIGxpbmVhZ2UgKyBsaW5lYWdlICogXG4gICAgZ2VuZXR5cGVcbiAgI0RmIExvZ0xpayBEZiBDaGlzcSBQcig+Q2hpc3EpICAgIFxuMSAgIDcgIC0yNC4xICAgICAgICAgICAgICAgICAgICAgICAgXG4yICAgNiAgLTMwLjIgLTEgIDEyLjQgICAgMC4wMDA0MyAqKipcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuIn0= -->
 <pre><code>Likelihood ratio test
 
 Model 1: count ~ psg + lineage + genetype + psg * lineage + psg * genetype + 
     lineage * genetype
 Model 2: count ~ psg + lineage + genetype + psg * lineage + lineage * 
     genetype
-  #Df  LogLik Df  Chisq Pr(&gt;Chisq)    
-1   7 -24.054                         
-2   6 -30.250 -1 12.392  0.0004312 ***
+  #Df LogLik Df Chisq Pr(&gt;Chisq)    
+1   7  -24.1                        
+2   6  -30.2 -1  12.4    0.00043 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVzaWR1YWxzKG1jZ3Zpc2lvbjQuZ2xtLHR5cGU9YyhcInBlYXJzb25cIikpXG5gYGAifQ== -->
 <pre class="r"><code>residuals(mcgvision4.glm,type=c(&quot;pearson&quot;))</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgOSAgICAgICAgIDEwICAgICAgICAgMTEgICAgICAgICAxMiAgICAgICAgIDEzICAgICAgICAgMTQgICAgICAgICAxNSAgICAgICAgIDE2IFxuLTEuMjk0MTA3NiAtMC40MDg1MjQxICAyLjYzODQ3NjQgIDAuOTM3MTA3MCAgMC45ODExNzc5ICAwLjMwOTczODQgLTIuMDAwNDYzMyAtMC43MTA1MDQxIFxuIn0= -->
-<pre><code>         9         10         11         12         13         14         15         16 
--1.2941076 -0.4085241  2.6384764  0.9371070  0.9811779  0.3097384 -2.0004633 -0.7105041 </code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgIDkgICAgICAgMTAgICAgICAgMTEgICAgICAgMTIgICAgICAgMTMgICAgICAgMTQgICAgICAgMTUgICAgICAgMTYgXG4tMS4yOTQxMSAtMC40MDg1MiAgMi42Mzg0OCAgMC45MzcxMSAgMC45ODExOCAgMC4zMDk3NCAtMi4wMDA0NiAtMC43MTA1MCBcbiJ9 -->
+<pre><code>       9       10       11       12       13       14       15       16 
+-1.29411 -0.40852  2.63848  0.93711  0.98118  0.30974 -2.00046 -0.71050 </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBUaGlyZCBsaW5lYWdlKmdlbmV0eXBlICh0aGVzZSB0d28gYXJlIGluZGVwZW5kZW50KVxubWNndmlzaW9uNS5nbG0gPC0gZ2xtKGNvdW50fnBzZytsaW5lYWdlK2dlbmV0eXBlK3BzZypsaW5lYWdlK3BzZypnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24sIGZhbWlseT1wb2lzc29uKVxubHJ0ZXN0KG1jZ3Zpc2lvbjIuZ2xtLG1jZ3Zpc2lvbjUuZ2xtKVxuYGBgIn0= -->
 <pre class="r"><code># Third lineage*genetype (these two are independent)
 mcgvision5.glm &lt;- glm(count~psg+lineage+genetype+psg*lineage+psg*genetype, data=mcgvision, family=poisson)
 lrtest(mcgvision2.glm,mcgvision5.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gcHNnICsgbGluZWFnZSArIGdlbmV0eXBlICsgcHNnICogbGluZWFnZSArIHBzZyAqIGdlbmV0eXBlICsgXG4gICAgbGluZWFnZSAqIGdlbmV0eXBlXG5Nb2RlbCAyOiBjb3VudCB+IHBzZyArIGxpbmVhZ2UgKyBnZW5ldHlwZSArIHBzZyAqIGxpbmVhZ2UgKyBwc2cgKiBnZW5ldHlwZVxuICAjRGYgIExvZ0xpayBEZiAgQ2hpc3EgUHIoPkNoaXNxKVxuMSAgIDcgLTI0LjA1NCAgICAgICAgICAgICAgICAgICAgIFxuMiAgIDYgLTI0LjA2NyAtMSAwLjAyNjQgICAgICAwLjg3MVxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gcHNnICsgbGluZWFnZSArIGdlbmV0eXBlICsgcHNnICogbGluZWFnZSArIHBzZyAqIGdlbmV0eXBlICsgXG4gICAgbGluZWFnZSAqIGdlbmV0eXBlXG5Nb2RlbCAyOiBjb3VudCB+IHBzZyArIGxpbmVhZ2UgKyBnZW5ldHlwZSArIHBzZyAqIGxpbmVhZ2UgKyBwc2cgKiBnZW5ldHlwZVxuICAjRGYgTG9nTGlrIERmIENoaXNxIFByKD5DaGlzcSlcbjEgICA3ICAtMjQuMSAgICAgICAgICAgICAgICAgICAgXG4yICAgNiAgLTI0LjEgLTEgIDAuMDMgICAgICAgMC44N1xuIn0= -->
 <pre><code>Likelihood ratio test
 
 Model 1: count ~ psg + lineage + genetype + psg * lineage + psg * genetype + 
     lineage * genetype
 Model 2: count ~ psg + lineage + genetype + psg * lineage + psg * genetype
-  #Df  LogLik Df  Chisq Pr(&gt;Chisq)
-1   7 -24.054                     
-2   6 -24.067 -1 0.0264      0.871</code></pre>
+  #Df LogLik Df Chisq Pr(&gt;Chisq)
+1   7  -24.1                    
+2   6  -24.1 -1  0.03       0.87</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBUcnkgY29tcGxldGUgaW5kZXBlbmRlbmNlIG1vZGVsXG5tY2d2aXNpb242LmdsbSA8LSBnbG0oY291bnR+cHNnK2xpbmVhZ2UrZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uLCBmYW1pbHk9cG9pc3NvbilcbmBgYCJ9 -->
 <pre class="r"><code># Try complete independence model
@@ -1927,10 +1929,10 @@ mcgvision6.glm &lt;- glm(count~psg+lineage+genetype, data=mcgvision, family=pois
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQUlDKG1jZ3Zpc2lvbjEuZ2xtLG1jZ3Zpc2lvbjIuZ2xtLG1jZ3Zpc2lvbjMuZ2xtLG1jZ3Zpc2lvbjQuZ2xtLG1jZ3Zpc2lvbjUuZ2xtLCBtY2d2aXNpb242LmdsbSlcbmBgYCJ9 -->
 <pre class="r"><code>AIC(mcgvision1.glm,mcgvision2.glm,mcgvision3.glm,mcgvision4.glm,mcgvision5.glm, mcgvision6.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNiDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoWW1aZ1pnVXlHVmhEUTl4MExSaUFJa0FPSXdNTEF5ZUlyZ0FxRWdZeVFJSjhRTXptb01BQUJnNHlVRm9DQnkzQUFBTVFmWDRQbkFWTWRzMXo4T2Q5RXZhY004akJiOGI5WTg4ZXNqa0VLWEJPbGxQWTVlQW42UEloOWQwa2g4RGthLy9pWnI1QWN3aHJYbUp1YWpHUUlRQjJERVNRS1NVTnltSjI5SFJHMDhGWmxGK3VoNnlMRFNyQmw1dWNYcFpabkptZlo2aVhucE9MSVdxRVZkUVlxNmdKVmxGVHJLSm1ZRkUwYnlYbkpCYkRIQWdUNUVwSkxFblVTeXNDdWgzSSs0ZW1oVDIvb0FSb0dsQVRrekRZVjBBTllHa0lSamFJc1FoTmdMODBEeFFpS2JySkdhVjUyYURZUnRITEM2WFprTmhNRU91Wi9xT0ZJa3RxY2tZK2xNMldtcGVlbVpjSzgxTk9ZbEpxRHN6N3dGZ0FSNEplUVZGbVhnbk1oMERSWXIyUy9KSkVtRHF1NVB3Y21Ball6d3ovQUl5RGxFT25BZ0FBIn0= -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNiDDlyAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERtaXVCaVlHQmdabUJoQnBLc1FDWURhMmlJbTY0RkF3TUxFNUREeU1EQ3dBbWlLNERTd2tBR1NKQVBpTmtjRkJqQXdFRUdTa3Znb0FVWVlBQ2l6KytCczRESnJua08vcnhQd3A1elJqdjR6YmgvN05sRGRvY2dCYzdKY2dwYkhmd0VYVDZrdnB2ckVKaDg3Vi9jekM5b0RtSE5TOHhOTFFZeUJNQ09nUWd5cGFSQldjeU9uczVvT2ppTDhzdjFrSFd4UVNYNGNwUFR5ektMTS9QekRQWFNjM0l4Ukkyd2locGpGVFhCS21xS1ZkUU1MSXJtcmVTY3hHS1lBMkdDWENtSkpZbDZhVVZBdHdONS85QzBzT2NYbEFCTkEycGlFZ2I3Q3FnQkxBM0J5QVl4RnFFSkNKVG1nVUlrUlRjNW96UXZXOWZRREUwekw1Um1RMkl6UWV4bitvOFdqQ3lweVJuNVVEWmJhbDU2Wmw0cXpGTTVpVW1wT1REL0E2TUJIQXQ2QlVXWmVTVXdMd0pGaS9WSzhrc1NZZXE0a3ZOellDSmdUelA4QXdDQ09XYm9xQUlBQUE9PSJ9 -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["df"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["AIC"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"8","2":"61.75205","_rn_":"mcgvision1.glm"},{"1":"7","2":"62.10853","_rn_":"mcgvision2.glm"},{"1":"6","2":"61.19433","_rn_":"mcgvision3.glm"},{"1":"6","2":"72.50058","_rn_":"mcgvision4.glm"},{"1":"6","2":"60.13492","_rn_":"mcgvision5.glm"},{"1":"4","2":"69.56000","_rn_":"mcgvision6.glm"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["df"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["AIC"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"8","2":"61.752","_rn_":"mcgvision1.glm"},{"1":"7","2":"62.109","_rn_":"mcgvision2.glm"},{"1":"6","2":"61.194","_rn_":"mcgvision3.glm"},{"1":"6","2":"72.501","_rn_":"mcgvision4.glm"},{"1":"6","2":"60.135","_rn_":"mcgvision5.glm"},{"1":"4","2":"69.560","_rn_":"mcgvision6.glm"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
@@ -1952,34 +1954,13 @@ psg      nonsensory sensory
   nonpsg         44      49
   psg           290     143</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub2Rkc3JhdGlvKG1jZ3Zpc2lvbl9zaW1wLnRhYilcbmBgYCJ9 -->
-<pre class="r"><code>oddsratio(mcgvision_simp.tab)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9kZHNyYXRpbyhtY2d2aXNpb25fc2ltcC50YWIsIGxvZyA9IEZBTFNFKVxuYGBgIn0= -->
+<pre class="r"><code>loddsratio(mcgvision_simp.tab, log = FALSE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGRhdGFcbiAgICAgICAgZ2VuZXR5cGVcbnBzZyAgICAgIG5vbnNlbnNvcnkgc2Vuc29yeSBUb3RhbFxuICBub25wc2cgICAgICAgICA0NCAgICAgIDQ5ICAgIDkzXG4gIHBzZyAgICAgICAgICAgMjkwICAgICAxNDMgICA0MzNcbiAgVG90YWwgICAgICAgICAzMzQgICAgIDE5MiAgIDUyNlxuXG4kbWVhc3VyZVxuICAgICAgICBvZGRzIHJhdGlvIHdpdGggOTUlIEMuSS5cbnBzZyAgICAgICBlc3RpbWF0ZSAgICAgbG93ZXIgICAgIHVwcGVyXG4gIG5vbnBzZyAxLjAwMDAwMDAgICAgICAgIE5BICAgICAgICBOQVxuICBwc2cgICAgMC40NDM3MDYyIDAuMjgwNzY3OCAwLjY5ODg3NTJcblxuJHAudmFsdWVcbiAgICAgICAgdHdvLXNpZGVkXG5wc2cgICAgICAgIG1pZHAuZXhhY3QgZmlzaGVyLmV4YWN0ICAgY2hpLnNxdWFyZVxuICBub25wc2cgICAgICAgICAgIE5BICAgICAgICAgICBOQSAgICAgICAgICAgTkFcbiAgcHNnICAgIDAuMDAwNDY4NDgzOSAwLjAwMDUzMDI0MDcgMC4wMDAzNTIxODI0XG5cbiRjb3JyZWN0aW9uXG5bMV0gRkFMU0VcblxuYXR0cigsXCJtZXRob2RcIilcblsxXSBcIm1lZGlhbi11bmJpYXNlZCBlc3RpbWF0ZSAmIG1pZC1wIGV4YWN0IENJXCJcbiJ9 -->
-<pre><code>$data
-        genetype
-psg      nonsensory sensory Total
-  nonpsg         44      49    93
-  psg           290     143   433
-  Total         334     192   526
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgcmF0aW9zIGZvciBwc2cgYW5kIGdlbmV0eXBlIFxuXG5bMV0gMC40NDI3OVxuIn0= -->
+<pre><code> odds ratios for psg and genetype 
 
-$measure
-        odds ratio with 95% C.I.
-psg       estimate     lower     upper
-  nonpsg 1.0000000        NA        NA
-  psg    0.4437062 0.2807678 0.6988752
-
-$p.value
-        two-sided
-psg        midp.exact fisher.exact   chi.square
-  nonpsg           NA           NA           NA
-  psg    0.0004684839 0.0005302407 0.0003521824
-
-$correction
-[1] FALSE
-
-attr(,&quot;method&quot;)
-[1] &quot;median-unbiased estimate &amp; mid-p exact CI&quot;</code></pre>
+[1] 0.44279</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1990,88 +1971,46 @@ attr(,&quot;method&quot;)
 <pre class="r"><code>mcgvision1 &lt;- subset(mcgvision,subset = lineage %in% &#39;in&#39;)
 mcgvision1</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNCDDlyA1XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlNTMDdETUJDZDV0UFFvRUlseEpZYkpBS3hZWTBRQjBBZ2RXdGNrMGFFY1dRN1FLL0JnUXZqMUZZYkU4UmlaTDgzTTI4KzlzUGQ4anBmNWdBUVF4TEZFS2QwaGZUcDhiNjRBV0lJVENDQm1UMC9LZWpNZXNrV1pJbHpUTjlyWFVzY1JSbVhhSlJzUWpoVXlMUkFMZFZtSE9ZbzhXOW1xQlMzdXZLTlVOQWVqVGlHbVZHTi85d0E1bjA4d0MzWkJka1gyWG13cGhUWm05Qk9QUFZrcFdUWE9uQlVDUlJtMDRyZnJXVk5qWUpWM3BOeTJhRUpDc3lVL0NoOUVkK1JkUnc3ZkJwMnhCdW1mVWVlekZmTXNQSkZrUTZoYlpDU3lkYlFJMUpTWkY5OGFoTjY5ODRPaFNZcUlCWWQydTVXQlY5MytGcGNYUWJKYzNjbUIvZDBWei82ZGxwVHA1VUl2cGIrMlFSV3RCMC9WTU9laGY5V0o3U1NmaU5scTJwYW1CdVJXRjBhYVppUHk3bHNQTk1QRGRzZjRpRUxVUUVEQUFBPSJ9 -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNCDDlyA1XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlNTMDdETUJDZEpuRkNnd3FWRUZ0dWtFaUlUZGNJY1FBRVVyZkdOV2xFR0VlMkEvUWFITGd3U1cyMU1VVXNKdmFiTi9NOG56emNMVy95WlE0QU1TUXhmUmxkZ1QwOTNoY0xnQ1FpTUlFRXB2MzVTZlJGejVMTnlSSkhwTysxcVJVZVJabFFhTFZxUWpoV3lJeEVvL1RtT014UjRkK2VzVkxjbXNvWFFrRjdkSVFZWjBZMS9uTURtQTN4QUxka1YyUmZaSmZCbUJqeU4ybWNPUFBPU3F1dWRlQ2traWp0cHBXL1M4dWFHaVd2UE1PRTZ0QUdEMHkxK2lqOUk3NmluamgxK0R5c1NEVGMrSXE4TTE5eHk4c1hUVHFFdGtGS3BscExTNlNrcU45NDJpY005TTRPaFNZNmNNdzc3S3RiRldMZDRXdHh2UWlTWis1TUR1NXM5MzcwN2JSU3A1VklzVlorYlJJcm1vNXZxdUhQMHY5V1p6U1NZU0pscTJzYW1HdVJ2S2EweW5JZmx3dlZlTS9RTkd4L0FMckk4eklCQXdBQSJ9 -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["chr"],"align":["left"]},{"label":["genetype"],"name":[2],"type":["chr"],"align":["left"]},{"label":["psg"],"name":[3],"type":["chr"],"align":["left"]},{"label":["lineage"],"name":[4],"type":["chr"],"align":["left"]},{"label":["count"],"name":[5],"type":["int"],"align":["right"]}],"data":[{"1":"vision","2":"sensory","3":"psg","4":"in","5":"66","_rn_":"9"},{"1":"vision","2":"sensory","3":"nonpsg","4":"in","5":"30","_rn_":"11"},{"1":"control","2":"nonsensory","3":"psg","4":"in","5":"146","_rn_":"13"},{"1":"control","2":"nonsensory","3":"nonpsg","4":"in","5":"21","_rn_":"15"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWNndmlzaW9uMS50YWIgPC0geHRhYnMoY291bnR+cHNnICsgZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uMSwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpXG5vZGRzcmF0aW8obWNndmlzaW9uMS50YWIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWNndmlzaW9uMS50YWIgPC0geHRhYnMoY291bnR+cHNnICsgZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uMSwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpXG5sb2Rkc3JhdGlvKG1jZ3Zpc2lvbjEudGFiLCBsb2cgPSBGQUxTRSlcbmBgYCJ9 -->
 <pre class="r"><code>mcgvision1.tab &lt;- xtabs(count~psg + genetype, data=mcgvision1, drop.unused.levels=TRUE)
-oddsratio(mcgvision1.tab)</code></pre>
+loddsratio(mcgvision1.tab, log = FALSE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGRhdGFcbiAgICAgICAgZ2VuZXR5cGVcbnBzZyAgICAgIG5vbnNlbnNvcnkgc2Vuc29yeSBUb3RhbFxuICBub25wc2cgICAgICAgICAyMSAgICAgIDMwICAgIDUxXG4gIHBzZyAgICAgICAgICAgMTQ2ICAgICAgNjYgICAyMTJcbiAgVG90YWwgICAgICAgICAxNjcgICAgICA5NiAgIDI2M1xuXG4kbWVhc3VyZVxuICAgICAgICBvZGRzIHJhdGlvIHdpdGggOTUlIEMuSS5cbnBzZyAgICAgIGVzdGltYXRlICAgICBsb3dlciAgICAgdXBwZXJcbiAgbm9ucHNnIDEuMDAwMDAwICAgICAgICBOQSAgICAgICAgTkFcbiAgcHNnICAgIDAuMzE4NjQ0IDAuMTY3NDYxMiAwLjU5NTk3MjZcblxuJHAudmFsdWVcbiAgICAgICAgdHdvLXNpZGVkXG5wc2cgICAgICAgIG1pZHAuZXhhY3QgZmlzaGVyLmV4YWN0ICAgY2hpLnNxdWFyZVxuICBub25wc2cgICAgICAgICAgIE5BICAgICAgICAgICBOQSAgICAgICAgICAgTkFcbiAgcHNnICAgIDAuMDAwMzM1MTg2OSAwLjAwMDMzMzU2MzMgMC4wMDAyMjYwODQ4XG5cbiRjb3JyZWN0aW9uXG5bMV0gRkFMU0VcblxuYXR0cigsXCJtZXRob2RcIilcblsxXSBcIm1lZGlhbi11bmJpYXNlZCBlc3RpbWF0ZSAmIG1pZC1wIGV4YWN0IENJXCJcbiJ9 -->
-<pre><code>$data
-        genetype
-psg      nonsensory sensory Total
-  nonpsg         21      30    51
-  psg           146      66   212
-  Total         167      96   263
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgcmF0aW9zIGZvciBwc2cgYW5kIGdlbmV0eXBlIFxuXG5bMV0gMC4zMTY0NFxuIn0= -->
+<pre><code> odds ratios for psg and genetype 
 
-$measure
-        odds ratio with 95% C.I.
-psg      estimate     lower     upper
-  nonpsg 1.000000        NA        NA
-  psg    0.318644 0.1674612 0.5959726
-
-$p.value
-        two-sided
-psg        midp.exact fisher.exact   chi.square
-  nonpsg           NA           NA           NA
-  psg    0.0003351869 0.0003335633 0.0002260848
-
-$correction
-[1] FALSE
-
-attr(,&quot;method&quot;)
-[1] &quot;median-unbiased estimate &amp; mid-p exact CI&quot;</code></pre>
+[1] 0.31644</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWNndmlzaW9uMiA8LSBzdWJzZXQobWNndmlzaW9uLHN1YnNldCA9IGxpbmVhZ2UgJWluJSAnb3V0Jylcbm1jZ3Zpc2lvbjJcbmBgYCJ9 -->
 <pre class="r"><code>mcgvision2 &lt;- subset(mcgvision,subset = lineage %in% &#39;out&#39;)
 mcgvision2</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNCDDlyA1XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlN6VTdETUF6MityT3lpazJUT1BBVXEwQmNlQURFalFzQ2FkZlFoYTZpMkZXU0Fuc0xubmpnYnJIWVFoRUhLLzQrLzl1NXYxbGU1Y3NjQUdKSW9oamlsRlZJSHg5dUY5ZkFESU1SSkREcDN3OTJPdXV0TEhPV3hCdkdiN1d0Q1FkUlZoSTZRMDBJanpOa1ZxTWxzeG1HT1JMK3pSeG5pbHRiU1NQczlJTUdERUVrZGU1L0ZXQzZpd0c0WSttMzhjbHlIcXdxUmZXcXJTK1FDbGtaNmxvUFRpcU4ybTFhL2J1OXJLbFJxMG9zYVVrZHVxREF4TkI3SVVXa28vNktweXl6ZmVIampzcEdXZWxJeUh5bG5DcWVEZWRodEExQ01tb2RINUtEb243T3NhOHc4bktZYUdRQ1l0NWgzOTFxVWE0N2ZGbGNYZ1RCVS84bUIzcTZyeDk5K1Z4am55dlI1WnJrZEJvcjNvNE0xYWduTFY5cnhpdlpiYVJvVFkxeXRKeFpXemh5U3Z6eWtocGhka1BEOWh0RlJWdElCUU1BQUE9PSJ9 -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZiBbNCDDlyA1XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlN3VTdETUF4MTEzWmxGWnNtY2VBcldnbHgyUWNnYmx3UVNMdUdMblFWeGE2U0ZOaGY4TVVEZDR2RkZvWTR1UEY3anYwY3UvYzN5K3Q4bVFOQURFbk0zNVJkU0I4ZmJvc0ZRREppRUVFQ2srSDg0UERGRUdXYnN5VStNSDVyYkVONEVtVVZvVFBVaHZDNFFtWTFXaktiMHpCSHdyK1o0MHB4WjJ0cGhDLzlvQk9CSUpONjk3OExNTjNsQU55eERkUDRaTHNNUnBXaWV0WFdDNlJDMW9iNnpvT3pXcU4ybTA3L2JpOXJHOVNxbGtoYVVZOHVFSmdZZWk5RlJEb2F0bmpPTnRzTEgzZFV0Y3BLUjBMbUsrVlUrV3k0RHFOdGtKSlI1M2lSbkRRYTNqbjJDcEczdzBLUkNZaDVqME4zcTZKYTkvaFNYQzJDNUtrL2t3TS8zZXVQdm55dHNhK1Y2R3BOc2pxTk5VOUhIdFdxSnkyLzFveEhzcHRJMlprR1pXazVzN1owNUpUY3l5dHFoZGs5R3JiZnlObnIxUVVEQUFBPSJ9 -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["chr"],"align":["left"]},{"label":["genetype"],"name":[2],"type":["chr"],"align":["left"]},{"label":["psg"],"name":[3],"type":["chr"],"align":["left"]},{"label":["lineage"],"name":[4],"type":["chr"],"align":["left"]},{"label":["count"],"name":[5],"type":["int"],"align":["right"]}],"data":[{"1":"vision","2":"sensory","3":"psg","4":"out","5":"77","_rn_":"10"},{"1":"vision","2":"sensory","3":"nonpsg","4":"out","5":"19","_rn_":"12"},{"1":"control","2":"nonsensory","3":"psg","4":"out","5":"144","_rn_":"14"},{"1":"control","2":"nonsensory","3":"nonpsg","4":"out","5":"23","_rn_":"16"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
   </script>
 </div>
 <!-- rnb-frame-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWNndmlzaW9uMi50YWIgPC0geHRhYnMoY291bnR+cHNnICsgZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uMiwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpXG5vZGRzcmF0aW8obWNndmlzaW9uMi50YWIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubWNndmlzaW9uMi50YWIgPC0geHRhYnMoY291bnR+cHNnICsgZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uMiwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpXG5sb2Rkc3JhdGlvKG1jZ3Zpc2lvbjIudGFiLCBsb2cgPSBGQUxTRSlcbmBgYCJ9 -->
 <pre class="r"><code>mcgvision2.tab &lt;- xtabs(count~psg + genetype, data=mcgvision2, drop.unused.levels=TRUE)
-oddsratio(mcgvision2.tab)</code></pre>
+loddsratio(mcgvision2.tab, log = FALSE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGRhdGFcbiAgICAgICAgZ2VuZXR5cGVcbnBzZyAgICAgIG5vbnNlbnNvcnkgc2Vuc29yeSBUb3RhbFxuICBub25wc2cgICAgICAgICAyMyAgICAgIDE5ICAgIDQyXG4gIHBzZyAgICAgICAgICAgMTQ0ICAgICAgNzcgICAyMjFcbiAgVG90YWwgICAgICAgICAxNjcgICAgICA5NiAgIDI2M1xuXG4kbWVhc3VyZVxuICAgICAgICBvZGRzIHJhdGlvIHdpdGggOTUlIEMuSS5cbnBzZyAgICAgICBlc3RpbWF0ZSAgICAgbG93ZXIgICB1cHBlclxuICBub25wc2cgMS4wMDAwMDAwICAgICAgICBOQSAgICAgIE5BXG4gIHBzZyAgICAwLjY0NzcxNjQgMC4zMzExMDg5IDEuMjc4MzZcblxuJHAudmFsdWVcbiAgICAgICAgdHdvLXNpZGVkXG5wc2cgICAgICBtaWRwLmV4YWN0IGZpc2hlci5leGFjdCBjaGkuc3F1YXJlXG4gIG5vbnBzZyAgICAgICAgIE5BICAgICAgICAgICBOQSAgICAgICAgIE5BXG4gIHBzZyAgICAgMC4yMDgwNDI2ICAgIDAuMjIyNzk4NyAgMC4xOTk1Mjk0XG5cbiRjb3JyZWN0aW9uXG5bMV0gRkFMU0VcblxuYXR0cigsXCJtZXRob2RcIilcblsxXSBcIm1lZGlhbi11bmJpYXNlZCBlc3RpbWF0ZSAmIG1pZC1wIGV4YWN0IENJXCJcbiJ9 -->
-<pre><code>$data
-        genetype
-psg      nonsensory sensory Total
-  nonpsg         23      19    42
-  psg           144      77   221
-  Total         167      96   263
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgcmF0aW9zIGZvciBwc2cgYW5kIGdlbmV0eXBlIFxuXG5bMV0gMC42NDczXG4ifQ== -->
+<pre><code> odds ratios for psg and genetype 
 
-$measure
-        odds ratio with 95% C.I.
-psg       estimate     lower   upper
-  nonpsg 1.0000000        NA      NA
-  psg    0.6477164 0.3311089 1.27836
-
-$p.value
-        two-sided
-psg      midp.exact fisher.exact chi.square
-  nonpsg         NA           NA         NA
-  psg     0.2080426    0.2227987  0.1995294
-
-$correction
-[1] FALSE
-
-attr(,&quot;method&quot;)
-[1] &quot;median-unbiased estimate &amp; mid-p exact CI&quot;</code></pre>
+[1] 0.6473</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUUsgQm94IDEzLjciCgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQpgYGAKCkFzIHBhcnQgb2YgYSBwaHlsb2dlbmV0aWMgc3R1ZHkgb24gdGhlIGFkYXB0YXRpb24gb2YgY2V0YWNlYW5zIHRvIGFuIGFxdWF0aWMgbGlmZXN0eWxlLCBNY0dvd2VuIGV0IGFsICgyMDIwKSBjb3VudGVkIHRoZSBudW1iZXIgb2YgZ2VuZXMgaW4gZWFjaCBjZWxsIG9mIHRocmVlIGNyb3NzLWNsYXNzaWZpZWQgdmFyaWFibGVzOiBzZW5zb3J5IChlLmcuIHNpZ2h0LCB2aXNpb24gZXRjLikgdnMgbm9uc2Vuc29yeSBnZW5lcywgaW5ncm91cCAod2hhbGVzLCBkb2xwaGlucyBldGMuKSB2cyBvdXRncm91cCAoZS5nLiBub24tYXF1YXRpYyBsaWtlIGhpcHBvcG90YW11c2VzKSBsaW5lYWdlcyBmcm9tIHRoZWlyIHBoeWxvZ2VuZXRpYyB0cmVlLCBhbmQgd2hldGhlciB0aGUgZ2VuZXMgd2VyZSB1bmRlciBwb3NpdGl2ZSBzZWxlY3Rpb24gKFBTRykgb3Igbm90LiBUaGUgcmVzZWFyY2ggcXVlc3Rpb24gd2FzIHByaW1hcmlseSBhYm91dCB0aGUgYXNzb2NpYXRpb24gb2Ygd2hldGhlciBnZW5lcyB3ZXJlIHVuZGVyIHBvc2l0aXZlIHNlbGVjdGlvbiBvciBub3Qgd2l0aCBib3RoIHBoeWxvZ2VuZXRpYyBncm91cCAoaW5ncm91cCB2cyBvdXRncm91cCkgYW5kIHNlbnNvcnkgcm9sZSAoc2Vuc29yeSB2cyBub24tc2Vuc29yeSkgYW5kLiBXZSB3aWxsIGZvY3VzIGp1c3Qgb24gdGhlIGFuYWx5c2lzIG9mIHZpc2lvbiBnZW5lcy4KClRoZSBwYXBlciBpcyBbaGVyZV0oaHR0cHM6Ly9kb2kub3JnLzEwLjEwOTMvbW9sYmV2L21zYWEwNzApCgpNY0dvd2VuLCBNLiBSLiwgVHNhZ2tvZ2VvcmdhLCBHLiwgV2lsbGlhbXNvbiwgSi4sIE1vcmluLCBQLiBBLiAmIFJvc3NpdGVyLCBBLiBTLiBKLiAoMjAyMCkuIFBvc2l0aXZlIHNlbGVjdGlvbiBhbmQgaW5hY3RpdmF0aW9uIGluIHRoZSB2aXNpb24gYW5kIGhlYXJpbmcgZ2VuZXMgb2YgY2V0YWNlYW5zLiAqTW9sIEJpb2wgRXZvbCosIDM3LCAyMDY5LTgzLgoKIyMjIFByZWxpbWluYXJpZXMKCkZpcnN0LCBsb2FkIHRoZSByZXF1aXJlZCBwYWNrYWdlcyAoZXBpdG9vbHMsIHZjZCwgRGVzY1Rvb2xzKQoKYGBge3IgaW5jbHVkZT1GQUxTRSwgcmVzdWx0cz0naGlkZSd9CmxpYnJhcnkoZXBpdG9vbHMpCmxpYnJhcnkodmNkKQpsaWJyYXJ5KERlc2NUb29scykKYGBgCgpJbXBvcnQgbWNnb3dlbiBkYXRhIGZpbGUgKFttY2dvd2VuLmNzdl0oLi4vZGF0YS9tY2dvd2VuLmNzdikpIGFuZCBzZWxlY3QgdmlzaW9uIGdlbmVzIG9ubHkKCmBgYHtyfQptY2dvd2VuIDwtIHJlYWQuY3N2KCIuLi9kYXRhL21jZ293ZW4uY3N2IikKbWNndmlzaW9uPC1tY2dvd2VuW21jZ293ZW4kZ3JvdXAgJWluJSBjKCJ2aXNpb24iLCJjb250cm9sIiksXQpoZWFkKG1jZ3Zpc2lvbiwxMCkKYGBgCgpgYGB7ciBlY2hvPUZBTFNFfQptY2d2aXNpb24udGFiPC14dGFicyhjb3VudH5wc2cgKyBsaW5lYWdlICsgZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uKQptY2d2aXNpb24udGFiCmBgYAoKIyMjIEdsbSB0ZXN0IGZvciAzIHdheSBpbnRlcmFjdGlvbgoKYGBge3J9Cm1jZ3Zpc2lvbjEuZ2xtIDwtIGdsbShjb3VudH5wc2cqbGluZWFnZSpnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24sIGZhbWlseT1wb2lzc29uKQptY2d2aXNpb24yLmdsbSA8LSBnbG0oY291bnR+cHNnK2xpbmVhZ2UrZ2VuZXR5cGUrcHNnKmxpbmVhZ2UrcHNnKmdlbmV0eXBlK2xpbmVhZ2UqZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uLCBmYW1pbHk9cG9pc3NvbikKbHJ0ZXN0KG1jZ3Zpc2lvbjEuZ2xtLG1jZ3Zpc2lvbjIuZ2xtKQpgYGAKCk5vIGV2aWRlbmNlIGZvciAzIHdheSBpbnRlcmFjdGlvbiAtIE9ScyBmb3IgZWFjaCAyeDIgY29uc2lzdGVudCBhY3Jvc3MgM3JkIHZhcmlhYmxlCgpDb25maXJtIHdpdGggQnJlc2xvdy1EYXkgdGVzdAoKYGBge3J9CkJyZXNsb3dEYXlUZXN0KG1jZ3Zpc2lvbi50YWIsIGNvcnJlY3QgPSBGQUxTRSkKYGBgCgojIyMgVGVzdCBlYWNoIDIgd2F5IGludGVyYWN0aW9uIHRvIHNlZSBpZiBjb25kaXRpb25hbCBpbmRlcGVuZGVuY2UgYXBwbGllcwoKYGBge3J9CiMgRmlyc3QgUFNHKmxpbmVhZ2UgKHRoZXNlIHR3byBhcmUgaW5kZXBlbmRlbnQpCm1jZ3Zpc2lvbjMuZ2xtIDwtIGdsbShjb3VudH5wc2crbGluZWFnZStnZW5ldHlwZStwc2cqZ2VuZXR5cGUrbGluZWFnZSpnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24sIGZhbWlseT1wb2lzc29uKQpscnRlc3QobWNndmlzaW9uMi5nbG0sbWNndmlzaW9uMy5nbG0pCiMgU2Vjb25kLCBQU0cgKiBnZW5ldHlwZSAodGhlc2UgdHdvIGFyZSBhc3NvY2lhdGVkKQptY2d2aXNpb240LmdsbSA8LSBnbG0oY291bnR+cHNnK2xpbmVhZ2UrZ2VuZXR5cGUrcHNnKmxpbmVhZ2UrbGluZWFnZSpnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24sIGZhbWlseT1wb2lzc29uKQpscnRlc3QobWNndmlzaW9uMi5nbG0sbWNndmlzaW9uNC5nbG0pCnJlc2lkdWFscyhtY2d2aXNpb240LmdsbSx0eXBlPWMoInBlYXJzb24iKSkKIyBUaGlyZCBsaW5lYWdlKmdlbmV0eXBlICh0aGVzZSB0d28gYXJlIGluZGVwZW5kZW50KQptY2d2aXNpb241LmdsbSA8LSBnbG0oY291bnR+cHNnK2xpbmVhZ2UrZ2VuZXR5cGUrcHNnKmxpbmVhZ2UrcHNnKmdlbmV0eXBlLCBkYXRhPW1jZ3Zpc2lvbiwgZmFtaWx5PXBvaXNzb24pCmxydGVzdChtY2d2aXNpb24yLmdsbSxtY2d2aXNpb241LmdsbSkKIyBUcnkgY29tcGxldGUgaW5kZXBlbmRlbmNlIG1vZGVsCm1jZ3Zpc2lvbjYuZ2xtIDwtIGdsbShjb3VudH5wc2crbGluZWFnZStnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24sIGZhbWlseT1wb2lzc29uKQpgYGAKCiMjIyBjb21wYXJlIG1vZGVsIGZpdHMKCmBgYHtyfQpBSUMobWNndmlzaW9uMS5nbG0sbWNndmlzaW9uMi5nbG0sbWNndmlzaW9uMy5nbG0sbWNndmlzaW9uNC5nbG0sbWNndmlzaW9uNS5nbG0sIG1jZ3Zpc2lvbjYuZ2xtKQpgYGAKCiMjIyBFc3RpbWF0ZSBPUnMgZm9yIFBTRyB4IGdlbmV0eXBlIGZvciBlYWNoIGxpbmVhZ2UgYW5kIG92ZXJhbGwKCk92ZXJhbGwKCmBgYHtyfQptY2d2aXNpb25fc2ltcC50YWIgPC0geHRhYnMoY291bnR+cHNnICsgZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSkKbWNndmlzaW9uX3NpbXAudGFiCm9kZHNyYXRpbyhtY2d2aXNpb25fc2ltcC50YWIpCgpgYGAKClNlcGFyYXRlbHkKCmBgYHtyfQptY2d2aXNpb24xIDwtIHN1YnNldChtY2d2aXNpb24sc3Vic2V0ID0gbGluZWFnZSAlaW4lICdpbicpCm1jZ3Zpc2lvbjEKbWNndmlzaW9uMS50YWIgPC0geHRhYnMoY291bnR+cHNnICsgZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uMSwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpCm9kZHNyYXRpbyhtY2d2aXNpb24xLnRhYikKbWNndmlzaW9uMiA8LSBzdWJzZXQobWNndmlzaW9uLHN1YnNldCA9IGxpbmVhZ2UgJWluJSAnb3V0JykKbWNndmlzaW9uMgptY2d2aXNpb24yLnRhYiA8LSB4dGFicyhjb3VudH5wc2cgKyBnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24yLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSkKb2Rkc3JhdGlvKG1jZ3Zpc2lvbjIudGFiKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUUsgQm94IDEzLjciCgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQpgYGAKCkFzIHBhcnQgb2YgYSBwaHlsb2dlbmV0aWMgc3R1ZHkgb24gdGhlIGFkYXB0YXRpb24gb2YgY2V0YWNlYW5zIHRvIGFuIGFxdWF0aWMgbGlmZXN0eWxlLCBNY0dvd2VuIGV0IGFsICgyMDIwKSBjb3VudGVkIHRoZSBudW1iZXIgb2YgZ2VuZXMgaW4gZWFjaCBjZWxsIG9mIHRocmVlIGNyb3NzLWNsYXNzaWZpZWQgdmFyaWFibGVzOiBzZW5zb3J5IChlLmcuIHNpZ2h0LCB2aXNpb24gZXRjLikgdnMgbm9uc2Vuc29yeSBnZW5lcywgaW5ncm91cCAod2hhbGVzLCBkb2xwaGlucyBldGMuKSB2cyBvdXRncm91cCAoZS5nLiBub24tYXF1YXRpYyBsaWtlIGhpcHBvcG90YW11c2VzKSBsaW5lYWdlcyBmcm9tIHRoZWlyIHBoeWxvZ2VuZXRpYyB0cmVlLCBhbmQgd2hldGhlciB0aGUgZ2VuZXMgd2VyZSB1bmRlciBwb3NpdGl2ZSBzZWxlY3Rpb24gKFBTRykgb3Igbm90LiBUaGUgcmVzZWFyY2ggcXVlc3Rpb24gd2FzIHByaW1hcmlseSBhYm91dCB0aGUgYXNzb2NpYXRpb24gb2Ygd2hldGhlciBnZW5lcyB3ZXJlIHVuZGVyIHBvc2l0aXZlIHNlbGVjdGlvbiBvciBub3Qgd2l0aCBib3RoIHBoeWxvZ2VuZXRpYyBncm91cCAoaW5ncm91cCB2cyBvdXRncm91cCkgYW5kIHNlbnNvcnkgcm9sZSAoc2Vuc29yeSB2cyBub24tc2Vuc29yeSkgYW5kLiBXZSB3aWxsIGZvY3VzIGp1c3Qgb24gdGhlIGFuYWx5c2lzIG9mIHZpc2lvbiBnZW5lcy4KClRoZSBwYXBlciBpcyBbaGVyZV0oaHR0cHM6Ly9kb2kub3JnLzEwLjEwOTMvbW9sYmV2L21zYWEwNzApCgpNY0dvd2VuLCBNLiBSLiwgVHNhZ2tvZ2VvcmdhLCBHLiwgV2lsbGlhbXNvbiwgSi4sIE1vcmluLCBQLiBBLiAmIFJvc3NpdGVyLCBBLiBTLiBKLiAoMjAyMCkuIFBvc2l0aXZlIHNlbGVjdGlvbiBhbmQgaW5hY3RpdmF0aW9uIGluIHRoZSB2aXNpb24gYW5kIGhlYXJpbmcgZ2VuZXMgb2YgY2V0YWNlYW5zLiAqTW9sIEJpb2wgRXZvbCosIDM3LCAyMDY5LTgzLgoKIyMjIFByZWxpbWluYXJpZXMKCkZpcnN0LCBsb2FkIHRoZSByZXF1aXJlZCBwYWNrYWdlcyAoZXBpdG9vbHMsIHZjZCwgRGVzY1Rvb2xzKQoKYGBge3IgaW5jbHVkZT1GQUxTRSwgcmVzdWx0cz0naGlkZSd9CmxpYnJhcnkoZXBpdG9vbHMpCmxpYnJhcnkodmNkKQpsaWJyYXJ5KERlc2NUb29scykKYGBgCgpJbXBvcnQgbWNnb3dlbiBkYXRhIGZpbGUgKFttY2dvd2VuLmNzdl0oLi4vZGF0YS9tY2dvd2VuLmNzdikpIGFuZCBzZWxlY3QgdmlzaW9uIGdlbmVzIG9ubHkKCmBgYHtyfQptY2dvd2VuIDwtIHJlYWQuY3N2KCIuLi9kYXRhL21jZ293ZW4uY3N2IikKbWNndmlzaW9uPC1tY2dvd2VuW21jZ293ZW4kZ3JvdXAgJWluJSBjKCJ2aXNpb24iLCJjb250cm9sIiksXQpoZWFkKG1jZ3Zpc2lvbiwxMCkKYGBgCgpgYGB7ciBlY2hvPUZBTFNFfQptY2d2aXNpb24udGFiPC14dGFicyhjb3VudH5wc2cgKyBsaW5lYWdlICsgZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uKQptY2d2aXNpb24udGFiCmBgYAoKIyMjIEdsbSB0ZXN0IGZvciAzIHdheSBpbnRlcmFjdGlvbgoKYGBge3J9Cm1jZ3Zpc2lvbjEuZ2xtIDwtIGdsbShjb3VudH5wc2cqbGluZWFnZSpnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24sIGZhbWlseT1wb2lzc29uKQptY2d2aXNpb24yLmdsbSA8LSBnbG0oY291bnR+cHNnK2xpbmVhZ2UrZ2VuZXR5cGUrcHNnKmxpbmVhZ2UrcHNnKmdlbmV0eXBlK2xpbmVhZ2UqZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uLCBmYW1pbHk9cG9pc3NvbikKbHJ0ZXN0KG1jZ3Zpc2lvbjEuZ2xtLG1jZ3Zpc2lvbjIuZ2xtKQpgYGAKCk5vIGV2aWRlbmNlIGZvciAzIHdheSBpbnRlcmFjdGlvbiAtIE9ScyBmb3IgZWFjaCAyeDIgY29uc2lzdGVudCBhY3Jvc3MgM3JkIHZhcmlhYmxlCgojIyMjIENvbmZpcm0gd2l0aCBCcmVzbG93LURheSB0ZXN0CgpgYGB7cn0KQnJlc2xvd0RheVRlc3QobWNndmlzaW9uLnRhYiwgY29ycmVjdCA9IEZBTFNFKQpgYGAKCiMjIyBUZXN0IGVhY2ggMiB3YXkgaW50ZXJhY3Rpb24gdG8gc2VlIGlmIGNvbmRpdGlvbmFsIGluZGVwZW5kZW5jZSBhcHBsaWVzCgpgYGB7cn0KIyBGaXJzdCBQU0cqbGluZWFnZSAodGhlc2UgdHdvIGFyZSBpbmRlcGVuZGVudCkKbWNndmlzaW9uMy5nbG0gPC0gZ2xtKGNvdW50fnBzZytsaW5lYWdlK2dlbmV0eXBlK3BzZypnZW5ldHlwZStsaW5lYWdlKmdlbmV0eXBlLCBkYXRhPW1jZ3Zpc2lvbiwgZmFtaWx5PXBvaXNzb24pCmxydGVzdChtY2d2aXNpb24yLmdsbSxtY2d2aXNpb24zLmdsbSkKIyBTZWNvbmQsIFBTRyAqIGdlbmV0eXBlICh0aGVzZSB0d28gYXJlIGFzc29jaWF0ZWQpCm1jZ3Zpc2lvbjQuZ2xtIDwtIGdsbShjb3VudH5wc2crbGluZWFnZStnZW5ldHlwZStwc2cqbGluZWFnZStsaW5lYWdlKmdlbmV0eXBlLCBkYXRhPW1jZ3Zpc2lvbiwgZmFtaWx5PXBvaXNzb24pCmxydGVzdChtY2d2aXNpb24yLmdsbSxtY2d2aXNpb240LmdsbSkKcmVzaWR1YWxzKG1jZ3Zpc2lvbjQuZ2xtLHR5cGU9YygicGVhcnNvbiIpKQojIFRoaXJkIGxpbmVhZ2UqZ2VuZXR5cGUgKHRoZXNlIHR3byBhcmUgaW5kZXBlbmRlbnQpCm1jZ3Zpc2lvbjUuZ2xtIDwtIGdsbShjb3VudH5wc2crbGluZWFnZStnZW5ldHlwZStwc2cqbGluZWFnZStwc2cqZ2VuZXR5cGUsIGRhdGE9bWNndmlzaW9uLCBmYW1pbHk9cG9pc3NvbikKbHJ0ZXN0KG1jZ3Zpc2lvbjIuZ2xtLG1jZ3Zpc2lvbjUuZ2xtKQojIFRyeSBjb21wbGV0ZSBpbmRlcGVuZGVuY2UgbW9kZWwKbWNndmlzaW9uNi5nbG0gPC0gZ2xtKGNvdW50fnBzZytsaW5lYWdlK2dlbmV0eXBlLCBkYXRhPW1jZ3Zpc2lvbiwgZmFtaWx5PXBvaXNzb24pCmBgYAoKIyMjIGNvbXBhcmUgbW9kZWwgZml0cwoKYGBge3J9CkFJQyhtY2d2aXNpb24xLmdsbSxtY2d2aXNpb24yLmdsbSxtY2d2aXNpb24zLmdsbSxtY2d2aXNpb240LmdsbSxtY2d2aXNpb241LmdsbSwgbWNndmlzaW9uNi5nbG0pCmBgYAoKIyMjIEVzdGltYXRlIE9ScyBmb3IgUFNHIHggZ2VuZXR5cGUgZm9yIGVhY2ggbGluZWFnZSBhbmQgb3ZlcmFsbAoKT3ZlcmFsbAoKYGBge3J9Cm1jZ3Zpc2lvbl9zaW1wLnRhYiA8LSB4dGFicyhjb3VudH5wc2cgKyBnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24sIGRyb3AudW51c2VkLmxldmVscz1UUlVFKQptY2d2aXNpb25fc2ltcC50YWIKbG9kZHNyYXRpbyhtY2d2aXNpb25fc2ltcC50YWIsIGxvZyA9IEZBTFNFKQoKYGBgCgpTZXBhcmF0ZWx5CgpgYGB7cn0KbWNndmlzaW9uMSA8LSBzdWJzZXQobWNndmlzaW9uLHN1YnNldCA9IGxpbmVhZ2UgJWluJSAnaW4nKQptY2d2aXNpb24xCm1jZ3Zpc2lvbjEudGFiIDwtIHh0YWJzKGNvdW50fnBzZyArIGdlbmV0eXBlLCBkYXRhPW1jZ3Zpc2lvbjEsIGRyb3AudW51c2VkLmxldmVscz1UUlVFKQpsb2Rkc3JhdGlvKG1jZ3Zpc2lvbjEudGFiLCBsb2cgPSBGQUxTRSkKbWNndmlzaW9uMiA8LSBzdWJzZXQobWNndmlzaW9uLHN1YnNldCA9IGxpbmVhZ2UgJWluJSAnb3V0JykKbWNndmlzaW9uMgptY2d2aXNpb24yLnRhYiA8LSB4dGFicyhjb3VudH5wc2cgKyBnZW5ldHlwZSwgZGF0YT1tY2d2aXNpb24yLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSkKbG9kZHNyYXRpbyhtY2d2aXNpb24yLnRhYiwgbG9nID0gRkFMU0UpCmBgYAo=</div>
 
 
 

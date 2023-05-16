@@ -1774,18 +1774,11 @@ ownership of obese cats. <em>PLoS One</em>, 15, e0234190.</p>
 <p>Install the package epitools</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGVwaXRvb2xzKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5saWJyYXJ5KGVwaXRvb2xzKVxubGlicmFyeSh2Y2QpXG5gYGAifQ== -->
 <pre class="r"><code>library(tidyverse)
-library(epitools)</code></pre>
+library(epitools)
+library(vcd)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZXBpdG9vbHPigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g4oCYcGFja2FnZTp2Y2TigJk6XG5cbiAgICBvZGRzcmF0aW9cbiJ9 -->
-<pre><code>
-Attaching package: ‘epitools’
-
-The following object is masked from ‘package:vcd’:
-
-    oddsratio</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Read in data</p>
@@ -1794,8 +1787,8 @@ The following object is masked from ‘package:vcd’:
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVuZyA8LSByZWFkX2NzdihcIi4uL2RhdGEvdGVuZy5jc3ZcIilcbmBgYCJ9 -->
 <pre class="r"><code>teng &lt;- read_csv(&quot;../data/teng.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTIgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAoMik6IGJlZ2dpbmcsIGJjc1xuZGJsICgxKTogY291bnRcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
-<pre><code>Rows: 12 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+<!-- rnb-output-begin eyJkYXRhIjoiUm93czogMTIgQ29sdW1uczogM+KUgOKUgCBDb2x1bW4gc3BlY2lmaWNhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIBcbkRlbGltaXRlcjogXCIsXCJcbmNociAoMik6IGJlZ2dpbmcsIGJjc1xuZGJsICgxKTogY291bnRcbuKEuSBVc2UgYHNwZWMoKWAgdG8gcmV0cmlldmUgdGhlIGZ1bGwgY29sdW1uIHNwZWNpZmljYXRpb24gZm9yIHRoaXMgZGF0YS5cbuKEuSBTcGVjaWZ5IHRoZSBjb2x1bW4gdHlwZXMgb3Igc2V0IGBzaG93X2NvbF90eXBlcyA9IEZBTFNFYCB0byBxdWlldCB0aGlzIG1lc3NhZ2UuXG4ifQ== -->
+<pre><code>Rows: 12 Columns: 3── Column specification ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 Delimiter: &quot;,&quot;
 chr (2): begging, bcs
 dbl (1): count
@@ -1805,7 +1798,7 @@ dbl (1): count
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVuZ1xuYGBgIn0= -->
 <pre class="r"><code>teng</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMiDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQThWU3pVN0NRQkFlV2dwcG80VEVWL0FvVFJCTlBQWmc4S0FYakNiRTI3WXMwRmgybTNZUnZQRW9QcVJuNm14M05tSVA0czFOSnJQZk4vK3orM2c3SFFYVEFBQmNhRHN1dUI1ZXdYdCtHZzl1QUJrRUxXaURyL1VXbmM1cVQ0QSt5Z2taUE1IZmVIRVUrS1ZjY1pXdWVQbG53cE56eGNWUjBHSFpocjJYdjZKR3kzRlNEaThKdEJHTURneFgxLy9nQmREVC9VWDZoaWZLUDR4K0lIeS9NM3EzTlhvV0dYMUI5aGV5VDRnL0ovNk8rREhRK2ZHbW5tQjYyMlk1THBIZG1DOFdxVmdRZExGQjY1N0l0VkNOSEg0aE42SE5jNHJpNkpKVlZYMDJpeVVaSzIweFN3WXpwbGc0THpBZTBiNFIwcFc1U3FYQUlFZi92STRPcU0xR0RoTzFpZ2JSWHd2ZDFXeVFMTmZpZFRBY0hRUUR0ZHFxLzhUMzNUWDFuWXB5ZGV5RDhXUXA3WS9pQXJmRDdWQVppM2xHb0llcnFEY1I1a1dLaTZJUmtTMURKUld6ZmtFaU04dlVROFArQzhBdVpPNkpBd0FBIn0= -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInNwZWNfdGJsX2RmIiwidGJsX2RmIiwidGJsIiwiZGF0YS5mcmFtZSJdLCJucm93IjoxMiwibmNvbCI6Mywic3VtbWFyeSI6eyJBIHRpYmJsZSI6WyIxMiDDlyAzIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQThWU3ZVN0RNQkMrNXFkVklxZ3E4UXFNTkZJcGxSZzdvRExBQWdLcFluTlRONDFJN1NweGFkbjZLRHdrYzhNNVBvdVFnYkpoeVQ1LzMvMzZmSTgzMDJFNERRSEFCYy9GMDhjcitNOVBrLzQxZ09jZ2FJRUhnWlk3Vko5VmxnQTkzQ2VrOEFWLzQvbFJFQlJ5eFZXNjRzV2ZDVjh1RkJkSFFadGxXL1plL0lvYUpjL2lZbkJKd0VNd3JDbXVSdjlnQmREVjlZMzFEZGQ0L1dIa1BlRzd2Wkg3blpIenNaRVhwSDhoL1FQeDU4VGZFajhCV2ovKzFCZE1kOXMweHlXeU0rTkprb3FFb0lzRld2Tllib1JxeEFoeXVZMXNuRlBjams1Wmx1Vm5NMW1jc2NJbXMyUTRaNHBGaXh6OUVSMGFMaDI1VnFrVTZPVG95V3RyaDBwdGRqMVFLMjhRdlkzUVZjMzc4WElqWHZ1RFVjMFpxTlJXTlJQZmQ5ZmtkMHFLMWJZZnh1T2x0QlBGQlhhSDIwZGxiTVl6QWwxc1JkV0phSjJuMkNoNklySkZwS1JpMWk2TVpXYVo2dEZ3K0FMVDF3L0NpUU1BQUE9PSJ9 -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["begging"],"name":[1],"type":["chr"],"align":["left"]},{"label":["bcs"],"name":[2],"type":["chr"],"align":["left"]},{"label":["count"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"never","2":"bcs12","3":"21"},{"1":"never","2":"bcs3","3":"266"},{"1":"never","2":"bcs45","3":"56"},{"1":"sometimes","2":"bcs12","3":"55"},{"1":"sometimes","2":"bcs3","3":"527"},{"1":"sometimes","2":"bcs45","3":"162"},{"1":"often","2":"bcs12","3":"14"},{"1":"often","2":"bcs3","3":"106"},{"1":"often","2":"bcs45","3":"69"},{"1":"always","2":"bcs12","3":"10"},{"1":"always","2":"bcs3","3":"47"},{"1":"always","2":"bcs45","3":"44"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[12]},"pages":{}}}
@@ -1838,35 +1831,35 @@ begging     bcs12 bcs3 bcs45
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hpc3EudGVzdCh0ZW5nLnRhYiwgY29ycmVjdD1GKSRleHBcbmBgYCJ9 -->
 <pre class="r"><code>chisq.test(teng.tab, correct=F)$exp</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICBiY3NcbmJlZ2dpbmcgICAgICAgICBiY3MxMiAgICAgIGJjczMgICAgIGJjczQ1XG4gIG5ldmVyICAgICAyNC45MDkyMjMgMjM1LjY0MTI1ICA4Mi40NDk1M1xuICBzb21ldGltZXMgNTQuMDMwNTAxIDUxMS4xMjg1NCAxNzguODQwOTZcbiAgb2Z0ZW4gICAgIDEzLjcyNTQ5MCAxMjkuODQzMTQgIDQ1LjQzMTM3XG4gIGFsd2F5cyAgICAgNy4zMzQ3ODYgIDY5LjM4NzA3ICAyNC4yNzgxNFxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICBiY3NcbmJlZ2dpbmcgICAgICAgYmNzMTIgICAgYmNzMyAgIGJjczQ1XG4gIG5ldmVyICAgICAyNC45MDkyIDIzNS42NDEgIDgyLjQ1MFxuICBzb21ldGltZXMgNTQuMDMwNSA1MTEuMTI5IDE3OC44NDFcbiAgb2Z0ZW4gICAgIDEzLjcyNTUgMTI5Ljg0MyAgNDUuNDMxXG4gIGFsd2F5cyAgICAgNy4zMzQ4ICA2OS4zODcgIDI0LjI3OFxuIn0= -->
 <pre><code>           bcs
-begging         bcs12      bcs3     bcs45
-  never     24.909223 235.64125  82.44953
-  sometimes 54.030501 511.12854 178.84096
-  often     13.725490 129.84314  45.43137
-  always     7.334786  69.38707  24.27814</code></pre>
+begging       bcs12    bcs3   bcs45
+  never     24.9092 235.641  82.450
+  sometimes 54.0305 511.129 178.841
+  often     13.7255 129.843  45.431
+  always     7.3348  69.387  24.278</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVuZy5jaGk8LSBjaGlzcS50ZXN0KHRlbmcudGFiLCBjb3JyZWN0PUYpXG50ZW5nLmNoaVxuYGBgIn0= -->
 <pre class="r"><code>teng.chi&lt;- chisq.test(teng.tab, correct=F)
 teng.chi</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdFBlYXJzb24ncyBDaGktc3F1YXJlZCB0ZXN0XG5cbmRhdGE6ICB0ZW5nLnRhYlxuWC1zcXVhcmVkID0gNTUuOTI4LCBkZiA9IDYsIHAtdmFsdWUgPSAzLjAxZS0xMFxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdFBlYXJzb24ncyBDaGktc3F1YXJlZCB0ZXN0XG5cbmRhdGE6ICB0ZW5nLnRhYlxuWC1zcXVhcmVkID0gNTUuOSwgZGYgPSA2LCBwLXZhbHVlID0gM2UtMTBcbiJ9 -->
 <pre><code>
     Pearson&#39;s Chi-squared test
 
 data:  teng.tab
-X-squared = 55.928, df = 6, p-value = 3.01e-10</code></pre>
+X-squared = 55.9, df = 6, p-value = 3e-10</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGVuZy5jaGkkcmVzaWR1YWxzXG5gYGAifQ== -->
 <pre class="r"><code>teng.chi$residuals</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICBiY3NcbmJlZ2dpbmcgICAgICAgICAgIGJjczEyICAgICAgICBiY3MzICAgICAgIGJjczQ1XG4gIG5ldmVyICAgICAtMC43ODMyNjc5NCAgMS45Nzc2OTAxMSAtMi45MTI4ODgzNVxuICBzb21ldGltZXMgIDAuMTMxODk0ODUgIDAuNzAyMDIzNzUgLTEuMjU5MzExOTJcbiAgb2Z0ZW4gICAgICAwLjA3NDA5NTg2IC0yLjA5MjQ0NDI2ICAzLjQ5NjY4MzgxXG4gIGFsd2F5cyAgICAgMC45ODQwOTgxMyAtMi42ODc1NTkxOSAgNC4wMDI1ODEwOFxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICBiY3NcbmJlZ2dpbmcgICAgICAgICBiY3MxMiAgICAgIGJjczMgICAgIGJjczQ1XG4gIG5ldmVyICAgICAtMC43ODMyNjggIDEuOTc3NjkwIC0yLjkxMjg4OFxuICBzb21ldGltZXMgIDAuMTMxODk1ICAwLjcwMjAyNCAtMS4yNTkzMTJcbiAgb2Z0ZW4gICAgICAwLjA3NDA5NiAtMi4wOTI0NDQgIDMuNDk2Njg0XG4gIGFsd2F5cyAgICAgMC45ODQwOTggLTIuNjg3NTU5ICA0LjAwMjU4MVxuIn0= -->
 <pre><code>           bcs
-begging           bcs12        bcs3       bcs45
-  never     -0.78326794  1.97769011 -2.91288835
-  sometimes  0.13189485  0.70202375 -1.25931192
-  often      0.07409586 -2.09244426  3.49668381
-  always     0.98409813 -2.68755919  4.00258108</code></pre>
+begging         bcs12      bcs3     bcs45
+  never     -0.783268  1.977690 -2.912888
+  sometimes  0.131895  0.702024 -1.259312
+  often      0.074096 -2.092444  3.496684
+  always     0.984098 -2.687559  4.002581</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1876,104 +1869,68 @@ begging           bcs12        bcs3       bcs45
 categories</h3>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBOZXZlciB2cyBzb21ldGltZXMgYmVnZ2luZ1xudGVuZzEgPC0gc3Vic2V0KHRlbmcsc3Vic2V0ID0gYmVnZ2luZyAlaW4lIGMoJ25ldmVyJywnc29tZXRpbWVzJykpXG50ZW5nMWEgPC0gc3Vic2V0KHRlbmcxLHN1YnNldCA9IGJjcyAlaW4lIGMoJ2JjczMnLCdiY3M0NScpKVxudGVuZzFhLnRhYiA8LSB4dGFicyhjb3VudH5iZWdnaW5nICsgYmNzLCBkYXRhPXRlbmcxYSwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpXG5vZGRzcmF0aW8odGVuZzFhLnRhYilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBOZXZlciB2cyBzb21ldGltZXMgYmVnZ2luZ1xudGVuZzEgPC0gc3Vic2V0KHRlbmcsc3Vic2V0ID0gYmVnZ2luZyAlaW4lIGMoJ25ldmVyJywnc29tZXRpbWVzJykpXG50ZW5nMWEgPC0gc3Vic2V0KHRlbmcxLHN1YnNldCA9IGJjcyAlaW4lIGMoJ2JjczMnLCdiY3M0NScpKVxudGVuZzFhLnRhYiA8LSB4dGFicyhjb3VudH5iZWdnaW5nICsgYmNzLCBkYXRhPXRlbmcxYSwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpXG5sb2Rkcyh0ZW5nMWEudGFiLCBsb2cgPSBGQUxTRSlcbmBgYCJ9 -->
 <pre class="r"><code># Never vs sometimes begging
 teng1 &lt;- subset(teng,subset = begging %in% c(&#39;never&#39;,&#39;sometimes&#39;))
 teng1a &lt;- subset(teng1,subset = bcs %in% c(&#39;bcs3&#39;,&#39;bcs45&#39;))
 teng1a.tab &lt;- xtabs(count~begging + bcs, data=teng1a, drop.unused.levels=TRUE)
-oddsratio(teng1a.tab)</code></pre>
+lodds(teng1a.tab, log = FALSE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGRhdGFcbiAgICAgICAgICAgYmNzXG5iZWdnaW5nICAgICBiY3MzIGJjczQ1IFRvdGFsXG4gIG5ldmVyICAgICAgMjY2ICAgIDU2ICAgMzIyXG4gIHNvbWV0aW1lcyAgNTI3ICAgMTYyICAgNjg5XG4gIFRvdGFsICAgICAgNzkzICAgMjE4ICAxMDExXG5cbiRtZWFzdXJlXG4gICAgICAgICAgIG9kZHMgcmF0aW8gd2l0aCA5NSUgQy5JLlxuYmVnZ2luZyAgICAgZXN0aW1hdGUgICAgbG93ZXIgICB1cHBlclxuICBuZXZlciAgICAgMS4wMDAwMDAgICAgICAgTkEgICAgICBOQVxuICBzb21ldGltZXMgMS40NTc0MjkgMS4wNDQ4MDcgMi4wNTcxMVxuXG4kcC52YWx1ZVxuICAgICAgICAgICB0d28tc2lkZWRcbmJlZ2dpbmcgICAgIG1pZHAuZXhhY3QgZmlzaGVyLmV4YWN0IGNoaS5zcXVhcmVcbiAgbmV2ZXIgICAgICAgICAgICAgTkEgICAgICAgICAgIE5BICAgICAgICAgTkFcbiAgc29tZXRpbWVzIDAuMDI2MjU5MzMgICAwLjAzMjY0MzU3IDAuMDI3NDY2NzlcblxuJGNvcnJlY3Rpb25cblsxXSBGQUxTRVxuXG5hdHRyKCxcIm1ldGhvZFwiKVxuWzFdIFwibWVkaWFuLXVuYmlhc2VkIGVzdGltYXRlICYgbWlkLXAgZXhhY3QgQ0lcIlxuIn0= -->
-<pre><code>$data
-           bcs
-begging     bcs3 bcs45 Total
-  never      266    56   322
-  sometimes  527   162   689
-  Total      793   218  1011
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgZm9yIGJlZ2dpbmcgYnkgYmNzIFxuXG4gICBiY3MzICAgYmNzNDUgXG4wLjUwNDc0IDAuMzQ1NjggXG4ifQ== -->
+<pre><code> odds for begging by bcs 
 
-$measure
-           odds ratio with 95% C.I.
-begging     estimate    lower   upper
-  never     1.000000       NA      NA
-  sometimes 1.457429 1.044807 2.05711
-
-$p.value
-           two-sided
-begging     midp.exact fisher.exact chi.square
-  never             NA           NA         NA
-  sometimes 0.02625933   0.03264357 0.02746679
-
-$correction
-[1] FALSE
-
-attr(,&quot;method&quot;)
-[1] &quot;median-unbiased estimate &amp; mid-p exact CI&quot;</code></pre>
+   bcs3   bcs45 
+0.50474 0.34568 </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBOZXZlciB2cyBvZnRlblxudGVuZzIgPC0gc3Vic2V0KHRlbmcsc3Vic2V0ID0gYmVnZ2luZyAlaW4lIGMoJ25ldmVyJywnb2Z0ZW4nKSlcbnRlbmcyYSA8LSBzdWJzZXQodGVuZzIsc3Vic2V0ID0gYmNzICVpbiUgYygnYmNzMycsJ2JjczQ1JykpXG50ZW5nMmEudGFiIDwtIHh0YWJzKGNvdW50fmJlZ2dpbmcgKyBiY3MsIGRhdGE9dGVuZzJhLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSlcbm9kZHNyYXRpbyh0ZW5nMmEudGFiKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9kZHNyYXRpbyh0ZW5nMWEudGFiLCBsb2cgPSBGQUxTRSlcbmBgYCJ9 -->
+<pre class="r"><code>loddsratio(teng1a.tab, log = FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgcmF0aW9zIGZvciBiZWdnaW5nIGFuZCBiY3MgXG5cblsxXSAxLjQ2MDJcbiJ9 -->
+<pre><code> odds ratios for begging and bcs 
+
+[1] 1.4602</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBOZXZlciB2cyBvZnRlblxudGVuZzIgPC0gc3Vic2V0KHRlbmcsc3Vic2V0ID0gYmVnZ2luZyAlaW4lIGMoJ25ldmVyJywnb2Z0ZW4nKSlcbnRlbmcyYSA8LSBzdWJzZXQodGVuZzIsc3Vic2V0ID0gYmNzICVpbiUgYygnYmNzMycsJ2JjczQ1JykpXG50ZW5nMmEudGFiIDwtIHh0YWJzKGNvdW50fmJlZ2dpbmcgKyBiY3MsIGRhdGE9dGVuZzJhLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSlcbmxvZGRzKHRlbmcyYS50YWIsIGxvZyA9IEZBTFNFKVxuYGBgIn0= -->
 <pre class="r"><code># Never vs often
 teng2 &lt;- subset(teng,subset = begging %in% c(&#39;never&#39;,&#39;often&#39;))
 teng2a &lt;- subset(teng2,subset = bcs %in% c(&#39;bcs3&#39;,&#39;bcs45&#39;))
 teng2a.tab &lt;- xtabs(count~begging + bcs, data=teng2a, drop.unused.levels=TRUE)
-oddsratio(teng2a.tab)</code></pre>
+lodds(teng2a.tab, log = FALSE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGRhdGFcbiAgICAgICBiY3NcbmJlZ2dpbmcgYmNzMyBiY3M0NSBUb3RhbFxuICBuZXZlciAgMjY2ICAgIDU2ICAgMzIyXG4gIG9mdGVuICAxMDYgICAgNjkgICAxNzVcbiAgVG90YWwgIDM3MiAgIDEyNSAgIDQ5N1xuXG4kbWVhc3VyZVxuICAgICAgIG9kZHMgcmF0aW8gd2l0aCA5NSUgQy5JLlxuYmVnZ2luZyBlc3RpbWF0ZSAgICBsb3dlciAgICB1cHBlclxuICBuZXZlciAxLjAwMDAwMCAgICAgICBOQSAgICAgICBOQVxuICBvZnRlbiAzLjA4MjIyMiAyLjAzMDg5NyA0LjcwMjAxMlxuXG4kcC52YWx1ZVxuICAgICAgIHR3by1zaWRlZFxuYmVnZ2luZyAgIG1pZHAuZXhhY3QgZmlzaGVyLmV4YWN0ICAgY2hpLnNxdWFyZVxuICBuZXZlciAgICAgICAgICAgTkEgICAgICAgICAgIE5BICAgICAgICAgICBOQVxuICBvZnRlbiAxLjE3NDcwNGUtMDcgMS40MzY5MDdlLTA3IDYuMzY0NTA4ZS0wOFxuXG4kY29ycmVjdGlvblxuWzFdIEZBTFNFXG5cbmF0dHIoLFwibWV0aG9kXCIpXG5bMV0gXCJtZWRpYW4tdW5iaWFzZWQgZXN0aW1hdGUgJiBtaWQtcCBleGFjdCBDSVwiXG4ifQ== -->
-<pre><code>$data
-       bcs
-begging bcs3 bcs45 Total
-  never  266    56   322
-  often  106    69   175
-  Total  372   125   497
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgZm9yIGJlZ2dpbmcgYnkgYmNzIFxuXG4gICBiY3MzICAgYmNzNDUgXG4yLjUwOTQzIDAuODExNTkgXG4ifQ== -->
+<pre><code> odds for begging by bcs 
 
-$measure
-       odds ratio with 95% C.I.
-begging estimate    lower    upper
-  never 1.000000       NA       NA
-  often 3.082222 2.030897 4.702012
-
-$p.value
-       two-sided
-begging   midp.exact fisher.exact   chi.square
-  never           NA           NA           NA
-  often 1.174704e-07 1.436907e-07 6.364508e-08
-
-$correction
-[1] FALSE
-
-attr(,&quot;method&quot;)
-[1] &quot;median-unbiased estimate &amp; mid-p exact CI&quot;</code></pre>
+   bcs3   bcs45 
+2.50943 0.81159 </code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAgTmV2ZXIgdnMgYWx3YXlzIGJlZ2dpbmdcbnRlbmczIDwtIHN1YnNldCh0ZW5nLHN1YnNldCA9IGJlZ2dpbmcgJWluJSBjKCduZXZlcicsJ2Fsd2F5cycpKVxudGVuZzNhIDwtIHN1YnNldCh0ZW5nMyxzdWJzZXQgPSBiY3MgJWluJSBjKCdiY3MzJywnYmNzNDUnKSlcbnRlbmczYS50YWIgPC0geHRhYnMoY291bnR+YmVnZ2luZyArIGJjcywgZGF0YT10ZW5nM2EsIGRyb3AudW51c2VkLmxldmVscz1UUlVFKVxub2Rkc3JhdGlvKHRlbmczYS50YWIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9kZHNyYXRpbyh0ZW5nMmEudGFiLCBsb2cgPSBGQUxTRSlcbmBgYCJ9 -->
+<pre class="r"><code>loddsratio(teng2a.tab, log = FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgcmF0aW9zIGZvciBiZWdnaW5nIGFuZCBiY3MgXG5cblsxXSAzLjA5MlxuIn0= -->
+<pre><code> odds ratios for begging and bcs 
+
+[1] 3.092</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAgTmV2ZXIgdnMgYWx3YXlzIGJlZ2dpbmdcbnRlbmczIDwtIHN1YnNldCh0ZW5nLHN1YnNldCA9IGJlZ2dpbmcgJWluJSBjKCduZXZlcicsJ2Fsd2F5cycpKVxudGVuZzNhIDwtIHN1YnNldCh0ZW5nMyxzdWJzZXQgPSBiY3MgJWluJSBjKCdiY3MzJywnYmNzNDUnKSlcbnRlbmczYS50YWIgPC0geHRhYnMoY291bnR+YmVnZ2luZyArIGJjcywgZGF0YT10ZW5nM2EsIGRyb3AudW51c2VkLmxldmVscz1UUlVFKVxubG9kZHModGVuZzNhLnRhYiwgbG9nID0gRkFMU0UpXG5gYGAifQ== -->
 <pre class="r"><code>#  Never vs always begging
 teng3 &lt;- subset(teng,subset = begging %in% c(&#39;never&#39;,&#39;always&#39;))
 teng3a &lt;- subset(teng3,subset = bcs %in% c(&#39;bcs3&#39;,&#39;bcs45&#39;))
 teng3a.tab &lt;- xtabs(count~begging + bcs, data=teng3a, drop.unused.levels=TRUE)
-oddsratio(teng3a.tab)</code></pre>
+lodds(teng3a.tab, log = FALSE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJGRhdGFcbiAgICAgICAgYmNzXG5iZWdnaW5nICBiY3MzIGJjczQ1IFRvdGFsXG4gIG5ldmVyICAgMjY2ICAgIDU2ICAgMzIyXG4gIGFsd2F5cyAgIDQ3ICAgIDQ0ICAgIDkxXG4gIFRvdGFsICAgMzEzICAgMTAwICAgNDEzXG5cbiRtZWFzdXJlXG4gICAgICAgIG9kZHMgcmF0aW8gd2l0aCA5NSUgQy5JLlxuYmVnZ2luZyAgZXN0aW1hdGUgICAgbG93ZXIgICAgdXBwZXJcbiAgbmV2ZXIgIDEuMDAwMDAwICAgICAgIE5BICAgICAgIE5BXG4gIGFsd2F5cyA0LjQyNDI1OCAyLjY3NzM1NSA3LjM0NDQ0NFxuXG4kcC52YWx1ZVxuICAgICAgICB0d28tc2lkZWRcbmJlZ2dpbmcgICAgbWlkcC5leGFjdCBmaXNoZXIuZXhhY3QgICBjaGkuc3F1YXJlXG4gIG5ldmVyICAgICAgICAgICAgTkEgICAgICAgICAgIE5BICAgICAgICAgICBOQVxuICBhbHdheXMgOC4zNDEzNDNlLTA5IDkuNTY5NDY4ZS0wOSAxLjE0NTAzOWUtMDlcblxuJGNvcnJlY3Rpb25cblsxXSBGQUxTRVxuXG5hdHRyKCxcIm1ldGhvZFwiKVxuWzFdIFwibWVkaWFuLXVuYmlhc2VkIGVzdGltYXRlICYgbWlkLXAgZXhhY3QgQ0lcIlxuIn0= -->
-<pre><code>$data
-        bcs
-begging  bcs3 bcs45 Total
-  never   266    56   322
-  always   47    44    91
-  Total   313   100   413
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgZm9yIGJlZ2dpbmcgYnkgYmNzIFxuXG4gIGJjczMgIGJjczQ1IFxuNS42NTk2IDEuMjcyNyBcbiJ9 -->
+<pre><code> odds for begging by bcs 
 
-$measure
-        odds ratio with 95% C.I.
-begging  estimate    lower    upper
-  never  1.000000       NA       NA
-  always 4.424258 2.677355 7.344444
+  bcs3  bcs45 
+5.6596 1.2727 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9kZHNyYXRpbyh0ZW5nM2EudGFiLCBsb2cgPSBGQUxTRSlcbmBgYCJ9 -->
+<pre class="r"><code>loddsratio(teng3a.tab, log = FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIG9kZHMgcmF0aW9zIGZvciBiZWdnaW5nIGFuZCBiY3MgXG5cblsxXSA0LjQ0NjhcbiJ9 -->
+<pre><code> odds ratios for begging and bcs 
 
-$p.value
-        two-sided
-begging    midp.exact fisher.exact   chi.square
-  never            NA           NA           NA
-  always 8.341343e-09 9.569468e-09 1.145039e-09
-
-$correction
-[1] FALSE
-
-attr(,&quot;method&quot;)
-[1] &quot;median-unbiased estimate &amp; mid-p exact CI&quot;</code></pre>
+[1] 4.4468</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1986,43 +1943,40 @@ attr(,&quot;method&quot;)
 <pre class="r"><code>tengfull.glm &lt;- glm(count~begging*bcs, family=poisson, data=teng)
 summary(tengfull.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IGJlZ2dpbmcgKiBiY3MsIGZhbWlseSA9IHBvaXNzb24sIGRhdGEgPSB0ZW5nKVxuXG5EZXZpYW5jZSBSZXNpZHVhbHM6IFxuIFsxXSAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMCAgMFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgICAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgeiB2YWx1ZSBQcig+fHp8KSAgICBcbihJbnRlcmNlcHQpICAgICAgICAgICAgICAgIDMuMDQ0NTIgICAgMC4yMTgyMiAgMTMuOTUyICA8IDJlLTE2ICoqKlxuYmVnZ2luZ3NvbWV0aW1lcyAgICAgICAgICAgMC45NjI4MSAgICAwLjI1NjUyICAgMy43NTMgMC4wMDAxNzQgKioqXG5iZWdnaW5nb2Z0ZW4gICAgICAgICAgICAgIC0wLjQwNTQ3ICAgIDAuMzQ1MDMgIC0xLjE3NSAwLjIzOTkzNSAgICBcbmJlZ2dpbmdhbHdheXMgICAgICAgICAgICAgLTAuNzQxOTQgICAgMC4zODQyMSAgLTEuOTMxIDAuMDUzNDc1IC4gIFxuYmNzYmNzMyAgICAgICAgICAgICAgICAgICAgMi41Mzg5NyAgICAwLjIyNjY3ICAxMS4yMDEgIDwgMmUtMTYgKioqXG5iY3NiY3M0NSAgICAgICAgICAgICAgICAgICAwLjk4MDgzICAgIDAuMjU1ODggICAzLjgzMyAwLjAwMDEyNyAqKipcbmJlZ2dpbmdzb21ldGltZXM6YmNzYmNzMyAgLTAuMjc5MTEgICAgMC4yNjczMiAgLTEuMDQ0IDAuMjk2NDM2ICAgIFxuYmVnZ2luZ29mdGVuOmJjc2JjczMgICAgICAtMC41MTQ1OSAgICAwLjM2MzY1ICAtMS40MTUgMC4xNTcwNDYgICAgXG5iZWdnaW5nYWx3YXlzOmJjc2JjczMgICAgIC0wLjk5MTQxICAgIDAuNDE1NTIgIC0yLjM4NiAwLjAxNzAzNCAqICBcbmJlZ2dpbmdzb21ldGltZXM6YmNzYmNzNDUgIDAuMDk5NDMgICAgMC4yOTk3MiAgIDAuMzMyIDAuNzQwMDcyICAgIFxuYmVnZ2luZ29mdGVuOmJjc2JjczQ1ICAgICAgMC42MTQyMiAgICAwLjM4OTEwICAgMS41NzkgMC4xMTQ0MzQgICAgXG5iZWdnaW5nYWx3YXlzOmJjc2JjczQ1ICAgICAwLjUwMDc4ICAgIDAuNDMzODIgICAxLjE1NCAwLjI0ODM2NiAgICBcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG4oRGlzcGVyc2lvbiBwYXJhbWV0ZXIgZm9yIHBvaXNzb24gZmFtaWx5IHRha2VuIHRvIGJlIDEpXG5cbiAgICBOdWxsIGRldmlhbmNlOiAxLjU3MDJlKzAzICBvbiAxMSAgZGVncmVlcyBvZiBmcmVlZG9tXG5SZXNpZHVhbCBkZXZpYW5jZTogNy42NjA1ZS0xNCAgb24gIDAgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiA5NS41OTlcblxuTnVtYmVyIG9mIEZpc2hlciBTY29yaW5nIGl0ZXJhdGlvbnM6IDNcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IGJlZ2dpbmcgKiBiY3MsIGZhbWlseSA9IHBvaXNzb24sIGRhdGEgPSB0ZW5nKVxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgeiB2YWx1ZSBQcig+fHp8KSAgICBcbihJbnRlcmNlcHQpICAgICA0LjEyNDEgICAgIDAuMDQ4MiAgIDg1LjUyICA8IDJlLTE2ICoqKlxuYmVnZ2luZzEgICAgICAgIDAuMDkzNyAgICAgMC4wNzg2ICAgIDEuMTkgICAwLjIzMzAgICAgXG5iZWdnaW5nMiAgICAgICAgMC45OTY2ICAgICAwLjA2MTUgICAxNi4yMCAgPCAyZS0xNiAqKipcbmJlZ2dpbmczICAgICAgIC0wLjI3ODYgICAgIDAuMDg3MyAgIC0zLjE5ICAgMC4wMDE0ICoqIFxuYmNzMSAgICAgICAgICAgLTEuMTI1NyAgICAgMC4wODUzICAtMTMuMjAgIDwgMmUtMTYgKioqXG5iY3MyICAgICAgICAgICAgMC45NjcwICAgICAwLjA1NTUgICAxNy40MiAgPCAyZS0xNiAqKipcbmJlZ2dpbmcxOmJjczEgIC0wLjA0NzYgICAgIDAuMTM4MCAgIC0wLjM0ICAgMC43MzA0ICAgIFxuYmVnZ2luZzI6YmNzMSAgIDAuMDEyMyAgICAgMC4xMDg0ICAgIDAuMTEgICAwLjkwOTQgICAgXG5iZWdnaW5nMzpiY3MxICAtMC4wODA4ICAgICAwLjE1NjQgICAtMC41MiAgIDAuNjA1NiAgICBcbmJlZ2dpbmcxOmJjczIgICAwLjM5ODcgICAgIDAuMDg2OSAgICA0LjU5ICA0LjVlLTA2ICoqKlxuYmVnZ2luZzI6YmNzMiAgIDAuMTc5NSAgICAgMC4wNjk3ICAgIDIuNTggICAwLjAxMDAgKiAgXG5iZWdnaW5nMzpiY3MyICAtMC4xNDkxICAgICAwLjA5OTggICAtMS40OSAgIDAuMTM1MSAgICBcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG4oRGlzcGVyc2lvbiBwYXJhbWV0ZXIgZm9yIHBvaXNzb24gZmFtaWx5IHRha2VuIHRvIGJlIDEpXG5cbiAgICBOdWxsIGRldmlhbmNlOiAxLjU3MDJlKzAzICBvbiAxMSAgZGVncmVlcyBvZiBmcmVlZG9tXG5SZXNpZHVhbCBkZXZpYW5jZTogMy4yNDE5ZS0xNCAgb24gIDAgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiA5NS42XG5cbk51bWJlciBvZiBGaXNoZXIgU2NvcmluZyBpdGVyYXRpb25zOiAzXG4ifQ== -->
 <pre><code>
 Call:
 glm(formula = count ~ begging * bcs, family = poisson, data = teng)
 
-Deviance Residuals: 
- [1]  0  0  0  0  0  0  0  0  0  0  0  0
-
 Coefficients:
-                          Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)                3.04452    0.21822  13.952  &lt; 2e-16 ***
-beggingsometimes           0.96281    0.25652   3.753 0.000174 ***
-beggingoften              -0.40547    0.34503  -1.175 0.239935    
-beggingalways             -0.74194    0.38421  -1.931 0.053475 .  
-bcsbcs3                    2.53897    0.22667  11.201  &lt; 2e-16 ***
-bcsbcs45                   0.98083    0.25588   3.833 0.000127 ***
-beggingsometimes:bcsbcs3  -0.27911    0.26732  -1.044 0.296436    
-beggingoften:bcsbcs3      -0.51459    0.36365  -1.415 0.157046    
-beggingalways:bcsbcs3     -0.99141    0.41552  -2.386 0.017034 *  
-beggingsometimes:bcsbcs45  0.09943    0.29972   0.332 0.740072    
-beggingoften:bcsbcs45      0.61422    0.38910   1.579 0.114434    
-beggingalways:bcsbcs45     0.50078    0.43382   1.154 0.248366    
+              Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)     4.1241     0.0482   85.52  &lt; 2e-16 ***
+begging1        0.0937     0.0786    1.19   0.2330    
+begging2        0.9966     0.0615   16.20  &lt; 2e-16 ***
+begging3       -0.2786     0.0873   -3.19   0.0014 ** 
+bcs1           -1.1257     0.0853  -13.20  &lt; 2e-16 ***
+bcs2            0.9670     0.0555   17.42  &lt; 2e-16 ***
+begging1:bcs1  -0.0476     0.1380   -0.34   0.7304    
+begging2:bcs1   0.0123     0.1084    0.11   0.9094    
+begging3:bcs1  -0.0808     0.1564   -0.52   0.6056    
+begging1:bcs2   0.3987     0.0869    4.59  4.5e-06 ***
+begging2:bcs2   0.1795     0.0697    2.58   0.0100 *  
+begging3:bcs2  -0.1491     0.0998   -1.49   0.1351    
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for poisson family taken to be 1)
 
     Null deviance: 1.5702e+03  on 11  degrees of freedom
-Residual deviance: 7.6605e-14  on  0  degrees of freedom
-AIC: 95.599
+Residual deviance: 3.2419e-14  on  0  degrees of freedom
+AIC: 95.6
 
 Number of Fisher Scoring iterations: 3</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYW5vdmEodGVuZ2Z1bGwuZ2xtLCB0ZXN0PVwiQ2hpc3FcIilcbmBgYCJ9 -->
 <pre class="r"><code>anova(tengfull.glm, test=&quot;Chisq&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiQW5hbHlzaXMgb2YgRGV2aWFuY2UgVGFibGVcblxuTW9kZWw6IHBvaXNzb24sIGxpbms6IGxvZ1xuXG5SZXNwb25zZTogY291bnRcblxuVGVybXMgYWRkZWQgc2VxdWVudGlhbGx5IChmaXJzdCB0byBsYXN0KVxuXG5cbiAgICAgICAgICAgIERmIERldmlhbmNlIFJlc2lkLiBEZiBSZXNpZC4gRGV2ICBQcig+Q2hpKSAgICBcbk5VTEwgICAgICAgICAgICAgICAgICAgICAgICAgICAxMSAgICAxNTcwLjIyICAgICAgICAgICAgICBcbmJlZ2dpbmcgICAgICAzICAgNjY5LjkxICAgICAgICAgOCAgICAgOTAwLjMxIDwgMi4yZS0xNiAqKipcbmJjcyAgICAgICAgICAyICAgODQ3LjA4ICAgICAgICAgNiAgICAgIDUzLjI0IDwgMi4yZS0xNiAqKipcbmJlZ2dpbmc6YmNzICA2ICAgIDUzLjI0ICAgICAgICAgMCAgICAgICAwLjAwICAxLjA1ZS0wOSAqKipcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiQW5hbHlzaXMgb2YgRGV2aWFuY2UgVGFibGVcblxuTW9kZWw6IHBvaXNzb24sIGxpbms6IGxvZ1xuXG5SZXNwb25zZTogY291bnRcblxuVGVybXMgYWRkZWQgc2VxdWVudGlhbGx5IChmaXJzdCB0byBsYXN0KVxuXG5cbiAgICAgICAgICAgIERmIERldmlhbmNlIFJlc2lkLiBEZiBSZXNpZC4gRGV2IFByKD5DaGkpICAgIFxuTlVMTCAgICAgICAgICAgICAgICAgICAgICAgICAgIDExICAgICAgIDE1NzAgICAgICAgICAgICAgXG5iZWdnaW5nICAgICAgMyAgICAgIDY3MCAgICAgICAgIDggICAgICAgIDkwMCAgPCAyZS0xNiAqKipcbmJjcyAgICAgICAgICAyICAgICAgODQ3ICAgICAgICAgNiAgICAgICAgIDUzICA8IDJlLTE2ICoqKlxuYmVnZ2luZzpiY3MgIDYgICAgICAgNTMgICAgICAgICAwICAgICAgICAgIDAgIDEuMWUtMDkgKioqXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcbiJ9 -->
 <pre><code>Analysis of Deviance Table
 
 Model: poisson, link: log
@@ -2031,11 +1985,11 @@ Response: count
 
 Terms added sequentially (first to last)
 
-            Df Deviance Resid. Df Resid. Dev  Pr(&gt;Chi)    
-NULL                           11    1570.22              
-begging      3   669.91         8     900.31 &lt; 2.2e-16 ***
-bcs          2   847.08         6      53.24 &lt; 2.2e-16 ***
-begging:bcs  6    53.24         0       0.00  1.05e-09 ***
+            Df Deviance Resid. Df Resid. Dev Pr(&gt;Chi)    
+NULL                           11       1570             
+begging      3      670         8        900  &lt; 2e-16 ***
+bcs          2      847         6         53  &lt; 2e-16 ***
+begging:bcs  6       53         0          0  1.1e-09 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
 <!-- rnb-output-end -->
@@ -2043,23 +1997,19 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 <pre class="r"><code>tengred.glm &lt;- glm(count~begging+bcs, family=poisson, data=teng)
 summary(tengred.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IGJlZ2dpbmcgKyBiY3MsIGZhbWlseSA9IHBvaXNzb24sIGRhdGEgPSB0ZW5nKVxuXG5EZXZpYW5jZSBSZXNpZHVhbHM6IFxuICAgIE1pbiAgICAgICAxUSAgIE1lZGlhbiAgICAgICAzUSAgICAgIE1heCAgXG4tMy4wOTQxICAtMS41MDA0ICAgMC4xMDI3ICAgMS4xODM0ICAgMy41ODkyICBcblxuQ29lZmZpY2llbnRzOlxuICAgICAgICAgICAgICAgICBFc3RpbWF0ZSBTdGQuIEVycm9yIHogdmFsdWUgUHIoPnx6fCkgICAgXG4oSW50ZXJjZXB0KSAgICAgICAzLjIxNTI0ICAgIDAuMTEwNDAgIDI5LjEyMiAgPCAyZS0xNiAqKipcbmJlZ2dpbmdzb21ldGltZXMgIDAuNzc0MzEgICAgMC4wNjUyNyAgMTEuODY0ICA8IDJlLTE2ICoqKlxuYmVnZ2luZ29mdGVuICAgICAtMC41OTU5OCAgICAwLjA5MDU5ICAtNi41NzkgNC43NGUtMTEgKioqXG5iZWdnaW5nYWx3YXlzICAgIC0xLjIyMjYxICAgIDAuMTEzMjEgLTEwLjgwMCAgPCAyZS0xNiAqKipcbmJjc2JjczMgICAgICAgICAgIDIuMjQ3MDcgICAgMC4xMDUxNSAgMjEuMzcwICA8IDJlLTE2ICoqKlxuYmNzYmNzNDUgICAgICAgICAgMS4xOTY5NSAgICAwLjExNDExICAxMC40ODkgIDwgMmUtMTYgKioqXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcblxuKERpc3BlcnNpb24gcGFyYW1ldGVyIGZvciBwb2lzc29uIGZhbWlseSB0YWtlbiB0byBiZSAxKVxuXG4gICAgTnVsbCBkZXZpYW5jZTogMTU3MC4yMjEgIG9uIDExICBkZWdyZWVzIG9mIGZyZWVkb21cblJlc2lkdWFsIGRldmlhbmNlOiAgIDUzLjIzOSAgb24gIDYgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiAxMzYuODRcblxuTnVtYmVyIG9mIEZpc2hlciBTY29yaW5nIGl0ZXJhdGlvbnM6IDRcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuZ2xtKGZvcm11bGEgPSBjb3VudCB+IGJlZ2dpbmcgKyBiY3MsIGZhbWlseSA9IHBvaXNzb24sIGRhdGEgPSB0ZW5nKVxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICBFc3RpbWF0ZSBTdGQuIEVycm9yIHogdmFsdWUgUHIoPnx6fCkgICAgXG4oSW50ZXJjZXB0KSAgIDQuMTAyMiAgICAgMC4wNDUzICAgOTAuNTIgIDwgMmUtMTYgKioqXG5iZWdnaW5nMSAgICAgIDAuMjYxMSAgICAgMC4wNTE3ICAgIDUuMDUgIDQuNGUtMDcgKioqXG5iZWdnaW5nMiAgICAgIDEuMDM1NCAgICAgMC4wNDM0ICAgMjMuODMgIDwgMmUtMTYgKioqXG5iZWdnaW5nMyAgICAgLTAuMzM0OSAgICAgMC4wNjIxICAgLTUuMzkgIDcuMWUtMDggKioqXG5iY3MxICAgICAgICAgLTEuMTQ4MCAgICAgMC4wNzAwICAtMTYuNDAgIDwgMmUtMTYgKioqXG5iY3MyICAgICAgICAgIDEuMDk5MSAgICAgMC4wNDM4ICAgMjUuMTAgIDwgMmUtMTYgKioqXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcblxuKERpc3BlcnNpb24gcGFyYW1ldGVyIGZvciBwb2lzc29uIGZhbWlseSB0YWtlbiB0byBiZSAxKVxuXG4gICAgTnVsbCBkZXZpYW5jZTogMTU3MC4yMjEgIG9uIDExICBkZWdyZWVzIG9mIGZyZWVkb21cblJlc2lkdWFsIGRldmlhbmNlOiAgIDUzLjIzOSAgb24gIDYgIGRlZ3JlZXMgb2YgZnJlZWRvbVxuQUlDOiAxMzYuOFxuXG5OdW1iZXIgb2YgRmlzaGVyIFNjb3JpbmcgaXRlcmF0aW9uczogNFxuIn0= -->
 <pre><code>
 Call:
 glm(formula = count ~ begging + bcs, family = poisson, data = teng)
 
-Deviance Residuals: 
-    Min       1Q   Median       3Q      Max  
--3.0941  -1.5004   0.1027   1.1834   3.5892  
-
 Coefficients:
-                 Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)       3.21524    0.11040  29.122  &lt; 2e-16 ***
-beggingsometimes  0.77431    0.06527  11.864  &lt; 2e-16 ***
-beggingoften     -0.59598    0.09059  -6.579 4.74e-11 ***
-beggingalways    -1.22261    0.11321 -10.800  &lt; 2e-16 ***
-bcsbcs3           2.24707    0.10515  21.370  &lt; 2e-16 ***
-bcsbcs45          1.19695    0.11411  10.489  &lt; 2e-16 ***
+            Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)   4.1022     0.0453   90.52  &lt; 2e-16 ***
+begging1      0.2611     0.0517    5.05  4.4e-07 ***
+begging2      1.0354     0.0434   23.83  &lt; 2e-16 ***
+begging3     -0.3349     0.0621   -5.39  7.1e-08 ***
+bcs1         -1.1480     0.0700  -16.40  &lt; 2e-16 ***
+bcs2          1.0991     0.0438   25.10  &lt; 2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
@@ -2067,14 +2017,14 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
     Null deviance: 1570.221  on 11  degrees of freedom
 Residual deviance:   53.239  on  6  degrees of freedom
-AIC: 136.84
+AIC: 136.8
 
 Number of Fisher Scoring iterations: 4</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYW5vdmEodGVuZ3JlZC5nbG0sIHRlc3Q9XCJDaGlzcVwiKVxuYGBgIn0= -->
 <pre class="r"><code>anova(tengred.glm, test=&quot;Chisq&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiQW5hbHlzaXMgb2YgRGV2aWFuY2UgVGFibGVcblxuTW9kZWw6IHBvaXNzb24sIGxpbms6IGxvZ1xuXG5SZXNwb25zZTogY291bnRcblxuVGVybXMgYWRkZWQgc2VxdWVudGlhbGx5IChmaXJzdCB0byBsYXN0KVxuXG5cbiAgICAgICAgRGYgRGV2aWFuY2UgUmVzaWQuIERmIFJlc2lkLiBEZXYgIFByKD5DaGkpICAgIFxuTlVMTCAgICAgICAgICAgICAgICAgICAgICAgMTEgICAgMTU3MC4yMiAgICAgICAgICAgICAgXG5iZWdnaW5nICAzICAgNjY5LjkxICAgICAgICAgOCAgICAgOTAwLjMxIDwgMi4yZS0xNiAqKipcbmJjcyAgICAgIDIgICA4NDcuMDggICAgICAgICA2ICAgICAgNTMuMjQgPCAyLjJlLTE2ICoqKlxuLS0tXG5TaWduaWYuIGNvZGVzOiAgMCDigJgqKirigJkgMC4wMDEg4oCYKirigJkgMC4wMSDigJgq4oCZIDAuMDUg4oCYLuKAmSAwLjEg4oCYIOKAmSAxXG4ifQ== -->
+<!-- rnb-output-begin eyJkYXRhIjoiQW5hbHlzaXMgb2YgRGV2aWFuY2UgVGFibGVcblxuTW9kZWw6IHBvaXNzb24sIGxpbms6IGxvZ1xuXG5SZXNwb25zZTogY291bnRcblxuVGVybXMgYWRkZWQgc2VxdWVudGlhbGx5IChmaXJzdCB0byBsYXN0KVxuXG5cbiAgICAgICAgRGYgRGV2aWFuY2UgUmVzaWQuIERmIFJlc2lkLiBEZXYgUHIoPkNoaSkgICAgXG5OVUxMICAgICAgICAgICAgICAgICAgICAgICAxMSAgICAgICAxNTcwICAgICAgICAgICAgIFxuYmVnZ2luZyAgMyAgICAgIDY3MCAgICAgICAgIDggICAgICAgIDkwMCAgIDwyZS0xNiAqKipcbmJjcyAgICAgIDIgICAgICA4NDcgICAgICAgICA2ICAgICAgICAgNTMgICA8MmUtMTYgKioqXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcbiJ9 -->
 <pre><code>Analysis of Deviance Table
 
 Model: poisson, link: log
@@ -2083,45 +2033,45 @@ Response: count
 
 Terms added sequentially (first to last)
 
-        Df Deviance Resid. Df Resid. Dev  Pr(&gt;Chi)    
-NULL                       11    1570.22              
-begging  3   669.91         8     900.31 &lt; 2.2e-16 ***
-bcs      2   847.08         6      53.24 &lt; 2.2e-16 ***
+        Df Deviance Resid. Df Resid. Dev Pr(&gt;Chi)    
+NULL                       11       1570             
+begging  3      670         8        900   &lt;2e-16 ***
+bcs      2      847         6         53   &lt;2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYW5vdmEodGVuZ2Z1bGwuZ2xtLCB0ZW5ncmVkLmdsbSwgdGVzdD1cIkNoaXNxXCIpXG5gYGAifQ== -->
 <pre class="r"><code>anova(tengfull.glm, tengred.glm, test=&quot;Chisq&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiQW5hbHlzaXMgb2YgRGV2aWFuY2UgVGFibGVcblxuTW9kZWwgMTogY291bnQgfiBiZWdnaW5nICogYmNzXG5Nb2RlbCAyOiBjb3VudCB+IGJlZ2dpbmcgKyBiY3NcbiAgUmVzaWQuIERmIFJlc2lkLiBEZXYgRGYgRGV2aWFuY2UgUHIoPkNoaSkgICAgXG4xICAgICAgICAgMCAgICAgIDAuMDAwICAgICAgICAgICAgICAgICAgICAgICAgIFxuMiAgICAgICAgIDYgICAgIDUzLjIzOSAtNiAgLTUzLjIzOSAxLjA1ZS0wOSAqKipcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiQW5hbHlzaXMgb2YgRGV2aWFuY2UgVGFibGVcblxuTW9kZWwgMTogY291bnQgfiBiZWdnaW5nICogYmNzXG5Nb2RlbCAyOiBjb3VudCB+IGJlZ2dpbmcgKyBiY3NcbiAgUmVzaWQuIERmIFJlc2lkLiBEZXYgRGYgRGV2aWFuY2UgUHIoPkNoaSkgICAgXG4xICAgICAgICAgMCAgICAgICAgMC4wICAgICAgICAgICAgICAgICAgICAgICAgIFxuMiAgICAgICAgIDYgICAgICAgNTMuMiAtNiAgICAtNTMuMiAgMS4xZS0wOSAqKipcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuIn0= -->
 <pre><code>Analysis of Deviance Table
 
 Model 1: count ~ begging * bcs
 Model 2: count ~ begging + bcs
   Resid. Df Resid. Dev Df Deviance Pr(&gt;Chi)    
-1         0      0.000                         
-2         6     53.239 -6  -53.239 1.05e-09 ***
+1         0        0.0                         
+2         6       53.2 -6    -53.2  1.1e-09 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubHJ0ZXN0KHRlbmdmdWxsLmdsbSwgdGVuZ3JlZC5nbG0pXG5gYGAifQ== -->
 <pre class="r"><code>lrtest(tengfull.glm, tengred.glm)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gYmVnZ2luZyAqIGJjc1xuTW9kZWwgMjogY291bnQgfiBiZWdnaW5nICsgYmNzXG4gICNEZiAgTG9nTGlrIERmICBDaGlzcSBQcig+Q2hpc3EpICAgIFxuMSAgMTIgLTM1LjgwMCAgICAgICAgICAgICAgICAgICAgICAgICBcbjIgICA2IC02Mi40MTkgLTYgNTMuMjM5ICAgMS4wNWUtMDkgKioqXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiTGlrZWxpaG9vZCByYXRpbyB0ZXN0XG5cbk1vZGVsIDE6IGNvdW50IH4gYmVnZ2luZyAqIGJjc1xuTW9kZWwgMjogY291bnQgfiBiZWdnaW5nICsgYmNzXG4gICNEZiBMb2dMaWsgRGYgQ2hpc3EgUHIoPkNoaXNxKSAgICBcbjEgIDEyICAtMzUuOCAgICAgICAgICAgICAgICAgICAgICAgIFxuMiAgIDYgIC02Mi40IC02ICA1My4yICAgIDEuMWUtMDkgKioqXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcbiJ9 -->
 <pre><code>Likelihood ratio test
 
 Model 1: count ~ begging * bcs
 Model 2: count ~ begging + bcs
-  #Df  LogLik Df  Chisq Pr(&gt;Chisq)    
-1  12 -35.800                         
-2   6 -62.419 -6 53.239   1.05e-09 ***
+  #Df LogLik Df Chisq Pr(&gt;Chisq)    
+1  12  -35.8                        
+2   6  -62.4 -6  53.2    1.1e-09 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUSAmIEsgQm94IDEzLjYiCm91dHB1dDoKICBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgpUZW5nIGV0IGFsLiAoMjAyMCkgYW5hbHl6ZWQgdGhlIHJlc3VsdHMgb2YgYSBzdXJ2ZXkgb2YgZG9tZXN0aWMgY2F0IG93bmVycyBpbiBBdXN0cmFsaWEuIFRoZSBzdXJ2ZXkgZm9jdXNlZCBvbiBmYWN0b3JzIChlLmcuIGNhdCBkZW1vZ3JhcGhpY3MsIG93bmVyIGF0dGl0dWRlcyBhbmQgZGVtb2dyYXBoaWNzLCBldGMuKSB0aGF0IG1pZ2h0IGFmZmVjdCB0aGUgcHJldmFsZW5jZSBvZiBvdmVyd2VpZ2h0IGFuZCBvYmVzZSBjYXRzLiBUaGV5IHJlbGF0ZWQgbmVhcmx5IDE0MDAgc3VydmV5IHJlc3BvbnNlcyBvZiBvd25lci1hc3Nlc3NlZCBib2R5IGNvbmRpdGlvbiBzY29yZSBbQkNTIHdpdGggZml2ZSBjYXRlZ29yaWVzOiB2ZXJ5IHVuZGVyd2VpZ2h0ICgxKSwgc29tZXdoYXQgdW5kZXJ3ZWlnaHQgKDIpLCBpZGVhbCAoMyksIGNodWJieS9vdmVyd2VpZ2h0ICg0KSwgYW5kIGZhdC9vYmVzZSAoNSldIHRvIGEgcmFuZ2Ugb2YgY2F0ZWdvcmljYWwgcHJlZGljdG9ycyB3aXRoIGEgbXVsdGl2YXJpYXRlIG11bHRpbm9taWFsIEdMTS4gV2Ugd2lsbCB1c2Ugb25lIGFzcGVjdCBvZiB0aGVpciBkYXRhIHRvIGNvbnN0cnVjdCBhIGNvbnRpbmdlbmN5IHRhYmxlIHJlbGF0aW5nIHRoZSBCQ1MsIHJlZHVjZWQgdG8gdGhyZWUgY2F0ZWdvcmllcyAoMSYyLCAzLCA0JjUpIHRvIGNhdHMnIGJlZ2dpbmcgYmVoYXZpb3IgKGZvdXIgY2F0ZWdvcmllczogbmV2ZXIsIHNvbWV0aW1lcywgb2Z0ZW4sIGFsd2F5cykuCgpUaGUgcGFwZXIgaXMgW2hlcmVdKGh0dHBzOi8vZG9pLm9yZy8xMC4xMzcxL2pvdXJuYWwucG9uZS4wMjM0MTkwKQoKVGVuZywgSy4gVC4sIE1jR3JlZXZ5LCBQLiBELiwgVG9yaWJpbywgSi4gJiBEaGFuZCwgTi4gSy4gKDIwMjApLiBQb3NpdGl2ZSBhdHRpdHVkZXMgdG93YXJkcyBmZWxpbmUgb2Jlc2l0eSBhcmUKc3Ryb25nbHkgYXNzb2NpYXRlZCB3aXRoIG93bmVyc2hpcCBvZiBvYmVzZSBjYXRzLiAqUExvUyBPbmUqLCAxNSwgZTAyMzQxOTAuCgojIyMgUHJlbGltaW5hcmllcwoKSW5zdGFsbCB0aGUgcGFja2FnZSBlcGl0b29scwoKYGBge3IgfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShlcGl0b29scykKYGBgCgpSZWFkIGluIGRhdGEKCmBgYHtyfQp0ZW5nIDwtIHJlYWRfY3N2KCIuLi9kYXRhL3RlbmcuY3N2IikKdGVuZwpgYGAKCk1ha2UgYmVnZ2luZyBhIGZhY3RvciBhbmQgcHV0IGNhdGVnb3JpZXMgaW50byBhIHNlbnNpYmxlIG9yZGVyCgpgYGB7cn0KdGVuZyRiZWdnaW5nIDwtIGZhY3Rvcih0ZW5nJGJlZ2dpbmcsIGxldmVscz1jKCJuZXZlciIsInNvbWV0aW1lcyIsIm9mdGVuIiwiYWx3YXlzIikpCnRlbmcudGFiPC14dGFicyhjb3VudH5iZWdnaW5nICsgYmNzLCBkYXRhPXRlbmcpCnRlbmcudGFiCmBgYAoKR2VuZXJhdGUgY2hpLXNxdWFyZSBzdGF0aXN0aWMgYW5kIGxvb2sgYXQgcmVzaWR1YWxzCgpgYGB7cn0KY2hpc3EudGVzdCh0ZW5nLnRhYiwgY29ycmVjdD1GKSRleHAKdGVuZy5jaGk8LSBjaGlzcS50ZXN0KHRlbmcudGFiLCBjb3JyZWN0PUYpCnRlbmcuY2hpCnRlbmcuY2hpJHJlc2lkdWFscwpgYGAKCiMjIyBEZXRlcm1pbmUgT1IgZm9yIGJlaW5nIG92ZXJ3ZWlnaHQgZm9yIHBhaXJzIG9mIGJlZ2dpbmcgY2F0ZWdvcmllcwoKCmBgYHtyfQojIE5ldmVyIHZzIHNvbWV0aW1lcyBiZWdnaW5nCnRlbmcxIDwtIHN1YnNldCh0ZW5nLHN1YnNldCA9IGJlZ2dpbmcgJWluJSBjKCduZXZlcicsJ3NvbWV0aW1lcycpKQp0ZW5nMWEgPC0gc3Vic2V0KHRlbmcxLHN1YnNldCA9IGJjcyAlaW4lIGMoJ2JjczMnLCdiY3M0NScpKQp0ZW5nMWEudGFiIDwtIHh0YWJzKGNvdW50fmJlZ2dpbmcgKyBiY3MsIGRhdGE9dGVuZzFhLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSkKb2Rkc3JhdGlvKHRlbmcxYS50YWIpCgojIE5ldmVyIHZzIG9mdGVuCnRlbmcyIDwtIHN1YnNldCh0ZW5nLHN1YnNldCA9IGJlZ2dpbmcgJWluJSBjKCduZXZlcicsJ29mdGVuJykpCnRlbmcyYSA8LSBzdWJzZXQodGVuZzIsc3Vic2V0ID0gYmNzICVpbiUgYygnYmNzMycsJ2JjczQ1JykpCnRlbmcyYS50YWIgPC0geHRhYnMoY291bnR+YmVnZ2luZyArIGJjcywgZGF0YT10ZW5nMmEsIGRyb3AudW51c2VkLmxldmVscz1UUlVFKQpvZGRzcmF0aW8odGVuZzJhLnRhYikKCiMgIE5ldmVyIHZzIGFsd2F5cyBiZWdnaW5nCnRlbmczIDwtIHN1YnNldCh0ZW5nLHN1YnNldCA9IGJlZ2dpbmcgJWluJSBjKCduZXZlcicsJ2Fsd2F5cycpKQp0ZW5nM2EgPC0gc3Vic2V0KHRlbmczLHN1YnNldCA9IGJjcyAlaW4lIGMoJ2JjczMnLCdiY3M0NScpKQp0ZW5nM2EudGFiIDwtIHh0YWJzKGNvdW50fmJlZ2dpbmcgKyBiY3MsIGRhdGE9dGVuZzNhLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSkKb2Rkc3JhdGlvKHRlbmczYS50YWIpCmBgYAoKIyMjIGZpdCBsb2ctbGluZWFyIG1vZGVscwoKYGBge3J9CnRlbmdmdWxsLmdsbSA8LSBnbG0oY291bnR+YmVnZ2luZypiY3MsIGZhbWlseT1wb2lzc29uLCBkYXRhPXRlbmcpCnN1bW1hcnkodGVuZ2Z1bGwuZ2xtKQphbm92YSh0ZW5nZnVsbC5nbG0sIHRlc3Q9IkNoaXNxIikKdGVuZ3JlZC5nbG0gPC0gZ2xtKGNvdW50fmJlZ2dpbmcrYmNzLCBmYW1pbHk9cG9pc3NvbiwgZGF0YT10ZW5nKQpzdW1tYXJ5KHRlbmdyZWQuZ2xtKQphbm92YSh0ZW5ncmVkLmdsbSwgdGVzdD0iQ2hpc3EiKQphbm92YSh0ZW5nZnVsbC5nbG0sIHRlbmdyZWQuZ2xtLCB0ZXN0PSJDaGlzcSIpCmxydGVzdCh0ZW5nZnVsbC5nbG0sIHRlbmdyZWQuZ2xtKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUSAmIEsgQm94IDEzLjYiCm91dHB1dDoKICBodG1sX25vdGVib29rCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgpUZW5nIGV0IGFsLiAoMjAyMCkgYW5hbHl6ZWQgdGhlIHJlc3VsdHMgb2YgYSBzdXJ2ZXkgb2YgZG9tZXN0aWMgY2F0IG93bmVycyBpbiBBdXN0cmFsaWEuIFRoZSBzdXJ2ZXkgZm9jdXNlZCBvbiBmYWN0b3JzIChlLmcuIGNhdCBkZW1vZ3JhcGhpY3MsIG93bmVyIGF0dGl0dWRlcyBhbmQgZGVtb2dyYXBoaWNzLCBldGMuKSB0aGF0IG1pZ2h0IGFmZmVjdCB0aGUgcHJldmFsZW5jZSBvZiBvdmVyd2VpZ2h0IGFuZCBvYmVzZSBjYXRzLiBUaGV5IHJlbGF0ZWQgbmVhcmx5IDE0MDAgc3VydmV5IHJlc3BvbnNlcyBvZiBvd25lci1hc3Nlc3NlZCBib2R5IGNvbmRpdGlvbiBzY29yZSBbQkNTIHdpdGggZml2ZSBjYXRlZ29yaWVzOiB2ZXJ5IHVuZGVyd2VpZ2h0ICgxKSwgc29tZXdoYXQgdW5kZXJ3ZWlnaHQgKDIpLCBpZGVhbCAoMyksIGNodWJieS9vdmVyd2VpZ2h0ICg0KSwgYW5kIGZhdC9vYmVzZSAoNSldIHRvIGEgcmFuZ2Ugb2YgY2F0ZWdvcmljYWwgcHJlZGljdG9ycyB3aXRoIGEgbXVsdGl2YXJpYXRlIG11bHRpbm9taWFsIEdMTS4gV2Ugd2lsbCB1c2Ugb25lIGFzcGVjdCBvZiB0aGVpciBkYXRhIHRvIGNvbnN0cnVjdCBhIGNvbnRpbmdlbmN5IHRhYmxlIHJlbGF0aW5nIHRoZSBCQ1MsIHJlZHVjZWQgdG8gdGhyZWUgY2F0ZWdvcmllcyAoMSYyLCAzLCA0JjUpIHRvIGNhdHMnIGJlZ2dpbmcgYmVoYXZpb3IgKGZvdXIgY2F0ZWdvcmllczogbmV2ZXIsIHNvbWV0aW1lcywgb2Z0ZW4sIGFsd2F5cykuCgpUaGUgcGFwZXIgaXMgW2hlcmVdKGh0dHBzOi8vZG9pLm9yZy8xMC4xMzcxL2pvdXJuYWwucG9uZS4wMjM0MTkwKQoKVGVuZywgSy4gVC4sIE1jR3JlZXZ5LCBQLiBELiwgVG9yaWJpbywgSi4gJiBEaGFuZCwgTi4gSy4gKDIwMjApLiBQb3NpdGl2ZSBhdHRpdHVkZXMgdG93YXJkcyBmZWxpbmUgb2Jlc2l0eSBhcmUKc3Ryb25nbHkgYXNzb2NpYXRlZCB3aXRoIG93bmVyc2hpcCBvZiBvYmVzZSBjYXRzLiAqUExvUyBPbmUqLCAxNSwgZTAyMzQxOTAuCgojIyMgUHJlbGltaW5hcmllcwoKSW5zdGFsbCB0aGUgcGFja2FnZSBlcGl0b29scwoKYGBge3IgfQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShlcGl0b29scykKbGlicmFyeSh2Y2QpCmBgYAoKUmVhZCBpbiBkYXRhCgpgYGB7cn0KdGVuZyA8LSByZWFkX2NzdigiLi4vZGF0YS90ZW5nLmNzdiIpCnRlbmcKYGBgCgpNYWtlIGJlZ2dpbmcgYSBmYWN0b3IgYW5kIHB1dCBjYXRlZ29yaWVzIGludG8gYSBzZW5zaWJsZSBvcmRlcgoKYGBge3J9CnRlbmckYmVnZ2luZyA8LSBmYWN0b3IodGVuZyRiZWdnaW5nLCBsZXZlbHM9YygibmV2ZXIiLCJzb21ldGltZXMiLCJvZnRlbiIsImFsd2F5cyIpKQp0ZW5nLnRhYjwteHRhYnMoY291bnR+YmVnZ2luZyArIGJjcywgZGF0YT10ZW5nKQp0ZW5nLnRhYgpgYGAKCkdlbmVyYXRlIGNoaS1zcXVhcmUgc3RhdGlzdGljIGFuZCBsb29rIGF0IHJlc2lkdWFscwoKYGBge3J9CmNoaXNxLnRlc3QodGVuZy50YWIsIGNvcnJlY3Q9RikkZXhwCnRlbmcuY2hpPC0gY2hpc3EudGVzdCh0ZW5nLnRhYiwgY29ycmVjdD1GKQp0ZW5nLmNoaQp0ZW5nLmNoaSRyZXNpZHVhbHMKYGBgCgojIyMgRGV0ZXJtaW5lIE9SIGZvciBiZWluZyBvdmVyd2VpZ2h0IGZvciBwYWlycyBvZiBiZWdnaW5nIGNhdGVnb3JpZXMKCgpgYGB7cn0KIyBOZXZlciB2cyBzb21ldGltZXMgYmVnZ2luZwp0ZW5nMSA8LSBzdWJzZXQodGVuZyxzdWJzZXQgPSBiZWdnaW5nICVpbiUgYygnbmV2ZXInLCdzb21ldGltZXMnKSkKdGVuZzFhIDwtIHN1YnNldCh0ZW5nMSxzdWJzZXQgPSBiY3MgJWluJSBjKCdiY3MzJywnYmNzNDUnKSkKdGVuZzFhLnRhYiA8LSB4dGFicyhjb3VudH5iZWdnaW5nICsgYmNzLCBkYXRhPXRlbmcxYSwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpCmxvZGRzKHRlbmcxYS50YWIsIGxvZyA9IEZBTFNFKQpsb2Rkc3JhdGlvKHRlbmcxYS50YWIsIGxvZyA9IEZBTFNFKQoKIyBOZXZlciB2cyBvZnRlbgp0ZW5nMiA8LSBzdWJzZXQodGVuZyxzdWJzZXQgPSBiZWdnaW5nICVpbiUgYygnbmV2ZXInLCdvZnRlbicpKQp0ZW5nMmEgPC0gc3Vic2V0KHRlbmcyLHN1YnNldCA9IGJjcyAlaW4lIGMoJ2JjczMnLCdiY3M0NScpKQp0ZW5nMmEudGFiIDwtIHh0YWJzKGNvdW50fmJlZ2dpbmcgKyBiY3MsIGRhdGE9dGVuZzJhLCBkcm9wLnVudXNlZC5sZXZlbHM9VFJVRSkKbG9kZHModGVuZzJhLnRhYiwgbG9nID0gRkFMU0UpCmxvZGRzcmF0aW8odGVuZzJhLnRhYiwgbG9nID0gRkFMU0UpCgojICBOZXZlciB2cyBhbHdheXMgYmVnZ2luZwp0ZW5nMyA8LSBzdWJzZXQodGVuZyxzdWJzZXQgPSBiZWdnaW5nICVpbiUgYygnbmV2ZXInLCdhbHdheXMnKSkKdGVuZzNhIDwtIHN1YnNldCh0ZW5nMyxzdWJzZXQgPSBiY3MgJWluJSBjKCdiY3MzJywnYmNzNDUnKSkKdGVuZzNhLnRhYiA8LSB4dGFicyhjb3VudH5iZWdnaW5nICsgYmNzLCBkYXRhPXRlbmczYSwgZHJvcC51bnVzZWQubGV2ZWxzPVRSVUUpCmxvZGRzKHRlbmczYS50YWIsIGxvZyA9IEZBTFNFKQpsb2Rkc3JhdGlvKHRlbmczYS50YWIsIGxvZyA9IEZBTFNFKQpgYGAKCiMjIyBmaXQgbG9nLWxpbmVhciBtb2RlbHMKCmBgYHtyfQp0ZW5nZnVsbC5nbG0gPC0gZ2xtKGNvdW50fmJlZ2dpbmcqYmNzLCBmYW1pbHk9cG9pc3NvbiwgZGF0YT10ZW5nKQpzdW1tYXJ5KHRlbmdmdWxsLmdsbSkKYW5vdmEodGVuZ2Z1bGwuZ2xtLCB0ZXN0PSJDaGlzcSIpCnRlbmdyZWQuZ2xtIDwtIGdsbShjb3VudH5iZWdnaW5nK2JjcywgZmFtaWx5PXBvaXNzb24sIGRhdGE9dGVuZykKc3VtbWFyeSh0ZW5ncmVkLmdsbSkKYW5vdmEodGVuZ3JlZC5nbG0sIHRlc3Q9IkNoaXNxIikKYW5vdmEodGVuZ2Z1bGwuZ2xtLCB0ZW5ncmVkLmdsbSwgdGVzdD0iQ2hpc3EiKQpscnRlc3QodGVuZ2Z1bGwuZ2xtLCB0ZW5ncmVkLmdsbSkKYGBgCg==</div>
 
 
 
