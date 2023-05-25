@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Ch 10 exercises</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">QK 2nd ed resources</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="examples.html">Boxes</a>
+</li>
+<li>
+  <a href="exercises.html">Exercises</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Ch 10 exercises</h1>
+
+</div>
+
+
+<p>The aim of these exercises is to start getting familiar with mixed
+models, and in these exercises we’ll be focused on models with multiple
+categorical predictors, with at least one predictor a random effect. The
+random effects can be crossed or be nested within other predictors,
+creating a nested or multilevel structure.</p>
+<p>For each of the examples below, you should follow the sequence we’ve
+used previously:</p>
+<ol style="list-style-type: decimal">
+<li><p>What is the biological question?</p></li>
+<li><p>Is the predictor continuous or categorical?</p></li>
+<li><p>Write out the linear model corresponding to this
+question.</p></li>
+<li><p>What distribution do you expect the response variable to
+follow?</p></li>
+<li><p>What are the assumptions behind the statistical model you’ll
+fit?</p>
+<ol style="list-style-type: decimal">
+<li>Are those assumptions satisfied?</li>
+</ol></li>
+<li><p>Fit the model</p>
+<ol style="list-style-type: decimal">
+<li><p>How will you assess whether the model fits well?</p></li>
+<li><p>Can you detect an effect of the predictor?</p></li>
+<li><p>How do you measure the effect?</p></li>
+</ol></li>
+<li><p>What do you conclude (including any cautions)</p></li>
+</ol>
+<div id="things-to-look-out-for" class="section level4">
+<h4>Things to look out for</h4>
+<p>In fitting these models, we’ll need to make the initial checklist
+more complex:</p>
+<ul>
+<li><p>as well as classifying a predictor as continuous or categorical,
+think clearly about whether it is random or fixed</p></li>
+<li><p>think about the relationship between predictors - are they
+crossed (factorial) or nested (hierarchical)? Make sure that your linear
+model reflects these relationships!</p></li>
+<li><p>When there are random effects, assumptions can be more extensive.
+We’re usually interested in the fixed effects, and different fixed
+effects can have different assumptions. This is particularly the case
+with nested designs.</p></li>
+</ul>
+</div>
+<div id="crossed-mixed-model-designs" class="section level2">
+<h2>Crossed mixed model designs</h2>
+<p>Remember from Chapter 10 that these designs are typically used for
+two purposes.</p>
+<p>Random effects are often used as to reduce background noise in the
+data (e.g. randomized blocks designs), where the random effect is of
+little intrinsic interest. In a sense, we sacrfice degrees of freedom
+from the residual variance, anticipating that the variance attributed to
+the random effects will be large enough to make this sacrifice
+worthwhile. When you see these designs, it’s a good idea to look and see
+if the use of a random effect seems a good decision, e.g. by looking at
+blocking efficiency.</p>
+<p>In other cases, the random effects are used to estimate how
+consistently fixed effects act, by estimating variance in their effects
+across, for example, an environmental spectrum.</p>
+<p>A. @walterLeavesDomatiaHave1992 were interested in testing the
+hypothesis that leaves of the shrub <em>Viburnum tinus</em> with domatia
+(small shelters at the juncture of veins on leaves) have more mites than
+leaves without domatia. Fourteen paired leaves on a shrub of <em>V.
+tinus</em> were randomly chosen and one leaf in each pair had its
+domatia shaved while the other remained as a control; the number of
+mites was recorded on each leaf (experimental unit) after two weeks.</p>
+<p>The data file is here: <a href="data\walter.csv">walter.csv</a>.</p>
+<ul>
+<li><div>
+
+</li>
+</ul>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/walter.csv&quot;)
+df</code></pre>
+<pre><code>##    leaf pair domatia mites
+## 1    a1    a  intact     9
+## 2    a2    a  shaved     1
+## 3    b1    b  intact     2
+## 4    b2    b  shaved     1
+## 5    c1    c  intact     0
+## 6    c2    c  shaved     2
+## 7    d1    d  intact    12
+## 8    d2    d  shaved     4
+## 9    e1    e  intact    15
+## 10   e2    e  shaved     2
+## 11   f1    f  intact     3
+## 12   f2    f  shaved     1
+## 13   g1    g  intact    11
+## 14   g2    g  shaved     0
+## 15   h1    h  intact     6
+## 16   h2    h  shaved     0
+## 17   i1    i  intact     7
+## 18   i2    i  shaved     1
+## 19   j1    j  intact     6
+## 20   j2    j  shaved     0
+## 21   k1    k  intact     5
+## 22   k2    k  shaved     1
+## 23   l1    l  intact     8
+## 24   l2    l  shaved     1
+## 25   m1    m  intact     3
+## 26   m2    m  shaved     1
+## 27   n1    n  intact     6
+## 28   n2    n  shaved     0</code></pre>
+<pre><code>&lt;/div&gt;</code></pre>
+<p>This file has four variables:</p>
+<ul>
+<li><p><em>leaf</em> is just a code to identify individual
+leaves</p></li>
+<li><p><em>pair</em> identifies the pair to which that leaf
+belongs</p></li>
+<li><p><em>domatia</em> describes the experimental treatments, whether
+domatia were shaved off or left intact</p></li>
+<li><p><em>mites</em> is the number of mites recorded from that
+leaf</p></li>
+</ul>
+<p>Use the sequence at the start of these exercises to make some
+conclusions about the role of domatia on this shrub species.</p>
+<p>Why do you think the authors chose to run the experiment with pairs
+of leaves?</p>
+<p>Did that pairing decision improve their ability to say something
+about domatia?</p>
+<pre class="r"><code>df$fmites &lt;- df$mites^.25  #Transform to make variances more similar; use fourth root because of zeroes
+walter.lm &lt;- lm(fmites ~ domatia + pair, data = df)
+plot(walter.lm)</code></pre>
+<p><img src="c10_files/figure-html/unnamed-chunk-3-1.png" width="672" /><img src="c10_files/figure-html/unnamed-chunk-3-2.png" width="672" /><img src="c10_files/figure-html/unnamed-chunk-3-3.png" width="672" /><img src="c10_files/figure-html/unnamed-chunk-3-4.png" width="672" /></p>
+<pre class="r"><code>anova(walter.lm)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: fmites
+##           Df Sum Sq Mean Sq F value   Pr(&gt;F)   
+## domatia    1 3.5075  3.5075 11.7749 0.004464 **
+## pair      13 2.6121  0.2009  0.6745 0.756191   
+## Residuals 13 3.8725  0.2979                    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>interaction.plot(df$pair,df$domatia,df$fmites)</code></pre>
+<p><img src="c10_files/figure-html/unnamed-chunk-3-5.png" width="672" /></p>
+<pre class="r"><code>walter.vca &lt;- anovaMM(fmites~domatia+(pair), df)</code></pre>
+<pre><code>## Convert variable pair from &quot;character&quot; to &quot;factor&quot;!</code></pre>
+<pre><code>## Convert variable domatia from &quot;character&quot; to &quot;factor&quot;!</code></pre>
+<pre class="r"><code>walter.vca</code></pre>
+<pre><code>## 
+## 
+## ANOVA-Type Estimation of Mixed Model:
+## --------------------------------------
+## 
+##  [Fixed Effects]
+## 
+##           int domatiaintact domatiashaved 
+##      0.770902      0.707865      0.000000 
+## 
+## 
+##  [Variance Components]
+## 
+##   Name  DF SS       MS       VC       %Total SD       CV[%]    
+## 1 total 26                   0.297881 100    0.545785 48.521349
+## 2 pair  13 2.612131 0.200933 0*       0*     0*       0*       
+## 3 error 13 3.872455 0.297881 0.297881 100    0.545785 48.521349
+## 
+## Mean: 1.124834 (N = 28) 
+## 
+## Experimental Design: balanced  |  Method: ANOVA | * VC set to 0 | adapted MS used for total DF</code></pre>
+<pre class="r"><code>VCAinference(walter.vca, alpha=0.05, VarVC=TRUE, excludeNeg=FALSE, constrainCI=FALSE)</code></pre>
+<pre><code>## 
+## 
+## 
+## Inference from Mixed Model Fit
+## ------------------------------
+## 
+## &gt; VCA Result:
+## -------------
+## 
+##  [Fixed Effects]
+## 
+##           int domatiaintact domatiashaved 
+##        0.7709        0.7079        0.0000 
+## 
+## 
+##  [Variance Components]
+## 
+##   Name  DF SS     MS     VC     %Total SD     CV[%]   Var(VC)
+## 1 total 26               0.2979 100    0.5458 48.5213        
+## 2 pair  13 2.6121 0.2009 0*     0*     0*     0*      0.005  
+## 3 error 13 3.8725 0.2979 0.2979 100    0.5458 48.5213 0.0137 
+## 
+## Mean: 1.1248 (N = 28) 
+## 
+## Experimental Design: balanced  |  Method: ANOVA | * VC set to 0 | adapted MS used for total DF
+## 
+## 
+## &gt; VC:
+## -----
+##       Estimate CI LCL CI UCL One-Sided LCL One-Sided UCL
+## total 0.2979   0.1847 0.5594 0.1992        0.5036       
+## pair  0        0*     0.1381 0*            0.1159       
+## error 0.2979   0.1566 0.7731 0.1732        0.6573       
+## 
+## &gt; SD:
+## -----
+##       Estimate CI LCL CI UCL One-Sided LCL One-Sided UCL
+## total 0.5458   0.4298 0.748  0.4463        0.7096       
+## pair  0        0*     0.3716 0*            0.3405       
+## error 0.5458   0.3957 0.8793 0.4161        0.8107       
+## 
+## &gt; CV[%]:
+## --------
+##       Estimate CI LCL  CI UCL  One-Sided LCL One-Sided UCL
+## total 48.5213  38.2114 66.4952 39.676        63.0889      
+## pair  0        0*      33.0392 0*            30.267       
+## error 48.5213  35.1757 78.17   36.9955       72.0739      
+## 
+## 
+## 95% Confidence Level  | * CI-limits constrained to be &gt;= 0
+## SAS PROC MIXED method used for computing CIs</code></pre>
+<pre class="r"><code>walter2.lm &lt;- lm(fmites ~ domatia, data = df)
+anova(walter2.lm)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: fmites
+##           Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## domatia    1 3.5075  3.5075  14.063 0.000894 ***
+## Residuals 26 6.4846  0.2494                     
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>anova(walter.lm, walter2.lm)</code></pre>
+<pre><code>## Analysis of Variance Table
+## 
+## Model 1: fmites ~ domatia + pair
+## Model 2: fmites ~ domatia
+##   Res.Df    RSS  Df Sum of Sq      F Pr(&gt;F)
+## 1     13 3.8725                            
+## 2     26 6.4846 -13   -2.6121 0.6745 0.7562</code></pre>
+<ol style="list-style-type: upper-alpha">
+<li><p><span class="citation">Didiano, Johnson, and Duval
+(2016)</span></p></li>
+<li><p><span class="citation">Highfill et al. (2019)</span></p></li>
+</ol>
+</div>
+<div id="designs-with-nesting" class="section level2">
+<h2>Designs with nesting</h2>
+<p>C. <span class="citation">Birceanu and Wilkie (2018)</span></p>
+<p>D. <span class="citation">Cramp et al. (2014)</span></p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-birceanuPostexposureEffectsPiscicide2018"
+class="csl-entry">
+Birceanu, Oana, and Michael Patrick Wilkie. 2018. <span>“Post-Exposure
+Effects of the Piscicide 3-Trifluoromethyl-4-Nitrophenol
+(<span>TFM</span>) on the Stress Response and Liver Metabolic Capacity
+in Rainbow Trout (<span>Oncorhynchus</span> Mykiss).”</span> <em>Plos
+One</em> 13 (7). <a
+href="https://doi.org/gdw2tk">https://doi.org/gdw2tk</a>.
+</div>
+<div id="ref-crampSynergisticInteractionUVB2014" class="csl-entry">
+Cramp, Rebecca L., Stefanie Reid, Frank Seebacher, and Craig E.
+Franklin. 2014. <span>“Synergistic Interaction Between <span>UVB</span>
+Radiation and Temperature Increases Susceptibility to Parasitic
+Infection in a Fish.”</span> <em>Biology Letters</em> 10 (9): 20140449.
+<a href="https://doi.org/gr9ckp">https://doi.org/gr9ckp</a>.
+</div>
+<div id="ref-didianoDisentanglingEffectsPrecipitation2016"
+class="csl-entry">
+Didiano, Teresa J., Marc T. J. Johnson, and Tim P. Duval. 2016.
+<span>“Disentangling the <span>Effects</span> of <span>Precipitation
+Amount</span> and <span>Frequency</span> on the <span>Performance</span>
+of 14 <span>Grassland Species</span>.”</span> <em>Plos One</em> 11 (9).
+<a href="https://doi.org/f9rkgk">https://doi.org/f9rkgk</a>.
+</div>
+<div id="ref-highfillGeneticsCocaineMethamphetamine2019"
+class="csl-entry">
+Highfill, Chad A., Brandon M. Baker, Stephenie D. Stevens, Robert R. H.
+Anholt, and Trudy F. C. Mackay. 2019. <span>“Genetics of Cocaine and
+Methamphetamine Consumption and Preference in <span>Drosophila</span>
+Melanogaster.”</span> <em>PLOS Genetics</em> 15 (5). <a
+href="https://doi.org/gr2pgk">https://doi.org/gr2pgk</a>.
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
