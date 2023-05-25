@@ -13,7 +13,7 @@
 
 <title>Ch 6 exercises</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -57,6 +57,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 
 
@@ -249,7 +271,7 @@ $(document).ready(function () {
   <a href="examples.html">Boxes</a>
 </li>
 <li>
-  <a href="../Exercises/index.html">Exercises</a>
+  <a href="exercises.html">Exercises</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -296,48 +318,51 @@ fit?</p>
 <div id="simple-regression" class="section level2">
 <h2>Simple regression</h2>
 <ol style="list-style-type: upper-alpha">
-<li><p>Le Boeuf et al (2000) examined the foraging behaviour of northern
-elephant seals (<em>Mirounga angustirostris</em>) that breed along the
-west coast of Mexico and the USA. They attached platform satellite
-transmitter terminals (PTTs) to 22 male seals and recorded, for each
-seal, the distance (km) to its main feeding area offshore and the amount
-of time (duration in days) it spent at the feeding area. You can get
-this data file <a href="data/peakquinn.csv">here</a>.</p></li>
-<li><p>Peake &amp; Quinn (1993) investigated the relationship between
-the number of individuals and number of species (response variables) of
-invertebrates living in amongst clumps of mussels on a rocky intertidal
-shore and the area of those mussel clumps (predictor). You can get this
-data file <a href="data/peakquinn.csv">here</a>.</p></li>
+<li><p><span class="citation">Le Boeuf et al. (2000)</span> examined the
+foraging behaviour of northern elephant seals (<em>Mirounga
+angustirostris</em>) that breed along the west coast of Mexico and the
+USA. They attached platform satellite transmitter terminals (PTTs) to 22
+male seals and recorded, for each seal, the distance (km) to its main
+feeding area offshore and the amount of time (duration in days) it spent
+at the feeding area. You can get this data file <a
+href="data/peakquinn.csv">here</a>.</p></li>
+<li><p><span class="citation">Peake and Quinn (1993)</span> investigated
+the relationship between the number of individuals and number of species
+(response variables) of invertebrates living in amongst clumps of
+mussels on a rocky intertidal shore and the area of those mussel clumps
+(predictor). You can get this data file <a
+href="data/peakquinn.csv">here</a>.</p></li>
 </ol>
 </div>
 <div id="model-2-regression" class="section level2">
 <h2>Model 2 regression</h2>
 <ol start="3" style="list-style-type: upper-alpha">
-<li>Dai et al (2019) examined the relationships between aboveground
-(AGB) and belowground (BGB) plant biomass from 80 sites across four
-types of grassland (temperate grassland, desert grassland, alpine
-meadow, meadow steppe) in a region of China. Their research questions
-did not distinguish response and predictor variables so they used
-reduced major axis (RMA) regression to determine the slopes of the
-relationships between log(ABG) and log(BGB) for each grassland type and
-compare these to a slope of 1, indicating an (isometric) allometric
-relationship.</li>
+<li><span class="citation">Dai et al. (2019)</span> examined the
+relationships between aboveground (AGB) and belowground (BGB) plant
+biomass from 80 sites across four types of grassland (temperate
+grassland, desert grassland, alpine meadow, meadow steppe) in a region
+of China. Their research questions did not distinguish response and
+predictor variables so they used reduced major axis (RMA) regression to
+determine the slopes of the relationships between log(ABG) and log(BGB)
+for each grassland type and compare these to a slope of 1, indicating an
+(isometric) allometric relationship.</li>
 </ol>
 </div>
 <div id="one-factor-anova" class="section level2">
 <h2>One factor ANOVA</h2>
 <ol start="4" style="list-style-type: upper-alpha">
-<li>Vosteen et al (2016) examined patterns of production of honeydew by
-different races of pea aphids (<em>Acyrthosiphon pisum</em>) and how
-that attracts ovipositioning hoverflies (<em>Episyrphus balteatus</em>)
-to create enemy-free space for the aphids. They measured honeydew
-production (mg) over 24 hours by three races of aphids (representing the
-native hosts they were collected from: <em>Triflolium</em>,
-<em>Pisum</em>, <em>Medicago</em> races) on plants of their native hosts
-and also the universal host plant <em>Vicia faba</em> in a climate
-chamber. There were six combinations of aphid race and host (native vs
-universal) plant that Vosteen et al (2016) treated as a single factor.
-The data from this paper are available through <a
+<li><span class="citation">Vosteen, Gershenzon, and Kunert (2016)</span>
+examined patterns of production of honeydew by different races of pea
+aphids (<em>Acyrthosiphon pisum</em>) and how that attracts
+ovipositioning hoverflies (<em>Episyrphus balteatus</em>) to create
+enemy-free space for the aphids. They measured honeydew production (mg)
+over 24 hours by three races of aphids (representing the native hosts
+they were collected from: <em>Triflolium</em>, <em>Pisum</em>,
+<em>Medicago</em> races) on plants of their native hosts and also the
+universal host plant <em>Vicia faba</em> in a climate chamber. There
+were six combinations of aphid race and host (native vs universal) plant
+that Vosteen et al (2016) treated as a single factor. The data from this
+paper are available through <a
 href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.37972"><em>datadryad</em></a>
 <em>.</em> For this question, the data set we’ll use is for Figure 2e.
 The authors’ analysis is provided and uses the data set
@@ -350,16 +375,17 @@ href="data/vosteen.csv">here</a>.</li>
 two-factor (aphid race and host plant) crossed design (Chapter 7).</p>
 </blockquote>
 <ol start="5" style="list-style-type: upper-alpha">
-<li>Binning et al (2013) studied the effect of ectoparasitic isopods
-(<em>Anilocra nemipteri</em>) on the swimming ability of a tropical
-species of bream (<em>Scolopsis bilineatus</em>). They collected 18
-unparasitized and 20 parasitized fish from Lizard Island on the Great
-Barrier Reef and created four treatment groups in the laboratory: eight
-unparasitized fish, 10 parasitized fish, 10 parasitized fish that had
-the parasites removed, and ten unparasitized fish that had model
-parasites made of plastic added. They recorded the swimming speed (body
-lengths per second) and oxygen consumption (mgO<sub>2</sub> per kg per
-hour) of each fish, in a respirometer. The data are available from <a
+<li><span class="citation">Binning, Roche, and Layton (2013)</span>
+studied the effect of ectoparasitic isopods (<em>Anilocra
+nemipteri</em>) on the swimming ability of a tropical species of bream
+(<em>Scolopsis bilineatus</em>). They collected 18 unparasitized and 20
+parasitized fish from Lizard Island on the Great Barrier Reef and
+created four treatment groups in the laboratory: eight unparasitized
+fish, 10 parasitized fish, 10 parasitized fish that had the parasites
+removed, and ten unparasitized fish that had model parasites made of
+plastic added. They recorded the swimming speed (body lengths per
+second) and oxygen consumption (mgO<sub>2</sub> per kg per hour) of each
+fish, in a respirometer. The data are available from <a
 href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.r73v3">datadryad</a>.
 Within dryad, the dataset you want is “binning etal 2012 one way
 anova.txt”; in this dataset, SMR is Standard Metabolic Rate
@@ -371,18 +397,18 @@ swimming speed.</li>
 generate the code you’ll need</p>
 </blockquote>
 <ol start="5" style="list-style-type: upper-alpha">
-<li>Here is an example from Kiss et al (2017). They were interested in
-the effects of intake of an invasive weed (ragweed) on health of humans
-as this species is now being used as a herbal supplement. They did an
-experiment using Wistar laboratory rats. Twenty-four rats were randomly
-allocated to one of three treatment groups, with eight rats in each
-group. Group 1 was a control group which was just fed cookie dough,
-group 2 rats were fed cookie dough with a low dose of ragweed and group
-3 rats were fed cookie dough with a high dose of ragweed. The total
-amount of feed was the same in each group and the experiment ran for 28
-days, with rats fed daily. At the end of the experiment, a range of
-blood parameters were measured and we will focus on aspartate
-aminotransferase (ast).<br />
+<li>Here is an example from <span class="citation">Kiss et al.
+(2017)</span>. They were interested in the effects of intake of an
+invasive weed (ragweed) on health of humans as this species is now being
+used as a herbal supplement. They did an experiment using Wistar
+laboratory rats. Twenty-four rats were randomly allocated to one of
+three treatment groups, with eight rats in each group. Group 1 was a
+control group which was just fed cookie dough, group 2 rats were fed
+cookie dough with a low dose of ragweed and group 3 rats were fed cookie
+dough with a high dose of ragweed. The total amount of feed was the same
+in each group and the experiment ran for 28 days, with rats fed daily.
+At the end of the experiment, a range of blood parameters were measured
+and we will focus on aspartate aminotransferase (ast).<br />
 You can access the data file <a
 href="https://doi.org/10.1371/journal.pone.0176818.s005">here</a>.
 However, it’s an Excel file not really formatted for <em>R</em>. You’ll
@@ -426,6 +452,48 @@ for high honeydew amounts creates enemy-free space for aphids colonizing
 novel host plants. <em>J Anim Ecol</em> <strong>85</strong>:1286-97. <a
 href="doi:10.1111/1365-2656.12564"
 class="uri">doi:10.1111/1365-2656.12564</a></p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-binning2013" class="csl-entry">
+Binning, Sandra A., Dominique G. Roche, and Cayne Layton. 2013.
+<span>“Ectoparasites Increase Swimming Costs in a Coral Reef
+Fish.”</span> <em>Biology Letters</em> 9 (1): 20120927. <a
+href="https://doi.org/10.1098/rsbl.2012.0927">https://doi.org/10.1098/rsbl.2012.0927</a>.
+</div>
+<div id="ref-dai2019" class="csl-entry">
+Dai, Licong, Xiaowei Guo, Xun Ke, Yuting Lan, Fawei Zhang, Yikang Li, Li
+Lin, et al. 2019. <span>“Biomass Allocation and
+Productivity<span></span>richness Relationship Across Four Grassland
+Types at the Qinghai Plateau.”</span> <em>Ecology and Evolution</em> 10
+(1): 506–16. <a
+href="https://doi.org/10.1002/ece3.5920">https://doi.org/10.1002/ece3.5920</a>.
+</div>
+<div id="ref-kiss2017" class="csl-entry">
+Kiss, Tivadar, Andrea Szabó, Gábor Oszlánczi, Anita Lukács, Zoltán
+Tímár, László Tiszlavicz, and Dezső Csupor. 2017. <span>“Repeated-Dose
+Toxicity of Common Ragweed on Rats.”</span> Edited by Mária A. Deli.
+<em>PLOS ONE</em> 12 (5): e0176818. <a
+href="https://doi.org/10.1371/journal.pone.0176818">https://doi.org/10.1371/journal.pone.0176818</a>.
+</div>
+<div id="ref-leboeufForagingEcologyNorthern2000" class="csl-entry">
+Le Boeuf, B. J., D. E. Crocker, D. P. Costa, S. B. Blackwell, P. M.
+Webb, and D. S. Houser. 2000. <span>“Foraging Ecology of Northern
+Elephant Seals.”</span> <em>Ecological Monographs</em> 70 (3): 353–82.
+<a href="https://doi.org/fj9rqc">https://doi.org/fj9rqc</a>.
+</div>
+<div id="ref-peakeTemporalVariationSpeciesarea1993" class="csl-entry">
+Peake, A. J., and G. P. Quinn. 1993. <span>“Temporal Variation in
+Species-Area Curves for Invertebrates in Clumps of an Intertidal
+Mussel.”</span> <em>Ecography</em> 16: 269–77. <a
+href="https://doi.org/cwzvgc">https://doi.org/cwzvgc</a>.
+</div>
+<div id="ref-vosteenHoverflyPreferenceHigh2016" class="csl-entry">
+Vosteen, Ilka, Jonathan Gershenzon, and Grit Kunert. 2016.
+<span>“Hoverfly Preference for High Honeydew Amounts Creates Enemy-Free
+Space for Aphids Colonizing Novel Host Plants.”</span> Edited by Kim
+Cuddington. <em>Journal of Animal Ecology</em> 85 (5): 1286–97. <a
+href="https://doi.org/f9csdq">https://doi.org/f9csdq</a>.
+</div>
+</div>
 </div>
 
 

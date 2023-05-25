@@ -13,7 +13,7 @@
 
 <title>Ch 7 exercises</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -57,6 +57,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 
 
@@ -249,7 +271,7 @@ $(document).ready(function () {
   <a href="examples.html">Boxes</a>
 </li>
 <li>
-  <a href="../Exercises/index.html">Exercises</a>
+  <a href="exercises.html">Exercises</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -295,8 +317,9 @@ Are those assumptions satisfied?</p></li>
 <!-- -->
 <div id="a" class="section level3">
 <h3>A</h3>
-<p>Hostetler et al. (2016) examined the effects of methamphetamine (MA)
-on hypothalamic neuropeptides in the brains of laboratory-housed prairie
+<p><span class="citation">Hostetler, Phillips, and Ryabinin
+(2016)</span> examined the effects of methamphetamine (MA) on
+hypothalamic neuropeptides in the brains of laboratory-housed prairie
 voles. Individual voles were the experimental units, and there were two
 fixed factors. Treatment, representing access to MA or water, was an
 experimental factor, crossed with sex (male vs. female), an
@@ -310,18 +333,19 @@ code.</p>
 </div>
 <div id="b" class="section level3">
 <h3>B</h3>
-<p>Kraskura et al (2021) examined sex-specific differences in the
-metabolic responses of coho salmon (Oncorhynchus kisutch) to three
-different temperatures: 9°C (typical), 14°C (current maximum) and 18°C
-(climate change scenario). Fish were collected from a hatchery in
-British Columbia, Canada, and returned to a research laboratory and held
-in outdoor tanks at 9°C. Temperatures were raised slowly to the relevant
-test temperature and held for 2 days. Fish were then transferred
-individually to a swim tunnel respirometer where critical swim speed was
-measured by increasing the water velocity until the fish could no longer
-maintain its position in the water column. In addition, the maximum
-metabolic rate was also recorded during each trial. The fish were
-subsequently euthanized and their sex determined.</p>
+<p><span class="citation">Kraskura et al. (2020)</span> examined
+sex-specific differences in the metabolic responses of coho salmon
+(<em>Oncorhynchus kisutch)</em> to three different temperatures: 9°C
+(typical), 14°C (current maximum) and 18°C (climate change scenario).
+Fish were collected from a hatchery in British Columbia, Canada, and
+returned to a research laboratory and held in outdoor tanks at 9°C.
+Temperatures were raised slowly to the relevant test temperature and
+held for 2 days. Fish were then transferred individually to a swim
+tunnel respirometer where critical swim speed was measured by increasing
+the water velocity until the fish could no longer maintain its position
+in the water column. In addition, the maximum metabolic rate was also
+recorded during each trial. The fish were subsequently euthanized and
+their sex determined.</p>
 <p>Analyze these data to examine the effects of temperature, sex and the
 interaction between these two fixed factors on absolute critical swim
 speed (cm s<sup>-1</sup>).</p>
@@ -342,18 +366,19 @@ do it anyway.</p></li>
 <li><p>We’ll come back to this example in exercises for later chapters
 (10, 11, and 13).</p></li>
 </ul>
-<p>The example we’ll use is from Martello et al. (2022), who tested
-whether dietary supplements, which are often expensive, can help with
-symptoms of osteoarthritis in dogs. Their study was experimental, with
-40 dogs with chronic pain symptoms. Dogs were also screened and excluded
-if, for example, they had recent surgery, were taking steroidal
-medication, etc. The dogs were then allocated randomly to one of two
-treatments, a dietary supplement that included glucosamine sulfate and
-chondroitin, and a placebo. The study was completely blind, so
-administration of treatments and recording of data was done with no
-knowledge of what each dog had received. The supplements were
-administered for 60 days, and dogs received treatments orally at 2g/10kg
-body weight. The treatments are the variable GROUP.</p>
+<p>The example we’ll use is from <span class="citation">Martello et al.
+(2022)</span>, who tested whether dietary supplements, which are often
+expensive, can help with symptoms of osteoarthritis in dogs. Their study
+was experimental, with 40 dogs with chronic pain symptoms. Dogs were
+also screened and excluded if, for example, they had recent surgery,
+were taking steroidal medication, etc. The dogs were then allocated
+randomly to one of two treatments, a dietary supplement that included
+glucosamine sulfate and chondroitin, and a placebo. The study was
+completely blind, so administration of treatments and recording of data
+was done with no knowledge of what each dog had received. The
+supplements were administered for 60 days, and dogs received treatments
+orally at 2g/10kg body weight. The treatments are the variable
+GROUP.</p>
 <p>Two response variables were used, both involving scoring of dogs’
 behaviour and activity:</p>
 <ol style="list-style-type: decimal">
@@ -384,12 +409,7 @@ predictors:</p>
 <li>Body condition score, which combines all of these to produce a
 4-point scale (BCS).</li>
 </ul>
-<p>The paper is: Martello, E., Bigliati, M., Adami, R., Biasibetti, E.,
-Bisanzio, D., Meineri, G. &amp; Bruni, N. (2022). Efficacy of a dietary
-supplement in dogs with osteoarthritis: A randomized placebo-controlled,
-double-blind clinical trial. PLoS One, 17, <a
-href="https://doi.org/10.1371/journal.pone.0263971">e0263971</a>, and
-the data are in the supporting information (and a copy is <a
+<p>The data are in the supporting information (and a copy is <a
 href="data/martello.csv">here</a>).</p>
 <p>The question of most interest is whether the dietary supplements
 result in an improvement after 60 days, and for now we’ll include sex in
@@ -428,17 +448,56 @@ presumes a normal distribution.</p>
 </div>
 <div id="d" class="section level3">
 <h3>D</h3>
-<p>We’ll return to the example from the Chapter 6 exercises, where
-Vosteen et al (2016) examined patterns of production of honeydew by
-different races of pea aphids (<em>Acyrthosiphon pisum</em>) and how
-that attracts ovipositioning hoverflies (<em>Episyrphus balteatus</em>)
-to create enemy-free space for the aphids. They measured honeydew
-production in response to combinations of aphid races and
-native/universal hosts, and treated these combinations as a single
-factor.</p>
+<p>We’ll return to the example from the Chapter 6 exercises, where <span
+class="citation">Vosteen, Gershenzon, and Kunert (2016)</span> examined
+patterns of production of honeydew by different races of pea aphids
+(<em>Acyrthosiphon pisum</em>) and how that attracts ovipositioning
+hoverflies (<em>Episyrphus balteatus</em>) to create enemy-free space
+for the aphids. They measured honeydew production in response to
+combinations of aphid races and native/universal hosts, and treated
+these combinations as a single factor.</p>
 <p>We could view aphid race and whether the aphids were on their native
 host or a universal one. Use the <a href="data/vosteen.csv">modified
 data file</a> to see what happens when you separate these factors.</p>
+</div>
+<div id="references" class="section level3 unnumbered">
+<h3 class="unnumbered">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-hostetlerMethamphetamineConsumptionInhibits2016"
+class="csl-entry">
+Hostetler, C. M., T. J. Phillips, and A. E. Ryabinin. 2016.
+<span>“Methamphetamine <span>Consumption Inhibits Pair Bonding</span>
+and <span>Hypothalamic Oxytocin</span> in <span>Prairie
+Voles</span>.”</span> <em>PLoS One</em> 11 (7): e0158178. <a
+href="https://doi.org/10.1371/journal.pone.0158178">https://doi.org/10.1371/journal.pone.0158178</a>.
+</div>
+<div id="ref-kraskuraSexspecificDifferencesSwimming2020"
+class="csl-entry">
+Kraskura, K, E A Hardison, A G Little, T Dressler, T S Prystay, B
+Hendriks, A P Farrell, et al. 2020. <span>“Sex-Specific Differences in
+Swimming, Aerobic Metabolism and Recovery from Exercise in Adult Coho
+Salmon ( <span><em>Oncorhynchus</em></span><span>
+<em>Kisutch</em></span> ) Across Ecologically Relevant
+Temperatures.”</span> Edited by Craig Franklin. <em>Conservation
+Physiology</em> 9 (1): coab016. <a
+href="https://doi.org/gr9cmm">https://doi.org/gr9cmm</a>.
+</div>
+<div id="ref-martelloEfficacyDietarySupplement2022" class="csl-entry">
+Martello, Elisa, Mauro Bigliati, Raffaella Adami, Elena Biasibetti,
+Donal Bisanzio, Giorgia Meineri, and Natascia Bruni. 2022.
+<span>“Efficacy of a Dietary Supplement in Dogs with Osteoarthritis:
+<span>A</span> Randomized Placebo-Controlled, Double-Blind Clinical
+Trial.”</span> Edited by Angel Abuelo. <em>PLOS ONE</em> 17 (2):
+e0263971. <a href="https://doi.org/gr9cmt">https://doi.org/gr9cmt</a>.
+</div>
+<div id="ref-vosteenHoverflyPreferenceHigh2016" class="csl-entry">
+Vosteen, Ilka, Jonathan Gershenzon, and Grit Kunert. 2016.
+<span>“Hoverfly Preference for High Honeydew Amounts Creates Enemy-Free
+Space for Aphids Colonizing Novel Host Plants.”</span> Edited by Kim
+Cuddington. <em>Journal of Animal Ecology</em> 85 (5): 1286–97. <a
+href="https://doi.org/f9csdq">https://doi.org/f9csdq</a>.
+</div>
+</div>
 </div>
 
 

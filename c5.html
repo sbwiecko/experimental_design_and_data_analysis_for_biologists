@@ -13,7 +13,7 @@
 
 <title>Ch 5 exercises</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -57,6 +57,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 
 
@@ -249,7 +271,7 @@ $(document).ready(function () {
   <a href="examples.html">Boxes</a>
 </li>
 <li>
-  <a href="../Exercises/index.html">Exercises</a>
+  <a href="exercises.html">Exercises</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -302,8 +324,8 @@ code where the results of model-fitting are suppressed (using RESULTS=
 ‘Hide’, etc.) and you just generate, e.g. residual plots!</p>
 <div id="study-a" class="section level2">
 <h2>Study A</h2>
-<p>Continue with the La Boeuf et al. elephant seal example from Chapter
-4’s exercises.</p>
+<p>Continue with the <span class="citation">Le Boeuf et al.
+(2000)</span> elephant seal example from Chapter 4’s exercises.</p>
 <p><strong>For the linear model you’ve specified, what are the
 assumptions?</strong></p>
 <p><strong>Open the <a href="data/leboeuf.csv">data file</a> and check
@@ -328,9 +350,10 @@ whether it might also be linked to distance travelled.</p>
 </div>
 <div id="study-b" class="section level2">
 <h2>Study B</h2>
-<p>Continue with the Peake and Quinn example from Chapter 4’s exercises,
-the relationship between the number of individuals and number of species
-(response variables).</p>
+<p>Continue with the <span class="citation">Peake and Quinn
+(1993)</span> example from Chapter 4’s exercises, the relationship
+between the number of individuals and number of species (response
+variables).</p>
 <p><strong>For the linear model you’ve specified, what are the
 assumptions?</strong></p>
 <p>Open the <a href="data/peakquinn.csv"><strong>data file</strong></a>
@@ -351,16 +374,17 @@ head(df,10)</code></pre>
 </div>
 <div id="study-c" class="section level2">
 <h2>Study C</h2>
-<p>Vosteen et al (2016) examined patterns of production of honeydew by
-different races of pea aphids (<em>Acyrthosiphon pisum</em>) and how
-that attracts ovipositioning hoverflies (<em>Episyrphus balteatus</em>)
-to create enemy-free space for the aphids. They measured honeydew
-production (mg) over 24 hours by three races of aphids (representing the
-native hosts they were collected from: <em>Triflolium</em>,
-<em>Pisum</em>, <em>Medicago</em> races) on plants of their native hosts
-and also the universal host plant <em>Vicia faba</em> in a climate
-chamber. There were six combinations of aphid race and host (native vs
-universal) plant that Vosteen et al (2016)</p>
+<p><span class="citation">Vosteen, Gershenzon, and Kunert (2016)</span>
+examined patterns of production of honeydew by different races of pea
+aphids (<em>Acyrthosiphon pisum</em>) and how that attracts
+ovipositioning hoverflies (<em>Episyrphus balteatus</em>) to create
+enemy-free space for the aphids. They measured honeydew production (mg)
+over 24 hours by three races of aphids (representing the native hosts
+they were collected from: <em>Triflolium</em>, <em>Pisum</em>,
+<em>Medicago</em> races) on plants of their native hosts and also the
+universal host plant <em>Vicia faba</em> in a climate chamber. There
+were six combinations of aphid race and host (native vs universal) plant
+that Vosteen et al (2016)</p>
 <p>In Chapter 4’s exercises, you should have described a model to fit to
 these data.</p>
 <p><strong>What are the assumptions associated with that
@@ -382,16 +406,17 @@ head(df,10)</code></pre>
 </div>
 <div id="study-d" class="section level2">
 <h2>Study D</h2>
-<p>Binning et al (2013) studied the effect of ectoparasitic isopods
-(<em>Anilocra nemipteri</em>) on the swimming ability of a tropical
-species of bream (<em>Scolopsis bilineatus</em>). They collected 18
-unparasitized and 20 parasitized fish from Lizard Island on the Great
-Barrier Reef and created four treatment groups in the laboratory: eight
-unparasitized fish, 10 parasitized fish, 10 parasitized fish that had
-the parasites removed, and ten unparasitized fish that had model
-parasites made of plastic added. They recorded the swimming speed (body
-lengths per second) and oxygen consumption (mgO<sub>2</sub> per kg per
-hour) of each fish, in a respirometer. The data are available from <a
+<p><span class="citation">Binning, Roche, and Layton (2013)</span>
+studied the effect of ectoparasitic isopods (<em>Anilocra
+nemipteri</em>) on the swimming ability of a tropical species of bream
+(<em>Scolopsis bilineatus</em>). They collected 18 unparasitized and 20
+parasitized fish from Lizard Island on the Great Barrier Reef and
+created four treatment groups in the laboratory: eight unparasitized
+fish, 10 parasitized fish, 10 parasitized fish that had the parasites
+removed, and ten unparasitized fish that had model parasites made of
+plastic added. They recorded the swimming speed (body lengths per
+second) and oxygen consumption (mgO<sub>2</sub> per kg per hour) of each
+fish, in a respirometer. The data are available from <a
 href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.r73v3">datadryad</a>.
 Within dryad, the dataset you want is “binning etal 2012 one way
 anova.txt”; in this dataset, SMR is Standard Metabolic Rate
@@ -402,33 +427,33 @@ these data.</p>
 <p><strong>What are the assumptions associated with that
 model?</strong></p>
 <p><strong>Read in the data and check the assumptions</strong></p>
-<pre class="r"><code>df &lt;- read.csv(&quot;data/peakquinn.csv&quot;)
+<pre class="r"><code>df &lt;- read.csv(&quot;data/binning.csv&quot;)
 head(df,10)</code></pre>
-<pre><code>##       area indiv species
-## 1   516.00    18       3
-## 2   469.06    60       7
-## 3   462.25    57       6
-## 4   938.60   100       8
-## 5  1357.15    48      10
-## 6  1773.66   118       9
-## 7  1686.01   148      10
-## 8  1786.29   214      11
-## 9  3090.07   225      16
-## 10 3980.12   283       9</code></pre>
+<pre><code>##    Fish Treatment    SMR    MMR   AS Ucrit
+## 1   P10         P 110.20 535.80 4.86  3.79
+## 2   P12         P 140.11 471.45 3.36  3.66
+## 3   P27         P 135.84 573.08 4.22  2.47
+## 4   P42         P 140.44 379.69 2.70  3.65
+## 5   P15         P 120.54 561.93 4.66  3.52
+## 6   P23         P 108.02 375.57 3.48  3.39
+## 7   P26         P 119.23 534.75 4.49  3.74
+## 8   P37         P 152.73 494.95 3.24  3.37
+## 9   P72         P 100.86 429.73 4.26  3.36
+## 10  P75         P 134.09 434.60 3.24  3.68</code></pre>
 </div>
 <div id="study-e" class="section level2">
 <h2>Study E</h2>
-<p><a href="https://doi.org/10.1371/journal.pone.0058667">Kaufman et
-al. (2013)</a> examined the neuroanatomy of a recently described species
-of sengi, which are small insectivorous mammals also known as elephant
-or jumping shrews. These animals are interesting, having been originally
-placed with the mammalian order Insectivora, along with shrews,
-hedgehogs, moles, etc., but this group is now known to be polyphyletic,
-and sengis are more appropriately grouped with elephants, dugongs, and
-hyraxes. They are in the order Macroscelidea, within the Afrotheria. The
-Afrotheria includes another order of small insectivores, the Tenrecoidea
-(tenrecs and golden moles). The Laurasiatheria also includes several
-families of small insectivores</p>
+<p><span class="citation">Kaufman et al. (2013)</span> examined the
+neuroanatomy of a recently described species of sengi, which are small
+insectivorous mammals also known as elephant or jumping shrews. These
+animals are interesting, having been originally placed with the
+mammalian order Insectivora, along with shrews, hedgehogs, moles, etc.,
+but this group is now known to be polyphyletic, and sengis are more
+appropriately grouped with elephants, dugongs, and hyraxes. They are in
+the order Macroscelidea, within the Afrotheria. The Afrotheria includes
+another order of small insectivores, the Tenrecoidea (tenrecs and golden
+moles). The Laurasiatheria also includes several families of small
+insectivores</p>
 <p>Small insectivores are generally thought to have small brain mass
 (when adjusted for overall mass), but there has been some question of
 whether sengis fit this pattern, and Kaufman and colleagues were curious
@@ -476,6 +501,44 @@ any steps you’d recommend we take?</strong></p>
 regression, as they considered both variables measured with error. Note
 the discussion in Chapter 6 about whether to consider X random or fixed.
 For our purposes, we’ll treat it as fixed</em></p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-binning2013" class="csl-entry">
+Binning, Sandra A., Dominique G. Roche, and Cayne Layton. 2013.
+<span>“Ectoparasites Increase Swimming Costs in a Coral Reef
+Fish.”</span> <em>Biology Letters</em> 9 (1): 20120927. <a
+href="https://doi.org/10.1098/rsbl.2012.0927">https://doi.org/10.1098/rsbl.2012.0927</a>.
+</div>
+<div id="ref-kaufman2013" class="csl-entry">
+Kaufman, Jason A., Gregory H. Turner, Patricia A. Holroyd, Francesco
+Rovero, and Ari Grossman. 2013. <span>“Brain Volume of the
+Newly-Discovered Species Rhynchocyon Udzungwensis (Mammalia: Afrotheria:
+Macroscelidea): Implications for Encephalization in Sengis.”</span>
+Edited by Andrew Iwaniuk. <em>PLoS ONE</em> 8 (3): e58667. <a
+href="https://doi.org/10.1371/journal.pone.0058667">https://doi.org/10.1371/journal.pone.0058667</a>.
+</div>
+<div id="ref-leboeufForagingEcologyNorthern2000" class="csl-entry">
+Le Boeuf, B. J., D. E. Crocker, D. P. Costa, S. B. Blackwell, P. M.
+Webb, and D. S. Houser. 2000. <span>“Foraging Ecology of Northern
+Elephant Seals.”</span> <em>Ecological Monographs</em> 70 (3): 353–82.
+<a href="https://doi.org/fj9rqc">https://doi.org/fj9rqc</a>.
+</div>
+<div id="ref-peakeTemporalVariationSpeciesarea1993" class="csl-entry">
+Peake, A. J., and G. P. Quinn. 1993. <span>“Temporal Variation in
+Species-Area Curves for Invertebrates in Clumps of an Intertidal
+Mussel.”</span> <em>Ecography</em> 16: 269–77. <a
+href="https://doi.org/cwzvgc">https://doi.org/cwzvgc</a>.
+</div>
+<div id="ref-vosteenHoverflyPreferenceHigh2016" class="csl-entry">
+Vosteen, Ilka, Jonathan Gershenzon, and Grit Kunert. 2016.
+<span>“Hoverfly Preference for High Honeydew Amounts Creates Enemy-Free
+Space for Aphids Colonizing Novel Host Plants.”</span> Edited by Kim
+Cuddington. <em>Journal of Animal Ecology</em> 85 (5): 1286–97. <a
+href="https://doi.org/f9csdq">https://doi.org/f9csdq</a>.
+</div>
+</div>
 </div>
 
 

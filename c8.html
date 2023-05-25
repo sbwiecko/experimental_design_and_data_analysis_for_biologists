@@ -13,7 +13,7 @@
 
 <title>Ch 8 exercises</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -57,6 +57,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 
 
@@ -249,7 +271,7 @@ $(document).ready(function () {
   <a href="examples.html">Boxes</a>
 </li>
 <li>
-  <a href="../Exercises/index.html">Exercises</a>
+  <a href="exercises.html">Exercises</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -273,31 +295,30 @@ multi-predictor linear models where the predictors are all continuous or
 a mixture of continuous and categorical.</p>
 <div id="a" class="section level3">
 <h3>A</h3>
-<p>Let’s continue with the example from Chapter 7 assessing whether
-dietary supplements improve the perceived health of dogs with
-osteoarthritis. The model we focused on at the end of that exercise was
-one modelling the pain index of dogs after 60 days as a function of
-whether they received dietary supplements or a placebo and the sex of
-the dog. The dogs unavoidably varied in body weight, ranging from 14-47
-kg. To partly account for this, the authors adjusted the doses to a
-constant amount per kg of body weight. However, you can probably think
-of a range of ways in which weight might affect osteoarthritis. The
-model using treatment and sex fitted the data fairly well, with
-r<sup>2</sup> around 0.6. We detected a strong treatment effect, but it
-is possible that if we reduced background noise, we might see
-sex-specific responses and we’d also get a more precise estimate of the
-effects.</p>
+<p>Let’s continue with the <span class="citation">Martello et al.
+(2022)</span> example from Chapter 7 assessing whether dietary
+supplements improve the perceived health of dogs with osteoarthritis.
+The model we focused on at the end of that exercise was one modelling
+the pain index of dogs after 60 days as a function of whether they
+received dietary supplements or a placebo and the sex of the dog. The
+dogs unavoidably varied in body weight, ranging from 14-47 kg. To partly
+account for this, the authors adjusted the doses to a constant amount
+per kg of body weight. However, you can probably think of a range of
+ways in which weight might affect osteoarthritis. The model using
+treatment and sex fitted the data fairly well, with r<sup>2</sup> around
+0.6. We detected a strong treatment effect, but it is possible that if
+we reduced background noise, we might see sex-specific responses and
+we’d also get a more precise estimate of the effects.</p>
 <p>Think about the steps you’d take to see if it would be helpful to
 include body weight in the model, then go back to the data and run the
 analysis</p>
 </div>
 <div id="b" class="section level3">
 <h3>B</h3>
-<p><a href="https://doi.org/10.3732/ajb.1600328">LaRosa and Connor
-(Amer. J. Bot., 2017)</a> examined effects of several floral traits on
-fitness components of milkweeds, <em>Asclepias</em> spp. The fitness
-components were male and female pollination success and female
-reproductive success.</p>
+<p><span class="citation">La Rosa and Conner (2017)</span> examined
+effects of several floral traits on fitness components of milkweeds,
+<em>Asclepias</em> spp. The fitness components were male and female
+pollination success and female reproductive success.</p>
 <p>In the paper, their analysis focused on 6 predictors, They measured
 six floral traits, although one of them, hood height, was not relevant
 for <strong>Asclepias viridiflora</strong>, which was the species with
@@ -358,12 +379,13 @@ comparison?</p></li>
 </div>
 <div id="c" class="section level3">
 <h3>C</h3>
-<p>Recall the sengi example from Chapter 5 (or go back and look at it
-;-)). The research questions are about family differences. Could also
-look at this relationship between sengis and the rest. There are 2 or 3
-groups of insectivores, sengis and closely (afrotherian) and more
-distantly (laurasiatherian) species, and the research question is about
-where sengis fit. We can frame this as 2 or 3 questions.</p>
+<p>Recall the <span class="citation">Kaufman et al. (2013)</span> sengi
+example from Chapter 5 (or go back and look at it ;-)). The research
+questions are about family differences. Could also look at this
+relationship between sengis and the rest. There are 2 or 3 groups of
+insectivores, sengis and closely (afrotherian) and more distantly
+(laurasiatherian) species, and the research question is about where
+sengis fit. We can frame this as 2 or 3 questions.</p>
 <ol style="list-style-type: decimal">
 <li><p>Does the new species (<em>udzugwensis</em>) fit within the
 pattern of other sengi?</p></li>
@@ -414,14 +436,15 @@ between groups</h5>
 </div>
 <div id="d" class="section level3">
 <h3>D</h3>
-<p>We’ll return to the elephant seal example in the study by LaBoeuf et
-al., and see whether body weight plays any role in foraging. In Chapter
-5, you should have noticed that while the focus of the initial analysis
-was on the relationship between distance travelled and time spend on the
-foraging grounds, the authors recorded weight on departure for each
-animal. Your exploratory data analysis should have shown a relationship
-between body weight and the original predictor and response variables.
-Now try and make some sense of what’s going on here.</p>
+<p>We’ll return to the elephant seal example in the study by <span
+class="citation">Le Boeuf et al. (2000)</span> and see whether body
+weight plays any role in foraging. In Chapter 5, you should have noticed
+that while the focus of the initial analysis was on the relationship
+between distance travelled and time spend on the foraging grounds, the
+authors recorded weight on departure for each animal. Your exploratory
+data analysis should have shown a relationship between body weight and
+the original predictor and response variables. Now try and make some
+sense of what’s going on here.</p>
 <p><strong>Think about how body mass might influence distance travelled
 and how it might contribute to time on foraging areas</strong></p>
 <p><strong>How will you assess whether including body weight as a second
@@ -447,6 +470,41 @@ head(df,10)</code></pre>
 <p><strong>Fit the appropriate model to the data, interpret the results,
 and explain whether body weight helps us.</strong></p>
 <p><strong>Is there anything else you might look at?</strong></p>
+</div>
+<div id="references" class="section level3 unnumbered">
+<h3 class="unnumbered">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-kaufman2013" class="csl-entry">
+Kaufman, Jason A., Gregory H. Turner, Patricia A. Holroyd, Francesco
+Rovero, and Ari Grossman. 2013. <span>“Brain Volume of the
+Newly-Discovered Species Rhynchocyon Udzungwensis (Mammalia: Afrotheria:
+Macroscelidea): Implications for Encephalization in Sengis.”</span>
+Edited by Andrew Iwaniuk. <em>PLoS ONE</em> 8 (3): e58667. <a
+href="https://doi.org/10.1371/journal.pone.0058667">https://doi.org/10.1371/journal.pone.0058667</a>.
+</div>
+<div id="ref-larosaFloralFunctionEffects2017" class="csl-entry">
+La Rosa, Raffica J., and Jeffrey K. Conner. 2017. <span>“Floral
+Function: Effects of Traits on Pollinators, Male and Female Pollination
+Success, and Female Fitness Across Three Species of Milkweeds (
+<span>Asclepias</span> ).”</span> <em>American Journal of Botany</em>
+104 (1): 150–60. <a
+href="https://doi.org/gr2r9p">https://doi.org/gr2r9p</a>.
+</div>
+<div id="ref-leboeufForagingEcologyNorthern2000" class="csl-entry">
+Le Boeuf, B. J., D. E. Crocker, D. P. Costa, S. B. Blackwell, P. M.
+Webb, and D. S. Houser. 2000. <span>“Foraging Ecology of Northern
+Elephant Seals.”</span> <em>Ecological Monographs</em> 70 (3): 353–82.
+<a href="https://doi.org/fj9rqc">https://doi.org/fj9rqc</a>.
+</div>
+<div id="ref-martelloEfficacyDietarySupplement2022" class="csl-entry">
+Martello, Elisa, Mauro Bigliati, Raffaella Adami, Elena Biasibetti,
+Donal Bisanzio, Giorgia Meineri, and Natascia Bruni. 2022.
+<span>“Efficacy of a Dietary Supplement in Dogs with Osteoarthritis:
+<span>A</span> Randomized Placebo-Controlled, Double-Blind Clinical
+Trial.”</span> Edited by Angel Abuelo. <em>PLOS ONE</em> 17 (2):
+e0263971. <a href="https://doi.org/gr9cmt">https://doi.org/gr9cmt</a>.
+</div>
+</div>
 </div>
 
 
