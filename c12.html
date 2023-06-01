@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Ch 12 exercises</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">QK 2nd ed resources</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="examples.html">Boxes</a>
+</li>
+<li>
+  <a href="exercises.html">Exercises</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Ch 12 exercises</h1>
+
+</div>
+
+
+<p>The aim of these exercises is to …</p>
+<p>For each of the examples below, you should follow the sequence we’ve
+used previously:</p>
+<ol style="list-style-type: decimal">
+<li><p>What is the biological question?</p></li>
+<li><p>Is the predictor continuous or categorical?</p></li>
+<li><p>Write out the linear model corresponding to this
+question.</p></li>
+<li><p>What distribution do you expect the response variable to
+follow?</p></li>
+<li><p>What are the assumptions behind the statistical model you’ll
+fit?</p>
+<ol style="list-style-type: decimal">
+<li>Are those assumptions satisfied?</li>
+</ol></li>
+<li><p>Fit the model</p>
+<ol style="list-style-type: decimal">
+<li><p>How will you assess whether the model fits well?</p></li>
+<li><p>Can you detect an effect of the predictor?</p></li>
+<li><p>How do you measure the effect?</p></li>
+</ol></li>
+<li><p>What do you conclude (including any cautions)</p></li>
+</ol>
+<div id="a." class="section level2">
+<h2>A.</h2>
+</div>
+<div id="b." class="section level2">
+<h2>B.</h2>
+</div>
+<div id="d." class="section level2">
+<h2>D.</h2>
+</div>
+<div id="e-challenging" class="section level2">
+<h2>E (Challenging)</h2>
+<p>Let’s return to the <span class="citation">Highfill et al.
+(2019)</span> example from the Chapter 10 exercises. Recall that this
+was a substantial experiment designed to assess variation in
+susceptibility to psychosomatic drugs between genetic lines of flies,
+with the sexes incorporated into the design.</p>
+<p>In the earlier discussion of this example, you should have thought
+about the physical structure of the experiment, in which food with and
+without the drug in question was offered to small groups of flies, where
+a group of flies was provided with capillary tubes with one of two
+solutions. The same group of flies was assessed three times, with
+feeding/recovery periods in between, to see if drug responses developed
+through time.</p>
+<p>Let’s bring back the data file and look at it again. While we’re at
+it, we’ll make sure that Lines are treated as factors, rather than
+continuous predictors:</p>
+<pre class="r"><code>library(readxl)
+highfill &lt;- read_excel(&quot;data/pgen.1007834.s001.xlsx&quot;)
+highfill &lt;- highfill %&gt;%
+  dplyr::rename(Line = &quot;DGRP Line&quot;) %&gt;%
+  dplyr::rename(vial = Replicate)
+highfill$Line &lt;-as.factor(highfill$Line)
+highfill$vial &lt;-as.factor(highfill$vial)
+head(highfill,10)</code></pre>
+<pre><code>## # A tibble: 10 × 6
+##    Solution Sex   Line  vial  Consumption Exposure
+##    &lt;chr&gt;    &lt;chr&gt; &lt;fct&gt; &lt;fct&gt;       &lt;dbl&gt;    &lt;dbl&gt;
+##  1 Cocaine  F     41    1            34.6        1
+##  2 Cocaine  F     41    2            23.6        1
+##  3 Cocaine  F     41    3            22.6        1
+##  4 Cocaine  F     41    4            38.6        1
+##  5 Cocaine  F     41    5            11.6        1
+##  6 Cocaine  F     41    6            37.6        1
+##  7 Cocaine  F     41    7            54.6        1
+##  8 Cocaine  F     41    8            13.6        1
+##  9 Cocaine  F     41    9            59.6        1
+## 10 Cocaine  F     41    10           81.6        1</code></pre>
+<p>The design has vials as an experimental unit, which we might consider
+to be plots or subjects.</p>
+<div id="what-other-possible-correlations-in-the-data-are-there"
+class="section level4">
+<h4>What other possible correlations in the data are there?</h4>
+<blockquote>
+<p>The Exposure occurred across three days, but the order could not be
+randomized - Exposure 2 always followed E1 and preceded E3, i.e. the
+levels of the factor Exposure weren’t randomized.</p>
+</blockquote>
+</div>
+<div id="the-model-structure" class="section level4">
+<h4>The model structure</h4>
+<p><strong>What are the between-subjects factors?</strong></p>
+<blockquote>
+<p>Sex and Line. Line is a random effect</p>
+</blockquote>
+<p><strong>What are within-subject(s) factors?</strong></p>
+<blockquote>
+<p>Solution and Exposure. These two factors create 6 combinations that
+were recorded for each vial</p>
+</blockquote>
+<p><strong>Have a crack at specifying the model and fitting it to the
+data. The worked examples of 12.4 and 12.5 will give you some help, but
+don’t expect it to be easy :-(</strong></p>
+<p><strong>Discuss with GQ - needs checking</strong></p>
+<pre class="r"><code>highfill$Exposure&lt;-as.factor(highfill$Exposure)  #Treat Exposure as factor when this line is run
+highfill.lmer &lt;- lmer(Consumption ~ Sex + (1|Line) + (1|Line:Sex) +
+                      Solution + Exposure + Solution * Exposure + Sex*Solution + Sex*Exposure + Sex*Solution*Exposure +
+                        (1|Line:Solution) + (1|Line:Exposure) + (1|Line:Solution:Exposure) + (1|Line:Sex:Solution) + (1|Line:Sex:Exposure) + (1|Line:Sex:Solution:Exposure) +
+                        (1|vial), highfill) #+ next line of code removed as result singular matrix error - model simplified</code></pre>
+<pre><code>## Warning in checkConv(attr(opt, &quot;derivs&quot;), opt$par, ctrl = control$checkConv, :
+## Model failed to converge with max|grad| = 0.00275091 (tol = 0.002, component 1)</code></pre>
+<pre class="r"><code>#                        (1|vial:Solution) + (1|vial:Exposure), highfill)
+#summary(highfill.lmer, ddf=&quot;Kenward-Roger&quot;)   #Very long execution times with K-R
+#anova(highfill.lmer, ddf=&quot;Kenward-Roger&quot;)
+
+anova(highfill.lmer) #runs with default Satterthwait method, rather than K-R</code></pre>
+<pre><code>## Type III Analysis of Variance Table with Satterthwaite&#39;s method
+##                       Sum Sq Mean Sq NumDF  DenDF  F value    Pr(&gt;F)    
+## Sex                    44658   44658     1 45.015 169.9665 &lt; 2.2e-16 ***
+## Solution                4196    4196     1 45.007  15.9694  0.000236 ***
+## Exposure                7805    3902     2 89.996  14.8520 2.667e-06 ***
+## Solution:Exposure        801     401     2 90.006   1.5251  0.223168    
+## Sex:Solution             633     633     1 44.984   2.4086  0.127674    
+## Sex:Exposure            6741    3370     2 90.351  12.8275 1.248e-05 ***
+## Sex:Solution:Exposure   1786     893     2 91.071   3.3981  0.037732 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>summary(highfill.lmer)</code></pre>
+<pre><code>## Linear mixed model fit by REML. t-tests use Satterthwaite&#39;s method [
+## lmerModLmerTest]
+## Formula: Consumption ~ Sex + (1 | Line) + (1 | Line:Sex) + Solution +  
+##     Exposure + Solution * Exposure + Sex * Solution + Sex * Exposure +  
+##     Sex * Solution * Exposure + (1 | Line:Solution) + (1 | Line:Exposure) +  
+##     (1 | Line:Solution:Exposure) + (1 | Line:Sex:Solution) +  
+##     (1 | Line:Sex:Exposure) + (1 | Line:Sex:Solution:Exposure) +  
+##     (1 | vial)
+##    Data: highfill
+## 
+## REML criterion at convergence: 46898.1
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -3.4948 -0.6426 -0.0888  0.5524  5.3901 
+## 
+## Random effects:
+##  Groups                     Name        Variance Std.Dev.
+##  Line:Sex:Solution:Exposure (Intercept)   0.7150  0.8455 
+##  Line:Sex:Exposure          (Intercept)   0.2647  0.5145 
+##  Line:Solution:Exposure     (Intercept)  13.1551  3.6270 
+##  Line:Sex:Solution          (Intercept)   4.2268  2.0559 
+##  Line:Exposure              (Intercept)   7.7159  2.7778 
+##  Line:Solution              (Intercept)   4.3657  2.0894 
+##  Line:Sex                   (Intercept)  15.2390  3.9037 
+##  Line                       (Intercept)  64.2189  8.0137 
+##  vial                       (Intercept)   4.5850  2.1413 
+##  Residual                               262.7431 16.2094 
+## Number of obs: 5520, groups:  
+## Line:Sex:Solution:Exposure, 552; Line:Sex:Exposure, 276; Line:Solution:Exposure, 276; Line:Sex:Solution, 184; Line:Exposure, 138; Line:Solution, 92; Line:Sex, 92; Line, 46; vial, 10
+## 
+## Fixed effects:
+##                                Estimate Std. Error      df t value Pr(&gt;|t|)    
+## (Intercept)                      42.665      1.849 113.345  23.075  &lt; 2e-16 ***
+## SexM                             -7.100      1.425 161.791  -4.982 1.61e-06 ***
+## SolutionSucrose                   6.973      1.456 223.880   4.790 3.03e-06 ***
+## Exposure2                         9.457      1.447 290.134   6.537 2.81e-10 ***
+## Exposure3                         6.228      1.447 290.134   4.306 2.28e-05 ***
+## SolutionSucrose:Exposure2        -3.807      1.868 162.946  -2.037  0.04323 *  
+## SolutionSucrose:Exposure3        -4.818      1.868 162.946  -2.579  0.01080 *  
+## SexM:SolutionSucrose             -4.877      1.648 130.955  -2.960  0.00365 ** 
+## SexM:Exposure2                   -7.585      1.539 180.648  -4.927 1.88e-06 ***
+## SexM:Exposure3                   -6.817      1.539 180.648  -4.428 1.64e-05 ***
+## SexM:SolutionSucrose:Exposure2    5.304      2.167  91.071   2.448  0.01628 *  
+## SexM:SolutionSucrose:Exposure3    4.333      2.167  91.071   2.000  0.04848 *  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Correlation of Fixed Effects:
+##             (Intr) SexM   SltnSc Expsr2 Expsr3 SlS:E2 SlS:E3 SxM:SS SxM:E2
+## SexM        -0.385                                                        
+## SolutinScrs -0.394  0.327                                                 
+## Exposure2   -0.391  0.287  0.414                                          
+## Exposure3   -0.391  0.287  0.414  0.500                                   
+## SltnScrs:E2  0.253 -0.220 -0.642 -0.646 -0.323                            
+## SltnScrs:E3  0.253 -0.220 -0.642 -0.323 -0.646  0.500                     
+## SxM:SltnScr  0.223 -0.578 -0.566 -0.246 -0.246  0.381  0.381              
+## SexM:Expsr2  0.208 -0.540 -0.262 -0.532 -0.266  0.408  0.204  0.463       
+## SexM:Expsr3  0.208 -0.540 -0.262 -0.266 -0.532  0.204  0.408  0.463  0.500
+## SxM:SltS:E2 -0.146  0.380  0.372  0.374  0.187 -0.580 -0.290 -0.657 -0.704
+## SxM:SltS:E3 -0.146  0.380  0.372  0.187  0.374 -0.290 -0.580 -0.657 -0.352
+##             SxM:E3 SM:SS:E2
+## SexM                       
+## SolutinScrs                
+## Exposure2                  
+## Exposure3                  
+## SltnScrs:E2                
+## SltnScrs:E3                
+## SxM:SltnScr                
+## SexM:Expsr2                
+## SexM:Expsr3                
+## SxM:SltS:E2 -0.352         
+## SxM:SltS:E3 -0.704  0.500  
+## optimizer (nloptwrap) convergence code: 0 (OK)
+## Model failed to converge with max|grad| = 0.00275091 (tol = 0.002, component 1)</code></pre>
+<pre class="r"><code>highfill.ci &lt;- confint.merMod(highfill.lmer, oldNames=FALSE)</code></pre>
+<pre><code>## Computing profile confidence intervals ...</code></pre>
+<pre class="r"><code>highfill.vc &lt;- (highfill.ci)^2
+print(highfill.vc)</code></pre>
+<pre><code>##                                                  2.5 %       97.5 %
+## sd_(Intercept)|Line:Sex:Solution:Exposure 0.000000e+00 8.958856e+00
+## sd_(Intercept)|Line:Sex:Exposure          0.000000e+00 5.082157e+00
+## sd_(Intercept)|Line:Solution:Exposure     5.732296e+00 2.210574e+01
+## sd_(Intercept)|Line:Sex:Solution          0.000000e+00 1.130086e+01
+## sd_(Intercept)|Line:Exposure              5.383352e-01 1.566235e+01
+## sd_(Intercept)|Line:Solution              0.000000e+00 1.307047e+01
+## sd_(Intercept)|Line:Sex                   7.144986e+00 2.698786e+01
+## sd_(Intercept)|Line                       3.651482e+01 1.078773e+02
+## sd_(Intercept)|vial                       1.766034e+00 1.373059e+01
+## sigma                                     2.526704e+02 2.732732e+02
+## (Intercept)                               1.524711e+03 2.142105e+03
+## SexM                                      9.759966e+01 1.866900e+01
+## SolutionSucrose                           1.713282e+01 9.617383e+01
+## Exposure2                                 4.413486e+01 1.505439e+02
+## Exposure3                                 1.166325e+01 8.174617e+01
+## SolutionSucrose:Exposure2                 5.549461e+01 2.676412e-02
+## SolutionSucrose:Exposure3                 7.158487e+01 1.380475e+00
+## SexM:SolutionSucrose                      6.549506e+01 2.756067e+00
+## SexM:Exposure2                            1.120286e+02 2.102360e+01
+## SexM:Exposure3                            9.637388e+01 1.457533e+01
+## SexM:SolutionSucrose:Exposure2            1.138286e+00 9.103611e+01
+## SexM:SolutionSucrose:Exposure3            9.217175e-03 7.344627e+01</code></pre>
+<blockquote>
+<p>For the research question around variation in sensitivity, the random
+effects that include Solution are the terms of interest. The purely
+fixed effects aren’t relevant here. Of these terms: Line x Sex x
+Solution x Exposure has a small VC, and CI includes 0 Line x Solution x
+Exposure has a large VC, with a CI of 5.7-22.1 Line x Solution x Sex has
+a CI including 0 Line x Solution has a CI including 0</p>
+<p>We’d continue by exploring Line x Solution x Exposure, One way to do
+this would be to use one of the data files created for Ch 10 exercises,
+where the “Solution” factor was collapsed to a drug-control difference.
+We could then plot this difference against exposure, and do it for the
+various lines. That figure is in the Ch10 solutions.</p>
+</blockquote>
+<pre class="r"><code>df &lt;-  highfill %&gt;%
+  pivot_wider(names_from = Solution, values_from = Consumption) </code></pre>
+<pre><code>## Warning: Values from `Consumption` are not uniquely identified; output will contain
+## list-cols.
+## • Use `values_fn = list` to suppress this warning.
+## • Use `values_fn = {summary_fun}` to summarise duplicates.
+## • Use the following dplyr code to identify duplicates.
+##   {data} %&gt;%
+##   dplyr::group_by(Sex, Line, vial, Exposure, Solution) %&gt;%
+##   dplyr::summarise(n = dplyr::n(), .groups = &quot;drop&quot;) %&gt;%
+##   dplyr::filter(n &gt; 1L)</code></pre>
+<pre class="r"><code>df$Sucrose &lt;-unlist(df$Sucrose)
+df$Cocaine &lt;-unlist(df$Cocaine)
+df$Pref &lt;-df$Cocaine - df$Sucrose
+df$Line &lt;-as.factor(df$Line)
+df$Sex &lt;- as.factor(df$Sex)
+df$Exposure &lt;- as.factor(df$Exposure)
+head(df,10)</code></pre>
+<pre><code>## # A tibble: 10 × 7
+##    Sex   Line  vial  Exposure Cocaine Sucrose    Pref
+##    &lt;fct&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 F     41    1     1           34.6    50   -15.4  
+##  2 F     41    2     1           23.6    59   -35.4  
+##  3 F     41    3     1           22.6    55   -32.4  
+##  4 F     41    4     1           38.6    44    -5.4  
+##  5 F     41    5     1           11.6    27   -15.4  
+##  6 F     41    6     1           37.6    79.8 -42.2  
+##  7 F     41    7     1           54.6    84.8 -30.2  
+##  8 F     41    8     1           13.6    85.8 -72.2  
+##  9 F     41    9     1           59.6    65.8  -6.20 
+## 10 F     41    10    1           81.6    81.8  -0.200</code></pre>
+<blockquote>
+<p>Graph for complex interaction</p>
+</blockquote>
+<pre class="r"><code>ggplot(data=df, aes(x=Exposure, y=Pref, group=Line, color=Line))+
+  geom_line(stat = &quot;summary&quot;) +
+  labs( y=&quot;Drug-Control difference&quot;)</code></pre>
+<pre><code>## No summary function supplied, defaulting to `mean_se()`</code></pre>
+<p><img src="c12_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+Can also look at other, line-independent effects among fixed factors.
+Most relevant is probably Sex<em>Solution</em>Exposure</p>
+<pre class="r"><code>ggplot(data=df, aes(x=Exposure, y=Pref, group=Sex, colour=Sex)) +
+  geom_line(stat = &quot;summary&quot;) +
+  labs( y=&quot;Drug-Control difference&quot;)</code></pre>
+<pre><code>## No summary function supplied, defaulting to `mean_se()`</code></pre>
+<p><img src="c12_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-highfillGeneticsCocaineMethamphetamine2019"
+class="csl-entry">
+Highfill, Chad A., Brandon M. Baker, Stephenie D. Stevens, Robert R. H.
+Anholt, and Trudy F. C. Mackay. 2019. <span>“Genetics of Cocaine and
+Methamphetamine Consumption and Preference in <span>Drosophila</span>
+Melanogaster.”</span> <em>PLOS Genetics</em> 15 (5). <a
+href="https://doi.org/gr2pgk">https://doi.org/gr2pgk</a>.
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

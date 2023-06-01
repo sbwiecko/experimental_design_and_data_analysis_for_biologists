@@ -1,0 +1,901 @@
+﻿Plant ID,Shelter,Plot,Pot,Species,Amount,Frequency,1st leaf measurement,1st plant height measurement,2nd leaf measurement,2nd plant height measurement,Above-ground biomass,Below-ground biomass,Above- to below-ground ratio,Sp_name,Type
+43,1,1,10,Big bluestem,70,3,21,18.5,15,51,3.2582,5.1174,15.65281444,Andropogon,monocot
+56,1,2,26,Big bluestem,70,15,14,14,18,44,3.5384,5.1336,12.43499887,Andropogon,monocot
+42,1,3,43,Big bluestem,70,30,28,21,40,122.5,9.9042,10.9245,12.36849014,Andropogon,monocot
+18,1,4,61,Big bluestem,90,3,9,18,23,59,4.5037,7.0745,13.10033972,Andropogon,monocot
+81,1,5,87,Big bluestem,90,15,28,18.5,32,103,7.5734,12.6201,13.60023239,Andropogon,monocot
+80,1,6,102,Big bluestem,90,30,17,18,24,101.5,6.6888,18.5087,15.17462026,Andropogon,monocot
+167,2,7,117,Big bluestem,70,3,22,20,21,74,5.4688,13.1856,13.53130486,Andropogon,monocot
+155,2,8,133,Big bluestem,70,15,43,20,33,61,9.5101,23.7545,6.414233289,Andropogon,monocot
+181,2,9,157,Big bluestem,70,30,20,19,34,58,4.9502,1.07738,11.71669832,Andropogon,monocot
+106,2,10,160,Big bluestem,90,3,22,17,49,81,10.0241,26.3797,8.080525933,Andropogon,monocot
+198,2,11,195,Big bluestem,90,15,18,13,27,132.5,10.8416,20.2468,12.22144333,Andropogon,monocot
+148,2,12,205,Big bluestem,90,30,16,27,21,94,6.4887,18.7704,14.48672307,Andropogon,monocot
+270,3,13,228,Big bluestem,70,3,30,21.5,42,59.5,10.1528,23.8031,5.860452289,Andropogon,monocot
+236,3,14,238,Big bluestem,70,15,16,18,33,123,10.7006,22.4623,11.49468254,Andropogon,monocot
+261,3,15,259,Big bluestem,70,30,8,17,30,106.5,14.5825,12.7278,7.303274473,Andropogon,monocot
+234,3,16,272,Big bluestem,90,3,30,17,47,91,10.1911,23.0852,8.929359932,Andropogon,monocot
+293,3,17,300,Big bluestem,90,15,12,23,34,124,12.1996,11.9987,10.16426768,Andropogon,monocot
+239,3,18,311,Big bluestem,90,30,22,17,38,59,6.4559,20.45,9.138927183,Andropogon,monocot
+364,4,19,332,Big bluestem,70,3,15,14,20,52.5,3.1235,9.2507,16.80806787,Andropogon,monocot
+359,4,20,350,Big bluestem,70,15,26,21.5,40,103.5,9.7395,13.6515,10.62682889,Andropogon,monocot
+360,4,21,369,Big bluestem,70,30,4,28,32,52.5,4.303,12.7048,12.20079015,Andropogon,monocot
+388,4,22,392,Big bluestem,90,3,15,24,24,105,11.4791,18.1012,9.147058567,Andropogon,monocot
+327,4,23,397,Big bluestem,90,15,15,19,34,133,7.2864,15.7801,18.25318401,Andropogon,monocot
+380,4,24,426,Big bluestem,90,30,31,20,44,161,17.0597,18.9915,9.437446145,Andropogon,monocot
+438,5,25,438,Big bluestem,70,3,14,17,26,106,6.8991,10.9658,15.36432288,Andropogon,monocot
+473,5,26,460,Big bluestem,70,15,25,23.5,68,102,12.1235,26.3372,8.413411968,Andropogon,monocot
+461,5,27,476,Big bluestem,70,30,31,14,25,90,4.4752,12.0849,20.11083304,Andropogon,monocot
+401,5,28,484,Big bluestem,90,3,9,18.5,15,42,1.1499,3.0227,36.52491521,Andropogon,monocot
+427,5,29,505,Big bluestem,90,15,16,20,43,85,7.7149,12.1757,11.01764119,Andropogon,monocot
+443,5,30,522,Big bluestem,90,30,20,21,75,98.5,10.8913,23.1473,9.043915786,Andropogon,monocot
+534,6,31,541,Big bluestem,70,3,14,22,40,60,7.1801,11.8219,8.356429576,Andropogon,monocot
+577,6,32,569,Big bluestem,70,15,13,19,17,59,2.9746,6.5881,19.83459961,Andropogon,monocot
+512,6,33,572,Big bluestem,70,30,16,18,14,69.5,3.1902,4.47,21.785468,Andropogon,monocot
+592,6,34,603,Big bluestem,90,3,23,22,47,55,4.1773,8.0939,13.16639935,Andropogon,monocot
+524,6,35,606,Big bluestem,90,15,16,19,24,81.5,8.0578,9.1691,10.11442329,Andropogon,monocot
+544,6,36,630,Big bluestem,90,30,11,10,16,145.5,5.1832,8.7093,28.07146165,Andropogon,monocot
+641,7,37,645,Big bluestem,70,3,20,24,19,132,5.8976,10.0264,22.38198589,Andropogon,monocot
+659,7,38,664,Big bluestem,70,15,21,20,81,114.5,6.5264,10.0679,17.54412846,Andropogon,monocot
+695,7,39,692,Big bluestem,70,30,24,13,56,100,8.2849,20.6563,12.07015172,Andropogon,monocot
+696,7,40,710,Big bluestem,90,3,20,22,95,41,4.1157,15.5069,9.961853391,Andropogon,monocot
+644,7,41,721,Big bluestem,90,15,26,23,34,85,4.3635,14.8991,19.47977541,Andropogon,monocot
+679,7,42,746,Big bluestem,90,30,6,22,23,79.5,4.0395,8.4488,19.68065355,Andropogon,monocot
+768,8,43,759,Big bluestem,70,3,15,18,33,143.5,10.5832,18.2233,13.55922594,Andropogon,monocot
+788,8,44,778,Big bluestem,70,15,8,27,16,94.5,8.4907,3.3906,11.1298244,Andropogon,monocot
+705,8,45,785,Big bluestem,70,30,18,17,24,87.5,7.6228,12.8735,11.47872173,Andropogon,monocot
+715,8,46,803,Big bluestem,90,3,17,20,13,65,3.5948,7.3936,18.08167353,Andropogon,monocot
+735,8,47,827,Big bluestem,90,15,18,17,33,143,9.4512,13.8059,15.13035382,Andropogon,monocot
+739,8,48,845,Big bluestem,90,30,29,20,40,132.5,8.7046,10.5846,15.22183673,Andropogon,monocot
+862,9,49,864,Big bluestem,70,3,22,20,35,70.5,6.9923,11.529,10.08251934,Andropogon,monocot
+846,9,50,885,Big bluestem,70,15,9,19,31,76,5.2299,19.8715,14.53182661,Andropogon,monocot
+884,9,51,907,Big bluestem,70,30,28,18,43,76.5,7.87,21.4019,9.720457433,Andropogon,monocot
+853,9,52,917,Big bluestem,90,3,30,20,34,109,7.2194,14.4381,15.09820761,Andropogon,monocot
+867,9,53,939,Big bluestem,90,15,15,23,28,71,4.5217,12.7757,15.70205896,Andropogon,monocot
+878,9,54,959,Big bluestem,90,30,18,17,35,68,4.9068,14.9863,13.85831907,Andropogon,monocot
+966,10,55,975,Big bluestem,70,3,19,23,35,116.5,5.6906,9.3517,20.47235792,Andropogon,monocot
+944,10,56,989,Big bluestem,70,15,33,24,29,113,8.4684,13.0531,13.34372491,Andropogon,monocot
+920,10,57,1005,Big bluestem,70,30,13,23,33,59,2.8153,15.0857,20.95691401,Andropogon,monocot
+957,10,58,1026,Big bluestem,90,3,8,13,36,60,3.6472,6.9502,16.45097609,Andropogon,monocot
+901,10,59,1036,Big bluestem,90,15,17,18,78,82,7.7358,15.1602,10.60006722,Andropogon,monocot
+965,10,60,1067,Big bluestem,90,30,22,14,52,98.5,4.106,7.1466,23.98928397,Andropogon,monocot
+17,1,1,4,Butterflyweed,70,3,22,12,62,34,1.3001,3.5863,26.15183447,Asclepias,eudicot
+77,1,2,31,Butterflyweed,70,15,36,12.5,76,25,1.7435,3.9556,14.33897333,Asclepias,eudicot
+47,1,3,45,Butterflyweed,70,30,34,15,42,15,1.1419,3.4777,13.1360014,Asclepias,eudicot
+24,1,4,63,Butterflyweed,90,3,56,11,89,21,1.6105,3.5238,13.03942875,Asclepias,eudicot
+65,1,5,84,Butterflyweed,90,15,32,9,84,17,1.8081,4.2448,9.402134838,Asclepias,eudicot
+48,1,6,97,Butterflyweed,90,30,42,15,51,33,1.3956,2.9543,23.64574377,Asclepias,eudicot
+186,2,7,120,Butterflyweed,70,3,28,16,67,23,3.4142,9.9667,6.736570793,Asclepias,eudicot
+104,2,8,124,Butterflyweed,70,15,44,14,84,25.5,1.9347,4.6912,13.18033804,Asclepias,eudicot
+114,2,9,143,Butterflyweed,70,30,16,5,48,26,0.9387,3.3872,27.69788005,Asclepias,eudicot
+199,2,10,177,Butterflyweed,90,3,28,12,61,36,2.4402,5.3204,14.75288911,Asclepias,eudicot
+115,2,11,180,Butterflyweed,90,15,22,13,61,33,NA,NA,NA,Asclepias,eudicot
+196,2,12,212,Butterflyweed,90,30,40,9.5,90,27,1.5269,5.2568,17.6828869,Asclepias,eudicot
+206,3,13,215,Butterflyweed,70,3,16,15.5,47,45,2.5494,6.3845,17.65121205,Asclepias,eudicot
+215,3,14,234,Butterflyweed,70,15,28,12,81,40.5,3.8682,6.5487,10.46998604,Asclepias,eudicot
+291,3,15,264,Butterflyweed,70,30,40,12,68,22,1.3372,3.9932,16.45228836,Asclepias,eudicot
+214,3,16,269,Butterflyweed,90,3,26,9,40,20.5,1.0389,1.8366,19.73240928,Asclepias,eudicot
+282,3,17,297,Butterflyweed,90,15,46,11,51,26,1.6831,4.0282,15.44768582,Asclepias,eudicot
+299,3,18,321,Butterflyweed,90,30,6,6.5,52,40,1.6388,4.1807,24.40810349,Asclepias,eudicot
+334,4,19,327,Butterflyweed,70,3,18,8,51,32,1.0721,3.4362,29.84796194,Asclepias,eudicot
+357,4,20,349,Butterflyweed,70,15,12,7.5,29,19,0.893,2.6298,21.27659574,Asclepias,eudicot
+373,4,21,372,Butterflyweed,70,30,20,13,49,27,1.4418,4.9349,18.72659176,Asclepias,eudicot
+339,4,22,383,Butterflyweed,90,3,22,12,77,49,4.131,11.5779,11.86153474,Asclepias,eudicot
+392,4,23,408,Butterflyweed,90,15,15,7,52,22,NA,NA,NA,Asclepias,eudicot
+325,4,24,417,Butterflyweed,90,30,16,8,29,23,0.6448,1.9196,35.66997519,Asclepias,eudicot
+418,5,25,433,Butterflyweed,70,3,15,12,30,30.5,1.2407,3.0109,24.58289675,Asclepias,eudicot
+403,5,26,448,Butterflyweed,70,15,14,6,66,27,1.3196,3.3592,20.46074568,Asclepias,eudicot
+478,5,27,480,Butterflyweed,70,30,26,6,76,25,1.7228,3.8486,14.51126074,Asclepias,eudicot
+445,5,28,492,Butterflyweed,90,3,26,9,46,29,1.3495,7.6938,21.48944053,Asclepias,eudicot
+423,5,29,504,Butterflyweed,90,15,26,10,18,33,2.1173,5.9823,15.58588769,Asclepias,eudicot
+412,5,30,517,Butterflyweed,90,30,32,12,157,29,2.4909,4.6372,11.64237826,Asclepias,eudicot
+515,6,31,537,Butterflyweed,70,3,26,8,52,39,1.3309,2.5439,29.30347885,Asclepias,eudicot
+571,6,32,568,Butterflyweed,70,15,20,10,NA,NA,NA,NA,NA,Asclepias,eudicot
+572,6,33,583,Butterflyweed,70,30,18,12,34,21,0.7686,1.5407,27.32240437,Asclepias,eudicot
+513,6,34,590,Butterflyweed,90,3,20,12.5,64,37,1.46,2.9271,25.34246575,Asclepias,eudicot
+548,6,35,611,Butterflyweed,90,15,16,11,53,29,1.3248,2.8924,21.89009662,Asclepias,eudicot
+563,6,36,632,Butterflyweed,90,30,22,11,84,43.5,2.258,4.0655,19.26483614,Asclepias,eudicot
+669,7,37,651,Butterflyweed,70,3,10,9,118,33,1.486,2.9318,22.20726783,Asclepias,eudicot
+677,7,38,669,Butterflyweed,70,15,28,13,172,10,1.311,2.8803,7.627765065,Asclepias,eudicot
+638,7,39,681,Butterflyweed,70,30,10,10,69,14,4.9671,3.0664,NA,Asclepias,eudicot
+632,7,40,703,Butterflyweed,90,3,18,13,101,17.5,0.7204,2.051,24.29205997,Asclepias,eudicot
+601,7,41,712,Butterflyweed,90,15,12,9,21,12.5,0.2863,1.0826,43.66049598,Asclepias,eudicot
+614,7,42,736,Butterflyweed,90,30,24,12,119,23,1.4249,3.9436,16.14148361,Asclepias,eudicot
+795,8,43,763,Butterflyweed,70,3,20,12,52,79,1.1746,3.541,67.25693853,Asclepias,eudicot
+792,8,44,782,Butterflyweed,70,15,26,8,48,23,1.6745,3.8203,13.73544342,Asclepias,eudicot
+710,8,45,787,Butterflyweed,70,30,17,11,55,30,1.4391,2.5191,20.84636231,Asclepias,eudicot
+734,8,46,807,Butterflyweed,90,3,24,7,46,23,1.6321,7.0648,14.09227376,Asclepias,eudicot
+773,8,47,834,Butterflyweed,90,15,12,9,45,28,1.3998,3.1172,20.00285755,Asclepias,eudicot
+738,8,48,844,Butterflyweed,90,30,30,11,51,25,1.2747,3.3951,19.61245783,Asclepias,eudicot
+896,9,49,872,Butterflyweed,70,3,26,11,55,27,1.5361,3.8557,17.57698067,Asclepias,eudicot
+840,9,50,881,Butterflyweed,70,15,30,8,49,16.5,1.2785,4.1991,12.90574892,Asclepias,eudicot
+899,9,51,909,Butterflyweed,70,30,20,8,66,20,1.638,4.1148,12.21001221,Asclepias,eudicot
+866,9,52,922,Butterflyweed,90,3,14,10,53,35.5,1.8403,4.7821,19.2903331,Asclepias,eudicot
+897,9,53,945,Butterflyweed,90,15,18,9,37,22.5,1.2014,1.6848,18.72815049,Asclepias,eudicot
+881,9,54,961,Butterflyweed,90,30,20,13,85,25.5,2.2368,6.3253,11.40021459,Asclepias,eudicot
+942,10,55,969,Butterflyweed,70,3,26,11,43,28.5,1.4707,3.3835,19.37852723,Asclepias,eudicot
+953,10,56,990,Butterflyweed,70,15,14,6,36,17.5,7,2.6208,NA,Asclepias,eudicot
+929,10,57,1009,Butterflyweed,70,30,16,14,61,27,0.8629,2.9594,31.2898366,Asclepias,eudicot
+925,10,58,1023,Butterflyweed,90,3,36,13,154,36,2.2214,5.8073,16.20599622,Asclepias,eudicot
+943,10,59,1043,Butterflyweed,90,15,24,33,NA,34.5,4.1615,4.9518,8.290279947,Asclepias,eudicot
+995,10,60,1071,Butterflyweed,90,30,28,17,151,41,1.9874,5.2329,20.6299688,Asclepias,eudicot
+64,1,1,15,Canada wild rye,70,3,12,28,13,74,NA,NA,NA,Elymus_can,monocot
+91,1,2,36,Canada wild rye,70,15,14,29,15,32,3.256,2.3421,9.828009828,Elymus_can,monocot
+51,1,3,46,Canada wild rye,70,30,8,25,14,69,8.7828,2.7361,7.856264517,Elymus_can,monocot
+52,1,4,64,Canada wild rye,90,3,12,26,18,59,4.9786,1.6229,11.85072109,Elymus_can,monocot
+27,1,5,78,Canada wild rye,90,15,12,18,20,57,5.4798,3.1627,10.40183948,Elymus_can,monocot
+38,1,6,94,Canada wild rye,90,30,13,25,8,45,2.7235,15.5993,16.52285662,Elymus_can,monocot
+169,2,7,118,Canada wild rye,70,3,15,30,10,49.5,4.4915,2.9973,11.0208171,Elymus_can,monocot
+161,2,8,134,Canada wild rye,70,15,15,32,10,38,1.9339,4.7303,19.6494131,Elymus_can,monocot
+128,2,9,148,Canada wild rye,70,30,8,32,20,90,12.4626,3.4098,7.221607048,Elymus_can,monocot
+177,2,10,173,Canada wild rye,90,3,11,41,11,85,6.1031,4.6973,13.9273484,Elymus_can,monocot
+165,2,11,188,Canada wild rye,90,15,18,22,20,64.5,6.9874,2.9585,9.230901337,Elymus_can,monocot
+170,2,12,210,Canada wild rye,90,30,14,35,23,74,8.8208,6.0245,8.389261745,Elymus_can,monocot
+271,3,13,229,Canada wild rye,70,3,16,21.5,23,57.5,5.4045,4.9315,10.63928208,Elymus_can,monocot
+209,3,14,233,Canada wild rye,70,15,15,23,20,60,3.5259,4.5132,17.01693185,Elymus_can,monocot
+292,3,15,266,Canada wild rye,70,30,6,40,17,78,6.3644,3.7922,12.25567218,Elymus_can,monocot
+240,3,16,273,Canada wild rye,90,3,11,33,18,22,4.9401,2.7712,4.453351147,Elymus_can,monocot
+272,3,17,295,Canada wild rye,90,15,9,34,8,50,3.5858,3.9088,13.94388979,Elymus_can,monocot
+280,3,18,319,Canada wild rye,90,30,9,27,20,79,10.3456,9.0845,7.636096505,Elymus_can,monocot
+333,4,19,326,Canada wild rye,70,3,8,31,15,91,6.2501,1.2144,14.55976704,Elymus_can,monocot
+308,4,20,343,Canada wild rye,70,15,8,33,6,74,3.8271,3.431,19.3357895,Elymus_can,monocot
+313,4,21,358,Canada wild rye,70,30,8,24,14,63.5,3.667,2.3254,17.31660758,Elymus_can,monocot
+331,4,22,381,Canada wild rye,90,3,16,33,23,72,8.6368,7.0425,8.336420897,Elymus_can,monocot
+317,4,23,395,Canada wild rye,90,15,5,16,41,86,8.4367,11.1,10.19355909,Elymus_can,monocot
+329,4,24,418,Canada wild rye,90,30,12,27,38,72,9.129,4.6221,7.886953664,Elymus_can,monocot
+425,5,25,435,Canada wild rye,70,3,10,35,21,87,4.6173,4.7238,18.8421805,Elymus_can,monocot
+462,5,26,457,Canada wild rye,70,15,9,27,34,69,6.7181,1.4842,10.27076108,Elymus_can,monocot
+448,5,27,474,Canada wild rye,70,30,11,35,20,103.5,7.4914,2.5032,13.81584217,Elymus_can,monocot
+409,5,28,487,Canada wild rye,90,3,11,26,16,39.5,2.8432,1.9159,13.89279685,Elymus_can,monocot
+429,5,29,506,Canada wild rye,90,15,10,29,21,61,5.2369,1.8323,11.64811243,Elymus_can,monocot
+416,5,30,518,Canada wild rye,90,30,15,26,40,67,7.3628,2.1664,9.09979899,Elymus_can,monocot
+562,6,31,545,Canada wild rye,70,3,9,37,20,100.5,6.4957,4.5289,15.47177363,Elymus_can,monocot
+527,6,32,561,Canada wild rye,70,15,7,33,14,104.5,6.6392,3.1284,15.73984817,Elymus_can,monocot
+551,6,33,578,Canada wild rye,70,30,8,40,14,79,4.0807,1.2432,19.35942363,Elymus_can,monocot
+565,6,34,597,Canada wild rye,90,3,9,33,14,89,6.395,7.7183,13.91712275,Elymus_can,monocot
+584,6,35,617,Canada wild rye,90,15,4,16,11,75,3.9886,2.2186,18.80359023,Elymus_can,monocot
+505,6,36,624,Canada wild rye,90,30,15,24,15,71.5,5.2925,4.1876,13.50968351,Elymus_can,monocot
+622,7,37,642,Canada wild rye,70,3,13,28,19,54.5,3.9075,1.9234,13.94753679,Elymus_can,monocot
+647,7,38,662,Canada wild rye,70,15,6,30,21,73.5,4.9131,3.0854,14.96000488,Elymus_can,monocot
+691,7,39,690,Canada wild rye,70,30,20,32,21,99,5.9392,5.1767,16.66891164,Elymus_can,monocot
+698,7,40,711,Canada wild rye,90,3,12,27,18,79,5.293,2.4193,14.92537313,Elymus_can,monocot
+666,7,41,726,Canada wild rye,90,15,13,27,15,106,8.1402,2.5688,13.02179308,Elymus_can,monocot
+611,7,42,733,Canada wild rye,90,30,10,25,28,54,5.0147,5.6593,10.76834108,Elymus_can,monocot
+714,8,43,752,Canada wild rye,70,3,9,25,18,74,4.6026,2.2726,16.07786903,Elymus_can,monocot
+783,8,44,776,Canada wild rye,70,15,15,30.5,18,90,4.646,3.9487,19.37150237,Elymus_can,monocot
+756,8,45,796,Canada wild rye,70,30,7,34,18,110,6.8523,2.3455,16.0530041,Elymus_can,monocot
+709,8,46,802,Canada wild rye,90,3,11,28,17,57,8.093,4.9606,7.043123687,Elymus_can,monocot
+725,8,47,825,Canada wild rye,90,15,14,31,19,72.5,7.918,5.6927,9.156352614,Elymus_can,monocot
+787,8,48,854,Canada wild rye,90,30,9,20,12,122,7.7668,7.0443,15.70788484,Elymus_can,monocot
+888,9,49,870,Canada wild rye,70,3,4,23,10,75.5,2.3033,3.0687,32.77905614,Elymus_can,monocot
+831,9,50,879,Canada wild rye,70,15,16,26,16,88,9.9565,7.4918,8.838447246,Elymus_can,monocot
+820,9,51,894,Canada wild rye,70,30,15,35,25,66.5,10.9322,9.3931,6.082947623,Elymus_can,monocot
+890,9,52,925,Canada wild rye,90,3,10,20,18,79,6.297,3.0216,12.54565666,Elymus_can,monocot
+849,9,53,933,Canada wild rye,90,15,4,13,5,69.5,2.7122,1.2783,25.62495391,Elymus_can,monocot
+861,9,54,956,Canada wild rye,90,30,11,20,26,63.5,6.8257,4.652,9.303075142,Elymus_can,monocot
+999,10,55,980,Canada wild rye,70,3,8,32,23,124,14.858,9.585,8.345672365,Elymus_can,monocot
+987,10,56,996,Canada wild rye,70,15,NA,NA,8,18,0.8383,2.8666,21.47202672,Elymus_can,monocot
+979,10,57,1014,Canada wild rye,70,30,13,33,34,74.5,10.3602,12.0408,7.190980869,Elymus_can,monocot
+910,10,58,1019,Canada wild rye,90,3,19,12,35,82,8.2752,4.9134,9.909126063,Elymus_can,monocot
+983,10,59,1050,Canada wild rye,90,15,5,24,12,56,2.0924,2.1797,26.76352514,Elymus_can,monocot
+902,10,60,1054,Canada wild rye,90,30,11,31,55,58.5,4.2513,6.7917,13.76049679,Elymus_can,monocot
+54,1,1,14,Common boneset,70,3,34,11,92,55,10.7008,7.315,5.139802632,Eupatorium,eudicot
+32,1,2,22,Common boneset,70,15,20,10,58,48,11.0684,6.2394,4.33667016,Eupatorium,eudicot
+92,1,3,51,Common boneset,70,30,16,11,26,62,9.0444,3.0407,6.855070541,Eupatorium,eudicot
+21,1,4,62,Common boneset,90,3,22,12,60,62,12.6596,6.1601,4.897469114,Eupatorium,eudicot
+58,1,5,80,Common boneset,90,15,26,10,23,58,9.8981,5.2135,5.859710449,Eupatorium,eudicot
+90,1,6,104,Common boneset,90,30,13,14,106,53,11.618,4.837,4.561886727,Eupatorium,eudicot
+158,2,7,115,Common boneset,70,3,30,12,34,51.5,5.7251,2.7709,8.995476062,Eupatorium,eudicot
+189,2,8,140,Common boneset,70,15,14,5.5,62,63,10.313,4.1813,6.108794725,Eupatorium,eudicot
+107,2,9,142,Common boneset,70,30,32,9,88,48,14,7.5159,3.31929548,Eupatorium,eudicot
+154,2,10,167,Common boneset,90,3,24,11,74,65,13.0776,4.8012,4.970330948,Eupatorium,eudicot
+146,2,11,184,Common boneset,90,15,5,4,38,55,5.3028,4.6632,10.37187901,Eupatorium,eudicot
+153,2,12,208,Common boneset,90,30,26,9,58,61,11.688,4.5279,5.219028063,Eupatorium,eudicot
+229,3,13,220,Common boneset,70,3,22,11,24,48,NA,NA,NA,Eupatorium,eudicot
+287,3,14,246,Common boneset,70,15,12,5.5,60,55,7.1203,2.9232,7.724393635,Eupatorium,eudicot
+267,3,15,262,Common boneset,70,30,32,12,39,53.5,10.9469,5.307,4.887228348,Eupatorium,eudicot
+227,3,16,271,Common boneset,90,3,24,9,44,62,11.0027,3.8996,5.634980505,Eupatorium,eudicot
+281,3,17,296,Common boneset,90,15,24,8.5,60,53.5,7.4773,6.6341,7.1549891,Eupatorium,eudicot
+217,3,18,306,Common boneset,90,30,22,12,30,55,7.6295,3.2526,7.208860345,Eupatorium,eudicot
+330,4,19,325,Common boneset,70,3,24,10,54,70,10.4604,4.2647,6.691904707,Eupatorium,eudicot
+344,4,20,346,Common boneset,70,15,12,11,50,65,12.3703,3.3237,5.254520909,Eupatorium,eudicot
+340,4,21,365,Common boneset,70,30,22,13,28,54,6.2743,2.8993,8.606537781,Eupatorium,eudicot
+385,4,22,391,Common boneset,90,3,20,12,76,57,12.2132,4.5101,4.667081518,Eupatorium,eudicot
+352,4,23,400,Common boneset,90,15,22,12,52,54.5,10.1177,4.5016,5.386599721,Eupatorium,eudicot
+316,4,24,414,Common boneset,90,30,32,10,72,47,9.25,5.6149,5.081081081,Eupatorium,eudicot
+467,5,25,443,Common boneset,70,3,10,8,50,48,7.4801,1.712,6.41702651,Eupatorium,eudicot
+454,5,26,453,Common boneset,70,15,14,7,36,56.5,5.7569,2.3953,9.814309785,Eupatorium,eudicot
+431,5,27,471,Common boneset,70,30,22,12,68,56,10.2053,3.5234,5.487344811,Eupatorium,eudicot
+491,5,28,500,Common boneset,90,3,20,14,42,62,9.9672,3.6664,6.220402922,Eupatorium,eudicot
+402,5,29,502,Common boneset,90,15,32,12,64,52,7.6138,3.2931,6.829703959,Eupatorium,eudicot
+444,5,30,523,Common boneset,90,30,18,11,70,38,7.4031,3.7518,5.132984831,Eupatorium,eudicot
+510,6,31,536,Common boneset,70,3,12,10,38,73,11.7161,4.6352,6.230742312,Eupatorium,eudicot
+543,6,32,563,Common boneset,70,15,32,12,33,48,6.119,3.3534,7.844419023,Eupatorium,eudicot
+539,6,33,576,Common boneset,70,30,26,12,40,58.5,9.3931,3.7272,6.227975855,Eupatorium,eudicot
+547,6,34,594,Common boneset,90,3,20,12,68,65,12.8344,2.8429,5.064514118,Eupatorium,eudicot
+579,6,35,616,Common boneset,90,15,28,10,66,57,12.1769,9.1119,4.680994342,Eupatorium,eudicot
+597,6,36,639,Common boneset,90,30,24,12,68,64,10.7132,2.9878,5.973938692,Eupatorium,eudicot
+610,7,37,640,Common boneset,70,3,34,14,46,52,7.5237,4.0502,6.911493015,Eupatorium,eudicot
+637,7,38,658,Common boneset,70,15,22,12,36,56.5,7.0958,1.8034,7.962456665,Eupatorium,eudicot
+676,7,39,687,Common boneset,70,30,12,7,30,44,4.6734,1.7554,9.414986947,Eupatorium,eudicot
+660,7,40,705,Common boneset,90,3,26,12,64,55,9.8499,2.5767,5.583813034,Eupatorium,eudicot
+663,7,41,725,Common boneset,90,15,48,14,78,61,11.5741,3.3829,5.270388194,Eupatorium,eudicot
+653,7,42,741,Common boneset,90,30,16,12,82,45.5,6.7018,2.5966,6.789220806,Eupatorium,eudicot
+745,8,43,754,Common boneset,70,3,6,13,50,55,10.5816,3.8797,5.197701671,Eupatorium,eudicot
+769,8,44,772,Common boneset,70,15,16,10,32,54,10.7413,4.4989,5.027324439,Eupatorium,eudicot
+780,8,45,800,Common boneset,70,30,46,14,82,61.5,11.7283,4.8648,5.243726712,Eupatorium,eudicot
+747,8,46,808,Common boneset,90,3,26,8,50,72,12.3525,4.7419,5.828779599,Eupatorium,eudicot
+737,8,47,828,Common boneset,90,15,30,11,54,41,11.6063,4.3634,3.532564211,Eupatorium,eudicot
+782,8,48,853,Common boneset,90,30,16,8,30,40,5.0498,3.8075,7.921105786,Eupatorium,eudicot
+886,9,49,869,Common boneset,70,3,16,14,18,38.5,4.8212,4.6392,7.98556376,Eupatorium,eudicot
+807,9,50,876,Common boneset,70,15,14,10,54,57,8.4021,2.4946,6.784018281,Eupatorium,eudicot
+894,9,51,908,Common boneset,70,30,24,14,41,55,10.0171,3.956,5.490611055,Eupatorium,eudicot
+892,9,52,927,Common boneset,90,3,26,12,54,52.5,6.878,2.8245,7.633032858,Eupatorium,eudicot
+828,9,53,929,Common boneset,90,15,18,8,52,53,9.5485,10.5217,5.550610043,Eupatorium,eudicot
+864,9,54,957,Common boneset,90,30,16,15,36,56,5.6492,2.5734,9.912908022,Eupatorium,eudicot
+996,10,55,979,Common boneset,70,3,22,10,32,64.5,11.2734,6.627,5.721432753,Eupatorium,eudicot
+961,10,56,994,Common boneset,70,15,14,10,18,55,7.4228,4.7541,7.409602845,Eupatorium,eudicot
+905,10,57,1000,Common boneset,70,30,NA,NA,NA,NA,NA,NA,NA,Eupatorium,eudicot
+993,10,58,1034,Common boneset,90,3,14,14,56,75,8.8496,4.8311,8.47495932,Eupatorium,eudicot
+970,10,59,1047,Common boneset,90,15,26,11,58,64.5,12.5585,7.3852,5.13596369,Eupatorium,eudicot
+917,10,60,1058,Common boneset,90,30,18,10,72,53.5,7.6771,6.0777,6.968777273,Eupatorium,eudicot
+25,1,1,6,Common evening primrose,70,3,19,10,29,32,19.2131,2.8267,1.665530289,Oenothera,eudicot
+53,1,2,25,Common evening primrose,70,15,33,11,53,94,19.4767,3.3878,4.826279606,Oenothera,eudicot
+78,1,3,47,Common evening primrose,70,30,20,16,57,115.5,22.5089,2.983,5.131303618,Oenothera,eudicot
+63,1,4,65,Common evening primrose,90,3,32,15,28,100.5,NA,NA,NA,Oenothera,eudicot
+100,1,5,90,Common evening primrose,90,15,17,17,32,110.5,16.1581,1.8028,6.838675339,Oenothera,eudicot
+33,1,6,93,Common evening primrose,90,30,13,10.5,35,86,12.7866,1.478,6.725791063,Oenothera,eudicot
+108,2,7,106,Common evening primrose,70,3,34,13,43,102,17.2382,1.6347,5.917091112,Oenothera,eudicot
+190,2,8,141,Common evening primrose,70,15,24,15,39,114,21.0801,6.4213,5.407943985,Oenothera,eudicot
+192,2,9,158,Common evening primrose,70,30,29,17,36,111,21.8449,3.4837,5.081277552,Oenothera,eudicot
+160,2,10,170,Common evening primrose,90,3,11,19,21,114.5,13.1139,1.8616,8.731193619,Oenothera,eudicot
+150,2,11,187,Common evening primrose,90,15,15,13,29,36,21.3136,4.5852,1.689062383,Oenothera,eudicot
+147,2,12,204,Common evening primrose,90,30,21,11,26,98,12.3251,1.6417,7.951253945,Oenothera,eudicot
+238,3,13,222,Common evening primrose,70,3,32,15,44,123,26.8595,6.5163,4.57938532,Oenothera,eudicot
+285,3,14,245,Common evening primrose,70,15,20,10,42,116.5,21.9398,4.4569,5.309984594,Oenothera,eudicot
+224,3,15,252,Common evening primrose,70,30,17,11,47,28,29.5767,6.3455,0.946691145,Oenothera,eudicot
+275,3,16,279,Common evening primrose,90,3,12,10,37,116,21.8559,2.1589,5.307491341,Oenothera,eudicot
+297,3,17,303,Common evening primrose,90,15,12,13,51,35,36.8795,6.1137,0.949036728,Oenothera,eudicot
+222,3,18,307,Common evening primrose,90,30,34,14,34,89,27.8834,4.6625,3.191863259,Oenothera,eudicot
+351,4,19,330,Common evening primrose,70,3,25,11,38,102.5,22.3637,2.0298,4.583320291,Oenothera,eudicot
+398,4,20,356,Common evening primrose,70,15,24,13,46,110.5,28.6196,5.6827,3.86099037,Oenothera,eudicot
+319,4,21,360,Common evening primrose,70,30,19,15,44,114,17.0013,1.9538,6.705369589,Oenothera,eudicot
+382,4,22,390,Common evening primrose,90,3,24,10,37,103,23.4034,1.7431,4.40106993,Oenothera,eudicot
+356,4,23,402,Common evening primrose,90,15,23,10,34,88,21.728,2.3104,4.050073638,Oenothera,eudicot
+348,4,24,422,Common evening primrose,90,30,20,18,26,129.5,17.1192,2.7345,7.564605823,Oenothera,eudicot
+417,5,25,432,Common evening primrose,70,3,10,13,33,24,20.0391,5.1341,1.197658577,Oenothera,eudicot
+435,5,26,452,Common evening primrose,70,15,21,19,61,112,20.3557,2.3717,5.502144363,Oenothera,eudicot
+413,5,27,467,Common evening primrose,70,30,8,16,34,38,17.5709,2.2555,2.162666682,Oenothera,eudicot
+424,5,28,490,Common evening primrose,90,3,24,14,53,139,24.1824,2.3069,5.747982003,Oenothera,eudicot
+484,5,29,512,Common evening primrose,90,15,14,10,28,24,19.1812,3.7562,1.251225158,Oenothera,eudicot
+466,5,30,526,Common evening primrose,90,30,14,12,81,126,30.719,2.8467,4.101696019,Oenothera,eudicot
+558,6,31,544,Common evening primrose,70,3,31,13,37,23,24.5564,7.4359,0.936619374,Oenothera,eudicot
+525,6,32,559,Common evening primrose,70,15,13,9,35,108,21.8038,1.9325,4.953265027,Oenothera,eudicot
+504,6,33,571,Common evening primrose,70,30,11,14,25,32,22.3093,4.9696,1.434379384,Oenothera,eudicot
+518,6,34,591,Common evening primrose,90,3,21,18,54,96,23.8644,4.5356,4.022728416,Oenothera,eudicot
+526,6,35,607,Common evening primrose,90,15,26,14,50,74,20.0664,2.82,3.687756648,Oenothera,eudicot
+566,6,36,633,Common evening primrose,90,30,23,16,56,50,25.7782,4.3278,1.939623403,Oenothera,eudicot
+683,7,37,656,Common evening primrose,70,3,26,15,116,103.5,24.0212,3.1771,4.308693987,Oenothera,eudicot
+667,7,38,666,Common evening primrose,70,15,22,11,47,58,12.8316,1.556,4.520091025,Oenothera,eudicot
+605,7,39,678,Common evening primrose,70,30,14,16,59,58,25.2208,3.5886,2.299689145,Oenothera,eudicot
+620,7,40,697,Common evening primrose,90,3,11,18,116,126,22.119,2.2459,5.696460057,Oenothera,eudicot
+619,7,41,716,Common evening primrose,90,15,32,8,39,104,13.2954,1.6191,7.822254314,Oenothera,eudicot
+651,7,42,740,Common evening primrose,90,30,22,13,65,106,18.2022,2.755,5.823471888,Oenothera,eudicot
+776,8,43,760,Common evening primrose,70,3,34,17,54,113.5,26.9827,5.0243,4.206398915,Oenothera,eudicot
+733,8,44,768,Common evening primrose,70,15,15,12,58,120.5,26.3035,2.8621,4.581139392,Oenothera,eudicot
+702,8,45,784,Common evening primrose,70,30,18,11,37,32,28.1072,9.3372,1.138498321,Oenothera,eudicot
+761,8,46,814,Common evening primrose,90,3,10,12,57,29,33.1512,6.042,0.874779797,Oenothera,eudicot
+800,8,47,837,Common evening primrose,90,15,10,10,63,128,37.5613,6.5687,3.407762777,Oenothera,eudicot
+703,8,48,838,Common evening primrose,90,30,22,15,53,112,19.2732,3.5018,5.811178216,Oenothera,eudicot
+843,9,49,861,Common evening primrose,70,3,16,11,45,32,18.8233,2.6696,1.700020719,Oenothera,eudicot
+877,9,50,889,Common evening primrose,70,15,24,9,51,81,13.5437,1.7379,5.980640445,Oenothera,eudicot
+839,9,51,899,Common evening primrose,70,30,22,9,53,124,17.3274,1.7751,7.156295809,Oenothera,eudicot
+871,9,52,923,Common evening primrose,90,3,25,11,46,86,21.2068,4.2103,4.055303016,Oenothera,eudicot
+832,9,53,930,Common evening primrose,90,15,16,21,49,116.5,31.0505,5.7482,3.751952465,Oenothera,eudicot
+837,9,54,955,Common evening primrose,90,30,15,8,31,25,12.4403,2.8248,2.009597839,Oenothera,eudicot
+933,10,55,967,Common evening primrose,70,3,24,18,34,94,19.1469,2.0981,4.909410923,Oenothera,eudicot
+958,10,56,993,Common evening primrose,70,15,15,3,78,119,24.9448,3.4493,4.770533338,Oenothera,eudicot
+972,10,57,1010,Common evening primrose,70,30,19,17,58,115.5,14.2151,1.4401,8.125162679,Oenothera,eudicot
+912,10,58,1021,Common evening primrose,90,3,4,20,75,127.5,27.385,5.9029,4.655833485,Oenothera,eudicot
+982,10,59,1049,Common evening primrose,90,15,8,11,40,30,25.0646,8.4089,1.196907192,Oenothera,eudicot
+930,10,60,1062,Common evening primrose,90,30,15,18,72,135,21.7936,4.2221,6.194479113,Oenothera,eudicot
+29,1,1,7,Flowering spurge,70,3,3,8,40,59,1.9357,4.0899,30.47992974,Euphorbia,eudicot
+10,1,2,19,Flowering spurge,70,15,8,11,48,63,3.0414,6.9501,20.7141448,Euphorbia,eudicot
+89,1,3,50,Flowering spurge,70,30,10,11.5,10,34.5,1.9998,3.7795,17.25172517,Euphorbia,eudicot
+99,1,4,72,Flowering spurge,90,3,10,12,41,45,3.1262,3.9422,14.39447252,Euphorbia,eudicot
+19,1,5,76,Flowering spurge,90,15,6,5.5,NA,NA,NA,NA,NA,Euphorbia,eudicot
+87,1,6,103,Flowering spurge,90,30,16,12,58,29,1.1329,4.9617,25.59802277,Euphorbia,eudicot
+118,2,7,108,Flowering spurge,70,3,10,12,46,49,3.2506,4.8994,15.07414016,Euphorbia,eudicot
+134,2,8,130,Flowering spurge,70,15,4,6,37,59,1.3263,3.9717,44.48465656,Euphorbia,eudicot
+143,2,9,154,Flowering spurge,70,30,6,11,50,58,1.6684,4.0202,34.7638456,Euphorbia,eudicot
+144,2,10,166,Flowering spurge,90,3,15,15,44,56.5,2.1237,2.2373,26.60451099,Euphorbia,eudicot
+173,2,11,189,Flowering spurge,90,15,4,11,51,57,3.7158,3.5135,15.33989989,Euphorbia,eudicot
+152,2,12,207,Flowering spurge,90,30,23,12,71,45,2.9896,11.4068,15.05218089,Euphorbia,eudicot
+248,3,13,225,Flowering spurge,70,3,4,9,46,42.5,1.6229,2.4431,26.18768871,Euphorbia,eudicot
+202,3,14,232,Flowering spurge,70,15,11,11,28,31,NA,NA,NA,Euphorbia,eudicot
+201,3,15,250,Flowering spurge,70,30,15,9,60,34,1.2848,4.1045,26.46326276,Euphorbia,eudicot
+295,3,16,283,Flowering spurge,90,3,NA,NA,94,60,3.5598,8.188,16.85487949,Euphorbia,eudicot
+247,3,17,290,Flowering spurge,90,15,12,12,74,46,2.6593,5.4241,17.29778513,Euphorbia,eudicot
+257,3,18,315,Flowering spurge,90,30,5,10.5,37,43,2.1466,3.2597,20.031678,Euphorbia,eudicot
+384,4,19,336,Flowering spurge,70,3,2,6,50,45,1.3273,3.3358,33.90341294,Euphorbia,eudicot
+383,4,20,354,Flowering spurge,70,15,10,8,71,44,1.8662,5.3715,23.5773229,Euphorbia,eudicot
+342,4,21,366,Flowering spurge,70,30,8,5,49,29,1.4259,4.6555,20.33803212,Euphorbia,eudicot
+366,4,22,388,Flowering spurge,90,3,3,8,36,37,0.6454,0.9614,57.32878835,Euphorbia,eudicot
+314,4,23,394,Flowering spurge,90,15,11,11,97,43,2.7953,8.4024,15.38296426,Euphorbia,eudicot
+391,4,24,429,Flowering spurge,90,30,3,10,46,43,2.0943,4.06,20.53191997,Euphorbia,eudicot
+432,5,25,436,Flowering spurge,70,3,9,7,74,41.5,3.0039,5.9896,13.81537335,Euphorbia,eudicot
+479,5,26,462,Flowering spurge,70,15,15,16,91,46,4.3762,4.5882,10.51140259,Euphorbia,eudicot
+469,5,27,478,Flowering spurge,70,30,17,11,97,47.5,2.3716,8.9118,20.02867263,Euphorbia,eudicot
+451,5,28,496,Flowering spurge,90,3,10,10,83,35,3.4234,3.9701,10.22375416,Euphorbia,eudicot
+498,5,29,516,Flowering spurge,90,15,7,15,62,49.5,2.3869,9.5152,20.73819599,Euphorbia,eudicot
+430,5,30,520,Flowering spurge,90,30,17,13,105,48,3.1875,6.0217,15.05882353,Euphorbia,eudicot
+600,6,31,552,Flowering spurge,70,3,13,8,37,42,1.763,2.965,23.82302893,Euphorbia,eudicot
+561,6,32,567,Flowering spurge,70,15,5,9,49,46,1.9346,4.1833,23.77752507,Euphorbia,eudicot
+560,6,33,579,Flowering spurge,70,30,6,13,61,42,NA,NA,NA,Euphorbia,eudicot
+582,6,34,602,Flowering spurge,90,3,3,16,69,56,3.0611,2.666,18.29407729,Euphorbia,eudicot
+553,6,35,612,Flowering spurge,90,15,10,11,87,57.5,3.4871,8.0135,16.48934645,Euphorbia,eudicot
+530,6,36,628,Flowering spurge,90,30,5,11,54,41,3.0073,6.853,13.63349184,Euphorbia,eudicot
+682,7,37,655,Flowering spurge,70,3,10,11,122,48,4.0874,4.7672,11.74340657,Euphorbia,eudicot
+665,7,38,665,Flowering spurge,70,15,6,16,56,55.5,2.2724,4.0154,24.42351699,Euphorbia,eudicot
+652,7,39,686,Flowering spurge,70,30,14,12,119,40,3.1286,5.5599,12.78527137,Euphorbia,eudicot
+664,7,40,706,Flowering spurge,90,3,5,10,NA,NA,NA,NA,NA,Euphorbia,eudicot
+685,7,41,728,Flowering spurge,90,15,3,9,19,41,0.8548,1.7131,47.96443613,Euphorbia,eudicot
+623,7,42,738,Flowering spurge,90,30,8,11,70,46.5,1.6257,4.5677,28.6030633,Euphorbia,eudicot
+760,8,43,756,Flowering spurge,70,3,6,6,65,45.5,2.3537,5.3523,19.33126567,Euphorbia,eudicot
+789,8,44,779,Flowering spurge,70,15,8,8,49,40,2.1485,3.9985,18.61764021,Euphorbia,eudicot
+742,8,45,793,Flowering spurge,70,30,10,13,31,42,1.5795,5.2757,26.59069326,Euphorbia,eudicot
+793,8,46,819,Flowering spurge,90,3,13,10,103,43,3.529,7.6932,12.18475489,Euphorbia,eudicot
+741,8,47,829,Flowering spurge,90,15,18,15,71,46,2.1311,7.9413,21.5850969,Euphorbia,eudicot
+752,8,48,847,Flowering spurge,90,30,4,11,44,58,1.458,2.2104,39.78052126,Euphorbia,eudicot
+827,9,49,859,Flowering spurge,70,3,14,10,71,38,1.9951,5.2902,19.04666433,Euphorbia,eudicot
+855,9,50,886,Flowering spurge,70,15,13,11,71,49,2.2959,2.3887,21.34239296,Euphorbia,eudicot
+879,9,51,905,Flowering spurge,70,30,11,12,63,50,1.9871,4.2237,25.16229681,Euphorbia,eudicot
+863,9,52,920,Flowering spurge,90,3,5,12,43,54,2.1922,3.7519,24.63278898,Euphorbia,eudicot
+872,9,53,941,Flowering spurge,90,15,10,17,62,45,2.5928,1.6072,17.3557544,Euphorbia,eudicot
+826,9,54,953,Flowering spurge,90,30,17,10,64,42,2.4081,4.879,17.44113617,Euphorbia,eudicot
+937,10,55,968,Flowering spurge,70,3,15,7,99,38,2.2136,4.8238,17.16660643,Euphorbia,eudicot
+908,10,56,982,Flowering spurge,70,15,32,13,80,48.5,2.9613,4.6802,16.37794212,Euphorbia,eudicot
+923,10,57,1006,Flowering spurge,70,30,8,13,206,53,3.3171,9.8054,15.97781194,Euphorbia,eudicot
+906,10,58,1018,Flowering spurge,90,3,17,18,156,49,2.9506,4.5741,16.60679184,Euphorbia,eudicot
+964,10,59,1045,Flowering spurge,90,15,30,11,239,40,3.4084,8.7843,11.73571177,Euphorbia,eudicot
+992,10,60,1070,Flowering spurge,90,30,19,11,216,55,4.1714,2.4602,13.18502182,Euphorbia,eudicot
+49,1,1,12,Golden alexanders,70,3,12,16,26,20,2.9167,2.2321,6.857064491,Zizia,eudicot
+66,1,2,28,Golden alexanders,70,15,14,20,17,14,2.049,2.4031,6.832601269,Zizia,eudicot
+16,1,3,39,Golden alexanders,70,30,31,22.5,31,11,3.963,10.2682,2.775674994,Zizia,eudicot
+94,1,4,71,Golden alexanders,90,3,29,20,22,18,3.2137,7.2618,5.60102063,Zizia,eudicot
+72,1,5,85,Golden alexanders,90,15,16,19,25,14,3.4122,4.4388,4.102924799,Zizia,eudicot
+93,1,6,105,Golden alexanders,90,30,18,31,32,14.5,3.7313,4.4788,3.886045078,Zizia,eudicot
+195,2,7,121,Golden alexanders,70,3,13,30,NA,NA,NA,NA,NA,Zizia,eudicot
+123,2,8,127,Golden alexanders,70,15,13,14,26,19.5,2.4947,4.0189,7.816571131,Zizia,eudicot
+135,2,9,149,Golden alexanders,70,30,34,33,29,14,2.7555,4.5266,5.080747596,Zizia,eudicot
+157,2,10,168,Golden alexanders,90,3,23,20,19,15,2.4403,3.4736,6.146785231,Zizia,eudicot
+176,2,11,191,Golden alexanders,90,15,17,42,16,16,2.752,3.8304,5.813953488,Zizia,eudicot
+111,2,12,198,Golden alexanders,90,30,20,21,30,21,4.1527,4.5089,5.056950899,Zizia,eudicot
+279,3,13,230,Golden alexanders,70,3,33,20,28,18.5,2.3052,6.7471,8.025334027,Zizia,eudicot
+244,3,14,239,Golden alexanders,70,15,6,20,13,11,1.2943,2.299,8.498802441,Zizia,eudicot
+252,3,15,256,Golden alexanders,70,30,11,14,NA,NA,NA,NA,NA,Zizia,eudicot
+251,3,16,276,Golden alexanders,90,3,45,16,38,14,5.5508,8.2378,2.522158968,Zizia,eudicot
+260,3,17,294,Golden alexanders,90,15,34,22,25,16.5,3.9029,7.704,4.227625612,Zizia,eudicot
+268,3,18,318,Golden alexanders,90,30,28,22,41,19,2.6836,6.6699,7.080041735,Zizia,eudicot
+394,4,19,338,Golden alexanders,70,3,13,23,28,12,3.3296,4.7838,3.604036521,Zizia,eudicot
+377,4,20,353,Golden alexanders,70,15,20,26,32,16,2.3803,3.1922,6.721841785,Zizia,eudicot
+393,4,21,374,Golden alexanders,70,30,17,21,27,13,3.5188,6.2437,3.694441287,Zizia,eudicot
+312,4,22,379,Golden alexanders,90,3,23,32,15,9.5,2.5622,2.894,3.707751151,Zizia,eudicot
+378,4,23,404,Golden alexanders,90,15,43,30,31,12,3.2597,5.4061,3.681320367,Zizia,eudicot
+335,4,24,419,Golden alexanders,90,30,27,22,26,12,3.5442,7.9251,3.385813442,Zizia,eudicot
+436,5,25,437,Golden alexanders,70,3,12,36,14,14,1.5843,4.6785,8.836710219,Zizia,eudicot
+486,5,26,464,Golden alexanders,70,15,14,43,35,12,3.2009,3.2683,3.748945609,Zizia,eudicot
+410,5,27,466,Golden alexanders,70,30,22,26.5,17,26,1.9314,1.8864,13.4617376,Zizia,eudicot
+419,5,28,488,Golden alexanders,90,3,22,18,30,12.5,2.73,5.8415,4.578754579,Zizia,eudicot
+489,5,29,513,Golden alexanders,90,15,24,38,22,18,3.3689,4.8146,5.342990294,Zizia,eudicot
+483,5,30,531,Golden alexanders,90,30,22,15,37,15,3.1813,4.4969,4.715053594,Zizia,eudicot
+591,6,31,550,Golden alexanders,70,3,30,14,13,12,1.0954,4.0238,10.95490232,Zizia,eudicot
+516,6,32,554,Golden alexanders,70,15,26,25,38,15,3.5365,4.0151,4.241481691,Zizia,eudicot
+568,6,33,581,Golden alexanders,70,30,27,18,25,15,3.458,2.112,4.337767496,Zizia,eudicot
+555,6,34,596,Golden alexanders,90,3,15,36,11,50.5,1.9232,1.7146,26.25831947,Zizia,eudicot
+531,6,35,608,Golden alexanders,90,15,24,30,24,18,2.4248,5.0417,7.423292643,Zizia,eudicot
+529,6,36,627,Golden alexanders,90,30,16,23,15,19,2.1627,2.2865,8.785314653,Zizia,eudicot
+662,7,37,650,Golden alexanders,70,3,16,23,52,38.5,2.6216,1.608,14.68568813,Zizia,eudicot
+684,7,38,670,Golden alexanders,70,15,15,11,53,13.5,2.9122,5.9269,4.635670627,Zizia,eudicot
+700,7,39,693,Golden alexanders,70,30,17,38,32,11,2.6351,2.2414,4.174414633,Zizia,eudicot
+629,7,40,702,Golden alexanders,90,3,16,24,42,13.5,3.2894,4.4396,4.104091932,Zizia,eudicot
+626,7,41,717,Golden alexanders,90,15,7,12,21,31,1.6168,1.4499,19.1736764,Zizia,eudicot
+627,7,42,739,Golden alexanders,90,30,16,11,82,9.5,3.3117,3.6765,2.868617326,Zizia,eudicot
+796,8,43,764,Golden alexanders,70,3,19,15,37,13,2.6557,5.2726,4.895131227,Zizia,eudicot
+701,8,44,766,Golden alexanders,70,15,15,14,15,10,1.7137,2.0341,5.83532707,Zizia,eudicot
+748,8,45,794,Golden alexanders,70,30,32,30,22,33,2.2127,1.7102,14.91390609,Zizia,eudicot
+717,8,46,805,Golden alexanders,90,3,26,17,38,31,3.8347,8.8557,8.084074373,Zizia,eudicot
+744,8,47,830,Golden alexanders,90,15,27,35,27,38.5,2.3946,3.5918,16.07784181,Zizia,eudicot
+770,8,48,852,Golden alexanders,90,30,34,17,39,17,4.2073,4.1085,4.040596107,Zizia,eudicot
+880,9,49,867,Golden alexanders,70,3,18,11,28,17,2.9003,3.2208,5.861462607,Zizia,eudicot
+803,9,50,874,Golden alexanders,70,15,56,25,26,18,3.001,1.8404,5.998000666,Zizia,eudicot
+858,9,51,903,Golden alexanders,70,30,25,14,31,13,2.536,2.8381,5.126182965,Zizia,eudicot
+857,9,52,919,Golden alexanders,90,3,18,12,54,11,3.3414,4.9253,3.292033279,Zizia,eudicot
+860,9,53,937,Golden alexanders,90,15,28,17,38,19,2.8497,4.6082,6.667368495,Zizia,eudicot
+824,9,54,952,Golden alexanders,90,30,23,14,35,18,2.4341,4.3833,7.394930364,Zizia,eudicot
+915,10,55,964,Golden alexanders,70,3,15,29,12,18,2.0005,2.3265,8.997750562,Zizia,eudicot
+939,10,56,988,Golden alexanders,70,15,24,27,25,15,2.8584,4.8824,5.247691016,Zizia,eudicot
+924,10,57,1007,Golden alexanders,70,30,17,12,39,17,2.3083,3.7743,7.364727288,Zizia,eudicot
+946,10,58,1025,Golden alexanders,90,3,28,34,17,33,4.5709,4.7982,7.219584764,Zizia,eudicot
+989,10,59,1053,Golden alexanders,90,15,18,18,83,57,10.442,8.7742,5.458724382,Zizia,eudicot
+916,10,60,1057,Golden alexanders,90,30,26,36,23,36,3.5883,4.311,10.03260597,Zizia,eudicot
+20,1,1,5,Gray goldenrod,70,3,12,13,37,54,5.5593,1.4036,9.713453133,Solidago,eudicot
+30,1,2,21,Gray goldenrod,70,15,18,14,52,57,8.9976,3.4117,6.335022673,Solidago,eudicot
+3,1,3,37,Gray goldenrod,70,30,20,11,45,59.5,7.1092,3.6512,8.369436786,Solidago,eudicot
+71,1,4,67,Gray goldenrod,90,3,8,11,22,60,6.8978,1.2024,8.698425585,Solidago,eudicot
+12,1,5,74,Gray goldenrod,90,15,18,12,58,64,10.1696,2.1737,6.293266205,Solidago,eudicot
+11,1,6,92,Gray goldenrod,90,30,8,8,15,10,4.8014,0.8848,2.082725872,Solidago,eudicot
+110,2,7,107,Gray goldenrod,70,3,25,13,13,62,2.2267,3.3486,27.84389455,Solidago,eudicot
+126,2,8,128,Gray goldenrod,70,15,27,17,50,65,7.8764,2.0623,8.252501143,Solidago,eudicot
+117,2,9,145,Gray goldenrod,70,30,15,13,31,59,9.9148,1.3443,5.950699964,Solidago,eudicot
+185,2,10,174,Gray goldenrod,90,3,17,10,64,22,12.8411,6.718,1.713248865,Solidago,eudicot
+180,2,11,192,Gray goldenrod,90,15,18,12,54,72,13.1114,2.9707,5.491404427,Solidago,eudicot
+113,2,12,199,Gray goldenrod,90,30,17,16,34,72.5,9.703,1.8724,7.471915902,Solidago,eudicot
+207,3,13,216,Gray goldenrod,70,3,14,17,18,65.5,4.3551,0.6501,15.03983835,Solidago,eudicot
+259,3,14,241,Gray goldenrod,70,15,15,14,35,76,10.2597,1.9698,7.407624005,Solidago,eudicot
+277,3,15,263,Gray goldenrod,70,30,12,17,75,82,10.2504,1.8681,7.999687817,Solidago,eudicot
+265,3,16,277,Gray goldenrod,90,3,20,17,50,53,11.2816,3.0103,4.697915189,Solidago,eudicot
+296,3,17,301,Gray goldenrod,90,15,24,10,47,55,7.314,4.4665,7.519824993,Solidago,eudicot
+262,3,18,317,Gray goldenrod,90,30,13,14,86,67,11.6185,2.5792,5.766665232,Solidago,eudicot
+346,4,19,329,Gray goldenrod,70,3,18,13,52,75,11.0603,1.5508,6.781009557,Solidago,eudicot
+307,4,20,342,Gray goldenrod,70,15,22,13,74,68,15.2872,3.9128,4.448165786,Solidago,eudicot
+367,4,21,371,Gray goldenrod,70,30,13,12,32,15.5,4.2152,1.9971,3.677168343,Solidago,eudicot
+353,4,22,385,Gray goldenrod,90,3,25,12,46,60,9.6831,1.6902,6.196362735,Solidago,eudicot
+328,4,23,398,Gray goldenrod,90,15,30,9,23,13,5.1549,2.1408,2.521872393,Solidago,eudicot
+315,4,24,413,Gray goldenrod,90,30,17,16,40,16,8.1127,2.9804,1.972216401,Solidago,eudicot
+414,5,25,430,Gray goldenrod,70,3,8,9,56,61,11.3503,1.0419,5.374307287,Solidago,eudicot
+456,5,26,456,Gray goldenrod,70,15,21,12,53,60.5,11.1251,2.6454,5.438153365,Solidago,eudicot
+463,5,27,477,Gray goldenrod,70,30,16,18,40,67,10.1446,1.6348,6.604498945,Solidago,eudicot
+422,5,28,489,Gray goldenrod,90,3,5,9,9,58,8.5671,0.8227,6.77008556,Solidago,eudicot
+482,5,29,511,Gray goldenrod,90,15,7,13,50,60,7.7611,2.7775,7.730862893,Solidago,eudicot
+475,5,30,529,Gray goldenrod,90,30,8,15,28,67,9.0645,2.0492,7.391472227,Solidago,eudicot
+598,6,31,551,Gray goldenrod,70,3,10,16,69,83,15.1981,1.9476,5.461208967,Solidago,eudicot
+517,6,32,556,Gray goldenrod,70,15,16,17,76,79.5,14.6323,1.7363,5.433185487,Solidago,eudicot
+595,6,33,587,Gray goldenrod,70,30,9,13,42,61,11.1565,1.2023,5.46766459,Solidago,eudicot
+569,6,34,599,Gray goldenrod,90,3,12,17,62,20,9.7851,2.9004,2.043923925,Solidago,eudicot
+573,6,35,615,Gray goldenrod,90,15,19,14,92,69,13.4447,3.0737,5.132133852,Solidago,eudicot
+589,6,36,637,Gray goldenrod,90,30,9,14,NA,NA,12.9864,0.9942,#VALUE!,Solidago,eudicot
+639,7,37,643,Gray goldenrod,70,3,20,10,NA,NA,NA,NA,NA,Solidago,eudicot
+642,7,38,659,Gray goldenrod,70,15,12,12,147,75.5,10.1694,1.1665,7.424233485,Solidago,eudicot
+648,7,39,684,Gray goldenrod,70,30,9,10,56,34.5,4.4139,2.7191,7.816216951,Solidago,eudicot
+687,7,40,709,Gray goldenrod,90,3,14,14,118,83,11.7811,2.7582,7.045182538,Solidago,eudicot
+656,7,41,722,Gray goldenrod,90,15,28,14,69,64.9,15.7279,1.0542,4.126425015,Solidago,eudicot
+661,7,42,743,Gray goldenrod,90,30,10,15,90,74,8.2742,1.0411,8.943462812,Solidago,eudicot
+755,8,43,755,Gray goldenrod,70,3,24,17,80,81.5,12.8411,4.0764,6.346808295,Solidago,eudicot
+790,8,44,781,Gray goldenrod,70,15,7,7,21,16,4.9511,2.3117,3.231605098,Solidago,eudicot
+740,8,45,792,Gray goldenrod,70,30,13,18,44,82,12.6459,3.8625,6.484315074,Solidago,eudicot
+758,8,46,812,Gray goldenrod,90,3,17,12,45,67,9.611,2.2827,6.971178858,Solidago,eudicot
+754,8,47,832,Gray goldenrod,90,15,13,12,28,19,9.2413,4.2301,2.055987794,Solidago,eudicot
+767,8,48,850,Gray goldenrod,90,30,9,14,51,63.5,9.5129,2.7423,6.67514638,Solidago,eudicot
+869,9,49,865,Gray goldenrod,70,3,20,10,57,54.5,8.7687,2.219,6.215288469,Solidago,eudicot
+874,9,50,887,Gray goldenrod,70,15,15,13,62,71,9.5071,3.0161,7.468102786,Solidago,eudicot
+847,9,51,900,Gray goldenrod,70,30,18,14,63,70,9.3028,2.6765,7.524616245,Solidago,eudicot
+854,9,52,918,Gray goldenrod,90,3,17,12,40,57,10.8982,4.6458,5.230221504,Solidago,eudicot
+885,9,53,943,Gray goldenrod,90,15,15,9,23,18,4.9739,1.5457,3.618890609,Solidago,eudicot
+900,9,54,962,Gray goldenrod,90,30,14,14,92,82,16.764,2.8362,4.891434025,Solidago,eudicot
+977,10,55,976,Gray goldenrod,70,3,10,16,48,72.5,12.0179,2.2672,6.032667937,Solidago,eudicot
+997,10,56,998,Gray goldenrod,70,15,22,15,59,69,10.874,2.1461,6.345411072,Solidago,eudicot
+975,10,57,1013,Gray goldenrod,70,30,13,12,NA,63.5,9.6394,2.2801,6.587546943,Solidago,eudicot
+963,10,58,1030,Gray goldenrod,90,3,12,14,131,86.5,19.561,2.616,4.422064312,Solidago,eudicot
+938,10,59,1041,Gray goldenrod,90,15,17,16,NA,67.5,19.8928,3.818,3.393187485,Solidago,eudicot
+928,10,60,1061,Gray goldenrod,90,30,13,12,124,60,9.0656,1.9513,6.618425697,Solidago,eudicot
+50,1,1,13,Hairy beardtongue,70,3,20,9,25,10,4.1987,3.2626,2.381689571,Penstemon,eudicot
+88,1,2,34,Hairy beardtongue,70,15,23,14,26,37,4.2172,1.7267,8.773593854,Penstemon,eudicot
+95,1,3,52,Hairy beardtongue,70,30,30,12,35,31,3.4825,0.8944,8.901651113,Penstemon,eudicot
+8,1,4,57,Hairy beardtongue,90,3,63,11,38,45,7.0594,2.0894,6.374479418,Penstemon,eudicot
+22,1,5,77,Hairy beardtongue,90,15,40,16,20,36,4.278,0.7763,8.415147265,Penstemon,eudicot
+75,1,6,101,Hairy beardtongue,90,30,36,10.5,81,28,3.294,1.5064,8.500303582,Penstemon,eudicot
+197,2,7,122,Hairy beardtongue,70,3,27,14,37,44,7.2125,2.9382,6.100519931,Penstemon,eudicot
+172,2,8,135,Hairy beardtongue,70,15,24,12,17,33,2.5803,1.7584,12.78921056,Penstemon,eudicot
+139,2,9,150,Hairy beardtongue,70,30,30,16,37,26,5.0419,2.6485,5.156786132,Penstemon,eudicot
+130,2,10,164,Hairy beardtongue,90,3,14,10,20,35,4.4342,1.2941,7.893193812,Penstemon,eudicot
+183,2,11,193,Hairy beardtongue,90,15,15,5,25,13,3.418,5.3898,3.803393798,Penstemon,eudicot
+166,2,12,209,Hairy beardtongue,90,30,12,8,24,14,4.162,4.867,3.36376742,Penstemon,eudicot
+269,3,13,227,Hairy beardtongue,70,3,43,21,22,41,8.675,4.4807,4.726224784,Penstemon,eudicot
+289,3,14,248,Hairy beardtongue,70,15,34,11,26,15,3.9854,2.4844,3.763737642,Penstemon,eudicot
+263,3,15,260,Hairy beardtongue,70,30,12,17,21,41,NA,NA,NA,Penstemon,eudicot
+276,3,16,280,Hairy beardtongue,90,3,10,18,27,51,4.1803,0.8922,12.20008133,Penstemon,eudicot
+203,3,17,286,Hairy beardtongue,90,15,14,15,15,61,2.7389,4.4685,22.27171492,Penstemon,eudicot
+208,3,18,304,Hairy beardtongue,90,30,10,4,37,15,2.6366,2.8288,5.689145111,Penstemon,eudicot
+343,4,19,328,Hairy beardtongue,70,3,8,15,25,12,3.1634,2.459,3.793386862,Penstemon,eudicot
+320,4,20,344,Hairy beardtongue,70,15,28,15,28,33,5.4049,1.9823,6.105570871,Penstemon,eudicot
+323,4,21,362,Hairy beardtongue,70,30,13,10,38,11.5,3.8377,2.0235,2.996586497,Penstemon,eudicot
+311,4,22,378,Hairy beardtongue,90,3,28,22,16,23,3.3401,3.1413,6.886021377,Penstemon,eudicot
+379,4,23,405,Hairy beardtongue,90,15,21,10,29,26,5.6409,3.3469,4.609193568,Penstemon,eudicot
+389,4,24,427,Hairy beardtongue,90,30,36,12,28,28.5,5.7828,4.4189,4.928408383,Penstemon,eudicot
+442,5,25,441,Hairy beardtongue,70,3,10,12,18,35,3.7858,5.9734,9.245073696,Penstemon,eudicot
+455,5,26,454,Hairy beardtongue,70,15,16,16,45,51,4.7665,1.1571,10.69967481,Penstemon,eudicot
+492,5,27,483,Hairy beardtongue,70,30,12,6,30,10,3.9595,0.8876,2.525571411,Penstemon,eudicot
+433,5,28,491,Hairy beardtongue,90,3,17,9,44,45,5.3224,1.6483,8.454832406,Penstemon,eudicot
+490,5,29,514,Hairy beardtongue,90,15,17,14,21,41,4.0483,1.5492,10.12770793,Penstemon,eudicot
+453,5,30,525,Hairy beardtongue,90,30,15,9,47,9.5,3.6276,2.2488,2.618811335,Penstemon,eudicot
+588,6,31,549,Hairy beardtongue,70,3,13,14,13,34,2.5061,1.0055,13.56689677,Penstemon,eudicot
+519,6,32,557,Hairy beardtongue,70,15,25,16,29,32,5.4853,1.0059,5.833773905,Penstemon,eudicot
+585,6,33,585,Hairy beardtongue,70,30,42,18,25,37,5.4315,1.1975,6.812114517,Penstemon,eudicot
+576,6,34,600,Hairy beardtongue,90,3,7,11,12,35,1.5734,1.8591,22.24482013,Penstemon,eudicot
+511,6,35,604,Hairy beardtongue,90,15,22,7,26,40.5,3.1027,1.5273,13.05314726,Penstemon,eudicot
+574,6,36,634,Hairy beardtongue,90,30,15,9,29,10,3.0261,3.0912,3.304583457,Penstemon,eudicot
+671,7,37,652,Hairy beardtongue,70,3,15,11,29,45,3.071,1.7551,14.65320742,Penstemon,eudicot
+692,7,38,672,Hairy beardtongue,70,15,18,10,76,24.5,3.1697,2.045,7.729438117,Penstemon,eudicot
+645,7,39,682,Hairy beardtongue,70,30,32,13,66,33,3.2259,2.297,10.22970334,Penstemon,eudicot
+609,7,40,696,Hairy beardtongue,90,3,15,10,79,18.5,3.0907,0.7102,5.985699033,Penstemon,eudicot
+668,7,41,727,Hairy beardtongue,90,15,10,12,32,22,4.0392,1.9886,5.446623094,Penstemon,eudicot
+608,7,42,732,Hairy beardtongue,90,30,20,10,56,49,4.2459,3.0696,11.540545,Penstemon,eudicot
+778,8,43,761,Hairy beardtongue,70,3,21,11,16,11,3.8229,2.0409,2.877396741,Penstemon,eudicot
+785,8,44,777,Hairy beardtongue,70,15,13,7,13,41.5,4.37,2.0543,9.496567506,Penstemon,eudicot
+720,8,45,788,Hairy beardtongue,70,30,15,9,22,32,2.9493,1.4663,10.85003221,Penstemon,eudicot
+775,8,46,817,Hairy beardtongue,90,3,19,23,37,34,2.246,1.6015,15.13802315,Penstemon,eudicot
+716,8,47,822,Hairy beardtongue,90,15,10,10,22,12,3.2717,2.7368,3.667817954,Penstemon,eudicot
+763,8,48,849,Hairy beardtongue,90,30,21,10,19,14,3.1643,1.7643,4.424359258,Penstemon,eudicot
+825,9,49,857,Hairy beardtongue,70,3,5,13,15,51,2.6485,0.9564,19.25618274,Penstemon,eudicot
+876,9,50,888,Hairy beardtongue,70,15,21,5,34,39,4.1839,1.9849,9.321446497,Penstemon,eudicot
+818,9,51,893,Hairy beardtongue,70,30,20,9,24,30,3.8843,2.0946,7.723399325,Penstemon,eudicot
+844,9,52,916,Hairy beardtongue,90,3,22,12,27,36,4.3831,1.5743,8.21336497,Penstemon,eudicot
+895,9,53,944,Hairy beardtongue,90,15,22,11,44,35,6.8256,2.6844,5.127754337,Penstemon,eudicot
+802,9,54,946,Hairy beardtongue,90,30,15,13,21,47,2.8217,0.9314,16.65662544,Penstemon,eudicot
+956,10,55,973,Hairy beardtongue,70,3,27,15,28,39,5.2066,1.5073,7.490492836,Penstemon,eudicot
+936,10,56,986,Hairy beardtongue,70,15,22,16,35,39,4.501,1.5026,8.664741169,Penstemon,eudicot
+994,10,57,1015,Hairy beardtongue,70,30,14,11,32,30,2.5787,1.3554,11.63376895,Penstemon,eudicot
+981,10,58,1032,Hairy beardtongue,90,3,10,8,63,42.5,4.263,4.6955,9.969505043,Penstemon,eudicot
+934,10,59,1040,Hairy beardtongue,90,15,11,9,59,11.5,2.8225,1.995,4.074402126,Penstemon,eudicot
+954,10,60,1065,Hairy beardtongue,90,30,15,9,36,37.5,2.6375,1.2294,14.21800948,Penstemon,eudicot
+4,1,1,1,Hoary vervain,70,3,5,6,68,65,5.9363,2.8002,10.94958139,Verbena,eudicot
+60,1,2,27,Hoary vervain,70,15,28,10,38,73,11.3531,2.7087,6.429961861,Verbena,eudicot
+46,1,3,44,Hoary vervain,70,30,22,11,46,64.5,5.2662,2.5653,12.2479207,Verbena,eudicot
+15,1,4,60,Hoary vervain,90,3,12,8,NA,NA,NA,NA,NA,Verbena,eudicot
+98,1,5,89,Hoary vervain,90,15,24,9,37,64,12.8714,4.3395,4.972264089,Verbena,eudicot
+70,1,6,100,Hoary vervain,90,30,16,11,112,69,13.1236,9.0458,5.257703679,Verbena,eudicot
+171,2,7,119,Hoary vervain,70,3,24,10,80,59.5,10.3838,3.1949,5.730079547,Verbena,eudicot
+187,2,8,139,Hoary vervain,70,15,16,6.5,34,87,10.6989,3.3213,8.131677088,Verbena,eudicot
+168,2,9,155,Hoary vervain,70,30,40,11,25,87.5,7.7967,3.956,11.22269678,Verbena,eudicot
+164,2,10,171,Hoary vervain,90,3,32,10,34,67.5,7.4975,2.943,9.003001,Verbena,eudicot
+109,2,11,179,Hoary vervain,90,15,28,12,52,80,9.1032,2.3561,8.788118464,Verbena,eudicot
+122,2,12,200,Hoary vervain,90,30,18,11,62,80.5,12.2662,5.6618,6.56274967,Verbena,eudicot
+210,3,13,217,Hoary vervain,70,3,18,10,29,85,20.815,5.01,4.083593562,Verbena,eudicot
+219,3,14,235,Hoary vervain,70,15,18,14,62,95,15.109,4.5606,6.287643127,Verbena,eudicot
+294,3,15,267,Hoary vervain,70,30,36,10,58,72,7.3518,3.3139,9.793519954,Verbena,eudicot
+212,3,16,268,Hoary vervain,90,3,24,10.5,46,82,8.9191,3.2927,9.193752733,Verbena,eudicot
+256,3,17,293,Hoary vervain,90,15,36,10,52,55,5.6901,2.3548,9.665910968,Verbena,eudicot
+211,3,18,305,Hoary vervain,90,30,34,7.5,60,64,15.4912,9.275,4.131377815,Verbena,eudicot
+326,4,19,324,Hoary vervain,70,3,24,10,35,73,10.0792,5.4719,7.242638305,Verbena,eudicot
+387,4,20,355,Hoary vervain,70,15,18,12,NA,NA,NA,NA,NA,Verbena,eudicot
+337,4,21,364,Hoary vervain,70,30,20,10.5,NA,NA,NA,NA,NA,Verbena,eudicot
+350,4,22,384,Hoary vervain,90,3,16,8,70,91.5,15.3623,4.4083,5.95613938,Verbena,eudicot
+400,4,23,411,Hoary vervain,90,15,18,13,27,74.5,16.4357,3.975,4.532815761,Verbena,eudicot
+345,4,24,421,Hoary vervain,90,30,18,9.5,24,60,9.3363,2.3025,6.426528711,Verbena,eudicot
+415,5,25,431,Hoary vervain,70,3,19,13,16,49,4.1044,1.1598,11.93840756,Verbena,eudicot
+500,5,26,465,Hoary vervain,70,15,20,12,38,88,19.1935,3.156,4.584885508,Verbena,eudicot
+426,5,27,468,Hoary vervain,70,30,22,13,NA,NA,NA,NA,NA,Verbena,eudicot
+485,5,28,498,Hoary vervain,90,3,24,13,56,67,12.7117,3.2318,5.270734835,Verbena,eudicot
+459,5,29,510,Hoary vervain,90,15,20,14,NA,NA,NA,NA,NA,Verbena,eudicot
+472,5,30,527,Hoary vervain,90,30,12,15,106,78,20.2494,3.935,3.851965984,Verbena,eudicot
+545,6,31,543,Hoary vervain,70,3,14,10,98,66,9.1614,2.4549,7.204139105,Verbena,eudicot
+549,6,32,564,Hoary vervain,70,15,28,10,15,76.5,10.592,2.6165,7.222432024,Verbena,eudicot
+535,6,33,575,Hoary vervain,70,30,22,10,49,80.9,11.8263,2.4201,6.840685591,Verbena,eudicot
+523,6,34,593,Hoary vervain,90,3,22,15,72,104,11.8631,2.8092,8.766679873,Verbena,eudicot
+559,6,35,614,Hoary vervain,90,15,8,6,14,19,1.3143,0.8212,14.4563646,Verbena,eudicot
+556,6,36,631,Hoary vervain,90,30,34,8,146,66,10.6006,4.3354,6.226062676,Verbena,eudicot
+643,7,37,646,Hoary vervain,70,3,22,13,44,61.5,6.9653,3.1178,8.829483296,Verbena,eudicot
+694,7,38,673,Hoary vervain,70,15,4,19,62,53,5.1,4.2853,10.39215686,Verbena,eudicot
+613,7,39,679,Hoary vervain,70,30,20,12,28,68,4.0961,2.6184,16.6011572,Verbena,eudicot
+603,7,40,695,Hoary vervain,90,3,16,8,78,73.5,14.5819,4.1379,5.040495409,Verbena,eudicot
+606,7,41,713,Hoary vervain,90,15,26,7,54,62,5.8511,2.247,10.59629813,Verbena,eudicot
+680,7,42,747,Hoary vervain,90,30,24,9,86,61,6.9107,3.2323,8.826891632,Verbena,eudicot
+784,8,43,762,Hoary vervain,70,3,18,12,34,81,8.6571,3.2863,9.356481963,Verbena,eudicot
+779,8,44,775,Hoary vervain,70,15,18,14,60,76,10.4156,2.0935,7.296747187,Verbena,eudicot
+774,8,45,798,Hoary vervain,70,30,32,10,50,79.5,10.1775,3.1141,7.811348563,Verbena,eudicot
+749,8,46,809,Hoary vervain,90,3,34,10,52,71.5,11.0789,2.988,6.453709303,Verbena,eudicot
+786,8,47,835,Hoary vervain,90,15,10,4,42,55,5.5914,2.2789,9.836534678,Verbena,eudicot
+723,8,48,840,Hoary vervain,90,30,28,13,50,79.5,6.5338,3.057,12.16749824,Verbena,eudicot
+852,9,49,862,Hoary vervain,70,3,4,2,38,52,6.3363,2.7334,8.206682133,Verbena,eudicot
+841,9,50,882,Hoary vervain,70,15,12,3,112,54,6.4342,1.8818,8.392651767,Verbena,eudicot
+873,9,51,904,Hoary vervain,70,30,4,2,50,36,3.7158,1.7226,9.688357823,Verbena,eudicot
+811,9,52,913,Hoary vervain,90,3,20,11,52,68,7.2485,3.9515,9.381251293,Verbena,eudicot
+809,9,53,928,Hoary vervain,90,15,34,7,94,72.5,14.2065,5.6041,5.103297786,Verbena,eudicot
+815,9,54,947,Hoary vervain,90,30,32,8,41,63,10.6626,3.3083,5.908502617,Verbena,eudicot
+985,10,55,977,Hoary vervain,70,3,8,9,42,69,4.977,2.6199,13.86377336,Verbena,eudicot
+919,10,56,984,Hoary vervain,70,15,6,14,35,58,6.4418,8.5416,9.00369462,Verbena,eudicot
+907,10,57,1001,Hoary vervain,70,30,NA,NA,16,16,0.1626,0.8207,98.40098401,Verbena,eudicot
+959,10,58,1027,Hoary vervain,90,3,30,10,72,68.5,9.7919,2.1635,6.995577978,Verbena,eudicot
+974,10,59,1048,Hoary vervain,90,15,16,9,58,85,18.1132,4.7593,4.692710289,Verbena,eudicot
+913,10,60,1055,Hoary vervain,90,30,16,7,56,78,7.6631,2.3245,10.17864833,Verbena,eudicot
+85,1,1,18,Indian grass,70,3,1,10,NA,NA,NA,NA,NA,Sorghastrum,monocot
+26,1,2,20,Indian grass,70,15,5,12,20,27,1.7702,5.9306,15.25251384,Sorghastrum,monocot
+28,1,3,40,Indian grass,70,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+14,1,4,58,Indian grass,90,3,1,9.5,3,35.5,0.4039,0.725,87.89304283,Sorghastrum,monocot
+59,1,5,82,Indian grass,90,15,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+39,1,6,95,Indian grass,90,30,1,3.5,NA,NA,NA,NA,NA,Sorghastrum,monocot
+125,2,7,111,Indian grass,70,3,2,7,10,33.5,0.8063,0.9509,41.54781099,Sorghastrum,monocot
+174,2,8,136,Indian grass,70,15,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+142,2,9,152,Indian grass,70,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+132,2,10,165,Indian grass,90,3,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+149,2,11,185,Indian grass,90,15,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+103,2,12,196,Indian grass,90,30,5,16,18,28,1.3064,2.4642,21.4329455,Sorghastrum,monocot
+218,3,13,219,Indian grass,70,3,2,9,5,16,0.3343,0.6021,47.86120251,Sorghastrum,monocot
+290,3,14,249,Indian grass,70,15,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+258,3,15,258,Indian grass,70,30,3,17,19,48,2.0274,4.269,23.67564368,Sorghastrum,monocot
+274,3,16,278,Indian grass,90,3,5,12.5,19,48,1.4782,1.6589,32.47192531,Sorghastrum,monocot
+225,3,17,288,Indian grass,90,15,2,13,16,66.5,3.265,4.4514,20.36753446,Sorghastrum,monocot
+237,3,18,310,Indian grass,90,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+363,4,19,331,Indian grass,70,3,4,9,10,41,1.6048,2.0063,25.54835494,Sorghastrum,monocot
+347,4,20,347,Indian grass,70,15,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+322,4,21,361,Indian grass,70,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+302,4,22,376,Indian grass,90,3,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+399,4,23,410,Indian grass,90,15,6,18,12,47,2.3897,1.9248,19.66774072,Sorghastrum,monocot
+321,4,24,416,Indian grass,90,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+471,5,25,445,Indian grass,70,3,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+470,5,26,459,Indian grass,70,15,2,8.5,3,27,0.4743,0.2993,56.9259962,Sorghastrum,monocot
+428,5,27,470,Indian grass,70,30,5,21.5,5,45.5,1.455,4.1457,31.27147766,Sorghastrum,monocot
+404,5,28,485,Indian grass,90,3,5,13,12,76,3.7393,8.0197,20.3246597,Sorghastrum,monocot
+439,5,29,507,Indian grass,90,15,5,18,38,40,2.7913,7.4482,14.33024039,Sorghastrum,monocot
+494,5,30,533,Indian grass,90,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+575,6,31,547,Indian grass,70,3,9,20,12,75,3.7893,12.6456,19.79257383,Sorghastrum,monocot
+514,6,32,553,Indian grass,70,15,8,13,30,38,2.7249,3.7942,13.94546589,Sorghastrum,monocot
+533,6,33,573,Indian grass,70,30,2,18,6,9.5,0.0801,0.4202,118.6017478,Sorghastrum,monocot
+554,6,34,595,Indian grass,90,3,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+520,6,35,605,Indian grass,90,15,2,5,NA,NA,NA,NA,NA,Sorghastrum,monocot
+583,6,36,635,Indian grass,90,30,1,5,10,43,0.8424,0.5897,51.04463438,Sorghastrum,monocot
+678,7,37,653,Indian grass,70,3,4,13,32,62,4.4656,5.9143,13.88391258,Sorghastrum,monocot
+674,7,38,668,Indian grass,70,15,4,33,116,63.5,1.5255,2.7052,41.62569649,Sorghastrum,monocot
+650,7,39,685,Indian grass,70,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+636,7,40,704,Indian grass,90,3,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+631,7,41,718,Indian grass,90,15,NA,NA,5,34.5,1.2986,2.9725,26.56707223,Sorghastrum,monocot
+602,7,42,731,Indian grass,90,30,2,11,12,32,0.7188,1.59,44.51864218,Sorghastrum,monocot
+707,8,43,748,Indian grass,70,3,4,9,12,28,1.058,1.3062,26.46502836,Sorghastrum,monocot
+743,8,44,769,Indian grass,70,15,9,8,14,40,2.0916,4.6785,19.12411551,Sorghastrum,monocot
+781,8,45,801,Indian grass,70,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+759,8,46,813,Indian grass,90,3,5,8,12,57,1.712,3.0503,33.29439252,Sorghastrum,monocot
+719,8,47,824,Indian grass,90,15,7,16,13,41.5,1.9683,6.0134,21.08418432,Sorghastrum,monocot
+727,8,48,842,Indian grass,90,30,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+859,9,49,863,Indian grass,70,3,1,4,NA,NA,0.0199,0.3503,#VALUE!,Sorghastrum,monocot
+822,9,50,878,Indian grass,70,15,4,13,25,42.5,3.7491,3.2841,11.33605399,Sorghastrum,monocot
+836,9,51,898,Indian grass,70,30,6,24,30,61.5,3.5334,7.264,17.40533197,Sorghastrum,monocot
+835,9,52,914,Indian grass,90,3,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+842,9,53,932,Indian grass,90,15,6,17,15,54,1.8946,4.3557,28.50205848,Sorghastrum,monocot
+819,9,54,950,Indian grass,90,30,4,9,14,53,2.5626,3.1546,20.68211972,Sorghastrum,monocot
+947,10,55,971,Indian grass,70,3,10,15,14,54.5,2.6526,1.3791,20.54587951,Sorghastrum,monocot
+984,10,56,995,Indian grass,70,15,1,10,11,53,1.6777,2.0902,31.59086845,Sorghastrum,monocot
+927,10,57,1008,Indian grass,70,30,2,11.5,15,17.5,0.0647,0.9362,270.4791345,Sorghastrum,monocot
+978,10,58,1031,Indian grass,90,3,4,11,38,82,4.334,2.3264,18.92016613,Sorghastrum,monocot
+968,10,59,1046,Indian grass,90,15,NA,NA,NA,NA,NA,NA,NA,Sorghastrum,monocot
+967,10,60,1069,Indian grass,90,30,8,18,33,108,6.7113,14.0552,16.0922623,Sorghastrum,monocot
+36,1,1,8,Prairie smoke,70,3,4,11,7,8,0.8487,0.5398,9.426181218,Geum,eudicot
+83,1,2,32,Prairie smoke,70,15,5,14,16,12,2.5025,1.9814,4.795204795,Geum,eudicot
+5,1,3,38,Prairie smoke,70,30,10,10,58,8.5,2,0.5684,4.25,Geum,eudicot
+73,1,4,69,Prairie smoke,90,3,7,9,10,7.5,1.3189,1.4467,5.686556979,Geum,eudicot
+74,1,5,86,Prairie smoke,90,15,6,11,6,6.5,1.0216,2.9208,6.36256852,Geum,eudicot
+62,1,6,98,Prairie smoke,90,30,5,10,10,9,1.609,0.9104,5.593536358,Geum,eudicot
+145,2,7,113,Prairie smoke,70,3,11,12,12,8,2.203,0.8803,3.631411711,Geum,eudicot
+137,2,8,132,Prairie smoke,70,15,5,10,7,7,0.8691,0.7853,8.054309055,Geum,eudicot
+200,2,9,159,Prairie smoke,70,30,25,14,23,7,3.041,2.4524,2.301874383,Geum,eudicot
+112,2,10,162,Prairie smoke,90,3,10,14,24,9.5,3.3807,2.8753,2.810068921,Geum,eudicot
+141,2,11,183,Prairie smoke,90,15,8,14,22,11,4.0791,1.2165,2.696673286,Geum,eudicot
+136,2,12,202,Prairie smoke,90,30,10,11,10,8.5,2.2255,2.2223,3.819366435,Geum,eudicot
+242,3,13,224,Prairie smoke,70,3,8,11,10,10.5,1.9222,2.2841,5.462490896,Geum,eudicot
+273,3,14,244,Prairie smoke,70,15,4,12,12,9.5,1.8303,1.2914,5.190405944,Geum,eudicot
+226,3,15,253,Prairie smoke,70,30,10,15,7,9,0.6426,1.137,14.00560224,Geum,eudicot
+243,3,16,274,Prairie smoke,90,3,11,13.5,17,8,2.9134,1.9455,2.745932587,Geum,eudicot
+245,3,17,289,Prairie smoke,90,15,9,10,8,11,1.7234,1.9462,6.382731809,Geum,eudicot
+233,3,18,309,Prairie smoke,90,30,19,11,16,7,2.079,3.9417,3.367003367,Geum,eudicot
+376,4,19,335,Prairie smoke,70,3,6,13,23,7,3.2434,2.4302,2.158229019,Geum,eudicot
+369,4,20,351,Prairie smoke,70,15,12,12,16,9,2.1803,2.1835,4.127872311,Geum,eudicot
+395,4,21,375,Prairie smoke,70,30,6,10,10,9,1.7038,0.7611,5.28231013,Geum,eudicot
+365,4,22,387,Prairie smoke,90,3,11,12,19,13,2.4342,1.467,5.340563635,Geum,eudicot
+336,4,23,399,Prairie smoke,90,15,14,12,23,10,3.2161,1.0322,3.109356052,Geum,eudicot
+390,4,24,428,Prairie smoke,90,30,7,7,15,7,1.31,0.7587,5.34351145,Geum,eudicot
+458,5,25,442,Prairie smoke,70,3,5,7,11,5,1.0997,0.7374,4.546694553,Geum,eudicot
+468,5,26,458,Prairie smoke,70,15,5,9,15,8,1.7514,0.6454,4.567774352,Geum,eudicot
+476,5,27,479,Prairie smoke,70,30,7,10,9,6,1.4063,0.6843,4.266514968,Geum,eudicot
+450,5,28,494,Prairie smoke,90,3,8,14,26,9.5,3.8272,1.9384,2.482232441,Geum,eudicot
+457,5,29,509,Prairie smoke,90,15,8,13,22,14,2.2266,0.9798,6.287613402,Geum,eudicot
+440,5,30,521,Prairie smoke,90,30,5,11,23,8,2.5367,0.5338,3.153703631,Geum,eudicot
+538,6,31,542,Prairie smoke,70,3,8,11,24,11.5,4.4783,2.7591,2.567938727,Geum,eudicot
+557,6,32,566,Prairie smoke,70,15,7,10,10,9,1.0805,0.8375,8.329477094,Geum,eudicot
+564,6,33,580,Prairie smoke,70,30,6,9,13,6,NA,NA,NA,Geum,eudicot
+567,6,34,598,Prairie smoke,90,3,5,11,15,8,2.1431,0.5557,3.73291027,Geum,eudicot
+541,6,35,610,Prairie smoke,90,15,8,14,NA,14,3.6721,3.907,3.812532338,Geum,eudicot
+502,6,36,622,Prairie smoke,90,30,5,11,10,4.5,2.5413,2.1609,1.770747255,Geum,eudicot
+640,7,37,644,Prairie smoke,70,3,4,10,12,5,1.1152,0.9293,4.483500717,Geum,eudicot
+646,7,38,661,Prairie smoke,70,15,9,7,17,2,0.6557,0.4995,3.050175385,Geum,eudicot
+624,7,39,680,Prairie smoke,70,30,6,13,17,10,1.4139,0.7071,7.072635971,Geum,eudicot
+681,7,40,708,Prairie smoke,90,3,6,8,49,4,1.2776,0.3092,3.130870382,Geum,eudicot
+615,7,41,714,Prairie smoke,90,15,6,11,11,14,1.3499,1.4085,10.3711386,Geum,eudicot
+612,7,42,734,Prairie smoke,90,30,6,8,18,3,1.0096,1.7404,2.971473851,Geum,eudicot
+713,8,43,750,Prairie smoke,70,3,6,10,16,7,1.5977,0.8972,4.381298116,Geum,eudicot
+746,8,44,771,Prairie smoke,70,15,8,17,9,11,1.978,1.5529,5.561172902,Geum,eudicot
+750,8,45,795,Prairie smoke,70,30,6,12,9,NA,1.425,1.5434,#VALUE!,Geum,eudicot
+791,8,46,818,Prairie smoke,90,3,11,10,29,9,2.686,5.278,3.350707372,Geum,eudicot
+731,8,47,826,Prairie smoke,90,15,10,15,7,18.5,1.5174,0.639,12.19190721,Geum,eudicot
+728,8,48,843,Prairie smoke,90,30,6,12,14,7.5,2.006,2.971,3.738783649,Geum,eudicot
+838,9,49,860,Prairie smoke,70,3,5,13,9,10,0.8564,0.6298,11.67678655,Geum,eudicot
+812,9,50,877,Prairie smoke,70,15,8,11.5,13,16,2.4114,1.5673,6.635149706,Geum,eudicot
+851,9,51,902,Prairie smoke,70,30,10,13,8,11.5,1.1805,1.0044,9.7416349,Geum,eudicot
+801,9,52,910,Prairie smoke,90,3,6,10,19,NA,3.507,1.1156,#VALUE!,Geum,eudicot
+865,9,53,938,Prairie smoke,90,15,8,10,20,9,2.4577,1.0205,3.661960369,Geum,eudicot
+816,9,54,948,Prairie smoke,90,30,4,6,8,6,0.6835,0.7874,8.778346745,Geum,eudicot
+932,10,55,965,Prairie smoke,70,3,6,9,6,5,0.624,0.3835,8.012820513,Geum,eudicot
+914,10,56,983,Prairie smoke,70,15,5,3,8,5,NA,NA,NA,Geum,eudicot
+909,10,57,1002,Prairie smoke,70,30,6,7,NA,9.5,1.776,1.1757,5.349099099,Geum,eudicot
+935,10,58,1024,Prairie smoke,90,3,5,13,29,13,4.4023,2.4062,2.95300184,Geum,eudicot
+904,10,59,1037,Prairie smoke,90,15,3,8,13,11,1.1042,0.5992,9.961963412,Geum,eudicot
+948,10,60,1063,Prairie smoke,90,30,4,9,21,NA,0.4836,0.3656,#VALUE!,Geum,eudicot
+82,1,1,16,Riverbank rye,70,3,4,26,12,38,1.5473,3.2961,24.55890907,Elymus_rip,monocot
+67,1,2,29,Riverbank rye,70,15,5,27,12,37.5,1.3331,4.0132,28.12992274,Elymus_rip,monocot
+97,1,3,53,Riverbank rye,70,30,6,26,8,34,NA,NA,NA,Elymus_rip,monocot
+6,1,4,56,Riverbank rye,90,3,14,32,11,48,4.5115,2.4,10.63947689,Elymus_rip,monocot
+96,1,5,88,Riverbank rye,90,15,10,28,14,47,3.4487,1.8248,13.62832372,Elymus_rip,monocot
+9,1,6,91,Riverbank rye,90,30,10,30,18,33,2.5093,6.3003,13.15107799,Elymus_rip,monocot
+138,2,7,112,Riverbank rye,70,3,5,38,14,99,5.723,4.1611,17.29861961,Elymus_rip,monocot
+129,2,8,129,Riverbank rye,70,15,10,26,26,57.5,4.1883,3.3419,13.72872048,Elymus_rip,monocot
+120,2,9,146,Riverbank rye,70,30,13,32,17,61,5.4948,5.5411,11.10140496,Elymus_rip,monocot
+124,2,10,163,Riverbank rye,90,3,13,30,25,49,7.3119,5.1164,6.70140456,Elymus_rip,monocot
+184,2,11,194,Riverbank rye,90,15,6,25,13,41,2.9963,2.7979,13.68354304,Elymus_rip,monocot
+127,2,12,201,Riverbank rye,90,30,10,31,10,66,4.9178,5.6518,13.42063524,Elymus_rip,monocot
+249,3,13,226,Riverbank rye,70,3,10,24,17,54,3.1585,5.6198,17.09672313,Elymus_rip,monocot
+288,3,14,247,Riverbank rye,70,15,10,26,14,47,3.285,4.5794,14.30745814,Elymus_rip,monocot
+220,3,15,251,Riverbank rye,70,30,3,24,8,40.5,NA,NA,NA,Elymus_rip,monocot
+286,3,16,282,Riverbank rye,90,3,11,30,30,49.5,5.1063,7.1125,9.693907526,Elymus_rip,monocot
+255,3,17,291,Riverbank rye,90,15,5,28,26,45.5,3.4805,4.4158,13.07283436,Elymus_rip,monocot
+232,3,18,308,Riverbank rye,90,30,7,32,30,49,1.5048,5.0687,32.56246677,Elymus_rip,monocot
+397,4,19,339,Riverbank rye,70,3,5,26,20,61,3.7999,4.2967,16.05305403,Elymus_rip,monocot
+341,4,20,345,Riverbank rye,70,15,5,32,20,51.5,3.0786,2.8169,16.72838303,Elymus_rip,monocot
+362,4,21,370,Riverbank rye,70,30,22,22,29,55,5.7184,5.2162,9.618074986,Elymus_rip,monocot
+332,4,22,382,Riverbank rye,90,3,6,28,14,58,4.9432,3.0863,11.73329018,Elymus_rip,monocot
+324,4,23,396,Riverbank rye,90,15,11,33,22,48,2.9418,5.4096,16.31654089,Elymus_rip,monocot
+374,4,24,425,Riverbank rye,90,30,12,29,14,52,3.6307,7.0822,14.32230699,Elymus_rip,monocot
+488,5,25,447,Riverbank rye,70,3,10,27,37,70,NA,NA,NA,Elymus_rip,monocot
+421,5,26,451,Riverbank rye,70,15,6,27,27,39,3.02,5.2429,12.91390728,Elymus_rip,monocot
+460,5,27,475,Riverbank rye,70,30,7,30,7,48,2.2485,2.3128,21.34756504,Elymus_rip,monocot
+464,5,28,497,Riverbank rye,90,3,5,29,13,49,2.878,5.5875,17.0257123,Elymus_rip,monocot
+449,5,29,508,Riverbank rye,90,15,6,36,19,78,7.6433,7.0092,10.20501616,Elymus_rip,monocot
+477,5,30,530,Riverbank rye,90,30,2,29,13,63,3.7449,3.4682,16.82287912,Elymus_rip,monocot
+528,6,31,538,Riverbank rye,70,3,9,27,35,41.5,3.6428,4.4576,11.39233557,Elymus_rip,monocot
+540,6,32,562,Riverbank rye,70,15,8,30,37,50,7.0017,5.1238,7.14112287,Elymus_rip,monocot
+542,6,33,577,Riverbank rye,70,30,8,33,14,71,4.4163,2.8822,16.07680638,Elymus_rip,monocot
+580,6,34,601,Riverbank rye,90,3,9,27,44,51.5,9.0786,6.8147,5.67268081,Elymus_rip,monocot
+594,6,35,621,Riverbank rye,90,15,14,25,37,52.5,5.8938,4.4747,8.907665683,Elymus_rip,monocot
+503,6,36,623,Riverbank rye,90,30,10,30,18,48,5.3188,4.9006,9.024592013,Elymus_rip,monocot
+690,7,37,657,Riverbank rye,70,3,5,26,45,62.5,4.7327,4.2771,13.20599235,Elymus_rip,monocot
+654,7,38,663,Riverbank rye,70,15,9,31,34,44.5,3.0165,3.6738,14.75219625,Elymus_rip,monocot
+693,7,39,691,Riverbank rye,70,30,4,31,NA,NA,NA,NA,NA,Elymus_rip,monocot
+621,7,40,698,Riverbank rye,90,3,5,22,NA,42,0.7711,0.4238,54.46764363,Elymus_rip,monocot
+658,7,41,724,Riverbank rye,90,15,6,23,13,41.5,2.3542,1.5338,17.62806898,Elymus_rip,monocot
+618,7,42,737,Riverbank rye,90,30,8,32,33,54,3.6454,6.7183,14.81318922,Elymus_rip,monocot
+708,8,43,749,Riverbank rye,70,3,12,25,24,42,4.0941,3.037,10.25866491,Elymus_rip,monocot
+777,8,44,773,Riverbank rye,70,15,4,23,12,26,1.9233,2.6131,13.51843186,Elymus_rip,monocot
+736,8,45,791,Riverbank rye,70,30,5,30.5,14,74,5.3604,4.4634,13.80493993,Elymus_rip,monocot
+726,8,46,806,Riverbank rye,90,3,5,26,14,52.5,6.5456,2.5374,8.020655097,Elymus_rip,monocot
+712,8,47,821,Riverbank rye,90,15,5,17,11,41.5,2.2341,2.7586,18.57571282,Elymus_rip,monocot
+718,8,48,839,Riverbank rye,90,30,8,38,11,79.5,3.057,6.4493,26.00588813,Elymus_rip,monocot
+893,9,49,871,Riverbank rye,70,3,4,28,11,42.5,1.6052,2.6311,26.47645153,Elymus_rip,monocot
+887,9,50,890,Riverbank rye,70,15,7,34,22,51,4.9677,6.0663,10.26632043,Elymus_rip,monocot
+805,9,51,892,Riverbank rye,70,30,5,29,12,75,3.7852,1.4866,19.81401247,Elymus_rip,monocot
+806,9,52,912,Riverbank rye,90,3,4,27,17,75,5.113,2.6027,14.66849208,Elymus_rip,monocot
+850,9,53,934,Riverbank rye,90,15,7,32,19,69.5,5.4633,4.7093,12.72124906,Elymus_rip,monocot
+821,9,54,951,Riverbank rye,90,30,4,28,18,89,3.3328,5.9583,26.70427268,Elymus_rip,monocot
+945,10,55,970,Riverbank rye,70,3,5,26,16,42,4.4919,3.8646,9.350163628,Elymus_rip,monocot
+990,10,56,997,Riverbank rye,70,15,5,26,17,52,6.2673,6.3184,8.29703381,Elymus_rip,monocot
+911,10,57,1003,Riverbank rye,70,30,10,29,56,45.5,5.1506,8.5194,8.833922261,Elymus_rip,monocot
+960,10,58,1029,Riverbank rye,90,3,9,30,36,52,4.2873,4.687,12.12884566,Elymus_rip,monocot
+941,10,59,1042,Riverbank rye,90,15,2,24,23,58,4.4011,5.2648,13.17852355,Elymus_rip,monocot
+950,10,60,1064,Riverbank rye,90,30,3,34,33,48,6.433,10.4493,7.461526504,Elymus_rip,monocot
+41,1,1,9,Showy tick-trefoil,70,3,12,12,50,31,4.0468,10.7242,7.660373629,Desmodium,eudicot
+35,1,2,24,Showy tick-trefoil,70,15,14,13,59,32.5,3.1333,8.6656,10.37245077,Desmodium,eudicot
+31,1,3,41,Showy tick-trefoil,70,30,19,17,62,27.5,NA,NA,NA,Desmodium,eudicot
+69,1,4,66,Showy tick-trefoil,90,3,17,13,79,77,8.566,14.564,8.989026383,Desmodium,eudicot
+1,1,5,73,Showy tick-trefoil,90,15,14,11,41,37,2.9973,7.1421,12.34444333,Desmodium,eudicot
+68,1,6,99,Showy tick-trefoil,90,30,12,10,52,34,4.1355,14.3581,8.221496796,Desmodium,eudicot
+121,2,7,110,Showy tick-trefoil,70,3,24,15,79,42,5.6043,12.255,7.49424549,Desmodium,eudicot
+119,2,8,125,Showy tick-trefoil,70,15,16,12,45,35,2.3643,7.4789,14.80353593,Desmodium,eudicot
+116,2,9,144,Showy tick-trefoil,70,30,17,10,49,35,2.3891,8.4743,14.64986815,Desmodium,eudicot
+159,2,10,169,Showy tick-trefoil,90,3,22,13,72,43,7.0251,12.5789,6.120909311,Desmodium,eudicot
+140,2,11,181,Showy tick-trefoil,90,15,16,13,80,34,2.9,5.5361,11.72413793,Desmodium,eudicot
+105,2,12,197,Showy tick-trefoil,90,30,8,18,37,52,3.039,6.441,17.11089174,Desmodium,eudicot
+235,3,13,221,Showy tick-trefoil,70,3,16,14,70,41,4.2186,13.2855,9.718864078,Desmodium,eudicot
+266,3,14,242,Showy tick-trefoil,70,15,28,13,103,35,5.458,13.3945,6.41260535,Desmodium,eudicot
+246,3,15,254,Showy tick-trefoil,70,30,5,9,55,50.5,5.9319,13.8515,8.513292537,Desmodium,eudicot
+300,3,16,285,Showy tick-trefoil,90,3,14,12,79,71.5,7.9927,16.0557,8.945662917,Desmodium,eudicot
+283,3,17,298,Showy tick-trefoil,90,15,15,9,85,32.5,4.5952,15.0674,7.072597493,Desmodium,eudicot
+254,3,18,314,Showy tick-trefoil,90,30,18,10.5,40,41.5,3.8714,17.3919,10.71963631,Desmodium,eudicot
+372,4,19,334,Showy tick-trefoil,70,3,18,8,83,31,5.5555,13.4582,5.580055801,Desmodium,eudicot
+306,4,20,341,Showy tick-trefoil,70,15,12,8,97,41.5,7.0652,14.4843,5.873860613,Desmodium,eudicot
+354,4,21,367,Showy tick-trefoil,70,30,8,9,57,72,6.7153,12.859,10.72178458,Desmodium,eudicot
+370,4,22,389,Showy tick-trefoil,90,3,10,9,71,69.5,8.7778,10.4417,7.917701474,Desmodium,eudicot
+368,4,23,403,Showy tick-trefoil,90,15,3,8,64,48,5.3672,18.0937,8.943210613,Desmodium,eudicot
+303,4,24,412,Showy tick-trefoil,90,30,15,6,68,30,4.8989,13.875,6.123823716,Desmodium,eudicot
+441,5,25,439,Showy tick-trefoil,70,3,11,10,41,65,3.314,10.1572,19.61375981,Desmodium,eudicot
+420,5,26,449,Showy tick-trefoil,70,15,12,12,95,50,4.4585,12.2665,11.21453404,Desmodium,eudicot
+487,5,27,481,Showy tick-trefoil,70,30,6,8,48,41,3.6136,8.3128,11.34602612,Desmodium,eudicot
+497,5,28,501,Showy tick-trefoil,90,3,19,10,155,51,7.7832,16.1529,6.552574776,Desmodium,eudicot
+495,5,29,515,Showy tick-trefoil,90,15,15,12,110,42.5,5.9227,12.1007,7.175781316,Desmodium,eudicot
+493,5,30,532,Showy tick-trefoil,90,30,11,7,134,52,8.214,12.7842,6.330654979,Desmodium,eudicot
+532,6,31,540,Showy tick-trefoil,70,3,13,9,72,67,5.5158,13.2335,12.14692338,Desmodium,eudicot
+521,6,32,558,Showy tick-trefoil,70,15,15,9,82,83,6.784,12.266,12.23466981,Desmodium,eudicot
+593,6,33,586,Showy tick-trefoil,70,30,9,9,85,53.5,5.4934,10.6364,9.738959479,Desmodium,eudicot
+522,6,34,592,Showy tick-trefoil,90,3,19,12,98,38,5.2848,12.5341,7.19043294,Desmodium,eudicot
+590,6,35,619,Showy tick-trefoil,90,15,12,12,113,65,7.6906,13.9252,8.451876317,Desmodium,eudicot
+506,6,36,626,Showy tick-trefoil,90,30,19,10,72,28.5,4.7294,10.0862,6.026134393,Desmodium,eudicot
+657,7,37,649,Showy tick-trefoil,70,3,13,7,140,36,3.5022,6.9296,10.27925304,Desmodium,eudicot
+686,7,38,671,Showy tick-trefoil,70,15,19,10,202,28,3.8325,10.1231,7.305936073,Desmodium,eudicot
+689,7,39,688,Showy tick-trefoil,70,30,12,6,131,25,2.3875,7.1508,10.47120419,Desmodium,eudicot
+625,7,40,699,Showy tick-trefoil,90,3,18,14,211,24,5.2637,11.535,4.559530368,Desmodium,eudicot
+634,7,41,720,Showy tick-trefoil,90,15,8,7,75,52.5,4.9658,7.7444,10.57231463,Desmodium,eudicot
+655,7,42,742,Showy tick-trefoil,90,30,18,10,180,41,4.3811,10.8883,9.358380315,Desmodium,eudicot
+729,8,43,753,Showy tick-trefoil,70,3,18,9,57,24.5,2.6131,8.1919,9.375837128,Desmodium,eudicot
+732,8,44,767,Showy tick-trefoil,70,15,10,11,49,70,4.7452,7.9405,14.75174914,Desmodium,eudicot
+771,8,45,797,Showy tick-trefoil,70,30,26,10,8,20.5,5.2267,10.4961,3.922168864,Desmodium,eudicot
+772,8,46,816,Showy tick-trefoil,90,3,17,11,97,32,3.9276,7.4481,8.147469192,Desmodium,eudicot
+706,8,47,820,Showy tick-trefoil,90,15,9,7,64,62.5,5.2562,6.6679,11.89071953,Desmodium,eudicot
+757,8,48,848,Showy tick-trefoil,90,30,22,10,79,61,7.8659,14.0686,7.754993071,Desmodium,eudicot
+817,9,49,856,Showy tick-trefoil,70,3,5,4,53,71,4.0154,6.6131,17.68192459,Desmodium,eudicot
+845,9,50,883,Showy tick-trefoil,70,15,6,6,55,35.5,2.4899,5.3705,14.25760071,Desmodium,eudicot
+834,9,51,897,Showy tick-trefoil,70,30,11,9,55,38.5,3.0316,5.4455,12.69956459,Desmodium,eudicot
+882,9,52,924,Showy tick-trefoil,90,3,6,8,44,49,3.153,6.3881,15.54075484,Desmodium,eudicot
+883,9,53,942,Showy tick-trefoil,90,15,32,10,72,30.5,4.5691,9.5167,6.675275218,Desmodium,eudicot
+829,9,54,954,Showy tick-trefoil,90,30,13,9,65,39.5,3.3712,6.9161,11.71689606,Desmodium,eudicot
+991,10,55,978,Showy tick-trefoil,70,3,15,11,43,92,4.8596,9.7643,18.93159931,Desmodium,eudicot
+955,10,56,991,Showy tick-trefoil,70,15,13,11,65,63,7.0085,16.2871,8.989084683,Desmodium,eudicot
+973,10,57,1012,Showy tick-trefoil,70,30,28,10,156,25,4.032,9.7088,6.200396825,Desmodium,eudicot
+921,10,58,1022,Showy tick-trefoil,90,3,21,6,105,57,4.392,6.7644,12.97814208,Desmodium,eudicot
+922,10,59,1039,Showy tick-trefoil,90,15,4,3,67,37.5,3.0431,9.8908,12.32296014,Desmodium,eudicot
+918,10,60,1059,Showy tick-trefoil,90,30,5,9,58,77.5,6.8725,8.8107,11.27682794,Desmodium,eudicot
+7,1,1,2,Switch grass,70,3,14,13,19,55.5,6.5011,17.7036,8.537016813,Panicum,monocot
+76,1,2,30,Switch grass,70,15,8,30,27,106,7.7937,20.34421,13.60072879,Panicum,monocot
+79,1,3,48,Switch grass,70,30,7,22,24,72,6.2426,8.3995,11.53365585,Panicum,monocot
+2,1,4,55,Switch grass,90,3,13,14,28,82.5,10.608,17.5708,7.777149321,Panicum,monocot
+45,1,5,79,Switch grass,90,15,14,24,52,85,12.1829,21.2254,6.976992342,Panicum,monocot
+40,1,6,96,Switch grass,90,30,NA,NA,NA,NA,NA,NA,NA,Panicum,monocot
+151,2,7,114,Switch grass,70,3,12,12,28,98.5,7.4663,11.7667,13.19261214,Panicum,monocot
+182,2,8,138,Switch grass,70,15,17,16,31,61.5,7.0417,10.3586,8.733686468,Panicum,monocot
+175,2,9,156,Switch grass,70,30,6,20,19,82,6.2032,13.9943,13.21898375,Panicum,monocot
+188,2,10,175,Switch grass,90,3,3,14,23,96.5,7.5165,9.8588,12.83842214,Panicum,monocot
+101,2,11,178,Switch grass,90,15,10,18,22,95,8.9055,26.4269,10.66756499,Panicum,monocot
+193,2,12,211,Switch grass,90,30,2,11,14,107,8.5899,10.1569,12.4564896,Panicum,monocot
+204,3,13,214,Switch grass,70,3,8,11,27,78,6.4208,9.5254,12.14801894,Panicum,monocot
+228,3,14,237,Switch grass,70,15,13,21,34,82,9.4812,21.0423,8.648694258,Panicum,monocot
+253,3,15,257,Switch grass,70,30,6,16.5,29,60,11.3538,17.2613,5.284574328,Panicum,monocot
+298,3,16,284,Switch grass,90,3,NA,NA,NA,NA,NA,NA,NA,Panicum,monocot
+213,3,17,287,Switch grass,90,15,11,17.5,35,94,6.7167,15.2007,13.99496777,Panicum,monocot
+250,3,18,313,Switch grass,90,30,9,25,26,82,12.1031,23.8072,6.775123729,Panicum,monocot
+301,4,19,322,Switch grass,70,3,6,14,51,87,8.8106,9.5196,9.874469389,Panicum,monocot
+304,4,20,340,Switch grass,70,15,4,18,31,84,6.2649,5.8291,13.40803524,Panicum,monocot
+318,4,21,359,Switch grass,70,30,10,37.5,16,87,3.9773,1.9999,21.87413572,Panicum,monocot
+305,4,22,377,Switch grass,90,3,15,22,33,93.5,8.9525,13.6116,10.44401005,Panicum,monocot
+381,4,23,406,Switch grass,90,15,6,25,23,63.5,6.8634,8.0201,9.25197424,Panicum,monocot
+355,4,24,423,Switch grass,90,30,NA,NA,NA,NA,NA,NA,NA,Panicum,monocot
+474,5,25,446,Switch grass,70,3,10,32,33,89,10.8312,26.0756,8.217002733,Panicum,monocot
+480,5,26,463,Switch grass,70,15,11,28,46,72.5,7.5054,7.7803,9.659711674,Panicum,monocot
+437,5,27,472,Switch grass,70,30,18,24,42,74,10.4095,22.3027,7.108890917,Panicum,monocot
+447,5,28,493,Switch grass,90,3,14,16,91,63.5,6.9603,11.5474,9.123169978,Panicum,monocot
+406,5,29,503,Switch grass,90,15,10,9,56,60,8.4757,7.8486,7.079061316,Panicum,monocot
+496,5,30,534,Switch grass,90,30,11,21,40,117,10.8429,18.7329,10.79047118,Panicum,monocot
+581,6,31,548,Switch grass,70,3,7,23,15,57.5,4.0141,5.582,14.32450612,Panicum,monocot
+587,6,32,570,Switch grass,70,15,9,13,32,61,6.2655,12.4939,9.735855079,Panicum,monocot
+578,6,33,584,Switch grass,70,30,15,25,25,55.5,6.2571,12.2302,8.869923767,Panicum,monocot
+508,6,34,589,Switch grass,90,3,11,24,25,98,6.7025,7.1281,14.62140992,Panicum,monocot
+586,6,35,618,Switch grass,90,15,5,12,29,78,6.3303,8.7473,12.32169092,Panicum,monocot
+537,6,36,629,Switch grass,90,30,9,18,80,61.5,4.0544,6.4102,15.1687056,Panicum,monocot
+649,7,37,647,Switch grass,70,3,4,12,22,90.5,3.203,7.0271,28.25476116,Panicum,monocot
+697,7,38,674,Switch grass,70,15,8,19,73,76,6.7213,14.6364,11.30733638,Panicum,monocot
+604,7,39,677,Switch grass,70,30,6,16,61,80,5.2364,6.8733,15.27767168,Panicum,monocot
+628,7,40,701,Switch grass,90,3,3,28,6,130,6.436,9.8107,20.19888129,Panicum,monocot
+688,7,41,729,Switch grass,90,15,12,24,26,87,8.0994,15.6577,10.74153641,Panicum,monocot
+675,7,42,744,Switch grass,90,30,7,17,36,31.5,1.2587,5.4066,25.02582029,Panicum,monocot
+764,8,43,757,Switch grass,70,3,10,29,23,74.5,6.0752,8.5827,12.26297077,Panicum,monocot
+799,8,44,783,Switch grass,70,15,13,13,39,45.5,7.6114,5.8021,5.977875292,Panicum,monocot
+721,8,45,789,Switch grass,70,30,9,27,31,82,8.3948,11.5991,9.767951589,Panicum,monocot
+751,8,46,811,Switch grass,90,3,7,14,16,87,4.6704,7.9098,18.62795478,Panicum,monocot
+765,8,47,833,Switch grass,90,15,12,15,35,45,5.5635,4.1973,8.08843354,Panicum,monocot
+798,8,48,855,Switch grass,90,30,11,13,27,70.5,6.3782,7.5943,11.05327522,Panicum,monocot
+870,9,49,866,Switch grass,70,3,9,14,15,65.5,1.1316,2.9078,57.88264404,Panicum,monocot
+833,9,50,880,Switch grass,70,15,4,8,28,81,5.9704,6.6448,13.56693019,Panicum,monocot
+830,9,51,895,Switch grass,70,30,18,15,42,56.6,5.4085,5.8738,10.46500878,Panicum,monocot
+804,9,52,911,Switch grass,90,3,15,16,42,12,12.1861,16.3516,0.984728502,Panicum,monocot
+856,9,53,935,Switch grass,90,15,8,17,26,91,7.0385,8.0322,12.9288911,Panicum,monocot
+875,9,54,958,Switch grass,90,30,17,17,28,82.5,5.6008,9.8111,14.73003857,Panicum,monocot
+949,10,55,972,Switch grass,70,3,5,20,18,87,4.1814,4.1276,20.80642847,Panicum,monocot
+931,10,56,985,Switch grass,70,15,4,16,15,88,NA,NA,NA,Panicum,monocot
+998,10,57,1016,Switch grass,70,30,5,16,35,94,6.9842,6.2879,13.4589502,Panicum,monocot
+1000,10,58,1035,Switch grass,90,3,8,12,81,89,6.4138,8.7079,13.87632917,Panicum,monocot
+986,10,59,1051,Switch grass,90,15,11,14,49,76,8.02,9.8634,9.476309227,Panicum,monocot
+962,10,60,1066,Switch grass,90,30,2,9,31,66,4.8038,8.406,13.73912319,Panicum,monocot
