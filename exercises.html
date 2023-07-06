@@ -13,7 +13,7 @@
 
 <title>Exercises</title>
 
-<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -268,7 +268,73 @@ $(document).ready(function () {
 </div>
 
 
-<p>The exercises are organized by chapter.</p>
+<p>These exercises are intended to get you familiar with the concepts
+underlying the various statistical approaches we introduced in the book
+<em>and</em> build your skills in taking a design, interrogating the
+data, and drawing some conclusions.</p>
+<p><strong>You won’t find</strong> standard revisionary questions, such
+as “What are the assumptions underlying x?”, or “Why would you use
+method x over method y?”. These exercises will build your understanding
+of model structure, assessing assumptions, making decisions about how
+models fit and how to describe effects, but we think it better when you
+need to answer these questions while looking at data used to answer
+biological questions.</p>
+<p><strong>You will find</strong> more of the kinds of worked examples
+we used throughout the book - real world data analysis situations, taken
+from published papers. We’ll give you a bit of context for the data, and
+then ask you a series of questions that will result in your translating
+the question to a statistical model, identifying the best way to fit
+that model, assessing assumptions, and describing the patterns that you
+infer from the data analysis.</p>
+<p>For these data sets,</p>
+<ul>
+<li>You’ll find the full reference, including a link to the paper, at
+the end of each chapter’s exercises.</li>
+<li>We’ve used papers that are Open Access, as far as we know.</li>
+<li>The papers have been chosen because the authors followed the good
+practice of making the raw data available publicly. They are setting a
+great example.</li>
+<li>Getting the data.
+<ul>
+<li>In the ideal cases, you can just download the raw data and import it
+to R. For us, the ideal case means a csv file (or equivalent), with one
+row of headers, then the data. The variables have simple, short names,
+without spaces or other things that make us use quotes everywhere in our
+code.</li>
+<li>In other cases, the files aren’t quite as straightforward, and we’ve
+given you a bit of R code to import the file as a well-behaved
+dataframe. That step might include skipping rows or columns, renaming
+variables, etc.</li>
+<li>In some cases, we’ve found it simpler to create our own data file
+and give you a link to it.</li>
+</ul></li>
+<li>In the worked examples, we showed you an approach that matched what
+the original paper’s authors did. We did this to allow you to see how
+the authors put their data analysis into a larger story. In the
+exercises, we haven’t been constrained that way - we’ve seen
+opportunities to make the analysis simpler or more complex, we’ve asked
+you to use more than one approach to a data set, and so on. As a result,
+you shouldn’t worry about your results exactly matching what’s in a
+paper.</li>
+</ul>
+<div id="r-wrangling" class="section level4">
+<h4>R-wrangling</h4>
+<p>We’ve not provided the code for these exercises, other than to help
+you with getting hold of the data. The code you’ll want will depend on
+the solutions you identify. However,…</p>
+<ul>
+<li><p>The worked examples provide a “bank” of code for particular
+tasks, and you may well have identified ways to improve or streamline
+that code</p></li>
+<li><p>Instructors have access to suggested solutions to the exercises,
+which include the code. If you’re working through these exercises in a
+way linked to a class, ask your instructor about code and
+solutions.</p></li>
+</ul>
+</div>
+<div id="the-exercises-are-organized-by-chapter."
+class="section level4">
+<h4>The exercises are organized by chapter.</h4>
 <ul>
 <li><p>Chapter 1. Relax and enjoy the scenery. This chapter sets the
 scene for the rest.</p></li>
@@ -291,6 +357,7 @@ start to the inquisition.</p></li>
 <li><p>Chapter 16</p></li>
 <li><p><a href="ch17.html">Chapter 17</a></p></li>
 </ul>
+</div>
 <div id="group-exercises" class="section level2">
 <h2>Group Exercises</h2>
 <ul>
