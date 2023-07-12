@@ -13,7 +13,7 @@
 
 <title>The worked examples</title>
 
-<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.23/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -293,9 +293,10 @@ Commons licenses and good for including in lectures.</p></li>
 <p>We will update these online examples periodically to maintain
 compatibility with <em>R</em> upgrades, improve the code, and possibly
 add more material. It’s also worth checking <a
-href="https://qkstats.com">our personal website</a> for minor updates,
-suggestions, discussion, etc.</p>
-<p>The scripts should be fine for <em>R</em> version 4.3.0.</p>
+href="https://qkstats.com">our personal website</a> and <a
+href="https://mjkeough.github.io/index.html">Github</a> for minor
+updates, suggestions, discussion, etc.</p>
+<p>The scripts should be fine for <em>R</em> version 4.3.1.</p>
 <div id="a-note-on-the-r-code" class="section level4">
 <h4>A note on the <em>R</em> code</h4>
 <p>Each example is based on an Rmarkdown notebook, which has two
@@ -306,22 +307,26 @@ individual code chunks. Sometimes it’s good to just see the comments and
 the output, while at other times you really want the code. Mix and
 match!</p></li>
 <li><p>The Rmarkdown files can be downloaded using the button at the top
-right of each screen. <strong>This isn’t working atm</strong></p></li>
+right of each screen. <strong>This isn’t working atm,</strong> but you
+can save the html file and open it in RStudio and you’ll see the
+code.</p></li>
 </ul>
 <p>The scripts rely on two external R scripts:</p>
 <ul>
-<li><p><a href="../R/libraries.R">libraries</a> is a small script that
+<li><p><a href="../R/libraries.R">libraries.R</a> is a small script that
 loads packages that are used across several examples, plus packages that
 make life easier, such as the Tidyverse and broom. It makes life easier
 to add packages via this script, rather than add individually to each
 example. The script should install any packages that aren’t present and
 then load all of the packages.</p></li>
-<li><p><a href="../R/appearance.R">appearance</a> is a collection of
+<li><p><a href="../R/appearance.R">appearance.R</a> is a collection of
 tweaks used to produce the figure layouts in the book. It functions as a
 style sheet for graphics, and defines a set of variables used for axis
 colour, symbol colours, etc. Changing this script is a quick way to
 change lots of figures, e.g. to colours suitable for teaching, rather
-than the gray scales predominantly used in the printed book.</p></li>
+than the gray scales predominantly used in the printed book. It’s
+invoked in ggplot using +theme_qk(). Default ggplot settings reappear if
+you disable this line in the code.</p></li>
 </ul>
 </div>
 <div id="the-data-files" class="section level4">
