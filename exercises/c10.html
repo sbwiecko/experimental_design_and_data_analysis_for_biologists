@@ -11,7 +11,7 @@
 
 
 
-<title>Ch 6 exercises</title>
+<title>Ch 10 exercises</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -388,16 +388,18 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Ch 6 exercises</h1>
+<h1 class="title toc-ignore">Ch 10 exercises</h1>
 
 </div>
 
 
-<p>The aim of these exercises is to make sure you’re comfortable with
-fitting simple linear models to data and to emphasise the similarity
-between regression and “ANOVA”.</p>
-<p>For each of the 5 examples below, you should follow the sequence
-we’ve used previously:</p>
+<p>The aim of these exercises is to start getting familiar with mixed
+models, and in these exercises we’ll be focused on models with multiple
+categorical predictors, with at least one predictor a random effect. The
+random effects can be crossed or be nested within other predictors,
+creating a nested or multilevel structure.</p>
+<p>For each of the examples below, you should follow the sequence we’ve
+used previously:</p>
 <ol style="list-style-type: decimal">
 <li><p>What is the biological question?</p></li>
 <li><p>Is the predictor continuous or categorical?</p></li>
@@ -418,152 +420,647 @@ fit?</p>
 </ol></li>
 <li><p>What do you conclude (including any cautions)</p></li>
 </ol>
-<div id="simple-regression" class="section level2">
-<h2>Simple regression</h2>
-<div id="a." class="section level3">
-<h3>A.</h3>
-<p><span class="citation">Le Boeuf et al. (2000)</span> examined the
-foraging behaviour of northern elephant seals (<em>Mirounga
-angustirostris</em>) that breed along the west coast of Mexico and the
-USA. They attached platform satellite transmitter terminals (PTTs) to 22
-male seals and recorded, for each seal, the distance (km) to its main
-feeding area offshore and the amount of time (duration in days) it spent
-at the feeding area.</p>
-<p>You can get this data file <a href="/data/peakquinn.csv">here</a>.</p>
+<div id="things-to-look-out-for" class="section level4">
+<h4>Things to look out for</h4>
+<p>In fitting these models, we’ll need to make the initial checklist
+more complex:</p>
+<ul>
+<li><p>as well as classifying a predictor as continuous or categorical,
+think clearly about whether it is random or fixed</p></li>
+<li><p>think about the relationship between predictors - are they
+crossed (factorial) or nested (hierarchical)? Make sure that your linear
+model reflects these relationships!</p></li>
+<li><p>When there are random effects, assumptions can be more extensive.
+We’re usually interested in the fixed effects, and different fixed
+effects can have different assumptions. This is particularly the case
+with nested designs.</p></li>
+</ul>
 </div>
-<div id="b." class="section level3">
-<h3>B.</h3>
-<p><span class="citation">Peake and Quinn (1993)</span> investigated the
-relationship between the number of individuals and number of species
-(response variables) of invertebrates living in amongst clumps of
-mussels on a rocky intertidal shore and the area of those mussel clumps
-(predictor).</p>
-<p>You can get this data file <a href="/data/peakquinn.csv">here</a>.</p>
+<div id="crossed-mixed-model-designs" class="section level2">
+<h2>Crossed mixed model designs</h2>
+<p>Remember from Chapter 10 that these designs are typically used for
+two purposes.</p>
+<p>Random effects are often used as to reduce background noise in the
+data (e.g. randomized blocks designs), where the random effect is of
+little intrinsic interest. In a sense, we sacrfice degrees of freedom
+from the residual variance, anticipating that the variance attributed to
+the random effects will be large enough to make this sacrifice
+worthwhile. When you see these designs, it’s a good idea to look and see
+if the use of a random effect seems a good decision, e.g. by looking at
+blocking efficiency.</p>
+<p>In other cases, the random effects are used to estimate how
+consistently fixed effects act, by estimating variance in their effects
+across, for example, an environmental spectrum.</p>
+</div>
+<div id="a" class="section level2">
+<h2>A</h2>
+<p><span class="citation">Walter and O’Dowd (1992)</span> were
+interested in testing the hypothesis that leaves of the shrub
+<em>Viburnum tinus</em> with domatia (small shelters at the juncture of
+veins on leaves) have more mites than leaves without domatia. Fourteen
+paired leaves on a shrub of <em>V. tinus</em> were randomly chosen and
+one leaf in each pair had its domatia shaved while the other remained as
+a control; the number of mites was recorded on each leaf (experimental
+unit) after two weeks.</p>
+<p>The data file is here: <a href="../data\walter.csv">walter.csv</a>.</p>
+<pre class="r"><code>df &lt;- read.csv(&quot;../data/walter.csv&quot;)
+df</code></pre>
+<pre><code>##    leaf pair domatia mites
+## 1    a1    a  intact     9
+## 2    a2    a  shaved     1
+## 3    b1    b  intact     2
+## 4    b2    b  shaved     1
+## 5    c1    c  intact     0
+## 6    c2    c  shaved     2
+## 7    d1    d  intact    12
+## 8    d2    d  shaved     4
+## 9    e1    e  intact    15
+## 10   e2    e  shaved     2
+## 11   f1    f  intact     3
+## 12   f2    f  shaved     1
+## 13   g1    g  intact    11
+## 14   g2    g  shaved     0
+## 15   h1    h  intact     6
+## 16   h2    h  shaved     0
+## 17   i1    i  intact     7
+## 18   i2    i  shaved     1
+## 19   j1    j  intact     6
+## 20   j2    j  shaved     0
+## 21   k1    k  intact     5
+## 22   k2    k  shaved     1
+## 23   l1    l  intact     8
+## 24   l2    l  shaved     1
+## 25   m1    m  intact     3
+## 26   m2    m  shaved     1
+## 27   n1    n  intact     6
+## 28   n2    n  shaved     0</code></pre>
+<pre><code>&lt;/div&gt;</code></pre>
+<p>This file has four variables:</p>
+<ul>
+<li><p><em>leaf</em> is just a code to identify individual
+leaves</p></li>
+<li><p><em>pair</em> identifies the pair to which that leaf
+belongs</p></li>
+<li><p><em>domatia</em> describes the experimental treatments, whether
+domatia were shaved off or left intact</p></li>
+<li><p><em>mites</em> is the number of mites recorded from that
+leaf</p></li>
+</ul>
+<div id="use-the-sequence-at-the-start-of-these-exercises-to-make-some-conclusions-about-the-role-of-domatia-on-this-shrub-species." class="section level3">
+<h3>Use the sequence at the start of these exercises to make some
+conclusions about the role of domatia on this shrub species.</h3>
+<p>Focus for now on using an OLS approach, so think about the response
+variable and how you might treat it.</p>
+<hr />
+</div>
+<div id="why-do-you-think-the-authors-chose-to-run-the-experiment-with-pairs-of-leaves" class="section level3">
+<h3>Why do you think the authors chose to run the experiment with pairs
+of leaves?</h3>
+<hr />
+<div id="did-that-pairing-decision-improve-their-ability-to-say-something-about-domatia" class="section level4">
+<h4>Did that pairing decision improve their ability to say something
+about domatia?</h4>
+<hr />
 </div>
 </div>
-<div id="model-2-regression" class="section level2">
-<h2>Model 2 regression</h2>
-<div id="c." class="section level3">
-<h3>C.</h3>
-<p><span class="citation">Dai et al. (2020)</span> examined the
-relationships between aboveground (AGB) and belowground (BGB) plant
-biomass from 80 sites across four types of grassland (temperate
-grassland, desert grassland, alpine meadow, meadow steppe) in a region
-of China. Their research questions did not distinguish response and
-predictor variables so they used reduced major axis (RMA) regression to
-determine the slopes of the relationships between log(ABG) and log(BGB)
-for each grassland type and compare these to a slope of 1, indicating an
-(isometric) allometric relationship.</p>
+<div id="extra-questions" class="section level3">
+<h3>Extra questions:</h3>
+<p><strong>Are there alternatives to how you treated the response
+variable in your analysis.</strong></p>
+<p>Hint: there are at least a couple</p>
+<hr />
+<p><strong>Would your conclusions have changed?</strong></p>
+<hr />
 </div>
 </div>
-<div id="one-factor-anova" class="section level2">
-<h2>One factor ANOVA</h2>
-<div id="d." class="section level3">
-<h3>D.</h3>
-<p><span class="citation">Vosteen, Gershenzon, and Kunert (2016)</span>
-examined patterns of production of honeydew by different races of pea
-aphids (<em>Acyrthosiphon pisum</em>) and how that attracts
-ovipositioning hoverflies (<em>Episyrphus balteatus</em>) to create
-enemy-free space for the aphids. They measured honeydew production (mg)
-over 24 hours by three races of aphids (representing the native hosts
-they were collected from: <em>Triflolium</em>, <em>Pisum</em>,
-<em>Medicago</em> races) on plants of their native hosts and also the
-universal host plant <em>Vicia faba</em> in a climate chamber. There
-were six combinations of aphid race and host (native vs universal) plant
-that Vosteen et al (2016) treated as a single factor.</p>
-<p>The data from this paper are available through <a href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.37972"><em>datadryad</em></a>
-<em>.</em> For this question, the data set we’ll use is for Figure 2e.
-The authors’ analysis is provided and uses the data set
-…2e…collection.txt, but we want to do a different analysis in Chapter 7,
-so the file with additional factors is <a href="/data/vosteen.csv">here</a>.</p>
-<div id="describe-the-terms-in-the-linear-model-if-this-study-was-treated-as-a-two-factor-aphid-race-and-host-plant-crossed-design-chapter-7." class="section level4">
-<h4>Describe the terms in the linear model if this study was treated as
-a two-factor (aphid race and host plant) crossed design (Chapter
-7).</h4>
+<div id="b" class="section level2">
+<h2>B</h2>
+<p><span class="citation">Didiano, Johnson, and Duval (2016)</span>
+assessed the effects of rainfall intensity and frequency on performance
+of grassland plants in Ontario, attempting to understand potential
+effects of future climates. The area is projected to receive much more
+summer rainfall than at present. They established a field experiment in
+which plants were grown from seeds in pots subjected to one of two
+rainfall levels (70 and 90 mm per month) and three frequencies (3, 5,
+and 15 days per month). They were interested in whether responses of
+plants varied according to whether the plants were moncots (5 species,
+though only 4 grew successfully) or eudicots (10, species).</p>
+<p>The experiment was done using shelters (see their supplementary Fig
+2) that prevented natural rainfall, allowing the researchers to control
+water received by the plants. They used 10 shelters, each of which had 6
+groups of 18 pots (see their figure S1). Each group received one of the
+6 frequency/amount combinations. The 18 pots in each group had one of
+the 15 target species, with three pots used to measure soil moisture
+levels during the experiment.</p>
+<p>For each seedling, they recorded leaf number (which didn’t change
+much), plant height, and above- and below-ground biomass at the end of
+the experiment. They also calculated a ratio of above:below biomass.</p>
+<p>The data are available from <a href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.t6h51">dryad</a>;
+the data you’ll use are the first sheet in the Excel file, which you can
+import directly, or use Excel to save that first sheet as a csv file. To
+make things a little complicated, the data file uses only common names,
+while the paper uses formal scientific names. We’ve made our own version
+of the file with species names and monocot/eudicot added - it’s <a href="../data/didiano.csv">didiano.csv</a></p>
+<p>Let’s keep things simple by focusing on one response variable
+(above.ground.biomass) and one species (Big bluestem)</p>
+<pre class="r"><code>didiano &lt;- read.csv(&quot;../data/didiano.csv&quot;)
+#Now create subset using just one species 
+df&lt;-subset(didiano, Species==&quot;Big bluestem&quot;)
+head(df,10)</code></pre>
+<pre><code>##    Plant.ID Shelter Plot Pot      Species Amount Frequency
+## 1        43       1    1  10 Big bluestem     70         3
+## 2        56       1    2  26 Big bluestem     70        15
+## 3        42       1    3  43 Big bluestem     70        30
+## 4        18       1    4  61 Big bluestem     90         3
+## 5        81       1    5  87 Big bluestem     90        15
+## 6        80       1    6 102 Big bluestem     90        30
+## 7       167       2    7 117 Big bluestem     70         3
+## 8       155       2    8 133 Big bluestem     70        15
+## 9       181       2    9 157 Big bluestem     70        30
+## 10      106       2   10 160 Big bluestem     90         3
+##    X1st.leaf.measurement X1st.plant.height.measurement X2nd.leaf.measurement
+## 1                     21                          18.5                    15
+## 2                     14                          14.0                    18
+## 3                     28                          21.0                    40
+## 4                      9                          18.0                    23
+## 5                     28                          18.5                    32
+## 6                     17                          18.0                    24
+## 7                     22                          20.0                    21
+## 8                     43                          20.0                    33
+## 9                     20                          19.0                    34
+## 10                    22                          17.0                    49
+##    X2nd.plant.height.measurement Above.ground.biomass Below.ground.biomass
+## 1                           51.0               3.2582              5.11740
+## 2                           44.0               3.5384              5.13360
+## 3                          122.5               9.9042             10.92450
+## 4                           59.0               4.5037              7.07450
+## 5                          103.0               7.5734             12.62010
+## 6                          101.5               6.6888             18.50870
+## 7                           74.0               5.4688             13.18560
+## 8                           61.0               9.5101             23.75450
+## 9                           58.0               4.9502              1.07738
+## 10                          81.0              10.0241             26.37970
+##    Above..to.below.ground.ratio    Sp_name    Type
+## 1                   15.65281444 Andropogon monocot
+## 2                   12.43499887 Andropogon monocot
+## 3                   12.36849014 Andropogon monocot
+## 4                   13.10033972 Andropogon monocot
+## 5                   13.60023239 Andropogon monocot
+## 6                   15.17462026 Andropogon monocot
+## 7                   13.53130486 Andropogon monocot
+## 8                   6.414233289 Andropogon monocot
+## 9                   11.71669832 Andropogon monocot
+## 10                  8.080525933 Andropogon monocot</code></pre>
+<hr />
+<div id="use-the-sequence-at-the-start-of-these-exercises-to-make-some-conclusions-about-the-role-of-rainfall-amount-and-frequency-on-this-species." class="section level3">
+<h3>Use the sequence at the start of these exercises to make some
+conclusions about the role of rainfall amount and frequency on this
+species.</h3>
+<p><strong>Focus for now on using an OLS approach, so think about the
+response variable how you might treat it.</strong></p>
+<p><strong>Now use REML instead</strong></p>
+<hr />
+</div>
+<div id="why-do-you-think-the-authors-chose-to-lay-out-the-experiment-with-10-shelters" class="section level3">
+<h3>Why do you think the authors chose to lay out the experiment with 10
+shelters?</h3>
+<p>Did that design decision improve their ability to say something about
+the rainfall effects?</p>
+<hr />
+<div id="simplified-model" class="section level4">
+<h4>Simplified model</h4>
+<p>Appropriate model for full RCB has Amount x Shelter and Frequency x
+Shelter. Didiano et al. apparently did not include these terms.</p>
+<p><strong>Redo the earlier analysis using their simpler model as
+starting point</strong></p>
+<hr />
 </div>
 </div>
-<div id="e." class="section level3">
-<h3>E.</h3>
-<p><span class="citation">Binning, Roche, and Layton (2013)</span>
-studied the effect of ectoparasitic isopods (<em>Anilocra
-nemipteri</em>) on the swimming ability of a tropical species of bream
-(<em>Scolopsis bilineatus</em>). They collected 18 unparasitized and 20
-parasitized fish from Lizard Island on the Great Barrier Reef and
-created four treatment groups in the laboratory: eight unparasitized
-fish, 10 parasitized fish, 10 parasitized fish that had the parasites
-removed, and ten unparasitized fish that had model parasites made of
-plastic added. They recorded the swimming speed (body lengths per
-second) and oxygen consumption (mgO<sub>2</sub> per kg per hour) of each
-fish, in a respirometer.</p>
-<p>The data are available from <a href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.r73v3">datadryad</a>.
-Within dryad, the dataset you want is “binning etal 2012 one way
-anova.txt”; in this dataset, SMR is Standard Metabolic Rate
-(O<sub>2</sub> consumption), AS = factorial aerobic scope, and Ucrit is
-swimming speed.</p>
-<p><strong>You should be able to use the answer from the previous
-section to generate the code you’ll need</strong></p>
+<div id="extension-activities" class="section level3">
+<h3>Extension activities</h3>
+<ol style="list-style-type: decimal">
+<li>For the species we’ve chosen, did rainfall have the same effect on
+plant height (X2nd.plant.height.measurement) and below-ground
+biomass?</li>
+<li>Was there a difference in how monocot and eudicot species responded?
+They used 14 species in their experiment, with the aim of comparing
+responses of monocot and eudicot species?
+<ul>
+<li>The monocot species (all Poaceae) were <em>Andropogon gerardii</em>
+(Big bluestem) <em>, Elymus canadensisa</em> (Canada wild rye)<em>,
+Elymus riparius</em> (Riverbank rye)<em>, Panicum virgatum,</em> and
+<em>Sorghastrum nutans</em> (Indian grass), but <em>S. nutans</em>
+failed to grow.</li>
+<li>The eudicots were <em>Asclepias tuberosa</em> (butterflyweed)<em>,
+Desmodium canadense</em> (Showy tick-trefoil)<em>, Eupatorium
+perfoliatum</em> (Common boneset)<em>, Euphorbia corollata</em>
+(flowering spurge)<em>, Geum triflorum</em> (Prairie smoke)<em>,
+Oenothera biennis</em> (Common evening primrose)<em>, Penstemon
+hirsutus</em> (Hairy beardtongue)<em>, Solidago nemoralis</em> (Gray
+goldenrod)<em>, Verbena stricta</em> (Hoary vervain), and <em>Zizia
+aurea</em> (Golden alexanders)<em>,</em> which were spread over 9
+families.</li>
+<li>Hint: you might want to simplify this question by focusing just on
+main effects, particularly of rainfall amount</li>
+<li>If you start working through more analyses, you’ll get some
+experience working with missing values as well for some species! **Note
+that simplified model isn’t affected to same degree by occasional missed
+plants</li>
+</ul></li>
+</ol>
+<hr />
+<div id="as-an-example-run-the-analysis-and-interpret-it-for-the-data-for-zizia" class="section level4">
+<h4>As an example, run the analysis and interpret it for the data for
+<em>Zizia</em></h4>
+<hr />
 </div>
-<div id="f." class="section level3">
-<h3>F.</h3>
-<p>Here is an example from <span class="citation">Kiss et al.
-(2017)</span>. They were interested in the effects of intake of an
-invasive weed (ragweed) on health of humans as this species is now being
-used as a herbal supplement. They did an experiment using Wistar
-laboratory rats. Twenty-four rats were randomly allocated to one of
-three treatment groups, with eight rats in each group. Group 1 was a
-control group which was just fed cookie dough, group 2 rats were fed
-cookie dough with a low dose of ragweed and group 3 rats were fed cookie
-dough with a high dose of ragweed. The total amount of feed was the same
-in each group and the experiment ran for 28 days, with rats fed daily.
-At the end of the experiment, a range of blood parameters were measured
-and we will focus on aspartate aminotransferase (ast).</p>
-<p>You can access the data file <a href="https://doi.org/10.1371/journal.pone.0176818.s005">here</a>.
-However, it’s an Excel file not really formatted for <em>R</em>. You’ll
-need to delete some rows and redo the treatment labels to be able to use
-open as a dataframe. Our reformatting of the file is <a href="/data/kissasst.csv">here</a>. Check your file against it if you
-have problems.</p>
-<p><strong>Again, you should use the same approach as for the two
-previous questions (although the answers will be
-different!)</strong></p>
+</div>
+</div>
+<div id="c." class="section level2">
+<h2>C.</h2>
+<p><span class="citation">Highfill et al. (2019)</span> examined effects
+of two psychostimulants of public health concern (cocaine and
+methamphetamine) using <em>Drosophila melanogaster</em> as a
+“translational” model species. Translational reflected similarities in
+dopamine transport and the overall effects of exposure. Their interest
+was in variation in susceptibility to these compounds, so they examined
+responses of lines of flies chosen from a large set of inbred lines (the
+Genetic Reference Panel). Groups of 5 flies from a line were placed into
+test vials and their consumption of sucrose media and sucrose + drug
+media recorded after 18 h. There’s a nice diagram of the test vial <a href="https://doi.org/10.1371/journal.pgen.1007834.g001">here</a>.
+Please look at it before proceeding.</p>
+<p>It’s not uncommon to find sex-based differences in consumption, so
+they used groups of males and groups of female flies for each line.
+Combinations were replicated 10 times.</p>
+<p>The final complexity was that they were interested in whether drug
+sensitivity changed with time, so they allowed 6 hours for flies to
+feed, then ran another trial, followed by more food, and a third.</p>
+<hr />
+<div id="what-is-this-design" class="section level3">
+<h3>What is this design?</h3>
+<p>As you work your way through the familiar set of questions at the
+start of these exercises, there are two important questions for you to
+answer. This is a complex example, so start with a factor diagram (see,
+e.g. Figure 10.2). It will help to clarify the relationships between the
+different factors. Look at the data file to see how they’re named. You
+can download it <a href="https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1007834#sec017">here</a></p>
+<pre class="r"><code>library(readxl)
+highfill &lt;- read_excel(&quot;../data/pgen.1007834.s001.xlsx&quot;)
+highfill &lt;- highfill %&gt;%
+  dplyr::rename(Line = &quot;DGRP Line&quot;) %&gt;%
+  dplyr::rename(vial = Replicate)
+head(highfill,10)</code></pre>
+<pre><code>## # A tibble: 10 × 6
+##    Solution Sex    Line  vial Consumption Exposure
+##    &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt;
+##  1 Cocaine  F        41     1        34.6        1
+##  2 Cocaine  F        41     2        23.6        1
+##  3 Cocaine  F        41     3        22.6        1
+##  4 Cocaine  F        41     4        38.6        1
+##  5 Cocaine  F        41     5        11.6        1
+##  6 Cocaine  F        41     6        37.6        1
+##  7 Cocaine  F        41     7        54.6        1
+##  8 Cocaine  F        41     8        13.6        1
+##  9 Cocaine  F        41     9        59.6        1
+## 10 Cocaine  F        41    10        81.6        1</code></pre>
+<hr />
+<div id="how-many-factors-are-there-in-the-design" class="section level4">
+<h4>How many factors are there in the design?</h4>
+<p>Hint: it’s more than 3!</p>
+<hr />
+</div>
+<div id="what-model-corresponds-to-the-design" class="section level4">
+<h4>What model corresponds to the design?</h4>
+<ol style="list-style-type: decimal">
+<li><p>Factorial mixed model, with 3 fixed effects (Solution, Sex,
+Exposure) and one random effect (Line)</p></li>
+<li><p>Partly-nested mixed model, with vials as plots or subjects. Sex,
+Exposure and Line as between-plot effects and Drug Effect (the pairs of
+capillary tubes) as the within-plots effect</p></li>
+<li><p>Partly-nested mixed model, with vials as plots or subjects. Sex
+and Line as between-plot effects and Drug Effect and Exposure as
+within-plots effect.</p></li>
+</ol>
+<hr />
+</div>
+</div>
+<div id="time-for-some-analysis" class="section level3">
+<h3>Time for some analysis</h3>
+<p>We’ll approach the analysis of this data set in a couple of ways -
+simple and complex. The complex way is an extension exercise for Chapter
+12. The keenest of you might like to take on the challenge of specifying
+and running this model. Do it after you’ve finished the Chapter 12
+exercises, and with reference to Box 12.5.</p>
+<hr />
+</div>
+<div id="ways-to-simplify-things" class="section level3">
+<h3>Ways to simplify things</h3>
+<p>We can also make the main question (variation in sensitivity to a
+psychostimulant) more tractable. The stimulant effect is the difference
+between sucrose and the drug solution, so we could calculate that for
+each vial.</p>
+<p>We still have the question of what to do with the three trials
+(Exposure).</p>
+<pre><code>-   You could jump ahead to Chapter 12 and see whether sensitivity varies with time, and whether that variation varies with line
+
+-   Use the three trials as just a way of estimating sensitivity, i.e. average them
+
+-   Choose one of the trials as &quot;the&quot; endpoint, e.g. Trial 3</code></pre>
+<p>For this chapter’s exercises, lets stick with the two simplifications
+- calculate sensitivity and average it across trial, and calculate
+sensitivity and look at the last trial (Exposure = 3).</p>
+<p>Start by rearranging the data so the Sucrose and Drug consumption
+values are columns, rather than appearing on different rows</p>
+<pre class="r"><code>df &lt;-  highfill %&gt;%
+  pivot_wider(names_from = Solution, values_from = Consumption) </code></pre>
+<pre><code>## Warning: Values from `Consumption` are not uniquely identified; output will contain
+## list-cols.
+## • Use `values_fn = list` to suppress this warning.
+## • Use `values_fn = {summary_fun}` to summarise duplicates.
+## • Use the following dplyr code to identify duplicates.
+##   {data} %&gt;%
+##   dplyr::group_by(Sex, Line, vial, Exposure, Solution) %&gt;%
+##   dplyr::summarise(n = dplyr::n(), .groups = &quot;drop&quot;) %&gt;%
+##   dplyr::filter(n &gt; 1L)</code></pre>
+<pre class="r"><code>df$Sucrose &lt;-unlist(df$Sucrose)
+df$Cocaine &lt;-unlist(df$Cocaine)
+df$Pref &lt;-df$Cocaine - df$Sucrose
+df$Line &lt;-as.factor(df$Line)
+df$Sex &lt;- as.factor(df$Sex)
+df$Exposure &lt;- as.factor(df$Exposure)
+head(df,10)</code></pre>
+<pre><code>## # A tibble: 10 × 7
+##    Sex   Line   vial Exposure Cocaine Sucrose    Pref
+##    &lt;fct&gt; &lt;fct&gt; &lt;dbl&gt; &lt;fct&gt;      &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 F     41        1 1           34.6    50   -15.4  
+##  2 F     41        2 1           23.6    59   -35.4  
+##  3 F     41        3 1           22.6    55   -32.4  
+##  4 F     41        4 1           38.6    44    -5.4  
+##  5 F     41        5 1           11.6    27   -15.4  
+##  6 F     41        6 1           37.6    79.8 -42.2  
+##  7 F     41        7 1           54.6    84.8 -30.2  
+##  8 F     41        8 1           13.6    85.8 -72.2  
+##  9 F     41        9 1           59.6    65.8  -6.20 
+## 10 F     41       10 1           81.6    81.8  -0.200</code></pre>
+<hr />
+<div id="analyze-just-one-survey" class="section level4">
+<h4>Analyze just one survey</h4>
+<hr />
+</div>
+<div id="analyze-mean-of-3-exposure-times" class="section level4">
+<h4>Analyze mean of 3 exposure times</h4>
+<hr />
+</div>
+</div>
+<div id="what-do-you-conclude" class="section level3">
+<h3>What do you conclude?</h3>
+<p>Do you see variation among <em>Drosophila</em> genetic lines?</p>
+<p>Does that variation depend on the sex of flies?</p>
+<p>Does your conclusion match that of the original authors in their
+paper?</p>
+</div>
+</div>
+<div id="section" class="section level2">
+<h2>————————————————————————</h2>
+</div>
+<div id="designs-with-nesting" class="section level2">
+<h2>Designs with nesting</h2>
+</div>
+<div id="d." class="section level2">
+<h2>D.</h2>
+<p><span class="citation">Birceanu and Wilkie (2018)</span> examined
+potential concerns around the use of 3-trifluoromethyl-4-nitrophenol
+(TFM). This chemical is used to control an invasive species (sea
+lamprey) in the Great Lakes of North America. Control is directed at
+larval lampreys, and to be effective, it must be applied at relatively
+high concentrations. There is a question of risks this may pose to other
+fish species. Bircenau and Wilkie focused on physiological effects on
+rainbow trout (<em>Oncorhynchus mykiss</em>).</p>
+<p>In the data we’ll look at, they focused on sub-lethal,
+environmentally relevant concentrations of TFM, and they considered
+effects on two pathways involved in detoxification of TFM. The
+hypothalamic-pituitary-interrenal (HPI) axis mediates the stress
+response of fishes, and on liver metabolic capacity. Many organisms
+detoxify pollutants via the liver.</p>
+<p>Physiological measurements were done on individual trout. Fish were
+exposed to TFM (or control) for 9h, then stressed for 12h, after which
+physiological measurements were taken.</p>
+<p>The animal husbandry involved fish being placed in large (180 L)
+tanks, with 24 fish per tank. Six tanks were used, and after fish had
+acclimatized for 24 h, TFM was added to three of the tanks. After 9h,
+all tanks were flushed and fish left overnight. After this time, 6 fish
+were removed from each tank and assayed, then fish were stressed (by
+chasing them vigorously for 3 min), then 6 more assayed after 1 and 4 h,
+then a further 6 sampled after 24h. Their <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200782">Figure
+1</a> has a diagram of the experimental setup.</p>
+<pre class="r"><code>df &lt;- pone_0200782_s003 &lt;- read_excel(&quot;../data/pone.0200782.s003.xlsx&quot;, 
+     sheet = &quot;Liver glycogen on SPSS&quot;, col_types = c(&quot;text&quot;, 
+         &quot;text&quot;, &quot;text&quot;, &quot;numeric&quot;))
+# Relabel glyggen
+df &lt;- df %&gt;%
+  dplyr::rename(Glycogen = &quot;Glycogen (umol/mg protein)&quot;) %&gt;%
+  dplyr::rename(Tank = &quot;Tank#&quot;)
+
+head(df,10) </code></pre>
+<pre><code>## # A tibble: 10 × 4
+##    Treatment Tank  Time  Glycogen
+##    &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt;
+##  1 TFM       1     0h        406.
+##  2 TFM       1     0h       1161.
+##  3 TFM       1     0h        250.
+##  4 TFM       2     0h        450.
+##  5 TFM       2     0h       2418.
+##  6 TFM       2     0h        372.
+##  7 TFM       2     0h       1081.
+##  8 TFM       3     0h       3119.
+##  9 TFM       3     0h       3652.
+## 10 TFM       3     0h       3683.</code></pre>
+<div id="start-by-going-through-the-steps-at-the-start-to-be-clear-about-the-question-the-kinds-of-predictors-etc.-pay-particular-attention-to-experimental-units-and-what-the-treatments-are." class="section level4">
+<h4>Start by going through the steps at the start to be clear about the
+question, the kinds of predictors, etc. Pay particular attention to
+experimental units, and what the treatments are.</h4>
+<hr />
+</div>
+<div id="lets-start-with-a-simple-question-what-was-the-situation-4h-after-stress-did-exposure-to-tfm-affect-the-stress-response-at-4h" class="section level4">
+<h4>Let’s start with a simple question: what was the situation 4h after
+stress? Did exposure to TFM affect the stress response at 4h?</h4>
+<p><strong>Describe two models that you could fit to address this
+question</strong></p>
+<p><strong>Fit both of these models, using OLS (or you can go mixed
+model/REML if you feel like it</strong></p>
+<hr />
+</div>
+<div id="what-do-you-conclude-about-tfm" class="section level3">
+<h3>What do you conclude about TFM?</h3>
+<hr />
+<div id="do-tanks-have-any-effect-on-glycogen-at-4h" class="section level4">
+<h4>Do tanks have any effect on Glycogen at 4h?</h4>
+<hr />
+</div>
+<div id="do-you-have-any-suggestions-for-alternative-ways-to-do-this-experiment" class="section level4">
+<h4>Do you have any suggestions for alternative ways to do this
+experiment?</h4>
+<hr />
+</div>
+</div>
+<div id="what-if-we-include-all-4-stages" class="section level3">
+<h3>What if we include all 4 stages?</h3>
+<p>How would your analysis change if we wanted to include very short and
+longer term responses to stress? Have a quick think about this and then
+take it up again when you get to Chapter 11.</p>
+<hr />
+</div>
+</div>
+<div id="e." class="section level2">
+<h2>E.</h2>
+<p><span class="citation">Cramp et al. (2014)</span> examined two
+aspects of changing climates, altered levels of UVB radiation and
+increased temperatures. Their interest was in the capacity for these
+changes to alter physiology (measured as oxygen consumption, VO2) and
+susceptibility to parasites (measured as prevalence, i.e. whether
+parasites were present, and intensity, the number of parasites present).
+They were especially interested in whether UV and temperature acted
+independently or synergistically, and they investigated this question
+with a small, widely-distributed freshwater fish, <em>Gambusia
+holbrooki</em>.</p>
+<p>The experiment involved wild-caught fish (from the University of
+Queensland campus) that were brought into the laboratory and housed in
+2L tanks. There were 40 tanks, each with 15 fish. After initial
+acclimitization, tanks were assigned randomly to one of four
+combinations of temperature (18 or 25 ℃) and UVB (high and low,
+corresponding to a more than 10-fold difference). After 10 days, fish
+were challenged with a common pathogen, whitespot, which is an
+ectoparasitic ciliate. Fish were left with the parasites for 8 d, after
+which the presence or absence of parasites was recorded (prevalence),
+the number of parasites counted (intensity), and a measure of each
+fishes metabolic rate (as oxygen consumption) taken.</p>
+<hr />
+<div id="follow-the-steps-at-the-top-of-these-exercises-to-be-sure-that-you-are-clear-on-the-design-and-model" class="section level3">
+<h3>Follow the steps at the top of these exercises to be sure that you
+are clear on the design and model</h3>
+<p>Let’s get the data and have a quick look. The data are available from
+<a href="https://datadryad.org/stash/dataset/doi:10.5061/dryad.74b31">Dryad</a>,
+and there are two worksheets we’re interested in here, VO2 and Parasite
+intensity.</p>
+<pre class="r"><code>library(readxl)
+cramp_vo2 &lt;- read_excel(&quot;../data/Cramp et al raw data.xlsx&quot;, 
+     sheet = &quot;VO2&quot;)
+cramp_intens &lt;- read_excel(&quot;../data/Cramp et al raw data.xlsx&quot;, 
+     sheet = &quot;Infection Intensity&quot;)
+
+cramp_vo2 &lt;- cramp_vo2 %&gt;%
+  dplyr::rename(UV = &quot;UV Level&quot;) %&gt;%
+  dplyr::rename(VO2 = &quot;VO2 (ml h-1)&quot;) %&gt;%
+  dplyr::rename(Temperature = &#39;Temperature (oC)&#39;)
+cramp_intens &lt;- cramp_intens %&gt;%
+  dplyr::rename(UV = &quot;UV Level&quot;) %&gt;%
+  dplyr::rename(Intensity = &quot;Whitespots/fish&quot;) %&gt;%
+  dplyr::rename(Temperature = &#39;Temperature (oC)&#39;)
+
+cramp_intens$Temperature&lt;-as.factor(cramp_intens$Temperature)
+cramp_intens$Tank &lt;-as.factor(cramp_intens$Tank)
+cramp_vo2$Temperature&lt;-as.factor(cramp_vo2$Temperature)
+cramp_vo2$Tank &lt;-as.factor(cramp_vo2$Tank)
+
+head(cramp_vo2, 10)</code></pre>
+<pre><code>## # A tibble: 10 × 5
+##    UV    Temperature Tank      VO2 `Body mass (g)`
+##    &lt;chr&gt; &lt;fct&gt;       &lt;fct&gt;   &lt;dbl&gt;           &lt;dbl&gt;
+##  1 Low   18          1     0.0405           0.124 
+##  2 Low   18          1     0.0386           0.108 
+##  3 Low   18          1     0.0264           0.0746
+##  4 Low   18          2     0.0597           0.129 
+##  5 Low   18          2     0.0438           0.099 
+##  6 Low   18          2     0.00737          0.113 
+##  7 Low   18          3     0.0199           0.0468
+##  8 Low   18          3     0.0197           0.0505
+##  9 Low   18          4     0.0132           0.0502
+## 10 Low   18          4     0.0255           0.0682</code></pre>
+<pre class="r"><code>head(cramp_intens, 10)</code></pre>
+<pre><code>## # A tibble: 10 × 4
+##    UV    Temperature Tank  Intensity
+##    &lt;chr&gt; &lt;fct&gt;       &lt;fct&gt;     &lt;dbl&gt;
+##  1 Low   18          1            15
+##  2 Low   18          1             0
+##  3 Low   18          1             0
+##  4 Low   18          1            12
+##  5 Low   18          1            11
+##  6 Low   18          1            15
+##  7 Low   18          1            15
+##  8 Low   18          1            14
+##  9 Low   18          1            11
+## 10 Low   18          2            11</code></pre>
+<hr />
+<div id="start-by-looking-at-metabolic-performance-of-fish" class="section level4">
+<h4>Start by looking at metabolic performance of fish</h4>
+<hr />
+</div>
+</div>
+<div id="what-are-the-two-main-models-you-could-fit-to-assess-the-effects-of-uv-and-temperature" class="section level3">
+<h3>What are the two main models you could fit to assess the effects of
+UV and Temperature?</h3>
+<p><strong>What assumptions are made in fitting each model</strong>?</p>
+<table>
+<colgroup>
+<col width="101%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><h3 id="use-the-two-approaches-to-analyse-vo2-and-outline-your-conclusions">Use
+the two approaches to analyse VO2 and outline your conclusions</h3></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="what-are-your-thoughts-about-the-effects-of-uv-and-temperature-on-vo2" class="section level3">
+<h3>What are your thoughts about the effects of UV and Temperature on
+VO2?</h3>
+<hr />
+</div>
+<div id="and-for-a-bit-more-use-the-approach-youve-developed-to-look-at-parasite-intensity" class="section level3">
+<h3>And for a bit more, use the approach you’ve developed to look at
+parasite intensity</h3>
+<hr />
+<div id="if-youre-still-feeling-enthusiastic-keep-these-data-in-mind-when-you-get-to-chapter-13-and-take-a-look-at-prevalence-its-a-separate-sheet-in-the-excel-file-from-dryad" class="section level4">
+<h4>If you’re still feeling enthusiastic, keep these data in mind when
+you get to Chapter 13, and take a look at prevalence (it’s a separate
+sheet in the Excel file from dryad)</h4>
+</div>
 </div>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2 class="unnumbered">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-binningEctoparasitesIncreaseSwimming2013" class="csl-entry">
-Binning, Sandra A., Dominique G. Roche, and Cayne Layton. 2013.
-<span>“Ectoparasites Increase Swimming Costs in a Coral Reef
-Fish.”</span> <em>Biology Letters</em> 9 (1): 20120927. <a href="https://doi.org/gsgbsx">https://doi.org/gsgbsx</a>.
+<div id="ref-birceanuPostexposureEffectsPiscicide2018" class="csl-entry">
+Birceanu, Oana, and Michael Patrick Wilkie. 2018. <span>“Post-Exposure
+Effects of the Piscicide 3-Trifluoromethyl-4-Nitrophenol
+(<span>TFM</span>) on the Stress Response and Liver Metabolic Capacity
+in Rainbow Trout (<span>Oncorhynchus</span> Mykiss).”</span> <em>Plos
+One</em> 13 (7). <a href="https://doi.org/gdw2tk">https://doi.org/gdw2tk</a>.
 </div>
-<div id="ref-daiBiomassAllocationProductivity2020" class="csl-entry">
-Dai, Licong, Xiaowei Guo, Xun Ke, Yuting Lan, Fawei Zhang, Yikang Li, Li
-Lin, et al. 2020. <span>“Biomass Allocation and Productivity–Richness
-Relationship Across Four Grassland Types at the <span>Qinghai
-Plateau</span>.”</span> <em>Ecology and Evolution</em> 10 (1): 506–16.
-<a href="https://doi.org/gj37pb">https://doi.org/gj37pb</a>.
+<div id="ref-crampSynergisticInteractionUVB2014" class="csl-entry">
+Cramp, Rebecca L., Stefanie Reid, Frank Seebacher, and Craig E.
+Franklin. 2014. <span>“Synergistic Interaction Between <span>UVB</span>
+Radiation and Temperature Increases Susceptibility to Parasitic
+Infection in a Fish.”</span> <em>Biology Letters</em> 10 (9): 20140449.
+<a href="https://doi.org/gr9ckp">https://doi.org/gr9ckp</a>.
 </div>
-<div id="ref-kissRepeateddoseToxicityCommon2017" class="csl-entry">
-Kiss, Tivadar, Andrea Szabó, Gábor Oszlánczi, Anita Lukács, Zoltán
-Tímár, László Tiszlavicz, and Dezső Csupor. 2017. <span>“Repeated-Dose
-Toxicity of Common Ragweed on Rats.”</span> Edited by Mária A. Deli.
-<em>PLOS ONE</em> 12 (5): e0176818. <a href="https://doi.org/f96gk8">https://doi.org/f96gk8</a>.
+<div id="ref-didianoDisentanglingEffectsPrecipitation2016" class="csl-entry">
+Didiano, Teresa J., Marc T. J. Johnson, and Tim P. Duval. 2016.
+<span>“Disentangling the <span>Effects</span> of <span>Precipitation
+Amount</span> and <span>Frequency</span> on the <span>Performance</span>
+of 14 <span>Grassland Species</span>.”</span> <em>Plos One</em> 11 (9).
+<a href="https://doi.org/f9rkgk">https://doi.org/f9rkgk</a>.
 </div>
-<div id="ref-leboeufForagingEcologyNorthern2000" class="csl-entry">
-Le Boeuf, B. J., D. E. Crocker, D. P. Costa, S. B. Blackwell, P. M.
-Webb, and D. S. Houser. 2000. <span>“Foraging Ecology of Northern
-Elephant Seals.”</span> <em>Ecological Monographs</em> 70 (3): 353–82.
-<a href="https://doi.org/fj9rqc">https://doi.org/fj9rqc</a>.
+<div id="ref-highfillGeneticsCocaineMethamphetamine2019" class="csl-entry">
+Highfill, Chad A., Brandon M. Baker, Stephenie D. Stevens, Robert R. H.
+Anholt, and Trudy F. C. Mackay. 2019. <span>“Genetics of Cocaine and
+Methamphetamine Consumption and Preference in <span>Drosophila</span>
+Melanogaster.”</span> <em>PLOS Genetics</em> 15 (5). <a href="https://doi.org/gr2pgk">https://doi.org/gr2pgk</a>.
 </div>
-<div id="ref-peakeTemporalVariationSpeciesarea1993" class="csl-entry">
-Peake, A. J., and G. P. Quinn. 1993. <span>“Temporal Variation in
-Species-Area Curves for Invertebrates in Clumps of an Intertidal
-Mussel.”</span> <em>Ecography</em> 16: 269–77. <a href="https://doi.org/cwzvgc">https://doi.org/cwzvgc</a>.
-</div>
-<div id="ref-vosteenHoverflyPreferenceHigh2016" class="csl-entry">
-Vosteen, Ilka, Jonathan Gershenzon, and Grit Kunert. 2016.
-<span>“Hoverfly Preference for High Honeydew Amounts Creates Enemy-Free
-Space for Aphids Colonizing Novel Host Plants.”</span> Edited by Kim
-Cuddington. <em>Journal of Animal Ecology</em> 85 (5): 1286–97. <a href="https://doi.org/f9csdq">https://doi.org/f9csdq</a>.
+<div id="ref-walterLeavesDomatiaHave1992" class="csl-entry">
+Walter, D. E., and D. J. O’Dowd. 1992. <span>“Leaves with Domatia Have
+More Mites.”</span> <em>Ecology</em> 73 (4): 1514–18. <a href="https://doi.org/10.2307/1940694">https://doi.org/10.2307/1940694</a>.
 </div>
 </div>
 </div>
