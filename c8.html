@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Ch 8 exercises</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+<style type="text/css">
+/* for pandoc --citeproc since 2.11 */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">QK 2nd ed resources</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="examples.html">Boxes</a>
+</li>
+<li>
+  <a href="exercises.html">Exercises</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Ch 8 exercises</h1>
+
+</div>
+
+
+<p>The aim of these exercises is to improve your ability to deal with
+multi-predictor linear models where the predictors are all continuous or
+a mixture of continuous and categorical.</p>
+<div id="a" class="section level3">
+<h3>A</h3>
+<p>Let’s continue with the <span class="citation">Martello et al.
+(2022)</span> example from Chapter 7 assessing whether dietary
+supplements improve the perceived health of dogs with osteoarthritis.
+The model we focused on at the end of that exercise was one modelling
+the pain index of dogs after 60 days as a function of whether they
+received dietary supplements or a placebo and the sex of the dog. The
+dogs unavoidably varied in body weight, ranging from 14-47 kg. To partly
+account for this, the authors adjusted the doses to a constant amount
+per kg of body weight. However, you can probably think of a range of
+ways in which weight might affect osteoarthritis. The model using
+treatment and sex fitted the data fairly well, with r<sup>2</sup> around
+0.6. We detected a strong treatment effect, but it is possible that if
+we reduced background noise, we might see sex-specific responses and
+we’d also get a more precise estimate of the effects.</p>
+<p>Think about the steps you’d take to see if it would be helpful to
+include body weight in the model, then go back to the data and run the
+analysis</p>
+</div>
+<div id="b" class="section level3">
+<h3>B</h3>
+<p><span class="citation">La Rosa and Conner (2017)</span> examined
+effects of several floral traits on fitness components of milkweeds,
+<em>Asclepias</em> spp. The fitness components were male and female
+pollination success and female reproductive success.</p>
+<p>In the paper, their analysis focused on 6 predictors, They measured
+six floral traits, although one of them, hood height, was not relevant
+for <strong>Asclepias viridiflora</strong>, which was the species with
+the largest sample size:</p>
+<ul>
+<li>gynostegium width,</li>
+<li>hood length,</li>
+<li>hood height,</li>
+<li>horn reach,</li>
+<li>slit length, and</li>
+<li>gap width</li>
+</ul>
+<p>Their Figure 2 shows what these measurements represent on
+flowers.</p>
+<p>The data are available from Dryad <a
+href="http://doi.org/10.5061/dryad.n81g1">here</a>.</p>
+<p>Fitness component estimates were relativized by dividing by the mean,
+and the traits were standardized to a mean of zero and standard
+deviation of one.</p>
+<div
+id="start-by-looking-at-a.-syriaca-then-for-comparison-look-at-how-these-floral-traits-affect-a.-viridiflora"
+class="section level4">
+<h4>Start by looking at <strong><em>A. syriaca</em></strong>, then for
+comparison, look at how these floral traits affect <strong><em>A.
+viridiflora</em></strong></h4>
+<p><strong>First look at the removals per flower</strong></p>
+<ul>
+<li><p>What checks should you do before assessing the predictors’
+effects?</p></li>
+<li><p>If you’re happy with your pre-flight checks, fit the model and
+make some conclusions about the effects of each predictor, including any
+notes of caution</p></li>
+</ul>
+</div>
+<div
+id="run-through-same-sequence-for-the-other-two-life-history-traits"
+class="section level4">
+<h4>Run through same sequence for the other two life-history traits</h4>
+<ul>
+<li><p>What would you need to check in doing analyses on three different
+fitness components as response variables?</p></li>
+<li><p>What do you conclude about the floral traits’ influence on
+fitness components of this species?</p></li>
+</ul>
+</div>
+<div
+id="now-have-a-look-at-the-data-for-the-more-common-species-asclepias-viridiflora"
+class="section level4">
+<h4>Now have a look at the data for the more common species
+<em>Asclepias viridiflora</em></h4>
+<ul>
+<li><p>What do you conclude about the role of floral traits in these two
+species?</p></li>
+<li><p>Is there anything you’d be cautious about in making this
+comparison?</p></li>
+</ul>
+</div>
+</div>
+<div id="c" class="section level3">
+<h3>C</h3>
+<p>Recall the <span class="citation">Kaufman et al. (2013)</span> sengi
+example from Chapter 5 (or go back and look at it ;-)). The research
+questions are about family differences. Could also look at this
+relationship between sengis and the rest. There are 2 or 3 groups of
+insectivores, sengis and closely (afrotherian) and more distantly
+(laurasiatherian) species, and the research question is about where
+sengis fit. We can frame this as 2 or 3 questions.</p>
+<ol style="list-style-type: decimal">
+<li><p>Does the new species (<em>udzugwensis</em>) fit within the
+pattern of other sengi?</p></li>
+<li><p>Are sengi different from the other small insectivores in their
+brain size?</p>
+<ol style="list-style-type: decimal">
+<li><p>sengi vs all others, or</p></li>
+<li><p>sengi vs closely-related vs distantly related
+insectivores</p></li>
+</ol></li>
+</ol>
+<p>Get started by loading the kaufman data. In Chapter 5, you should
+have decided that log-transforming both variables was sensible, so lets
+also start by defining new variables logbrain and log body. That will
+make the coding tidier, without having to log things repeatedly.</p>
+<pre class="r"><code>df &lt;- read.csv(&quot;data/kaufman.csv&quot;)
+df$logbrain &lt;- log(df$brainmass)
+df$logbody &lt;- log(df$bodymass)</code></pre>
+<p><strong>For the first question, cast your mind back to Chapter 6. How
+would you decide whether the new species is unusual?</strong></p>
+<div
+id="now-lets-compare-sengis-to-the-other-insectivores.-use-three-groups-for-comparison-sengi-afrotherian-and-laurasiatherian.-these-groups-are-defined-in-the-variable-relation"
+class="section level4">
+<h4>Now lets compare sengis to the other insectivores. Use three groups
+for comparison (sengi, Afrotherian and Laurasiatherian). These groups
+are defined in the variable <em>relation</em></h4>
+<p>** You could make this comparison in two ways:</p>
+<ul>
+<li>fit a linear model including the groups and log body mass, i.e. an
+analysis of covariance</li>
+<li>look at the patterns in the residuals for the relationship between
+log-brain and log-body</li>
+</ul>
+<p>**Before you start, are there any things to check in the original
+data, linked to the assumptions of the linear model you’ll fit?</p>
+<div id="analysis-of-covariance" class="section level5">
+<h5>Analysis of covariance</h5>
+<p><strong>Outline the steps you’ll take</strong></p>
+<p><strong>Run the analysis</strong></p>
+</div>
+<div
+id="use-residuals-from-a-regression-of-all-data-and-compare-residuals-between-groups"
+class="section level5">
+<h5>Use residuals from a regression of all data and compare residuals
+between groups</h5>
+</div>
+</div>
+</div>
+<div id="d" class="section level3">
+<h3>D</h3>
+<p>We’ll return to the elephant seal example in the study by <span
+class="citation">Le Boeuf et al. (2000)</span> and see whether body
+weight plays any role in foraging. In Chapter 5, you should have noticed
+that while the focus of the initial analysis was on the relationship
+between distance travelled and time spend on the foraging grounds, the
+authors recorded weight on departure for each animal. Your exploratory
+data analysis should have shown a relationship between body weight and
+the original predictor and response variables. Now try and make some
+sense of what’s going on here.</p>
+<p><strong>Think about how body mass might influence distance travelled
+and how it might contribute to time on foraging areas</strong></p>
+<p><strong>How will you assess whether including body weight as a second
+predictor helps us understand feeding time better?</strong></p>
+<ul>
+<li><p>Write out the linear model you’d apply</p></li>
+<li><p>What checks do you need when fitting the model?</p></li>
+</ul>
+<pre class="r"><code>#Get the data file back
+df &lt;- read.csv(&quot;data/leboeuf.csv&quot;)
+head(df,10)</code></pre>
+<pre><code>##    male departwt distance FFAduration durationto durationfrom
+## 1   Pop       NA      534          31         18           11
+## 2   Alt      973      755          89          9            8
+## 3   Pro      977     1210          77         12           18
+## 4   Hal     1121       NA          NA         NA           NA
+## 5   Blu       NA     1297          76         19           25
+## 6   Dua      996     1487          68         18           23
+## 7   Rov     1100     2073          69         29           25
+## 8   Ric     1068     2181          46         21           42
+## 9   Ori     1097       NA          NA         NA           NA
+## 10  Jer     1199       NA          NA         NA           NA</code></pre>
+<p><strong>Fit the appropriate model to the data, interpret the results,
+and explain whether body weight helps us.</strong></p>
+<p><strong>Is there anything else you might look at?</strong></p>
+</div>
+<div id="references" class="section level3 unnumbered">
+<h3 class="unnumbered">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-kaufman2013" class="csl-entry">
+Kaufman, Jason A., Gregory H. Turner, Patricia A. Holroyd, Francesco
+Rovero, and Ari Grossman. 2013. <span>“Brain Volume of the
+Newly-Discovered Species Rhynchocyon Udzungwensis (Mammalia: Afrotheria:
+Macroscelidea): Implications for Encephalization in Sengis.”</span>
+Edited by Andrew Iwaniuk. <em>PLoS ONE</em> 8 (3): e58667. <a
+href="https://doi.org/10.1371/journal.pone.0058667">https://doi.org/10.1371/journal.pone.0058667</a>.
+</div>
+<div id="ref-larosaFloralFunctionEffects2017" class="csl-entry">
+La Rosa, Raffica J., and Jeffrey K. Conner. 2017. <span>“Floral
+Function: Effects of Traits on Pollinators, Male and Female Pollination
+Success, and Female Fitness Across Three Species of Milkweeds (
+<span>Asclepias</span> ).”</span> <em>American Journal of Botany</em>
+104 (1): 150–60. <a
+href="https://doi.org/gr2r9p">https://doi.org/gr2r9p</a>.
+</div>
+<div id="ref-leboeufForagingEcologyNorthern2000" class="csl-entry">
+Le Boeuf, B. J., D. E. Crocker, D. P. Costa, S. B. Blackwell, P. M.
+Webb, and D. S. Houser. 2000. <span>“Foraging Ecology of Northern
+Elephant Seals.”</span> <em>Ecological Monographs</em> 70 (3): 353–82.
+<a href="https://doi.org/fj9rqc">https://doi.org/fj9rqc</a>.
+</div>
+<div id="ref-martelloEfficacyDietarySupplement2022" class="csl-entry">
+Martello, Elisa, Mauro Bigliati, Raffaella Adami, Elena Biasibetti,
+Donal Bisanzio, Giorgia Meineri, and Natascia Bruni. 2022.
+<span>“Efficacy of a Dietary Supplement in Dogs with Osteoarthritis:
+<span>A</span> Randomized Placebo-Controlled, Double-Blind Clinical
+Trial.”</span> Edited by Angel Abuelo. <em>PLOS ONE</em> 17 (2):
+e0263971. <a href="https://doi.org/gr9cmt">https://doi.org/gr9cmt</a>.
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
