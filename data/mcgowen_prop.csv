@@ -1,9 +1,0 @@
-group,genetype,lineage,nonpsg,psg,visprop
-control,nonsensory,in,21,146,0.874251497
-control,nonsensory,out,23,144,0.862275449
-hearing,sensory,in,25,54,0.683544304
-nshl,sensory,in,17,16,0.484848485
-vision,sensory,in,30,66,0.6875
-hearing,sensory,out,10,69,0.873417722
-nshl,sensory,out,3,30,0.909090909
-vision,sensory,out,19,77,0.802083333
