@@ -394,17 +394,19 @@ display: none;
 
 
 <p>The aim of these exercises is to make sure you’re comfortable with
-fitting simple linear models to data and to emphasise the similarity
-between regression and “ANOVA”.</p>
+fitting simple (one predictor) linear models to data and to emphasise
+the similarity between regression and “ANOVA”. We will complete some of
+the analyses we introduced in Chapter 4’s exercises.</p>
 <p>For each of the 5 examples below, you should follow the sequence
 we’ve used previously:</p>
 <ol style="list-style-type: decimal">
-<li><p>What is the biological question?</p></li>
-<li><p>Is the predictor continuous or categorical?</p></li>
-<li><p>Write out the linear model corresponding to this
-question.</p></li>
+<li><p>What is the biological question and what are the response and
+predictor variables?</p></li>
 <li><p>What distribution do you expect the response variable to
 follow?</p></li>
+<li><p>Are the predictors continuous or categorical?</p></li>
+<li><p>Write out the linear model corresponding to the biological
+question.</p></li>
 <li><p>What are the assumptions behind the statistical model you’ll
 fit?</p>
 <ol style="list-style-type: decimal">
@@ -416,10 +418,11 @@ fit?</p>
 <li><p>Can you detect an effect of the predictor?</p></li>
 <li><p>How do you measure the effect?</p></li>
 </ol></li>
-<li><p>What do you conclude (including any cautions)</p></li>
+<li><p>What, if any, next steps would you suggest?</p></li>
+<li><p>What do you conclude (including any cautions)?</p></li>
 </ol>
-<div id="simple-regression" class="section level2">
-<h2>Simple regression</h2>
+<div id="continuous-predictor-regression" class="section level2">
+<h2>Continuous predictor (regression)</h2>
 <div id="a." class="section level3">
 <h3>A.</h3>
 <p><span class="citation">Le Boeuf et al. (2000)</span> examined the
@@ -429,7 +432,7 @@ USA. They attached platform satellite transmitter terminals (PTTs) to 22
 male seals and recorded, for each seal, the distance (km) to its main
 feeding area offshore and the amount of time (duration in days) it spent
 at the feeding area.</p>
-<p>You can get this data file <a href="/data/peakquinn.csv">here</a>.</p>
+<p>You can get this data file <a href="/data/leboeuf.csv">here</a>.</p>
 </div>
 <div id="b." class="section level3">
 <h3>B.</h3>
@@ -440,9 +443,6 @@ mussels on a rocky intertidal shore and the area of those mussel clumps
 (predictor).</p>
 <p>You can get this data file <a href="/data/peakquinn.csv">here</a>.</p>
 </div>
-</div>
-<div id="model-2-regression" class="section level2">
-<h2>Model 2 regression</h2>
 <div id="c." class="section level3">
 <h3>C.</h3>
 <p><span class="citation">Dai et al. (2020)</span> examined the
@@ -456,8 +456,8 @@ for each grassland type and compare these to a slope of 1, indicating an
 (isometric) allometric relationship.</p>
 </div>
 </div>
-<div id="one-factor-anova" class="section level2">
-<h2>One factor ANOVA</h2>
+<div id="categorical-predictor-anova" class="section level2">
+<h2>Categorical predictor (“ANOVA”)</h2>
 <div id="d." class="section level3">
 <h3>D.</h3>
 <p><span class="citation">Vosteen, Gershenzon, and Kunert (2016)</span>
@@ -520,7 +520,7 @@ and we will focus on aspartate aminotransferase (ast).</p>
 <p>You can access the data file <a href="https://doi.org/10.1371/journal.pone.0176818.s005">here</a>.
 However, it’s an Excel file not really formatted for <em>R</em>. You’ll
 need to delete some rows and redo the treatment labels to be able to use
-open as a dataframe. Our reformatting of the file is <a href="/data/kissasst.csv">here</a>. Check your file against it if you
+open as a dataframe. Our reformatting of the file is <a href="/data/kissast.csv">here</a>. Check your file against it if you
 have problems.</p>
 <p><strong>Again, you should use the same approach as for the two
 previous questions (although the answers will be
