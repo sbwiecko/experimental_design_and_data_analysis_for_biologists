@@ -477,12 +477,14 @@ comparison?</p></li>
 <div id="c" class="section level2">
 <h2>C</h2>
 <p>Recall the sengi example (<span class="citation">Kaufman et al.
-(2013)</span>) from Chapter 5 (or go back and look at it ;-)). The
-research questions are about family differences. Could also look at this
-relationship between sengis and the rest. There are 2 or 3 groups of
-insectivores, sengis and closely (afrotherian) and more distantly
-(laurasiatherian) species, and the research question is about where
-sengis fit. We can frame this as 2 or 3 questions.</p>
+(2013)</span>) from Chapter 5 (or go back and look at it ;-)) where we
+looked at the relationship between brain mass and body mass in small
+insectivore species. Now we will look at how this relationship varies
+between families of insectivores, including whether sengis are different
+from the rest. There are 3 groups of insectivores, sengis and closely
+(afrotherian) and more distantly (laurasiatherian) species, and the
+research question is about where sengis fit. We can frame this as 2 or 3
+questions.</p>
 <ol style="list-style-type: decimal">
 <li><p>Does the new species (<em>udzugwensis</em>) fit within the
 pattern of other sengi?</p></li>
@@ -521,7 +523,7 @@ head(df,10)</code></pre>
 ## 10 other insectivore</code></pre>
 <p>In Chapter 5, you should have decided that log-transforming both
 variables was sensible, so lets also start by defining new variables
-logbrain and log body. That will make the coding tidier, without having
+logbrain and logbody. That will make the coding tidier, without having
 to log things repeatedly.</p>
 <pre class="r"><code>df$logbrain &lt;- log(df$brainmass)
 df$logbody &lt;- log(df$bodymass)</code></pre>
@@ -533,8 +535,8 @@ for comparison (sengi, Afrotherian and Laurasiatherian). These groups
 are defined in the variable <em>relation</em></h4>
 <p>** You could make this comparison in two ways:</p>
 <ul>
-<li>fit a linear model including the groups and log body mass, i.e. an
-analysis of covariance</li>
+<li>fit a linear model including the groups as a categorical factor and
+log body mass as a covariate, i.e. an analysis of covariance</li>
 <li>look at the patterns in the residuals for the relationship between
 log-brain and log-body</li>
 </ul>
@@ -556,7 +558,7 @@ between groups</h5>
 <p>We’ll return to the elephant seal example in the study by <span class="citation">Le Boeuf et al. (2000)</span> and see whether body
 weight plays any role in foraging. In Chapter 5, you should have noticed
 that while the focus of the initial analysis was on the relationship
-between distance travelled and time spend on the foraging grounds, the
+between time spend on the foraging grounds and distance travelled, the
 authors recorded weight on departure for each animal. Your exploratory
 data analysis should have shown a relationship between body weight and
 the original predictor and response variables. Now try and make some
