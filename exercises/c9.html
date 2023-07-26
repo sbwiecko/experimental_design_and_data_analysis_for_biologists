@@ -269,6 +269,28 @@ if (window.hljs) {
 
 
 
+<style type="text/css">
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+}
+.hanging div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}
+</style>
 
 
 
@@ -371,9 +393,802 @@ display: none;
 </div>
 
 
-<p>The aim of these exercises</p>
-<div id="references" class="section level2">
-<h2>References</h2>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.2     ✔ readr     2.1.4
+## ✔ forcats   1.0.0     ✔ stringr   1.5.0
+## ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+## ✔ purrr     1.0.1     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors
+## Loading required package: carData
+## 
+## 
+## Attaching package: &#39;car&#39;
+## 
+## 
+## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     recode
+## 
+## 
+## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     some
+## 
+## 
+## 
+## Attaching package: &#39;MASS&#39;
+## 
+## 
+## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     select
+## 
+## 
+## Loading required package: lattice
+## 
+## Loading required package: plyr
+## 
+## ------------------------------------------------------------------------------
+## 
+## You have loaded plyr after dplyr - this is likely to cause problems.
+## If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+## library(plyr); library(dplyr)
+## 
+## ------------------------------------------------------------------------------
+## 
+## 
+## Attaching package: &#39;plyr&#39;
+## 
+## 
+## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     arrange, count, desc, failwith, id, mutate, rename, summarise,
+##     summarize
+## 
+## 
+## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     compact
+## 
+## 
+## Loading required package: lme4
+## 
+## Loading required package: Matrix
+## 
+## 
+## Attaching package: &#39;Matrix&#39;
+## 
+## 
+## The following objects are masked from &#39;package:tidyr&#39;:
+## 
+##     expand, pack, unpack
+## 
+## 
+## ************
+## Welcome to afex. For support visit: http://afex.singmann.science/
+## 
+## - Functions for ANOVAs: aov_car(), aov_ez(), and aov_4()
+## - Methods for calculating p-values with mixed(): &#39;S&#39;, &#39;KR&#39;, &#39;LRT&#39;, and &#39;PB&#39;
+## - &#39;afex_aov&#39; and &#39;mixed&#39; objects can be passed to emmeans() for follow-up tests
+## - Get and set global package options with: afex_options()
+## - Set sum-to-zero contrasts globally: set_sum_contrasts()
+## - For example analyses see: browseVignettes(&quot;afex&quot;)
+## ************
+## 
+## 
+## Attaching package: &#39;afex&#39;
+## 
+## 
+## The following object is masked from &#39;package:lme4&#39;:
+## 
+##     lmer
+## 
+## 
+## 
+## Attaching package: &#39;lmerTest&#39;
+## 
+## 
+## The following object is masked from &#39;package:lme4&#39;:
+## 
+##     lmer
+## 
+## 
+## The following object is masked from &#39;package:stats&#39;:
+## 
+##     step
+## 
+## 
+## 
+## Attaching package: &#39;nlme&#39;
+## 
+## 
+## The following object is masked from &#39;package:lme4&#39;:
+## 
+##     lmList
+## 
+## 
+## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     collapse
+## 
+## 
+## 
+## Attaching package: &#39;VCA&#39;
+## 
+## 
+## The following objects are masked from &#39;package:nlme&#39;:
+## 
+##     fixef, isBalanced, ranef
+## 
+## 
+## The following object is masked from &#39;package:emmeans&#39;:
+## 
+##     lsmeans
+## 
+## 
+## The following objects are masked from &#39;package:lme4&#39;:
+## 
+##     fixef, getL, ranef
+## 
+## 
+## Loading required package: zoo
+## 
+## 
+## Attaching package: &#39;zoo&#39;
+## 
+## 
+## The following objects are masked from &#39;package:base&#39;:
+## 
+##     as.Date, as.Date.numeric
+## 
+## 
+## 
+## Attaching package: &#39;patchwork&#39;
+## 
+## 
+## The following object is masked from &#39;package:MASS&#39;:
+## 
+##     area
+## 
+## 
+## Loading required package: viridisLite
+## 
+## Loading required package: boot
+## 
+## 
+## Attaching package: &#39;boot&#39;
+## 
+## 
+## The following object is masked from &#39;package:lattice&#39;:
+## 
+##     melanoma
+## 
+## 
+## The following object is masked from &#39;package:car&#39;:
+## 
+##     logit
+## 
+## 
+## Loading required package: survey
+## 
+## Loading required package: grid
+## 
+## Loading required package: survival
+## 
+## 
+## Attaching package: &#39;survival&#39;
+## 
+## 
+## The following object is masked from &#39;package:boot&#39;:
+## 
+##     aml
+## 
+## 
+## 
+## Attaching package: &#39;survey&#39;
+## 
+## 
+## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     dotchart
+## 
+## 
+## Loading required package: mitools
+## 
+## This is the non-US version of package relaimpo including the metric pmvd.
+## 
+## 
+## Please make sure that you are entitled to using it.
+## 
+## 
+## If you are a US-user, please use the global version (without pmvd) that is available on CRAN.
+## 
+## 
+## Loading required package: vegan
+## 
+## Loading required package: permute
+## 
+## This is vegan 2.6-4
+## 
+## 
+## Attaching package: &#39;vegan&#39;
+## 
+## 
+## The following object is masked from &#39;package:survey&#39;:
+## 
+##     calibrate</code></pre>
+<p>The aim of these exercises is to extend the analyses from Chapter 8,
+focusing on identifying the relative importance of predictors in linear
+models that include at least one continuous predictor.</p>
+<p>##A</p>
+<p>Recall the example of <span class="citation">La Rosa and Conner
+(2017)</span> from the Chapter 8 exercises. They examined effects of up
+to six floral traits on fitness components of milkweeds,
+<em>Asclepias</em> spp. The fitness components were male and female
+pollination success and female reproductive success.</p>
+<p>The data are available from Dryad <a href="http://doi.org/10.5061/dryad.n81g1">here</a>. Fitness component
+estimates were relativized by dividing by the mean, and the traits were
+standardized to a mean of zero and standard deviation of one. You can
+also get the data from larosa.csv.</p>
+<pre class="r"><code>df &lt;- read.csv(&quot;../data/larosa.csv&quot;)
+head(df,10)</code></pre>
+<pre><code>##    species plant.id gyn.width hood.length hood.height horn.reach slit.length
+## 1     Asyr     AS01    0.2190      0.3557      0.5095     0.2038      0.1918
+## 2     Asyr     AS02    0.2042      0.2776      0.5293     0.1820      0.1843
+## 3     Asyr     AS03    0.2233      0.2771      0.5083     0.1809      0.1687
+## 4     Asyr     AS04    0.2081      0.2403      0.4241     0.1520      0.1796
+## 5     Asyr     AS05    0.2136      0.3544      0.5368     0.1940      0.1842
+## 6     Asyr     AS07    0.2276      0.2984      0.4867     0.2161      0.1953
+## 7     Asyr     AS08    0.2103      0.3155      0.4390     0.1806      0.1967
+## 8     Asyr     AS09    0.2261      0.3385      0.5744     0.2101      0.1898
+## 9     Asyr     AS10    0.2214      0.3508      0.5406     0.2295      0.1997
+## 10    Asyr     AS11    0.2175      0.3166      0.4320     0.1501      0.1746
+##    gap.width display.flowers.1day removals.per.flower insertions.per.flower
+## 1     0.0464                  168              3.0308                0.3231
+## 2     0.0597                  120              3.0732                1.0244
+## 3     0.0664                  117              0.3226                0.1935
+## 4     0.0515                   76              1.2475                0.2970
+## 5     0.0459                  148              3.5573                0.9008
+## 6     0.0840                   61              1.5000                0.2400
+## 7     0.0581                   69              0.1833                0.3333
+## 8     0.0597                  388              2.5053                0.3915
+## 9     0.0525                   47              2.0200                0.5600
+## 10    0.0535                   35              0.1389                0.0278
+##    fruits geo_mean relz.gyn.w relz.hood.l relz.hood.h relz.horn.r relz.slit.l
+## 1       7   0.2954     0.7414      1.2042      1.7249      0.6900      0.6493
+## 2       3   0.2727     0.7488      1.0180      1.9410      0.6674      0.6758
+## 3      10   0.2699     0.8274      1.0267      1.8833      0.6703      0.6251
+## 4       3   0.2484     0.8377      0.9673      1.7071      0.6118      0.7229
+## 5       3   0.2941     0.7262      1.2049      1.8250      0.6596      0.6262
+## 6       1   0.2835     0.8030      1.0527      1.7170      0.7624      0.6890
+## 7       0   0.2751     0.7644      1.1468      1.5957      0.6564      0.7150
+## 8       1   0.3022     0.7481      1.1200      1.9005      0.6952      0.6280
+## 9       0   0.3026     0.7317      1.1593      1.7865      0.7584      0.6599
+## 10      0   0.2685     0.8102      1.1793      1.6092      0.5591      0.6504
+##    relz.gap.w remins.std.gyn.w remins.std.hood.l remins.std.hood.h
+## 1      0.1571           0.0126            0.7453            0.0231
+## 2      0.2189          -1.2374           -1.1126            0.4765
+## 3      0.2460           0.3758           -1.1245           -0.0044
+## 4      0.2073          -0.9080           -1.9999           -1.9328
+## 5      0.1560          -0.4435            0.7144            0.6483
+## 6      0.2963           0.7389           -0.6178           -0.4991
+## 7      0.2112          -0.7222           -0.2110           -1.5915
+## 8      0.1975           0.6122            0.3361            1.5094
+## 9      0.1735           0.2153            0.6287            0.7353
+## 10     0.1993          -0.1141           -0.1849           -1.7518
+##    remins.std.horn.r remins.std.slit.l remins.std.gap.w std.floral.display.1day
+## 1            -0.0052            0.1851          -1.2587                  0.8513
+## 2            -0.6511           -0.4590          -0.1277                  0.1527
+## 3            -0.6837           -1.7987           0.4420                  0.1090
+## 4            -1.5400           -0.8626          -0.8251                 -0.4878
+## 5            -0.2956           -0.4676          -1.3013                  0.5602
+## 6             0.3592            0.4857           1.9387                 -0.7061
+## 7            -0.6926            0.6059          -0.2638                 -0.5896
+## 8             0.1815            0.0134          -0.1277                  4.0535
+## 9             0.7563            0.8636          -0.7400                 -0.9099
+## 10           -1.5963           -1.2920          -0.6550                 -1.0845
+##    rel.removal.per.flower rel.insertion.per.flower fruit.std.gyn.w
+## 1                  1.5032                   0.7706         -0.0338
+## 2                  1.5242                   2.4433         -1.2902
+## 3                  0.1600                   0.4616          0.3313
+## 4                  0.6187                   0.7084         -0.9591
+## 5                  1.7643                   2.1484         -0.4922
+## 6                  0.7439                   0.5724          0.6964
+## 7                  0.0909                   0.7950         -0.7724
+## 8                  1.2426                   0.9337          0.5690
+## 9                  1.0018                   1.3357          0.1700
+## 10                 0.0689                   0.0663         -0.1611
+##    fruit.std.hood.l fruit.std.hood.h fruit.std.horn.r fruit.std.slit.l
+## 1            0.6940          -0.0218          -0.0925           0.1087
+## 2           -1.1224           0.4261          -0.7732          -0.5484
+## 3           -1.1340          -0.0489          -0.8075          -1.9150
+## 4           -1.9899          -1.9533          -1.7100          -0.9601
+## 5            0.6638           0.5957          -0.3985          -0.5571
+## 6           -0.6386          -0.5375           0.2916           0.4153
+## 7           -0.2409          -1.6163          -0.8169           0.5379
+## 8            0.2940           1.4462           0.1042          -0.0665
+## 9            0.5801           0.6817           0.7100           0.8008
+## 10          -0.2154          -1.7747          -1.7693          -1.3981
+##    fruit.std.gap.w fruit.std.display.size rel.fruits notes
+## 1          -1.2607                 0.7907      1.176      
+## 2          -0.1345                 0.1036      0.504      
+## 3           0.4329                 0.0607      1.680      
+## 4          -0.8288                -0.5262      0.504      
+## 5          -1.3030                 0.5044      0.504      
+## 6           1.9232                -0.7409      0.168      
+## 7          -0.2700                -0.6264      0.000      
+## 8          -0.1345                 3.9399      0.168      
+## 9          -0.7442                -0.9413      0.000      
+## 10         -0.6595                -1.1131      0.000      
+##    total.flower.quantity poll.duration.per10min.no.flies.
+## 1                  325.0                            0.512
+## 2                  369.0                            0.375
+## 3                  372.0                            0.000
+## 4                  303.0                            0.188
+## 5                  262.0                            4.736
+## 6                  150.0                            2.138
+## 7                   90.0                            0.000
+## 8                  421.5                            8.181
+## 9                   50.0                            0.000
+## 10                  36.0                            3.410
+##    poll.visits.per10min.no.flies.
+## 1                           0.480
+## 2                           2.413
+## 3                           0.000
+## 4                           0.665
+## 5                          11.667
+## 6                           0.668
+## 7                           0.000
+## 8                           5.167
+## 9                           0.000
+## 10                          0.628</code></pre>
+<pre class="r"><code>df_syr&lt;-subset(df,species==&quot;Asyr&quot;)
+df_vir&lt;-subset(df, species==&#39;Avir&#39;)
+df_tub&lt;-subset(df, species==&#39;Atub&#39;)</code></pre>
+<p>For each fitness component and for each species separately (i.e. 6
+models in total), refit the linear models from the Chapter 8 exercises
+but now use the recommended methods from this chapter (hierarchical
+partitioning or LMD, PMVD) to assess each predictor’s relative
+importance in each of the models. If you’re really keen, there’s a third
+species in the dataframe (<em>Atub</em>).</p>
+<blockquote>
+<p>We’ll only show the workings here for <em>A. syriaca</em> and the
+fitness component <em>removals per flower</em>. The same code can be run
+for the other combinations. We’ve used generic “asc.x” names for output
+frames, so to run other responses or species, it’s only necessary to
+edit the initial model asc.lm As a refresher, first run the model from
+Ch 8 again</p>
+</blockquote>
+<pre class="r"><code>asc.lm&lt;-lm(data=df_syr, removals.per.flower ~ gyn.width + hood.length + hood.height + horn.reach + slit.length + gap.width)
+tidy(asc.lm)</code></pre>
+<pre><code>## # A tibble: 7 × 5
+##   term        estimate std.error statistic p.value
+##   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 (Intercept)     2.01      3.54     0.568 0.573  
+## 2 gyn.width     -18.9      15.1     -1.26  0.217  
+## 3 hood.length    12.9       4.96     2.60  0.0131 
+## 4 hood.height    13.8       4.76     2.90  0.00612
+## 5 horn.reach    -10.9       7.09    -1.54  0.131  
+## 6 slit.length   -16.5      15.7     -1.05  0.299  
+## 7 gap.width     -28.0      14.2     -1.97  0.0556</code></pre>
+<pre class="r"><code>#Don&#39;t need to generate standardized coefficients, as predictors already standardized
+std.coef(asc.lm, partial.sd=FALSE)</code></pre>
+<pre><code>##             Estimate* Std. Error* df
+## (Intercept)   0.00000     0.00000 38
+## gyn.width    -0.18589     0.14793 38
+## hood.length   0.44980     0.17281 38
+## hood.height   0.50061     0.17243 38
+## horn.reach   -0.30570     0.19830 38
+## slit.length  -0.15913     0.15127 38
+## gap.width    -0.27327     0.13838 38</code></pre>
+<pre class="r"><code>std.coef(asc.lm, partial.sd=TRUE)</code></pre>
+<pre><code>##             Estimate* Std. Error* df
+## (Intercept)   0.00000     0.00000 38
+## gyn.width    -0.19769     0.15732 38
+## hood.length   0.40947     0.15732 38
+## hood.height   0.45674     0.15732 38
+## horn.reach   -0.24252     0.15732 38
+## slit.length  -0.16549     0.15732 38
+## gap.width    -0.31067     0.15732 38</code></pre>
+<blockquote>
+<p>Now get rel. importance</p>
+</blockquote>
+<pre class="r"><code>asc.boot &lt;- boot.relimp(asc.lm, b=1000, type = c(&quot;lmg&quot;, &quot;pmvd&quot;))
+booteval.relimp(asc.boot)</code></pre>
+<pre><code>## Response variable: removals.per.flower 
+## Total response variance: 1.45437 
+## Analysis based on 45 observations 
+## 
+## 6 Regressors: 
+## gyn.width hood.length hood.height horn.reach slit.length gap.width 
+## Proportion of variance explained by model: 33.87%
+## Metrics are not normalized (rela=FALSE). 
+## 
+## Relative importance metrics: 
+## 
+##                    lmg       pmvd
+## gyn.width   0.01744927 0.02774161
+## hood.length 0.10802804 0.09437375
+## hood.height 0.12134299 0.10386283
+## horn.reach  0.02406247 0.03321906
+## slit.length 0.01607970 0.02374381
+## gap.width   0.05169171 0.05571311
+## 
+## Average coefficients for different model sizes: 
+## 
+##                     1X        2Xs        3Xs        4Xs       5Xs       6Xs
+## gyn.width    -5.529046 -10.149531 -13.064411 -15.080503 -16.90035 -18.93471
+## hood.length   9.394187  10.080782  10.639191  11.238651  11.97681  12.90406
+## hood.height   9.030463   9.906633  10.755746  11.665330  12.68560  13.82652
+## horn.reach    4.084409   1.181650  -1.709401  -4.666682  -7.73801 -10.92311
+## slit.length  -5.243806 -10.692791 -14.115228 -15.979426 -16.69027 -16.48079
+## gap.width   -16.692283 -20.707933 -23.650220 -25.702443 -27.07967 -28.02496
+## 
+##  
+##  Confidence interval information ( 1000 bootstrap replicates, bty= perc ): 
+## Relative Contributions with confidence intervals: 
+##  
+##                                    Lower  Upper
+##                  percentage 0.95   0.95   0.95  
+## gyn.width.lmg    0.0174     ABCDEF 0.0026 0.1383
+## hood.length.lmg  0.1080     ABCDE_ 0.0143 0.2770
+## hood.height.lmg  0.1213     ABCDE_ 0.0175 0.3140
+## horn.reach.lmg   0.0241     _BCDEF 0.0123 0.0969
+## slit.length.lmg  0.0161     ABCDEF 0.0032 0.1466
+## gap.width.lmg    0.0517     ABCDEF 0.0025 0.2304
+##                                                 
+## gyn.width.pmvd   0.0277     ABCDEF 0.0001 0.1497
+## hood.length.pmvd 0.0944     ABCDE_ 0.0075 0.2825
+## hood.height.pmvd 0.1039     ABCDE_ 0.0111 0.3201
+## horn.reach.pmvd  0.0332     _BCDEF 0.0004 0.1158
+## slit.length.pmvd 0.0237     ABCDEF 0.0000 0.1607
+## gap.width.pmvd   0.0557     ABCDEF 0.0007 0.2317
+## 
+## Letters indicate the ranks covered by bootstrap CIs. 
+## (Rank bootstrap confidence intervals always obtained by percentile method) 
+## CAUTION: Bootstrap confidence intervals can be somewhat liberal. 
+## 
+##  
+##  Differences between Relative Contributions: 
+##  
+##                                              Lower   Upper
+##                              difference 0.95 0.95    0.95   
+## gyn.width-hood.length.lmg    -0.0906         -0.2558  0.0519
+## gyn.width-hood.height.lmg    -0.1039         -0.2966  0.0670
+## gyn.width-horn.reach.lmg     -0.0066         -0.0787  0.1036
+## gyn.width-slit.length.lmg     0.0014         -0.1266  0.1179
+## gyn.width-gap.width.lmg      -0.0342         -0.2116  0.0977
+## hood.length-hood.height.lmg  -0.0133         -0.2590  0.2321
+## hood.length-horn.reach.lmg    0.0840         -0.0291  0.2297
+## hood.length-slit.length.lmg   0.0919         -0.0836  0.2509
+## hood.length-gap.width.lmg     0.0563         -0.1631  0.2400
+## hood.height-horn.reach.lmg    0.0973         -0.0292  0.2752
+## hood.height-slit.length.lmg   0.1053         -0.0609  0.2792
+## hood.height-gap.width.lmg     0.0697         -0.1391  0.2535
+## horn.reach-slit.length.lmg    0.0080         -0.1147  0.0807
+## horn.reach-gap.width.lmg     -0.0276         -0.1964  0.0602
+## slit.length-gap.width.lmg    -0.0356         -0.2121  0.1038
+##                                                             
+## gyn.width-hood.length.pmvd   -0.0666         -0.2701  0.0586
+## gyn.width-hood.height.pmvd   -0.0761         -0.3009  0.0776
+## gyn.width-horn.reach.pmvd    -0.0055         -0.1013  0.1130
+## gyn.width-slit.length.pmvd    0.0040         -0.1422  0.1319
+## gyn.width-gap.width.pmvd     -0.0280         -0.2173  0.1007
+## hood.length-hood.height.pmvd -0.0095         -0.2827  0.2405
+## hood.length-horn.reach.pmvd   0.0612         -0.0394  0.2446
+## hood.length-slit.length.pmvd  0.0706         -0.0973  0.2688
+## hood.length-gap.width.pmvd    0.0387         -0.1800  0.2391
+## hood.height-horn.reach.pmvd   0.0706         -0.0533  0.2996
+## hood.height-slit.length.pmvd  0.0801         -0.0724  0.2994
+## hood.height-gap.width.pmvd    0.0481         -0.1161  0.2526
+## horn.reach-slit.length.pmvd   0.0095         -0.1315  0.0975
+## horn.reach-gap.width.pmvd    -0.0225         -0.2089  0.0783
+## slit.length-gap.width.pmvd   -0.0320         -0.2106  0.1125
+## 
+## * indicates that CI for difference does not include 0. 
+## CAUTION: Bootstrap confidence intervals can be somewhat liberal.</code></pre>
+<pre class="r"><code>glmm.hp(asc.lm, type=&quot;R2&quot;)</code></pre>
+<pre><code>## Warning: &#39;r.squaredGLMM&#39; now calculates a revised statistic. See the help page.</code></pre>
+<pre><code>## $Total.R2
+## [1] 0.3386542
+## 
+## $hierarchical.partitioning
+##             Unique Average.share Individual I.perc(%)
+## gyn.width   0.0343       -0.0132     0.0211      5.38
+## hood.length 0.0842        0.0061     0.0903     23.03
+## hood.height 0.1852       -0.0219     0.1633     41.65
+## horn.reach  0.0229        0.0021     0.0250      6.38
+## slit.length 0.0217       -0.0066     0.0151      3.85
+## gap.width   0.0873       -0.0100     0.0773     19.71
+## 
+## $variables
+## [1] &quot;gyn.width&quot;   &quot;hood.length&quot; &quot;hood.height&quot; &quot;horn.reach&quot;  &quot;slit.length&quot;
+## [6] &quot;gap.width&quot;  
+## 
+## $type
+## [1] &quot;hierarchical.partitioning&quot;
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;glmmhp&quot;</code></pre>
+<p><strong>Now use AIC and Aikake weights to find the most parsimonious
+model (best fit with fewest predictors)</strong> for each combination of
+fitness component and species. If there are multiple models with similar
+AICs, then use full (zero) model averaging to produce a final model.</p>
+<pre class="r"><code>options(na.action = &quot;na.fail&quot;)
+asc.dredge &lt;-dredge(asc.lm, beta=&quot;partial.sd&quot;, evaluate=TRUE)</code></pre>
+<pre><code>## Fixed term is &quot;(Intercept)&quot;</code></pre>
+<pre class="r"><code>asc.dredge</code></pre>
+<pre><code>## Global model call: lm(formula = removals.per.flower ~ gyn.width + hood.length + 
+##     hood.height + horn.reach + slit.length + gap.width, data = df_syr)
+## ---
+## Model selection table 
+##    (Int) gap.wdt  gyn.wdt hod.hgh hod.lng  hrn.rch  slt.lng df  logLik  AICc
+## 32     0 -0.2949 -0.26150  0.4385  0.4111 -0.27330           7 -63.117 143.3
+## 46     0 -0.3422           0.3739  0.3062          -0.27430  6 -64.542 143.3
+## 30     0 -0.2847           0.3983  0.3666 -0.26490           6 -64.654 143.5
+## 16     0 -0.3283 -0.25270  0.3514  0.3160                    6 -64.790 143.8
+## 14     0 -0.3176           0.3102  0.2688                    5 -66.127 143.8
+## 62     0 -0.3097           0.4352  0.3787 -0.22720 -0.23810  7 -63.387 143.8
+## 6      0 -0.3023           0.4536                            4 -67.551 144.1
+## 29     0                   0.3648  0.3692 -0.29990           5 -66.348 144.2
+## 31     0         -0.25000  0.4029  0.4114 -0.30910           6 -65.053 144.3
+## 38     0 -0.3210           0.5060                  -0.23190  5 -66.500 144.5
+## 48     0 -0.3450 -0.17850  0.3901  0.3326          -0.20800  7 -63.836 144.7
+## 64     0 -0.3107 -0.19770  0.4567  0.4095 -0.24250 -0.16550  8 -62.471 144.9
+## 10     0 -0.2587                   0.4263                    4 -68.004 145.0
+## 9      0                           0.3905                    3 -69.222 145.0
+## 5      0                   0.3899                            3 -69.231 145.0
+## 13     0                   0.2496  0.2505                    4 -68.090 145.2
+## 61     0                   0.3943  0.3797 -0.26990 -0.20460  6 -65.489 145.2
+## 8      0 -0.3079 -0.19050  0.4887                            5 -66.848 145.2
+## 45     0                   0.3046  0.2823          -0.24290  5 -66.963 145.5
+## 15     0         -0.23850  0.2883  0.2947                    5 -67.004 145.5
+## 37     0                   0.4364                  -0.20510  4 -68.473 145.9
+## 11     0         -0.19000          0.4294                    4 -68.574 146.1
+## 12     0 -0.2596 -0.19120          0.4638                    5 -67.309 146.2
+## 7      0         -0.18110  0.4250                            4 -68.642 146.3
+## 22     0 -0.2881           0.4207         -0.08964           5 -67.397 146.3
+## 42     0 -0.2648                   0.4582          -0.17800  5 -67.403 146.3
+## 63     0         -0.19610  0.4161  0.4101 -0.28520 -0.13350  7 -64.669 146.4
+## 41     0                           0.4211          -0.16880  4 -68.712 146.4
+## 40     0 -0.3214 -0.12240  0.5193                  -0.18020  6 -66.198 146.6
+## 25     0                           0.3912 -0.13840           4 -68.881 146.8
+## 21     0                   0.3871         -0.12810           4 -68.938 146.9
+## 47     0         -0.17310  0.3205  0.3080          -0.17900  6 -66.368 146.9
+## 54     0 -0.3109           0.4541         -0.04427 -0.21840  6 -66.461 147.1
+## 26     0 -0.2357                   0.3908 -0.08815           5 -67.858 147.3
+## 24     0 -0.2953 -0.18390  0.4476         -0.07461           6 -66.738 147.7
+## 1      0                                                     2 -71.774 147.8
+## 39     0         -0.12150  0.4508                  -0.15490  5 -68.201 147.9
+## 27     0         -0.18250          0.4203 -0.12800           5 -68.273 148.1
+## 53     0                   0.4132         -0.09151 -0.18450  5 -68.319 148.2
+## 43     0         -0.14170          0.4420          -0.11170  5 -68.345 148.2
+## 44     0 -0.2638 -0.13970          0.4776          -0.12100  6 -67.025 148.3
+## 23     0         -0.17200  0.4120         -0.11470           5 -68.401 148.3
+## 57     0                           0.3992 -0.10060 -0.13950  5 -68.528 148.6
+## 28     0 -0.2387 -0.18640          0.4208 -0.07721           6 -67.194 148.6
+## 2      0 -0.1941                                             3 -71.170 148.9
+## 58     0 -0.2489                   0.4002 -0.04443 -0.16090  6 -67.365 148.9
+## 56     0 -0.3116 -0.12170  0.4663         -0.04215 -0.16940  7 -66.162 149.4
+## 17     0                                   0.13630           3 -71.479 149.5
+## 3      0         -0.06473                                    3 -71.708 150.0
+## 33     0                                           -0.06038  3 -71.717 150.0
+## 18     0 -0.2363                           0.19170           4 -70.565 150.1
+## 55     0         -0.12000  0.4256         -0.08950 -0.13730  6 -68.052 150.3
+## 59     0         -0.14450          0.4198 -0.10450 -0.08373  6 -68.143 150.5
+## 60     0 -0.2470 -0.14110          0.4201 -0.04859 -0.10510  7 -66.979 151.0
+## 34     0 -0.1936                                   -0.05889  4 -71.114 151.2
+## 4      0 -0.1915 -0.05657                                    4 -71.118 151.2
+## 49     0                                   0.16750 -0.11460  4 -71.267 151.5
+## 19     0         -0.09844                  0.15520           4 -71.323 151.6
+## 50     0 -0.2474                           0.22750 -0.13590  5 -70.254 152.0
+## 20     0 -0.2380 -0.10230                  0.20980           5 -70.389 152.3
+## 35     0         -0.04489                          -0.03834  4 -71.685 152.4
+## 36     0 -0.1919 -0.03666                          -0.04014  5 -71.092 153.7
+## 51     0         -0.06357                  0.17350 -0.08651  5 -71.202 153.9
+## 52     0 -0.2465 -0.06010                  0.23250 -0.10780  6 -70.193 154.6
+##    delta weight
+## 32  0.00  0.064
+## 46  0.03  0.063
+## 30  0.26  0.056
+## 16  0.53  0.049
+## 14  0.53  0.049
+## 62  0.54  0.049
+## 6   0.84  0.042
+## 29  0.97  0.039
+## 31  1.05  0.038
+## 38  1.28  0.034
+## 48  1.44  0.031
+## 64  1.68  0.028
+## 10  1.75  0.027
+## 9   1.77  0.026
+## 5   1.79  0.026
+## 13  1.92  0.025
+## 61  1.93  0.024
+## 8   1.97  0.024
+## 45  2.20  0.021
+## 15  2.29  0.020
+## 37  2.68  0.017
+## 11  2.89  0.015
+## 12  2.90  0.015
+## 7   3.02  0.014
+## 22  3.07  0.014
+## 42  3.08  0.014
+## 63  3.10  0.014
+## 41  3.16  0.013
+## 40  3.35  0.012
+## 25  3.50  0.011
+## 21  3.62  0.010
+## 47  3.69  0.010
+## 54  3.87  0.009
+## 26  3.99  0.009
+## 24  4.42  0.007
+## 1   4.57  0.007
+## 39  4.68  0.006
+## 27  4.82  0.006
+## 53  4.91  0.005
+## 43  4.97  0.005
+## 44  5.00  0.005
+## 23  5.08  0.005
+## 57  5.33  0.004
+## 28  5.34  0.004
+## 2   5.66  0.004
+## 58  5.68  0.004
+## 56  6.09  0.003
+## 17  6.28  0.003
+## 3   6.74  0.002
+## 33  6.76  0.002
+## 18  6.87  0.002
+## 55  7.05  0.002
+## 59  7.24  0.002
+## 60  7.72  0.001
+## 34  7.97  0.001
+## 4   7.98  0.001
+## 49  8.27  0.001
+## 19  8.38  0.001
+## 50  8.79  0.001
+## 20  9.06  0.001
+## 35  9.11  0.001
+## 36 10.46  0.000
+## 51 10.68  0.000
+## 52 11.34  0.000
+## Models ranked by AICc(x)</code></pre>
+<pre class="r"><code>asc.ma&lt;-model.avg(asc.dredge, beta=&quot;partial.sd&quot;) 
+summary(asc.ma)</code></pre>
+<pre><code>## 
+## Call:
+## model.avg(object = get.models(object = asc.dredge, subset = NA), 
+##     beta = &quot;partial.sd&quot;)
+## 
+## Component model call: 
+## lm(formula = removals.per.flower ~ &lt;64 unique rhs&gt;, data = df_syr)
+## 
+## Component models: 
+##        df logLik   AICc delta weight
+## 12345   7 -63.12 143.26  0.00   0.06
+## 1346    6 -64.54 143.30  0.03   0.06
+## 1345    6 -64.65 143.52  0.26   0.06
+## 1234    6 -64.79 143.79  0.53   0.05
+## 134     5 -66.13 143.79  0.53   0.05
+## 13456   7 -63.39 143.80  0.54   0.05
+## 13      4 -67.55 144.10  0.84   0.04
+## 345     5 -66.35 144.23  0.97   0.04
+## 2345    6 -65.05 144.32  1.05   0.04
+## 136     5 -66.50 144.54  1.28   0.03
+## 12346   7 -63.84 144.70  1.44   0.03
+## 123456  8 -62.47 144.94  1.68   0.03
+## 14      4 -68.00 145.01  1.75   0.03
+## 4       3 -69.22 145.03  1.77   0.03
+## 3       3 -69.23 145.05  1.79   0.03
+## 34      4 -68.09 145.18  1.92   0.02
+## 3456    6 -65.49 145.19  1.93   0.02
+## 123     5 -66.85 145.23  1.97   0.02
+## 346     5 -66.96 145.47  2.20   0.02
+## 234     5 -67.00 145.55  2.29   0.02
+## 36      4 -68.47 145.95  2.68   0.02
+## 24      4 -68.57 146.15  2.89   0.02
+## 124     5 -67.31 146.16  2.90   0.02
+## 23      4 -68.64 146.28  3.02   0.01
+## 135     5 -67.40 146.33  3.07   0.01
+## 146     5 -67.40 146.34  3.08   0.01
+## 23456   7 -64.67 146.37  3.10   0.01
+## 46      4 -68.71 146.42  3.16   0.01
+## 1236    6 -66.20 146.61  3.35   0.01
+## 45      4 -68.88 146.76  3.50   0.01
+## 35      4 -68.94 146.88  3.62   0.01
+## 2346    6 -66.37 146.95  3.69   0.01
+## 1356    6 -66.46 147.13  3.87   0.01
+## 145     5 -67.86 147.25  3.99   0.01
+## 1235    6 -66.74 147.69  4.42   0.01
+## (Null)  2 -71.77 147.83  4.57   0.01
+## 236     5 -68.20 147.94  4.68   0.01
+## 245     5 -68.27 148.08  4.82   0.01
+## 356     5 -68.32 148.18  4.91   0.01
+## 246     5 -68.35 148.23  4.97   0.01
+## 1246    6 -67.02 148.26  5.00   0.01
+## 235     5 -68.40 148.34  5.08   0.01
+## 456     5 -68.53 148.59  5.33   0.00
+## 1245    6 -67.19 148.60  5.34   0.00
+## 1       3 -71.17 148.93  5.66   0.00
+## 1456    6 -67.37 148.94  5.68   0.00
+## 12356   7 -66.16 149.35  6.09   0.00
+## 5       3 -71.48 149.54  6.28   0.00
+## 2       3 -71.71 150.00  6.74   0.00
+## 6       3 -71.72 150.02  6.76   0.00
+## 15      4 -70.56 150.13  6.87   0.00
+## 2356    6 -68.05 150.31  7.05   0.00
+## 2456    6 -68.14 150.50  7.24   0.00
+## 12456   7 -66.98 150.98  7.72   0.00
+## 16      4 -71.11 151.23  7.97   0.00
+## 12      4 -71.12 151.24  7.98   0.00
+## 56      4 -71.27 151.53  8.27   0.00
+## 25      4 -71.32 151.65  8.38   0.00
+## 156     5 -70.25 152.05  8.79   0.00
+## 125     5 -70.39 152.32  9.06   0.00
+## 26      4 -71.68 152.37  9.11   0.00
+## 126     5 -71.09 153.72 10.46   0.00
+## 256     5 -71.20 153.94 10.68   0.00
+## 1256    6 -70.19 154.60 11.34   0.00
+## 
+## Term codes: 
+##   gap.width   gyn.width hood.height hood.length  horn.reach slit.length 
+##           1           2           3           4           5           6 
+## 
+## Model-averaged coefficients:  
+## (full average) 
+##             Estimate Std. Error Adjusted SE z value Pr(&gt;|z|)
+## (Intercept)  0.00000    0.00000     0.00000     NaN      NaN
+## gap.width   -0.18954    0.19721     0.19984   0.948    0.343
+## gyn.width   -0.08096    0.14705     0.14928   0.542    0.588
+## hood.height  0.32314    0.22138     0.22445   1.440    0.150
+## hood.length  0.26965    0.21812     0.22097   1.220    0.222
+## horn.reach  -0.09171    0.16394     0.16608   0.552    0.581
+## slit.length -0.07982    0.14651     0.14873   0.537    0.592
+##  
+## (conditional average) 
+##             Estimate Std. Error Adjusted SE z value Pr(&gt;|z|)  
+## (Intercept)   0.0000     0.0000      0.0000     NaN      NaN  
+## gap.width    -0.3043     0.1659      0.1709   1.781   0.0749 .
+## gyn.width    -0.2090     0.1705      0.1754   1.191   0.2335  
+## hood.height   0.3984     0.1745      0.1793   2.222   0.0263 *
+## hood.length   0.3633     0.1734      0.1782   2.038   0.0415 *
+## horn.reach   -0.2195     0.1905      0.1949   1.126   0.2600  
+## slit.length  -0.2081     0.1711      0.1760   1.182   0.2372  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>confint(asc.ma)</code></pre>
+<pre><code>##                   2.5 %     97.5 %
+## (Intercept)  0.00000000 0.00000000
+## gap.width   -0.63919132 0.03055412
+## gyn.width   -0.55276461 0.13482585
+## hood.height  0.04700925 0.74972116
+## hood.length  0.01394504 0.71262105
+## horn.reach  -0.60142039 0.16241017
+## slit.length -0.55304809 0.13691380</code></pre>
+<pre class="r"><code>sw(asc.dredge)</code></pre>
+<pre><code>##                      hood.height hood.length gap.width horn.reach gyn.width
+## Sum of weights:      0.81        0.74        0.62      0.42       0.39     
+## N containing models:   32          32          32        32         32     
+##                      slit.length
+## Sum of weights:      0.38       
+## N containing models:   32</code></pre>
+<p>##C</p>
+<p>Following on from the previous</p>
+<div id="references" class="section level2 unnumbered">
+<h2 class="unnumbered">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-larosaFloralFunctionEffects2017" class="csl-entry">
+La Rosa, Raffica J., and Jeffrey K. Conner. 2017. <span>“Floral
+Function: Effects of Traits on Pollinators, Male and Female Pollination
+Success, and Female Fitness Across Three Species of Milkweeds (
+<span>Asclepias</span> ).”</span> <em>American Journal of Botany</em>
+104 (1): 150–60. <a href="https://doi.org/gr2r9p">https://doi.org/gr2r9p</a>.
+</div>
+</div>
 </div>
 
 
