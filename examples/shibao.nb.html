@@ -1633,6 +1633,28 @@ display: none;
 }
 </style>
 
+<style type="text/css">
+
+div.csl-bib-body { }
+div.csl-entry {
+clear: both;
+}
+.hanging div.csl-entry {
+margin-left:2em;
+text-indent:-2em;
+}
+div.csl-left-margin {
+min-width:2em;
+float:left;
+}
+div.csl-right-inline {
+margin-left:2em;
+padding-left:1em;
+}
+div.csl-indent {
+margin-left: 2em;
+}
+</style>
 
 
 
@@ -1772,26 +1794,18 @@ display: none;
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-text-begin -->
-<p>Shibao et al. (2004) studied whether the density of aphids in a
-colony affected the proportion of soldiers in that colony. They
-collected galls formed by the aphid <em>Tuberaphis styraci</em> from
-host trees in Japan, and recorded several characteristics of the galls
-(diameter, height, inner surface area, number of holes) and of the
-aphids using that gall (number of aphids, proportion of soldier
-individuals, and aphid density – no. aphids/surface area). The variables
-of interest here are the % soldiers and the aphid density
-(aphids/mm<sup>2</sup>).</p>
+<p><span class="citation">Shibao, Kutsukake, and Fukatsu (2004)</span>
+studied whether the density of aphids in a colony affected the
+proportion of soldiers in that colony. They collected galls formed by
+the aphid <em>Tuberaphis styraci</em> from host trees in Japan, and
+recorded several characteristics of the galls (diameter, height, inner
+surface area, number of holes) and of the aphids using that gall (number
+of aphids, proportion of soldier individuals, and aphid density – no.
+aphids/surface area). The variables of interest here are the % soldiers
+and the aphid density (aphids/mm<sup>2</sup>).</p>
 <p>You can find images of the castes of this aphid species from another
-Shibao <em>et al. paper</em>, in 2010. Mechanisms regulating caste
-differentiation in an aphid social system. <em>Communicative &amp;
-Integrative Biology</em> <strong>3</strong>:1-5. DOI:
-10.4161/cib.3.1.9694.</p>
-<p>Link to <a href="doi:%2010.1098/rsbl.2003.0089">paper</a></p>
-<p>Shibao, H., Kutsukake, M. &amp; Fukatsu, T. (2004). Density triggers
-soldier production in a social aphid. <em>Proc Biol Sci</em>, 271 Suppl
-3, S71-4. There are videos of these aphids, linked to Shibao et
-al. (2022): <em>Zoology letters</em> . The videos are in the
-supplementary material <a href="https://doi.%20org/10.1186/s40851-021-00184-w">here</a>.</p>
+paper, <span class="citation">Shibao et al. (2010)</span> and some
+videos in the supplementary material of the 2004 paper <a href="https://doi.%20org/10.1186/s40851-021-00184-w">here</a>.</p>
 <div id="preliminaries" class="section level3">
 <h3>Preliminaries</h3>
 <p>First, load the required packages (car, lm.beta, Rmisc) +ggplot2</p>
@@ -1931,9 +1945,28 @@ Standardized Coefficients::
          NA   0.8581697 </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="bibliography" class="section level2">
+<h2>Bibliography</h2>
+<!-- rnb-text-end -->
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-shibao2004" class="csl-entry">
+Shibao, Harunobu, Mayako Kutsukake, and Takema Fukatsu. 2004.
+<span>“Density Triggers Soldier Production in a Social Aphid.”</span>
+<em>Proceedings of the Royal Society of London. Series B: Biological
+Sciences</em> 271 (suppl<span>_</span>3). <a href="https://doi.org/fwhx8g">https://doi.org/fwhx8g</a>.
+</div>
+<div id="ref-shibao2010" class="csl-entry">
+Shibao, Harunobu, Mayako Kutsukake, Shigeru Matsuyama, Takema Fukatsu,
+and Masakazu Shimada. 2010. <span>“Mechanisms Regulating Caste
+Differentiation in an Aphid Social System.”</span> <em>Communicative
+&amp; Integrative Biology</em> 3 (1): 1–5. <a href="https://doi.org/dnj3d4">https://doi.org/dnj3d4</a>.
+</div>
+</div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUUsgQm94IDYuMiIKCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIHRoZW1lOiBmbGF0bHkKLS0tCgpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQpgYGAKClNoaWJhbyBldCBhbC4gKDIwMDQpIHN0dWRpZWQgd2hldGhlciB0aGUgZGVuc2l0eSBvZiBhcGhpZHMgaW4gYSBjb2xvbnkgYWZmZWN0ZWQgdGhlIHByb3BvcnRpb24gb2Ygc29sZGllcnMgaW4gdGhhdCBjb2xvbnkuIFRoZXkgY29sbGVjdGVkIGdhbGxzIGZvcm1lZCBieSB0aGUgYXBoaWQgKlR1YmVyYXBoaXMgc3R5cmFjaSogZnJvbSBob3N0IHRyZWVzIGluIEphcGFuLCBhbmQgcmVjb3JkZWQgc2V2ZXJhbCBjaGFyYWN0ZXJpc3RpY3Mgb2YgdGhlIGdhbGxzIChkaWFtZXRlciwgaGVpZ2h0LCBpbm5lciBzdXJmYWNlIGFyZWEsIG51bWJlciBvZiBob2xlcykgYW5kIG9mIHRoZSBhcGhpZHMgdXNpbmcgdGhhdCBnYWxsIChudW1iZXIgb2YgYXBoaWRzLCBwcm9wb3J0aW9uIG9mIHNvbGRpZXIgaW5kaXZpZHVhbHMsIGFuZCBhcGhpZCBkZW5zaXR5IC0tIG5vLiBhcGhpZHMvc3VyZmFjZSBhcmVhKS4gVGhlIHZhcmlhYmxlcyBvZiBpbnRlcmVzdCBoZXJlIGFyZSB0aGUgJSBzb2xkaWVycyBhbmQgdGhlIGFwaGlkIGRlbnNpdHkgKGFwaGlkcy9tbV4yXikuCgpZb3UgY2FuIGZpbmQgaW1hZ2VzIG9mIHRoZSBjYXN0ZXMgb2YgdGhpcyBhcGhpZCBzcGVjaWVzIGZyb20gYW5vdGhlciBTaGliYW8gKmV0IGFsLiBwYXBlciosIGluIDIwMTAuIE1lY2hhbmlzbXMgcmVndWxhdGluZyBjYXN0ZSBkaWZmZXJlbnRpYXRpb24gaW4gYW4gYXBoaWQgc29jaWFsIHN5c3RlbS4gKkNvbW11bmljYXRpdmUgJiBJbnRlZ3JhdGl2ZSBCaW9sb2d5KiAqKjMqKjoxLTUuIERPSTogMTAuNDE2MS9jaWIuMy4xLjk2OTQuCgpMaW5rIHRvIFtwYXBlcl0oZG9pOiUyMDEwLjEwOTgvcnNibC4yMDAzLjAwODkpCgpTaGliYW8sIEguLCBLdXRzdWtha2UsIE0uICYgRnVrYXRzdSwgVC4gKDIwMDQpLiBEZW5zaXR5IHRyaWdnZXJzIHNvbGRpZXIgcHJvZHVjdGlvbiBpbiBhIHNvY2lhbCBhcGhpZC4gKlByb2MgQmlvbCBTY2kqLCAyNzEgU3VwcGwgMywgUzcxLTQuIFRoZXJlIGFyZSB2aWRlb3Mgb2YgdGhlc2UgYXBoaWRzLCBsaW5rZWQgdG8gU2hpYmFvIGV0IGFsLiAoMjAyMik6ICpab29sb2d5IGxldHRlcnMqIC4gVGhlIHZpZGVvcyBhcmUgaW4gdGhlIHN1cHBsZW1lbnRhcnkgbWF0ZXJpYWwgW2hlcmVdKGh0dHBzOi8vZG9pLiUyMG9yZy8xMC4xMTg2L3M0MDg1MS0wMjEtMDAxODQtdykuCgojIyMgUHJlbGltaW5hcmllcwoKRmlyc3QsIGxvYWQgdGhlIHJlcXVpcmVkIHBhY2thZ2VzIChjYXIsIGxtLmJldGEsIFJtaXNjKSArZ2dwbG90MgoKYGBge3IgaW5jbHVkZT1GQUxTRSwgcmVzdWx0cz0naGlkZSd9CnNvdXJjZSgiLi4vUi9saWJyYXJpZXMuUiIpICAgI1RoaXMgaXMgdGhlIGNvbW1vbiBsaWJyYXJ5CmxpYnJhcnkobG0uYmV0YSkKYGBgCgpJbXBvcnQgc2hpYmFvIGRhdGEgZmlsZSAoc2hpYmFvLmNzdikKCmBgYHtyfQpzaGliYW8gPC0gcmVhZC5jc3YoIi4uL2RhdGEvc2hpYmFvLmNzdiIpCmhlYWQoc2hpYmFvLDEwKQpgYGAKCiMjIyBMb29rIGF0IGRpYWdub3N0aWNzCgpEbyBpbml0aWFsIHNjYXR0ZXJwbG90LCB0aGVuIHdlIG5lZWQgdG8gZml0IHRoZSBtb2RlbCB0byBnZW5lcmF0ZSByZXNpZHVhbHMsIG1lYXN1cmVzIG9mIGluZmx1ZW5jZS4gWW91J2xsIHNlZSBoZXJlIHRoYXQgdGhlIGxpbmVhciBtb2RlbCBpcyBxdWl0ZSBzdHJhaWdodGZvcndhcmQuIEl0IGlzIGVxdWl2YWxlbnQgdG8gdGhlIG1vZGVscyB3ZSBkZXNjcmliZSBpbiB0aGUgdGV4dDoKCmBgYHtyIGVjaG89RkFMU0UsIHJlc3VsdHM9J2FzaXMnfQpzaGliYW8ubG0gPC0gbG0oc29sZGllcnN+YXBoaWRkZW5zLCBkYXRhPXNoaWJhbykKZXF1YXRpb21hdGljOjpleHRyYWN0X2VxKHNoaWJhby5sbSkKYGBgCgpgYGB7ciB9CnNjYXR0ZXJwbG90IChzb2xkaWVyc35hcGhpZGRlbnMsIGRhdGE9c2hpYmFvKQpzaGliYW8ubG0gPC0gbG0oc29sZGllcnN+YXBoaWRkZW5zLCBkYXRhPXNoaWJhbykKcGxvdChzaGliYW8ubG0pCiMgaW5mbHVlbmNlLm1lYXN1cmVzKHNoaWJhby5sbSkKYXVnbWVudChzaGliYW8ubG0sZGF0YT1zaGliYW8pCmBgYAoKIyMjIEV4YW1pbmUgbW9kZWwgb3V0cHV0CgpXZSdyZSBjb21mb3J0YWJsZSB3aXRoIHRoZSBkaWFnbm9zdGljcywgc28gd2UgY2FuIG5vdyBhc3Nlc3MgdGhlIHBhcmFtZXRlcnMgYW5kIHRoZWlyIGNvbmZpZGVuY2UgaW50ZXJ2YWxzOgoKYGBge3IgZWNobz1GQUxTRSwgcmVzdWx0cz0nYXNpcyd9CmVxdWF0aW9tYXRpYzo6ZXh0cmFjdF9lcShzaGliYW8ubG0sIHVzZV9jb2VmcyA9IFRSVUUpCmBgYAoKYGBge3IgfQp0aWR5KHNoaWJhby5sbSwgY29uZi5pbnQgPSBUUlVFKQpnbGFuY2Uoc2hpYmFvLmxtKQphbm92YShzaGliYW8ubG0pCmBgYAoKR2V0IHN0YW5kYXJkaXplZCBjb2VmZmljaWVudHMKCmBgYHtyIH0KbG0uYmV0YShzaGliYW8ubG0pCmBgYAo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUUsgQm94IDYuMiIKCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIHRoZW1lOiBmbGF0bHkKYmlibGlvZ3JhcGh5OiB3ZWJfZXguYmliCi0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgpAc2hpYmFvMjAwNCBzdHVkaWVkIHdoZXRoZXIgdGhlIGRlbnNpdHkgb2YgYXBoaWRzIGluIGEgY29sb255IGFmZmVjdGVkIHRoZSBwcm9wb3J0aW9uIG9mIHNvbGRpZXJzIGluIHRoYXQgY29sb255LiBUaGV5IGNvbGxlY3RlZCBnYWxscyBmb3JtZWQgYnkgdGhlIGFwaGlkICpUdWJlcmFwaGlzIHN0eXJhY2kqIGZyb20gaG9zdCB0cmVlcyBpbiBKYXBhbiwgYW5kIHJlY29yZGVkIHNldmVyYWwgY2hhcmFjdGVyaXN0aWNzIG9mIHRoZSBnYWxscyAoZGlhbWV0ZXIsIGhlaWdodCwgaW5uZXIgc3VyZmFjZSBhcmVhLCBudW1iZXIgb2YgaG9sZXMpIGFuZCBvZiB0aGUgYXBoaWRzIHVzaW5nIHRoYXQgZ2FsbCAobnVtYmVyIG9mIGFwaGlkcywgcHJvcG9ydGlvbiBvZiBzb2xkaWVyIGluZGl2aWR1YWxzLCBhbmQgYXBoaWQgZGVuc2l0eSAtLSBuby4gYXBoaWRzL3N1cmZhY2UgYXJlYSkuIFRoZSB2YXJpYWJsZXMgb2YgaW50ZXJlc3QgaGVyZSBhcmUgdGhlICUgc29sZGllcnMgYW5kIHRoZSBhcGhpZCBkZW5zaXR5IChhcGhpZHMvbW1eMl4pLgoKWW91IGNhbiBmaW5kIGltYWdlcyBvZiB0aGUgY2FzdGVzIG9mIHRoaXMgYXBoaWQgc3BlY2llcyBmcm9tIGFub3RoZXIgcGFwZXIsIEBzaGliYW8yMDEwIGFuZCBzb21lIHZpZGVvcyBpbiB0aGUgc3VwcGxlbWVudGFyeSBtYXRlcmlhbCBvZiB0aGUgMjAwNCBwYXBlciBbaGVyZV0oaHR0cHM6Ly9kb2kuJTIwb3JnLzEwLjExODYvczQwODUxLTAyMS0wMDE4NC13KS4KCiMjIyBQcmVsaW1pbmFyaWVzCgpGaXJzdCwgbG9hZCB0aGUgcmVxdWlyZWQgcGFja2FnZXMgKGNhciwgbG0uYmV0YSwgUm1pc2MpICtnZ3Bsb3QyCgpgYGB7ciBpbmNsdWRlPUZBTFNFLCByZXN1bHRzPSdoaWRlJ30Kc291cmNlKCIuLi9SL2xpYnJhcmllcy5SIikgICAjVGhpcyBpcyB0aGUgY29tbW9uIGxpYnJhcnkKbGlicmFyeShsbS5iZXRhKQpsaWJyYXJ5KGJpYnRleCkKbGlicmFyeShjaXRyKQpgYGAKCkltcG9ydCBzaGliYW8gZGF0YSBmaWxlIChzaGliYW8uY3N2KQoKYGBge3J9CnNoaWJhbyA8LSByZWFkLmNzdigiLi4vZGF0YS9zaGliYW8uY3N2IikKaGVhZChzaGliYW8sMTApCmBgYAoKIyMjIExvb2sgYXQgZGlhZ25vc3RpY3MKCkRvIGluaXRpYWwgc2NhdHRlcnBsb3QsIHRoZW4gd2UgbmVlZCB0byBmaXQgdGhlIG1vZGVsIHRvIGdlbmVyYXRlIHJlc2lkdWFscywgbWVhc3VyZXMgb2YgaW5mbHVlbmNlLiBZb3UnbGwgc2VlIGhlcmUgdGhhdCB0aGUgbGluZWFyIG1vZGVsIGlzIHF1aXRlIHN0cmFpZ2h0Zm9yd2FyZC4gSXQgaXMgZXF1aXZhbGVudCB0byB0aGUgbW9kZWxzIHdlIGRlc2NyaWJlIGluIHRoZSB0ZXh0OgoKYGBge3IgZWNobz1GQUxTRSwgcmVzdWx0cz0nYXNpcyd9CnNoaWJhby5sbSA8LSBsbShzb2xkaWVyc35hcGhpZGRlbnMsIGRhdGE9c2hpYmFvKQplcXVhdGlvbWF0aWM6OmV4dHJhY3RfZXEoc2hpYmFvLmxtKQpgYGAKCmBgYHtyIH0Kc2NhdHRlcnBsb3QgKHNvbGRpZXJzfmFwaGlkZGVucywgZGF0YT1zaGliYW8pCnNoaWJhby5sbSA8LSBsbShzb2xkaWVyc35hcGhpZGRlbnMsIGRhdGE9c2hpYmFvKQpwbG90KHNoaWJhby5sbSkKIyBpbmZsdWVuY2UubWVhc3VyZXMoc2hpYmFvLmxtKQphdWdtZW50KHNoaWJhby5sbSxkYXRhPXNoaWJhbykKYGBgCgojIyMgRXhhbWluZSBtb2RlbCBvdXRwdXQKCldlJ3JlIGNvbWZvcnRhYmxlIHdpdGggdGhlIGRpYWdub3N0aWNzLCBzbyB3ZSBjYW4gbm93IGFzc2VzcyB0aGUgcGFyYW1ldGVycyBhbmQgdGhlaXIgY29uZmlkZW5jZSBpbnRlcnZhbHM6CgpgYGB7ciBlY2hvPUZBTFNFLCByZXN1bHRzPSdhc2lzJ30KZXF1YXRpb21hdGljOjpleHRyYWN0X2VxKHNoaWJhby5sbSwgdXNlX2NvZWZzID0gVFJVRSkKYGBgCgpgYGB7ciB9CnRpZHkoc2hpYmFvLmxtLCBjb25mLmludCA9IFRSVUUpCmdsYW5jZShzaGliYW8ubG0pCmFub3ZhKHNoaWJhby5sbSkKYGBgCgpHZXQgc3RhbmRhcmRpemVkIGNvZWZmaWNpZW50cwoKYGBge3IgfQpsbS5iZXRhKHNoaWJhby5sbSkKYGBgCgojIyBCaWJsaW9ncmFwaHkK</div>
 
 
 
