@@ -11,7 +11,7 @@
 
 
 
-<title>Ch 13 exercises</title>
+<title>c13.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -388,31 +388,22 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Ch 13 exercises</h1>
 
 </div>
 
 
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.2     ✔ readr     2.1.4
-## ✔ forcats   1.0.0     ✔ stringr   1.5.0
-## ✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-## ✔ purrr     1.0.1     
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<div id="chapter-13" class="section level1">
+<h1>Chapter 13</h1>
 <p>These exercises will push you a bit to fit GLMs to various kinds of
 data. You’ll need to pay attention to the nature of the predictors and
 think about the response variables and their likely distributions.</p>
-<div id="a" class="section level2">
-<h2>A</h2>
+<div id="a.-improving-biological-control-of-diamondback-moths" class="section level2">
+<h2>A. Improving biological control of diamondback moths</h2>
 <p><span class="citation">Uefune et al. (2020)</span> studied the use of
 synthetic herbivory-induced plant volatiles (HIPVs) to attract larval
 parasitoid wasps (<em>Plutella xylostella</em>) to control diamondback
 moths (DBM: <em>Cotesia vestalis</em>), a global pest of cruciferous
-vegetables. in greenhouses growing mizuna (Japanese mustard) in Japan.
+vegetables in greenhouses growing mizuna (Japanese mustard) in Japan.
 They used two groups of greenhouses, the treated group having dispensers
 for the HIPVs as well as honeyfeeders to attract <em>C. vestalis</em>)
 and a second untreated group. In each greenhouse, a single sticky trap,
@@ -463,7 +454,7 @@ candidate.</p>
 <h4>Extension question</h4>
 <p>A look at the means and standard deviations suggests that the
 variance was much larger than the mean, suggesting some overdispersion.
-Let’s check for it, and see if we should be concerned</p>
+Let’s check for it, and see if we should be concerned.</p>
 <p>Hint: here’s an R code chunk to do that:</p>
 <p><em>presid &lt;- resid(uefune.glm, type=“pearson”)</em></p>
 <p><em>ssize &lt;- nrow(uefune1)</em></p>
@@ -478,8 +469,8 @@ fitting an OLS linear model</strong></p>
 <p>Try linear with sqrt transform</p>
 </div>
 </div>
-<div id="b" class="section level2">
-<h2>B</h2>
+<div id="b.-better-coffee-growing-for-small-mammals" class="section level2">
+<h2>B. Better coffee-growing for small mammals</h2>
 <p><span class="citation">Caudill and Rice (2016)</span> examined the
 effectiveness of methods for making agriculture and habitat preservation
 more compatible, specifically assessing whether protocols for
@@ -558,14 +549,14 @@ Why?</strong></p>
 <hr />
 </div>
 <div id="what-checks-would-you-do-for-the-habitat-predictor-variables-and-what-do-you-conclude-from-those-checks" class="section level4">
-<h4><strong>What checks would you do for the habitat predictor
-variables, and what do you conclude from those checks?</strong></h4>
+<h4>What checks would you do for the habitat predictor variables, and
+what do you conclude from those checks?</h4>
 <hr />
 </div>
 <div id="the-authors-showed-some-differences-in-mammal-diversity-between-habitat-types-but-for-their-regression-analysis-they-ignored-habitat." class="section level4">
-<h4><strong>The authors showed some differences in mammal diversity
-between habitat types, but for their regression analysis they ignored
-habitat.</strong></h4>
+<h4>The authors showed some differences in mammal diversity between
+habitat types, but for their regression analysis they ignored
+habitat.</h4>
 <p><strong>Are there any additional checks you’d do before
 proceeding?</strong></p>
 <p><strong>What is the linear model for species density of small
@@ -574,18 +565,18 @@ mammals?</strong></p>
 of data points?</strong></p>
 <hr />
 </div>
-<div id="fit-this-model-to-the-data-and-assess-its-fit." class="section level4">
-<h4><strong>Fit this model to the data and assess its fit.</strong></h4>
+<div id="fit-this-model-to-the-data-and-assess-its-fit." class="section level3">
+<h3>Fit this model to the data and assess its fit.</h3>
 <p><strong>What do you conclude about habitat influences on small
 mammals?</strong></p>
 <hr />
 </div>
-<div id="now-run-the-analysis-for-large-mammals" class="section level4">
-<h4>Now run the analysis for large mammals</h4>
+<div id="now-run-the-analysis-for-large-mammals" class="section level3">
+<h3>Now run the analysis for large mammals</h3>
 </div>
 </div>
-<div id="c" class="section level2">
-<h2>C</h2>
+<div id="c.-why-do-gnus-die" class="section level2">
+<h2>C. Why do gnus die?</h2>
 <p>This exercise expands on the example introduced in Chapter 13, where
 <span class="citation">Sinclair and Arcese (1995)</span> were interested
 in the causes (predation or other) of death of wildebeeste, more
@@ -640,17 +631,17 @@ as predation or other, and record values for the other two
 values.</p></li>
 </ol>
 </div>
-<div id="write-out-the-linear-model-you-might-use-in-each-case" class="section level4">
-<h4>Write out the linear model you might use in each case</h4>
+<div id="write-out-the-linear-model-you-might-use-in-each-case" class="section level3">
+<h3>Write out the linear model you might use in each case</h3>
 <hr />
-</div>
 <div id="what-distribution-would-you-expect-to-response-variable-to-follow-in-each-case" class="section level4">
 <h4>What distribution would you expect to response variable to follow in
 each case?</h4>
 <hr />
 </div>
-<div id="start-with-situation-a" class="section level4">
-<h4>Start with situation <em>a</em></h4>
+</div>
+<div id="start-with-situation-a" class="section level3">
+<h3>Start with situation <em>a</em></h3>
 <p><strong>What is your first step in fitting the model to these
 data?</strong></p>
 <p><strong>What are your next steps?</strong></p>
@@ -658,9 +649,9 @@ data?</strong></p>
 wildebeeste?</strong></p>
 <hr />
 </div>
-<div id="now-do-situation-b---fit-logistic-model-with-death-as-response" class="section level4">
-<h4>Now do situation <em>b</em> - fit logistic model with death as
-response</h4>
+<div id="now-do-situation-b---fit-logistic-model-with-death-as-response" class="section level3">
+<h3>Now do situation <em>b</em> - fit logistic model with death as
+response</h3>
 <p>There are two kinds of data files that can be used in this case. We
 could work with a long file in which every gnu carcass is a record, or
 we could use a summary file, where one column of the file contains a
@@ -681,8 +672,8 @@ the initial complex model, and see how your results compare to those you
 obtained in part a</p>
 </div>
 </div>
-<div id="d" class="section level2">
-<h2>D</h2>
+<div id="d.-inbreeding-effects-on-parasitism-in-birds" class="section level2">
+<h2>D. Inbreeding effects on parasitism in birds</h2>
 <p>One of the consequences of inbreeding in animal populations is that
 it is thought to increase the susceptibility of individuals to disease.
 To assess this, <span class="citation">Townsend et al. (2018)</span> did
@@ -712,9 +703,9 @@ head(df,10)</code></pre>
 <p>Because we are doing a binomial response a simple scatterplot to
 check assumptions here is a little pointless, but just in case you do
 want to see it, have a crack</p>
-<div id="now-fit-the-generalised-linear-model-plasmodium-intercept-slopehl-with-a-binomial-response-variable." class="section level4">
-<h4>Now fit the generalised linear model, Plasmodium = intercept +
-slope*HL, with a binomial response variable.</h4>
+<div id="fit-the-generalised-linear-model-plasmodium-intercept-slopehl-with-a-binomial-response-variable." class="section level3">
+<h3>Fit the generalised linear model, Plasmodium = intercept + slope*HL,
+with a binomial response variable.</h3>
 <p>Think about how you might check how well the model fits</p>
 <p><strong>Examine the results from fitting the GLM and testing the null
 hypothesis that the slope of the response to predictor equals
@@ -728,7 +719,6 @@ zero.</strong></p>
 <li><p>Obtain the 95% confidence intervals on the model
 estimates</p></li>
 </ol>
-</div>
 <div id="from-the-results-above-what-conclusions-would-you-draw-about-the-relationship-between-incidence-of-avian-malaria-plasmodium-and-the-homozygosity-level" class="section level4">
 <h4>From the results above what conclusions would you draw about the
 relationship between incidence of avian malaria (<em>Plasmodium</em>)
@@ -739,8 +729,9 @@ probability of a bird having avian malaria is if its homozygosity level
 is 50%</strong></p>
 <p><strong>What is that probability?</strong></p>
 </div>
-<div id="odds" class="section level4">
-<h4>Odds</h4>
+</div>
+<div id="odds" class="section level3">
+<h3>Odds</h3>
 <p>We might want to something a bit more meaningful about the
 relationship of homozygosity level to incidence of <em>Plasmodium</em>
 and express this in terms of the odds of a bird having avian malaria.
@@ -753,7 +744,7 @@ not having it). To compute how the odds of a bird having
 intervals on these odds ratios using
 <em>exp(confint.default(townsend.glm))</em></p>
 <p><strong>What do you interpret from these results about the odds of a
-bird having Plasmodium as you increase the homozygosity
+bird having <em>Plasmodium</em> as you increase the homozygosity
 level?</strong></p>
 <p>You might find it helpful to plot the data as well as examining the
 output</p>
@@ -802,6 +793,7 @@ Nagasaka, and Junji Takabayashi. 2020. <span>“Targeting Diamondback
 Moths in Greenhouses by Attracting Specific Native Parasitoids with
 Herbivory-Induced Plant Volatiles.”</span> <em>Royal Society Open
 Science</em> 7 (11): 201592. <a href="https://doi.org/gsgcg9">https://doi.org/gsgcg9</a>.
+</div>
 </div>
 </div>
 </div>
