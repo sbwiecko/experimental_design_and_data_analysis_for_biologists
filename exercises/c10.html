@@ -11,7 +11,7 @@
 
 
 
-<title>Ch 10 exercises</title>
+<title>c10.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -388,11 +388,12 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Ch 10 exercises</h1>
 
 </div>
 
 
+<div id="chapter-10" class="section level1">
+<h1>Chapter 10</h1>
 <p>The aim of these exercises is to start getting familiar with mixed
 models, and in these exercises we’ll be focused on models with multiple
 categorical predictors, with at least one predictor a random effect. The
@@ -401,12 +402,17 @@ creating a nested or multilevel structure.</p>
 <p>For each of the examples below, you should follow the sequence we’ve
 used previously:</p>
 <ol style="list-style-type: decimal">
-<li><p>What is the biological question?</p></li>
-<li><p>Is the predictor continuous or categorical?</p></li>
-<li><p>Write out the linear model corresponding to this
-question.</p></li>
+<li><p>What is the biological question and what are the response and
+predictor variables?</p></li>
 <li><p>What distribution do you expect the response variable to
 follow?</p></li>
+<li><p>Is each predictor</p>
+<ol style="list-style-type: decimal">
+<li>Continuous or categorical?</li>
+<li>Fixed or random?</li>
+</ol></li>
+<li><p>Write out the linear model corresponding to the biological
+question.</p></li>
 <li><p>What are the assumptions behind the statistical model you’ll
 fit?</p>
 <ol style="list-style-type: decimal">
@@ -415,8 +421,9 @@ fit?</p>
 <li><p>Fit the model</p>
 <ol style="list-style-type: decimal">
 <li><p>How will you assess whether the model fits well?</p></li>
-<li><p>Can you detect an effect of the predictor?</p></li>
-<li><p>How do you measure the effect?</p></li>
+<li><p>Can you detect an effect of the fixed predictors?</p></li>
+<li><p>How much of the variance is attributable to each random
+predictor?</p></li>
 </ol></li>
 <li><p>What do you conclude (including any cautions)</p></li>
 </ol>
@@ -425,9 +432,7 @@ fit?</p>
 <p>In fitting these models, we’ll need to make the initial checklist
 more complex:</p>
 <ul>
-<li><p>as well as classifying a predictor as continuous or categorical,
-think clearly about whether it is random or fixed</p></li>
-<li><p>think about the relationship between predictors - are they
+<li><p>Think about the relationship between predictors - are they
 crossed (factorial) or nested (hierarchical)? Make sure that your linear
 model reflects these relationships!</p></li>
 <li><p>When there are random effects, assumptions can be more extensive.
@@ -440,20 +445,20 @@ with nested designs.</p></li>
 <h2>Crossed mixed model designs</h2>
 <p>Remember from Chapter 10 that these designs are typically used for
 two purposes.</p>
-<p>Random effects are often used as to reduce background noise in the
-data (e.g. randomized blocks designs), where the random effect is of
-little intrinsic interest. In a sense, we sacrfice degrees of freedom
-from the residual variance, anticipating that the variance attributed to
-the random effects will be large enough to make this sacrifice
-worthwhile. When you see these designs, it’s a good idea to look and see
-if the use of a random effect seems a good decision, e.g. by looking at
-blocking efficiency.</p>
+<p>Random effects are often used to reduce background noise in the data
+(e.g. randomized blocks designs), where the random effect is of little
+intrinsic interest. In a sense, we sacrifice degrees of freedom from the
+residual variance, anticipating that the variance attributed to the
+random effects will be large enough to make this sacrifice worthwhile.
+When you see these designs, it’s a good idea to look and see if the use
+of a random effect seems a good decision, e.g. by looking at blocking
+efficiency.</p>
 <p>In other cases, the random effects are used to estimate how
 consistently fixed effects act, by estimating variance in their effects
-across, for example, an environmental spectrum.</p>
+across, for example, an environmental spectrum (fixed predictor).</p>
 </div>
-<div id="a" class="section level2">
-<h2>A</h2>
+<div id="a.-leaf-domatia-and-mites" class="section level2">
+<h2>A. Leaf domatia and mites</h2>
 <p><span class="citation">Walter and O’Dowd (1992)</span> were
 interested in testing the hypothesis that leaves of the shrub
 <em>Viburnum tinus</em> with domatia (small shelters at the juncture of
@@ -494,7 +499,6 @@ df</code></pre>
 ## 26   m2    m  shaved     1
 ## 27   n1    n  intact     6
 ## 28   n2    n  shaved     0</code></pre>
-<pre><code>&lt;/div&gt;</code></pre>
 <p>This file has four variables:</p>
 <ul>
 <li><p><em>leaf</em> is just a code to identify individual
@@ -506,9 +510,10 @@ domatia were shaved off or left intact</p></li>
 <li><p><em>mites</em> is the number of mites recorded from that
 leaf</p></li>
 </ul>
-<div id="use-the-sequence-at-the-start-of-these-exercises-to-make-some-conclusions-about-the-role-of-domatia-on-this-shrub-species." class="section level3">
+<div id="use-the-sequence-at-the-start-of-these-exercises-to-make-some-conclusions-about-the-role-of-domatia-on-this-shrub-species-and-the-variability-between-leaf-pairs." class="section level3">
 <h3>Use the sequence at the start of these exercises to make some
-conclusions about the role of domatia on this shrub species.</h3>
+conclusions about the role of domatia on this shrub species and the
+variability between leaf pairs.</h3>
 <p>Focus for now on using an OLS approach, so think about the response
 variable and how you might treat it.</p>
 <hr />
@@ -533,8 +538,8 @@ variable in your analysis.</strong></p>
 <hr />
 </div>
 </div>
-<div id="b" class="section level2">
-<h2>B</h2>
+<div id="b.-rainfall-intensity-and-frequency-and-grassland-plants" class="section level2">
+<h2>B. Rainfall intensity and frequency and grassland plants</h2>
 <p><span class="citation">Didiano, Johnson, and Duval (2016)</span>
 assessed the effects of rainfall intensity and frequency on performance
 of grassland plants in Ontario, attempting to understand potential
@@ -543,11 +548,11 @@ summer rainfall than at present. They established a field experiment in
 which plants were grown from seeds in pots subjected to one of two
 rainfall levels (70 and 90 mm per month) and three frequencies (3, 5,
 and 15 days per month). They were interested in whether responses of
-plants varied according to whether the plants were moncots (5 species,
+plants varied according to whether the plants were monocots (5 species,
 though only 4 grew successfully) or eudicots (10, species).</p>
-<p>The experiment was done using shelters (see their supplementary Fig
-2) that prevented natural rainfall, allowing the researchers to control
-water received by the plants. They used 10 shelters, each of which had 6
+<p>The experiment was done using shelters (see their figure S2) that
+prevented natural rainfall, allowing the researchers to control water
+received by the plants. They used 10 shelters, each of which had 6
 groups of 18 pots (see their figure S1). Each group received one of the
 6 frequency/amount combinations. The 18 pots in each group had one of
 the 15 target species, with three pots used to measure soil moisture
@@ -612,10 +617,10 @@ head(df,10)</code></pre>
 ## 9                   11.71669832 Andropogon monocot
 ## 10                  8.080525933 Andropogon monocot</code></pre>
 <hr />
-<div id="use-the-sequence-at-the-start-of-these-exercises-to-make-some-conclusions-about-the-role-of-rainfall-amount-and-frequency-on-this-species." class="section level3">
+<div id="use-the-sequence-at-the-start-of-these-exercises-to-make-some-conclusions-about-the-role-of-rainfall-amount-and-frequency-on-this-species-and-the-variability-between-shelters." class="section level3">
 <h3>Use the sequence at the start of these exercises to make some
 conclusions about the role of rainfall amount and frequency on this
-species.</h3>
+species and the variability between shelters.</h3>
 <p><strong>Focus for now on using an OLS approach, so think about the
 response variable how you might treat it.</strong></p>
 <p><strong>Now use REML instead</strong></p>
@@ -629,8 +634,8 @@ the rainfall effects?</p>
 <hr />
 <div id="simplified-model" class="section level4">
 <h4>Simplified model</h4>
-<p>Appropriate model for full RCB has Amount x Shelter and Frequency x
-Shelter. Didiano et al. apparently did not include these terms.</p>
+<p>The appropriate model for full RCB has Amount x Shelter and Frequency
+x Shelter. Didiano et al. apparently did not include these terms.</p>
 <p><strong>Redo the earlier analysis using their simpler model as
 starting point</strong></p>
 <hr />
@@ -640,7 +645,7 @@ starting point</strong></p>
 <h3>Extension activities</h3>
 <ol style="list-style-type: decimal">
 <li>For the species we’ve chosen, did rainfall have the same effect on
-plant height (X2nd.plant.height.measurement) and below-ground
+plant height (2nd.plant.height.measurement) and below-ground
 biomass?</li>
 <li>Was there a difference in how monocot and eudicot species responded?
 They used 14 species in their experiment, with the aim of comparing
@@ -664,30 +669,31 @@ families.</li>
 main effects, particularly of rainfall amount</li>
 <li>If you start working through more analyses, you’ll get some
 experience working with missing values as well for some species! **Note
-that simplified model isn’t affected to same degree by occasional missed
-plants</li>
+that the simplified model isn’t affected to same degree by occasional
+missed plants</li>
 </ul></li>
 </ol>
 <hr />
-<div id="as-an-example-run-the-analysis-and-interpret-it-for-the-data-for-zizia" class="section level4">
-<h4>As an example, run the analysis and interpret it for the data for
+<div id="as-an-example-run-the-analysis-and-interpret-it-using-the-data-for-zizia" class="section level4">
+<h4>As an example, run the analysis and interpret it using the data for
 <em>Zizia</em></h4>
 <hr />
 </div>
 </div>
 </div>
-<div id="c." class="section level2">
-<h2>C.</h2>
+<div id="c.-psychostimulant-effects-on-fruit-flies" class="section level2">
+<h2>C. Psychostimulant effects on fruit flies</h2>
 <p><span class="citation">Highfill et al. (2019)</span> examined effects
 of two psychostimulants of public health concern (cocaine and
 methamphetamine) using <em>Drosophila melanogaster</em> as a
 “translational” model species. Translational reflected similarities in
-dopamine transport and the overall effects of exposure. Their interest
-was in variation in susceptibility to these compounds, so they examined
-responses of lines of flies chosen from a large set of inbred lines (the
-Genetic Reference Panel). Groups of 5 flies from a line were placed into
-test vials and their consumption of sucrose media and sucrose + drug
-media recorded after 18 h. There’s a nice diagram of the test vial <a href="https://doi.org/10.1371/journal.pgen.1007834.g001">here</a>.
+dopamine transport and the overall effects of exposure in fruitflies and
+humans. Their interest was in variation in susceptibility to these
+compounds, so they examined responses of lines of flies chosen from a
+large set of inbred lines (the Genetic Reference Panel). Groups of 5
+flies from a line were placed into test vials and their consumption of
+sucrose media and sucrose + drug media recorded after 18 h. There’s a
+nice diagram of the test vial <a href="https://doi.org/10.1371/journal.pgen.1007834.g001">here</a>.
 Please look at it before proceeding.</p>
 <p>It’s not uncommon to find sex-based differences in consumption, so
 they used groups of males and groups of female flies for each line.
@@ -698,7 +704,7 @@ feed, then ran another trial, followed by more food, and a third.</p>
 <hr />
 <div id="what-is-this-design" class="section level3">
 <h3>What is this design?</h3>
-<p>As you work your way through the familiar set of questions at the
+<p>As you work your way through the analysis sequence described at the
 start of these exercises, there are two important questions for you to
 answer. This is a complex example, so start with a factor diagram (see,
 e.g. Figure 10.2). It will help to clarify the relationships between the
@@ -767,12 +773,12 @@ each vial.</p>
 
 -   Choose one of the trials as &quot;the&quot; endpoint, e.g. Trial 3</code></pre>
 <p>For this chapter’s exercises, lets stick with the two simplifications
-- calculate sensitivity and average it across trial, and calculate
+- calculate sensitivity and average it across trials, and calculate
 sensitivity and look at the last trial (Exposure = 3).</p>
 <p>Start by rearranging the data so the Sucrose and Drug consumption
 values are columns, rather than appearing on different rows</p>
 <pre class="r"><code>df &lt;-  highfill %&gt;%
-  pivot_wider(names_from = Solution, values_from = Consumption) </code></pre>
+  tidyr::pivot_wider(names_from = Solution, values_from = Consumption) </code></pre>
 <pre><code>## Warning: Values from `Consumption` are not uniquely identified; output will contain
 ## list-cols.
 ## • Use `values_fn = list` to suppress this warning.
@@ -826,8 +832,8 @@ paper?</p>
 <div id="designs-with-nesting" class="section level2">
 <h2>Designs with nesting</h2>
 </div>
-<div id="d." class="section level2">
-<h2>D.</h2>
+<div id="d.-piscicide-effects-on-trout" class="section level2">
+<h2>D. Piscicide effects on trout</h2>
 <p><span class="citation">Birceanu and Wilkie (2018)</span> examined
 potential concerns around the use of 3-trifluoromethyl-4-nitrophenol
 (TFM). This chemical is used to control an invasive species (sea
@@ -887,14 +893,14 @@ stress? Did exposure to TFM affect the stress response at 4h?</h4>
 <p><strong>Describe two models that you could fit to address this
 question</strong></p>
 <p><strong>Fit both of these models, using OLS (or you can go mixed
-model/REML if you feel like it</strong></p>
+model/REML if you feel like it)</strong></p>
 <hr />
 </div>
 <div id="what-do-you-conclude-about-tfm" class="section level3">
 <h3>What do you conclude about TFM?</h3>
 <hr />
-<div id="do-tanks-have-any-effect-on-glycogen-at-4h" class="section level4">
-<h4>Do tanks have any effect on Glycogen at 4h?</h4>
+<div id="what-is-the-variation-between-tanks-in-glycogen-at-4h" class="section level4">
+<h4>What is the variation between tanks in Glycogen at 4h?</h4>
 <hr />
 </div>
 <div id="do-you-have-any-suggestions-for-alternative-ways-to-do-this-experiment" class="section level4">
@@ -911,8 +917,8 @@ take it up again when you get to Chapter 11.</p>
 <hr />
 </div>
 </div>
-<div id="e." class="section level2">
-<h2>E.</h2>
+<div id="e.-effects-of-altered-climates-on-freshwater-fish" class="section level2">
+<h2>E. Effects of altered climates on freshwater fish</h2>
 <p><span class="citation">Cramp et al. (2014)</span> examined two
 aspects of changing climates, altered levels of UVB radiation and
 increased temperatures. Their interest was in the capacity for these
@@ -996,21 +1002,17 @@ head(cramp_vo2, 10)</code></pre>
 <hr />
 </div>
 </div>
-<div id="what-are-the-two-main-models-you-could-fit-to-assess-the-effects-of-uv-and-temperature" class="section level3">
+<div id="what-are-the-two-main-models-you-could-fit-to-assess-the-effects-of-uv-and-temperature-hint-the-difference-is-how-tanks-are-incorporated-into-the-model" class="section level3">
 <h3>What are the two main models you could fit to assess the effects of
-UV and Temperature?</h3>
+UV and Temperature (Hint: the difference is how tanks are incorporated
+into the model)?</h3>
 <p><strong>What assumptions are made in fitting each model</strong>?</p>
-<table>
-<colgroup>
-<col width="101%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><h3 id="use-the-two-approaches-to-analyse-vo2-and-outline-your-conclusions">Use
-the two approaches to analyse VO2 and outline your conclusions</h3></td>
-</tr>
-</tbody>
-</table>
+<hr />
+<div id="use-the-two-approaches-to-analyse-vo2-and-outline-your-conclusions" class="section level4">
+<h4>Use the two approaches to analyse VO2 and outline your
+conclusions</h4>
+<hr />
+</div>
 </div>
 <div id="what-are-your-thoughts-about-the-effects-of-uv-and-temperature-on-vo2" class="section level3">
 <h3>What are your thoughts about the effects of UV and Temperature on
@@ -1061,6 +1063,7 @@ Melanogaster.”</span> <em>PLOS Genetics</em> 15 (5). <a href="https://doi.org/
 <div id="ref-walterLeavesDomatiaHave1992" class="csl-entry">
 Walter, D. E., and D. J. O’Dowd. 1992. <span>“Leaves with Domatia Have
 More Mites.”</span> <em>Ecology</em> 73 (4): 1514–18. <a href="https://doi.org/10.2307/1940694">https://doi.org/10.2307/1940694</a>.
+</div>
 </div>
 </div>
 </div>
