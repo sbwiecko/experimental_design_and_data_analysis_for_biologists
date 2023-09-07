@@ -11,7 +11,7 @@
 
 
 
-<title>Ch 6 exercises</title>
+<title>c06.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -388,11 +388,12 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Ch 6 exercises</h1>
 
 </div>
 
 
+<div id="chapter-6" class="section level1">
+<h1>Chapter 6</h1>
 <p>The aim of these exercises is to make sure you’re comfortable with
 fitting simple (one predictor) linear models to data and to emphasise
 the similarity between regression and “ANOVA”. We will complete some of
@@ -423,8 +424,9 @@ fit?</p>
 </ol>
 <div id="continuous-predictor-regression" class="section level2">
 <h2>Continuous predictor (regression)</h2>
-<div id="a." class="section level3">
-<h3>A.</h3>
+</div>
+<div id="a.-foraging-elephant-seals" class="section level2">
+<h2>A. Foraging elephant seals</h2>
 <p><span class="citation">Le Boeuf et al. (2000)</span> examined the
 foraging behaviour of northern elephant seals (<em>Mirounga
 angustirostris</em>) that breed along the west coast of Mexico and the
@@ -434,8 +436,8 @@ feeding area offshore and the amount of time (duration in days) it spent
 at the feeding area.</p>
 <p>You can get this data file <a href="/data/leboeuf.csv">here</a>.</p>
 </div>
-<div id="b." class="section level3">
-<h3>B.</h3>
+<div id="b.-invertebrates-in-mussel-clumps" class="section level2">
+<h2>B. Invertebrates in mussel clumps</h2>
 <p><span class="citation">Peake and Quinn (1993)</span> investigated the
 relationship between the number of individuals and number of species
 (response variables) of invertebrates living in amongst clumps of
@@ -443,8 +445,8 @@ mussels on a rocky intertidal shore and the area of those mussel clumps
 (predictor).</p>
 <p>You can get this data file <a href="/data/peakquinn.csv">here</a>.</p>
 </div>
-<div id="c." class="section level3">
-<h3>C.</h3>
+<div id="c.-plant-biomass-in-different-grassland-types" class="section level2">
+<h2>C. Plant biomass in different grassland types</h2>
 <p><span class="citation">Dai et al. (2020)</span> examined the
 relationships between aboveground (AGB) and belowground (BGB) plant
 biomass from 80 sites across four types of grassland (temperate
@@ -455,11 +457,11 @@ determine the slopes of the relationships between log(ABG) and log(BGB)
 for each grassland type and compare these to a slope of 1, indicating an
 (isometric) allometric relationship.</p>
 </div>
-</div>
 <div id="categorical-predictor-anova" class="section level2">
 <h2>Categorical predictor (“ANOVA”)</h2>
-<div id="d." class="section level3">
-<h3>D.</h3>
+</div>
+<div id="d.-honeydew-production-in-aphids" class="section level2">
+<h2>D. Honeydew production in aphids</h2>
 <p><span class="citation">Vosteen, Gershenzon, and Kunert (2016)</span>
 examined patterns of production of honeydew by different races of pea
 aphids (<em>Acyrthosiphon pisum</em>) and how that attracts
@@ -482,8 +484,8 @@ a two-factor (aphid race and host plant) crossed design (Chapter
 7).</h4>
 </div>
 </div>
-<div id="e." class="section level3">
-<h3>E.</h3>
+<div id="e.-effects-of-parasites-on-fish-swimming" class="section level2">
+<h2>E. Effects of parasites on fish swimming</h2>
 <p><span class="citation">Binning, Roche, and Layton (2013)</span>
 studied the effect of ectoparasitic isopods (<em>Anilocra
 nemipteri</em>) on the swimming ability of a tropical species of bream
@@ -502,9 +504,8 @@ anova.txt”; in this dataset, SMR is Standard Metabolic Rate
 swimming speed.</p>
 <p><strong>You should be able to use the answer from the previous
 section to generate the code you’ll need</strong></p>
-</div>
-<div id="f." class="section level3">
-<h3>F.</h3>
+<div id="f.-effects-of-herbal-supplements-on-rat-physiology" class="section level3">
+<h3>F. Effects of herbal supplements on rat physiology</h3>
 <p>Here is an example from <span class="citation">Kiss et al.
 (2017)</span>. They were interested in the effects of intake of an
 invasive weed (ragweed) on health of humans as this species is now being
@@ -520,7 +521,7 @@ and we will focus on aspartate aminotransferase (ast).</p>
 <p>You can access the data file <a href="https://doi.org/10.1371/journal.pone.0176818.s005">here</a>.
 However, it’s an Excel file not really formatted for <em>R</em>. You’ll
 need to delete some rows and redo the treatment labels to be able to use
-open as a dataframe. Our reformatting of the file is <a href="/data/kissast.csv">here</a>. Check your file against it if you
+it as a data frame. Our reformatting of the file is <a href="/data/kissast.csv">here</a>. Check your file against it if you
 have problems.</p>
 <p><strong>Again, you should use the same approach as for the two
 previous questions (although the answers will be
@@ -564,6 +565,7 @@ Vosteen, Ilka, Jonathan Gershenzon, and Grit Kunert. 2016.
 <span>“Hoverfly Preference for High Honeydew Amounts Creates Enemy-Free
 Space for Aphids Colonizing Novel Host Plants.”</span> Edited by Kim
 Cuddington. <em>Journal of Animal Ecology</em> 85 (5): 1286–97. <a href="https://doi.org/f9csdq">https://doi.org/f9csdq</a>.
+</div>
 </div>
 </div>
 </div>

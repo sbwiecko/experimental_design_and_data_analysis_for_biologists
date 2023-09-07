@@ -11,7 +11,7 @@
 
 
 
-<title>Ch 7 exercises</title>
+<title>c07.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -388,11 +388,12 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Ch 7 exercises</h1>
 
 </div>
 
 
+<div id="chapter-7" class="section level1">
+<h1>Chapter 7</h1>
 <p>The aim of these exercises is to make sure you’re comfortable with
 fitting linear models with two or more categorical predictors. We will
 focus on normally distributed responses.</p>
@@ -421,8 +422,8 @@ fit?</p>
 <li><p>What do you conclude (including any cautions)?</p></li>
 </ol>
 <!-- -->
-<div id="a" class="section level2">
-<h2>A</h2>
+<div id="a.-psychostimulant-effects-on-vole-physiology" class="section level2">
+<h2>A. Psychostimulant effects on vole physiology</h2>
 <p><span class="citation">Hostetler, Phillips, and Ryabinin
 (2016)</span> examined the effects of methamphetamine (MA) on
 hypothalamic neuropeptides in the brains of laboratory-housed prairie
@@ -431,9 +432,10 @@ fixed factors. Treatment, representing access to MA or water, was an
 experimental factor, crossed with sex (male vs. female), an
 observational factor, with five or six voles in each of the four
 combinations.</p>
-<p>We’ll start with the oxytocin data as the response variable. Import
+<p>We’ll start with the oxytocin data as the response variable. The data
+are in the supplementary files of the paper or use our version. Import
 hostetler_OT data file (hostetler OT.csv), and we’ll make sure that sex
-and treatment are treated as factors</p>
+and treatment are treated as factors.</p>
 <pre class="r"><code>host_ot &lt;- read.csv(&quot;../data/hostetler OT.csv&quot;)
 head(host_ot,10)</code></pre>
 <pre><code>##    Animal.ID trtmt sex pvn1 pvn2 pvn3 pvn4 pvn5 pvn6 otmean
@@ -453,10 +455,12 @@ host_ot$trtmt&lt;-as.factor(host_ot$trtmt)</code></pre>
 <p><strong>Hint</strong>. To help you analyse this data set in R, have a
 look at the online version of Box 7.3, which includes some relevant R
 code.</p>
-<p>Would the same approach work for the ATV response?</p>
+<div id="would-the-same-approach-work-for-the-atv-response" class="section level3">
+<h3>Would the same approach work for the ATV response?</h3>
 </div>
-<div id="b" class="section level2">
-<h2>B</h2>
+</div>
+<div id="b.-metabolic-responses-of-salmon-to-temperature-change" class="section level2">
+<h2>B. Metabolic responses of salmon to temperature change</h2>
 <p><span class="citation">Kraskura et al. (2020)</span> examined
 sex-specific differences in the metabolic responses of coho salmon
 (<em>Oncorhynchus kisutch)</em> to three different temperatures: 9°C
@@ -525,8 +529,8 @@ head(krask,10)</code></pre>
 krask$sex&lt;-as.factor(krask$sex)
 krask$temperature&lt;-as.factor(krask$temperature)</code></pre>
 </div>
-<div id="c" class="section level2">
-<h2>C</h2>
+<div id="c.-dietary-supplements-and-osteoarthritis-in-dogs" class="section level2">
+<h2>C. Dietary supplements and osteoarthritis in dogs</h2>
 <p>This exercise is a little more complex, designed to start thinking
 about using additional predictors to give a clearer picture of any
 signals from predictors of interest, i.e. to reduce background noise in
@@ -673,8 +677,8 @@ of the response 3. Take a look at the vet data; with only 5 values, it
 might be better not to try and force it into an analysis that presumes a
 normal distribution.</p>
 </div>
-<div id="d" class="section level2">
-<h2>D</h2>
+<div id="d.-honeydew-production-in-aphids" class="section level2">
+<h2>D. Honeydew production in aphids</h2>
 <p>We’ll return to the example from the Chapter 6 exercises, where <span class="citation">Vosteen, Gershenzon, and Kunert (2016)</span> examined
 patterns of production of honeydew by different races of pea aphids
 (<em>Acyrthosiphon pisum</em>) and how that attracts ovipositioning
@@ -734,6 +738,7 @@ Vosteen, Ilka, Jonathan Gershenzon, and Grit Kunert. 2016.
 <span>“Hoverfly Preference for High Honeydew Amounts Creates Enemy-Free
 Space for Aphids Colonizing Novel Host Plants.”</span> Edited by Kim
 Cuddington. <em>Journal of Animal Ecology</em> 85 (5): 1286–97. <a href="https://doi.org/f9csdq">https://doi.org/f9csdq</a>.
+</div>
 </div>
 </div>
 </div>
