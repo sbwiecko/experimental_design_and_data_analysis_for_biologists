@@ -13,7 +13,7 @@
 
 <title>The worked examples</title>
 
-<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -252,7 +252,7 @@ $(document).ready(function () {
   <a href="exercises.html">Exercises</a>
 </li>
 <li>
-  <a href="About.html">About</a>
+  <a href="about.html">About</a>
 </li>
 <li>
   <a href="notes.html">Notes</a>
@@ -302,7 +302,8 @@ add more material. It’s also worth checking <a
 href="https://qkstats.com">our personal website</a> and <a
 href="https://mjkeough.github.io/index.html">Github</a> for minor
 updates, suggestions, discussion, etc.</p>
-<p>The scripts should be fine for <em>R</em> version 4.3.1.</p>
+<p>The scripts should be fine for <em>R</em> version 4.3.1 and should
+work for 4.4.2.</p>
 <div id="a-note-on-the-r-code" class="section level4">
 <h4>A note on the <em>R</em> code</h4>
 <p>Each example is based on an Rmarkdown notebook, which has two
@@ -334,6 +335,9 @@ than the gray scales predominantly used in the printed book. It’s
 invoked in ggplot using +theme_qk(). Default ggplot settings reappear if
 you disable this line in the code.</p></li>
 </ul>
+<p>These scripts can be accessed directly, but we’re also modifying the
+individual examples etc. to load these scripts directly using devtools,
+rather than loading local files.</p>
 </div>
 <div id="the-data-files" class="section level4">
 <h4>The data files</h4>
