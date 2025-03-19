@@ -11,7 +11,7 @@
 
 
 
-<title>Chapter 12</title>
+<title>c12.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -274,6 +274,7 @@ if (window.hljs) {
 div.csl-bib-body { }
 div.csl-entry {
 clear: both;
+margin-bottom: 0em;
 }
 .hanging div.csl-entry {
 margin-left:2em;
@@ -388,11 +389,12 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Chapter 12</h1>
 
 </div>
 
 
+<div id="chapter-12" class="section level1">
+<h1>Chapter 12</h1>
 <p>The aim of these exercises is to start getting familiar with mixed
 models, and in these exercises we’ll be focused on models with
 correlated data.</p>
@@ -437,8 +439,8 @@ with nested designs.</p></li>
 additional assumptions.</p></li>
 </ul>
 </div>
-<div id="a-straightforward-with-a-chance-to-be-complex" class="section level2">
-<h2>A Straightforward, with a chance to be complex</h2>
+<div id="a.-straightforward-with-a-chance-to-be-complex" class="section level2">
+<h2>A. Straightforward, with a chance to be complex</h2>
 <p>Let’s start with an example we mentioned briefly in Chapter 12, and
 work through the data analysis. <span class="citation">Allen and
 Marshall (2014)</span> studied the effects of egg size on larval
@@ -511,18 +513,19 @@ day1)</h3>
 <p><strong>Think about how you’d specify the model. Describe the random
 slopes and random intercepts models, and then fit them.</strong></p>
 <p><em>Is the random intercepts approach needed?</em></p>
-<div id="last-if-you-want-to-extend-yourself-a-bit-lets-look-at-accounting-for-some-of-the-heterogeneity-in-variances-by-allowing-covariances-to-differ-well-use-ar1" class="section level4">
-<h4>Last, if you want to extend yourself a bit, Let’s look at accounting
-for some of the heterogeneity in variances by allowing covariances to
-differ (we’ll use AR1)</h4>
+<div id="last-if-you-want-to-extend-yourself-a-bit-more-lets-look-at-accounting-for-some-of-the-heterogeneity-in-variances-by-allowing-covariances-to-differ-well-use-ar1" class="section level4">
+<h4>Last, if you want to extend yourself a bit more, Let’s look at
+accounting for some of the heterogeneity in variances by allowing
+covariances to differ (we’ll use AR1)</h4>
 <p>Now run as mixed effects random intercept with nlme - use day1 for
 continuous (not factor) and allow covariances to differ.</p>
-<p>**Does this approach give us a model that fits better?</p>
+<p><strong>Does this approach give us a model that fits
+better?</strong></p>
 </div>
 </div>
 </div>
-<div id="b-organic-matter-breakdown-in-streams---a-messy-example" class="section level2">
-<h2>B Organic matter breakdown in streams - a messy example</h2>
+<div id="b.-organic-matter-breakdown-in-streams---a-messy-example" class="section level2">
+<h2>B. Organic matter breakdown in streams - a messy example</h2>
 <p><span class="citation">Kiffer et al. (2018)</span> were interested in
 the nutritional value of leaves from native and introduced trees to
 “shredders” – invertebrate larvae in streams that help to break down
@@ -541,39 +544,39 @@ estimate the animal’s biomass at this time.</p>
 <h4>What factors are in the design?</h4>
 <p>Which of these variables would you include:</p>
 <ul class="task-list">
-<li><input type="checkbox"></input>Tree species (S)</li>
-<li><input type="checkbox"></input>Plantation type (P)</li>
-<li><input type="checkbox"></input>Caddis flies (C)</li>
-<li><input type="checkbox"></input>Time (T)</li>
+<li><label><input type="checkbox"></input>Tree species (S)</label></li>
+<li><label><input type="checkbox"></input>Plantation type (P)</label></li>
+<li><label><input type="checkbox"></input>Caddis flies (C)</label></li>
+<li><label><input type="checkbox"></input>Time (T)</label></li>
 </ul>
 </div>
 <div id="how-would-you-combined-them-in-the-linear-model" class="section level4">
 <h4>How would you combined them in the linear model?</h4>
 <p>Look at this list and decide which terms should be included</p>
 <ul class="task-list">
-<li><input type="checkbox"></input>S</li>
-<li><input type="checkbox"></input>P(S)</li>
-<li><input type="checkbox"></input>C(P(S)</li>
-<li><input type="checkbox"></input>C(S)</li>
-<li><input type="checkbox"></input>T</li>
-<li><input type="checkbox"></input>TS</li>
-<li><input type="checkbox"></input>TP(S)</li>
-<li><input type="checkbox"></input>TC(P(S))</li>
-<li><input type="checkbox"></input>TC(S)</li>
+<li><label><input type="checkbox"></input>S</label></li>
+<li><label><input type="checkbox"></input>P(S)</label></li>
+<li><label><input type="checkbox"></input>C(P(S)</label></li>
+<li><label><input type="checkbox"></input>C(S)</label></li>
+<li><label><input type="checkbox"></input>T</label></li>
+<li><label><input type="checkbox"></input>TS</label></li>
+<li><label><input type="checkbox"></input>TP(S)</label></li>
+<li><label><input type="checkbox"></input>TC(P(S))</label></li>
+<li><label><input type="checkbox"></input>TC(S)</label></li>
 </ul>
 </div>
 <div id="which-terms-answer-the-biological-question" class="section level4">
 <h4>Which terms answer the biological question?</h4>
 <ul class="task-list">
-<li><input type="checkbox"></input>S</li>
-<li><input type="checkbox"></input>P(S)</li>
-<li><input type="checkbox"></input>C(P(S)</li>
-<li><input type="checkbox"></input>C(S)</li>
-<li><input type="checkbox"></input>T</li>
-<li><input type="checkbox"></input>TS</li>
-<li><input type="checkbox"></input>TP(S)</li>
-<li><input type="checkbox"></input>TC(P(S))</li>
-<li><input type="checkbox"></input>TC(S)</li>
+<li><label><input type="checkbox"></input>S</label></li>
+<li><label><input type="checkbox"></input>P(S)</label></li>
+<li><label><input type="checkbox"></input>C(P(S)</label></li>
+<li><label><input type="checkbox"></input>C(S)</label></li>
+<li><label><input type="checkbox"></input>T</label></li>
+<li><label><input type="checkbox"></input>TS</label></li>
+<li><label><input type="checkbox"></input>TP(S)</label></li>
+<li><label><input type="checkbox"></input>TC(P(S))</label></li>
+<li><label><input type="checkbox"></input>TC(S)</label></li>
 </ul>
 </div>
 <div id="what-checks-would-you-do-before-fitting-a-model-to-these-data" class="section level4">
@@ -622,7 +625,7 @@ file with one row for each weekly measurement</p>
 </div>
 <div id="suggest-two-ways-of-dealing-with-this-problem-or-three-if-youre-really-keen." class="section level3">
 <h3>Suggest two ways of dealing with this problem (or three, if you’re
-really keen!.</h3>
+really keen!).</h3>
 <p><strong>Outline any issues with each approach</strong></p>
 <p>Assuming that you identified a solution involving dropping subjects
 and one involving a different way of treating weeks, we’ll need to
@@ -647,36 +650,23 @@ polynomials</strong></p>
 <p>Run the model as a linear mixed effects model</p>
 <p>(R script provided). For easy comparison, use the kiffer1_na file,
 which has the same data.</p>
-<pre><code>## Numerical variables NOT centered on 0: weekno
-## If in interactions, interpretation of lower order (e.g., main) effects difficult.</code></pre>
-<pre><code>## Warning in mixed(growth ~ species * weekno + (weekno | subject), test_intercept
-## = TRUE, : Cannot test intercept with Satterthwaite approximation.</code></pre>
-<pre><code>## Mixed Model Anova Table (Type 3 tests, S-method)
-## 
-## Model: growth ~ species * weekno + (weekno | subject)
-## Data: kiffer1_na
-##           Effect       df         F p.value
-## 1        species 4, 55.00      0.02    .999
-## 2         weekno 1, 55.00 21.85 ***   &lt;.001
-## 3 species:weekno 4, 55.00 12.03 ***   &lt;.001
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;+&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
-</div>
-</div>
-<div id="get-anova-results" class="section level1">
-<h1>Get anova results</h1>
+<div id="get-anova-results" class="section level4">
+<h4>Get anova results</h4>
 <p>The advantage of the mixed effects approach is that we can keep all
 insects in</p>
 <p><strong>An important decision is whether to fit a random intercepts
 model (as we did) or a random intercepts model, which we can do using
 the mixed model approach.</strong></p>
+</div>
+</div>
 <div id="what-do-you-conclude-from-your-analysis-would-you-reach-different-conclusions-from-the-traditional-and-mixed-model-approaches" class="section level3">
 <h3>What do you conclude from your analysis?  Would you reach different
 conclusions from the “traditional” and mixed model approaches?</h3>
 </div>
-<div id="c-challenging" class="section level2">
-<h2>C (Challenging)</h2>
+</div>
+<div id="c.-challenging---back-to-psychostimulants-and-flies" class="section level2">
+<h2>C. (Challenging) - back to psychostimulants and flies</h2>
 <p>Let’s return to the <span class="citation">Highfill et al.
 (2019)</span> example from the Chapter 10 exercises. Recall that this
 was a substantial experiment designed to assess variation in
@@ -721,7 +711,7 @@ don’t expect it to be easy :-(</strong></p>
 </div>
 <div id="references" class="section level2 unnumbered">
 <h2 class="unnumbered">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-allenEggSizeEffects2014" class="csl-entry">
 Allen, R. M., and D. Marshall. 2014. <span>“Egg Size Effects Across
 Multiple Life-History Stages in the Marine Annelid
